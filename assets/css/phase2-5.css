@@ -4,132 +4,57 @@
   --p25-marker:'Patrick Hand', 'Comic Sans MS', cursive;
   --p25-display:'Bowlby One SC', Anton, Impact, sans-serif;
 }
-
-/* More festival, less corporate: keep Anton for the main editorial voice,
-   then use a rounded display + marker voice for selected UI moments. */
 body{letter-spacing:.005em}
-
-/* Supporting display copy gets a little more character. */
-.hero-sub,
-.challenge-sub,
-.zone-no,
-.city-dot,
-.date-card h3,
-.family-highlight{
-  font-family:var(--p25-display);
-  letter-spacing:.015em;
-}
-
-/* Big headlines gain a slightly less pristine poster feel. */
-.hero-copy h1,
-.section-head h2,
-.experience-head h2,
-.challenge-grid h2,
-.family-grid h2,
-.cities-head h2,
-.tickets-head h2,
-.final-cta h2{
-  text-shadow:3px 3px 0 var(--p25-ink);
-}
-
-/* Handwritten festival annotations. */
-.what-sticker,
-.hero-ticket small,
-.exp-star,
-.hero-collage .object,
-.challenge-grid .object,
-.family-grid .object{
-  font-family:var(--p25-marker);
-}
-
-.what-sticker{
-  font-size:24px;
-  letter-spacing:.01em;
-}
-
-/* Give the cards a deliberately physical, poster-cutout treatment. */
-.zone h3,
-.mpg-word{
-  text-transform:uppercase;
-  letter-spacing:.015em;
-}
-.zone h3{
-  text-shadow:2px 2px 0 var(--p25-ink);
-}
-
-/* Navigation remains highly legible, but no longer feels like generic UI. */
-.nav-links a,
-.nav .btn,
-.mobile-menu a{
-  letter-spacing:.035em;
-}
-
-/* Make secondary labels feel hand-marked rather than SaaS-like. */
-.label{
-  font-family:Inter,Arial,sans-serif;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.12em;
-}
-
-/* Tiny type reactions on interactive surfaces. */
-.zone h3,
-.city-dot,
-.date-card h3,
-.mpg-word{
-  transition:transform .2s cubic-bezier(.2,.75,.25,1), letter-spacing .2s ease;
-}
+.hero-sub,.challenge-sub,.zone-no,.city-dot,.date-card h3,.family-highlight{font-family:var(--p25-display);letter-spacing:.015em}
+.hero-copy h1,.section-head h2,.experience-head h2,.challenge-grid h2,.family-grid h2,.cities-head h2,.tickets-head h2,.final-cta h2{text-shadow:3px 3px 0 var(--p25-ink)}
+.what-sticker,.hero-ticket small,.exp-star,.hero-collage .object,.challenge-grid .object,.family-grid .object{font-family:var(--p25-marker)}
+.what-sticker{font-size:24px;letter-spacing:.01em}
+.zone h3,.mpg-word{text-transform:uppercase;letter-spacing:.015em}
+.zone h3{text-shadow:2px 2px 0 var(--p25-ink)}
+.nav-links a,.nav .btn,.mobile-menu a{letter-spacing:.035em}
+.label{font-family:Inter,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:.12em}
+.zone h3,.city-dot,.date-card h3,.mpg-word{transition:transform .2s cubic-bezier(.2,.75,.25,1),letter-spacing .2s ease}
 .zone:hover h3{transform:translateX(4px) rotate(-1deg);letter-spacing:.025em}
 .city-node:hover .city-dot{letter-spacing:.035em}
+.hero-ticket small{font-family:var(--p25-marker);font-size:14px;line-height:1;letter-spacing:.04em;text-transform:none}
+.copy,.city-info,.date-card p,footer{font-family:Inter,Arial,sans-serif}
 
-/* Marker-style microcopy can be applied without changing structural HTML. */
-.hero-ticket small{
-  font-family:var(--p25-marker);
-  font-size:14px;
-  line-height:1;
-  letter-spacing:.04em;
-  text-transform:none;
-}
+/* Real HOP FEST photography */
+.photo.missing .asset-label,.photo.missing:before{display:none !important}
+.photo.missing img{opacity:0 !important}
+.hero-main{background-image:url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.hero-side{background-image:url('../images/Hopfest1.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.mpg:nth-child(1){background-image:url('../images/Hopfest5.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.mpg:nth-child(2){background-image:url('../images/Hopfest3.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.mpg:nth-child(3){background-image:url('../images/Hopfest4.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(1) .photo{background-image:url('../images/Hopfest5.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(2) .photo{background-image:url('../images/Hopfest4.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(3) .photo{background-image:url('../images/Hopfest1.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(4) .photo{background-image:url('../images/Hopfest3.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(5) .photo{background-image:url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.challenge-photo{background-image:url('../images/Hopfest4.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.family-photos .photo:nth-child(1){background-image:url('../images/Hopfest1.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.family-photos .photo:nth-child(2){background-image:url('../images/Hopfest3.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.family-photos .photo:nth-child(3){background-image:url('../images/Hopfest5.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.final-photo{background-image:url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
 
-/* Keep the parent-facing information layer clean and readable. */
-.copy,
-.city-info,
-.date-card p,
-footer{font-family:Inter,Arial,sans-serif}
+/* Hard override the old placeholder <img> elements too. This makes the supplied
+   GitHub images render even when the old placeholder src is still in the HTML. */
+.hero-main img{content:url('../images/Hopfest_fisheye2.png') !important;opacity:1 !important}
+.hero-side img{content:url('../images/Hopfest1.png') !important;opacity:1 !important}
+.mpg:nth-child(1) img{content:url('../images/Hopfest5.png') !important;opacity:1 !important}
+.mpg:nth-child(2) img{content:url('../images/Hopfest3.png') !important;opacity:1 !important}
+.mpg:nth-child(3) img{content:url('../images/Hopfest4.png') !important;opacity:1 !important}
+.zone:nth-child(1) .photo img{content:url('../images/Hopfest5.png') !important;opacity:1 !important}
+.zone:nth-child(2) .photo img{content:url('../images/Hopfest4.png') !important;opacity:1 !important}
+.zone:nth-child(3) .photo img{content:url('../images/Hopfest1.png') !important;opacity:1 !important}
+.zone:nth-child(4) .photo img{content:url('../images/Hopfest3.png') !important;opacity:1 !important}
+.zone:nth-child(5) .photo img{content:url('../images/Hopfest_fisheye2.png') !important;opacity:1 !important}
+.challenge-photo img{content:url('../images/Hopfest4.png') !important;opacity:1 !important}
+.family-photos .photo:nth-child(1) img{content:url('../images/Hopfest1.png') !important;opacity:1 !important}
+.family-photos .photo:nth-child(2) img{content:url('../images/Hopfest3.png') !important;opacity:1 !important}
+.family-photos .photo:nth-child(3) img{content:url('../images/Hopfest5.png') !important;opacity:1 !important}
+.final-photo img{content:url('../images/Hopfest_fisheye2.png') !important;opacity:1 !important}
 
-/* Supplied HOP FEST photography: use the real event images in the existing
-   photo slots without changing the page structure. The requested fisheye
-   image is the hero lead visual. */
-.photo.missing .asset-label,
-.photo.missing:before{display:none}
-.photo.missing img{opacity:0}
-
-.hero-main{background-image:url('../images/Hopfest_fisheye2.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-.hero-side{background-image:url('../images/Hopfest1.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-
-.mpg:nth-child(1){background-image:url('../images/Hopfest5.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-.mpg:nth-child(2){background-image:url('../images/Hopfest3.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-.mpg:nth-child(3){background-image:url('../images/Hopfest4.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-
-.zone:nth-child(1) .photo{background-image:url('../images/Hopfest5.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-.zone:nth-child(2) .photo{background-image:url('../images/Hopfest4.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-.zone:nth-child(3) .photo{background-image:url('../images/Hopfest1.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-.zone:nth-child(4) .photo{background-image:url('../images/Hopfest3.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-.zone:nth-child(5) .photo{background-image:url('../images/Hopfest_fisheye2.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-
-.challenge-photo{background-image:url('../images/Hopfest4.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-
-.family-photos .photo:nth-child(1){background-image:url('../images/Hopfest1.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-.family-photos .photo:nth-child(2){background-image:url('../images/Hopfest3.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-.family-photos .photo:nth-child(3){background-image:url('../images/Hopfest5.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-
-.final-photo{background-image:url('../images/Hopfest_fisheye2.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-
-@media(max-width:700px){
-  .what-sticker{font-size:20px}
-  .hero-ticket small{font-size:12px}
-}
-
-@media(prefers-reduced-motion:reduce){
-  .zone h3,.city-dot,.date-card h3,.mpg-word{transition:none}
-}
+@media(max-width:700px){.what-sticker{font-size:20px}.hero-ticket small{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.zone h3,.city-dot,.date-card h3,.mpg-word{transition:none}}
