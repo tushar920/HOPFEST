@@ -1,0 +1,93 @@
+name: HOP FEST Phase 1
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  phase1:
+    if: "!contains(github.event.head_commit.message, '[hopphase1]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply Festival Energy layer
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text()
+
+          css = r'''
+          /* HOP FEST PHASE 1 — FESTIVAL ENERGY */
+          body{background:var(--cream)}
+          .btn{box-shadow:5px 5px 0 var(--black);will-change:transform,box-shadow}
+          .btn:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--black)}
+          .btn:active{transform:translate(1px,1px);box-shadow:3px 3px 0 var(--black)}
+          .hero-ctas .btn-outline{box-shadow:none}
+          .festival-sticker{position:absolute;z-index:7;display:grid;place-items:center;text-align:center;border:3px solid var(--black);box-shadow:4px 4px 0 var(--black);font:400 20px/.88 Anton,Impact,sans-serif;pointer-events:none;transform:rotate(-7deg)}
+          .sticker-yellow{background:var(--yellow);color:var(--black)}
+          .sticker-pink{background:var(--pink);color:#fff}
+          .sticker-lime{background:var(--lime);color:var(--black)}
+          .sticker-blue{background:var(--blue);color:#fff}
+          .hero-sticker{right:2%;top:38%;width:118px;height:76px;transform:rotate(8deg)}
+          .hero-copy:after{content:"LET'S PLAY";position:absolute;left:-18px;bottom:-70px;padding:7px 12px;background:var(--pink);border:3px solid var(--black);box-shadow:4px 4px 0 var(--black);font:400 18px/1 Anton,Impact,sans-serif;transform:rotate(-6deg);z-index:-1}
+          .section-head,.experience-head,.cities-head,.challenge-grid,.family-grid,.date-grid,.final-content{position:relative}
+          #what:before{content:"★ ★ ★";position:absolute;right:4%;top:18%;font:400 34px/1 Anton,Impact,sans-serif;color:var(--pink);letter-spacing:8px;transform:rotate(9deg);text-shadow:2px 2px 0 var(--black);opacity:.95}
+          #what:after{content:"MOVE IT!";position:absolute;left:-12px;bottom:10%;padding:8px 15px;background:var(--blue);color:#fff;border:3px solid var(--black);box-shadow:4px 4px 0 var(--black);font:400 18px/1 Anton,Impact,sans-serif;transform:rotate(-8deg)}
+          #experience:before{content:"PLAY ZONE";position:absolute;right:-8px;top:18%;padding:9px 16px;background:var(--yellow);border:3px solid var(--black);box-shadow:4px 4px 0 var(--black);font:400 18px/1 Anton,Impact,sans-serif;transform:rotate(8deg)}
+          .zone{transition:transform .2s ease,box-shadow .2s ease}
+          .zone:hover{transform:translate(-5px,-6px) rotate(-1deg);box-shadow:7px 7px 0 var(--black)}
+          .zone:nth-child(2):hover{transform:translate(-5px,-6px) rotate(2deg)}
+          .zone:nth-child(3):hover{transform:translate(-5px,-6px) rotate(-2.5deg)}
+          .zone:nth-child(4):hover{transform:translate(-5px,-6px) rotate(-1deg)}
+          .zone:nth-child(5):hover{transform:translate(-5px,-6px) rotate(1deg)}
+          .zone:after{content:"";position:absolute;right:12px;bottom:12px;width:26px;height:26px;border:3px solid currentColor;border-radius:50%;opacity:.85}
+          #challenge:before{content:"GO!";position:absolute;right:7%;top:9%;padding:10px 18px;background:var(--pink);color:#fff;border:3px solid var(--black);box-shadow:5px 5px 0 var(--black);font:400 28px/1 Anton,Impact,sans-serif;transform:rotate(7deg)}
+          .challenge-photo{transition:transform .25s ease,box-shadow .25s ease}
+          .challenge-photo:hover{transform:rotate(-1deg) translate(-4px,-4px);box-shadow:11px 11px 0 var(--yellow)}
+          #family:before{content:"FAMILY DAY";position:absolute;left:3%;top:12%;padding:8px 14px;background:var(--pink);color:#fff;border:3px solid var(--black);box-shadow:4px 4px 0 var(--black);font:400 18px/1 Anton,Impact,sans-serif;transform:rotate(-7deg)}
+          .family-photos .photo{transition:transform .22s ease,box-shadow .22s ease}
+          .family-photos .photo:hover{z-index:6;box-shadow:9px 9px 0 var(--black)}
+          #cities:after{content:"NEXT STOP →";position:absolute;right:4%;bottom:12%;padding:9px 14px;background:var(--yellow);color:var(--black);border:3px solid var(--black);box-shadow:4px 4px 0 var(--black);font:400 18px/1 Anton,Impact,sans-serif;transform:rotate(-5deg)}
+          .city-dot{box-shadow:4px 4px 0 var(--black)}
+          .city-node:hover .city-dot{transform:scale(1.08) rotate(-4deg);box-shadow:7px 7px 0 var(--black)}
+          .date-card{transition:transform .2s ease,box-shadow .2s ease}
+          .date-card:hover{transform:translate(-4px,-5px) rotate(-1deg)!important;box-shadow:10px 10px 0 var(--black)}
+          #tickets:before{content:"SAVE YOUR SPOT";position:absolute;right:3%;top:14%;padding:9px 15px;background:var(--lime);border:3px solid var(--black);box-shadow:4px 4px 0 var(--black);font:400 18px/1 Anton,Impact,sans-serif;transform:rotate(6deg)}
+          #why:before{content:"HOP HOP HOP!";position:absolute;left:4%;top:11%;padding:9px 14px;background:var(--pink);color:#fff;border:3px solid var(--black);box-shadow:4px 4px 0 var(--black);font:400 18px/1 Anton,Impact,sans-serif;transform:rotate(-6deg);z-index:4}
+          .final-content .btn{min-width:185px;justify-content:center}
+          .photo.missing{background:linear-gradient(135deg,var(--blue) 0 34%,var(--pink) 34% 66%,var(--yellow) 66%);}
+          .photo.missing:after{background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(9,9,9,.12)),repeating-linear-gradient(-45deg,rgba(255,255,255,.18) 0 10px,transparent 10px 20px)}
+          .photo.missing .asset-label{background:transparent;text-shadow:2px 2px 0 var(--black);font-size:clamp(20px,2.5vw,36px)}
+          @media(max-width:900px){.hero-sticker{right:0;top:42%;width:95px;height:64px;font-size:17px}.hero-copy:after{bottom:-58px}.#what:before{right:2%;top:10%;font-size:25px}.#what:after{bottom:4%;font-size:15px}.#experience:before{top:8%;font-size:15px}.#challenge:before{right:4%;top:4%;font-size:22px}.#family:before{left:2%;top:5%;font-size:15px}.#cities:after{right:2%;bottom:4%;font-size:15px}.#tickets:before{right:2%;top:7%;font-size:15px}.#why:before{left:2%;top:5%;font-size:15px}}
+          @media(max-width:560px){.hero-sticker{width:80px;height:54px;font-size:14px;right:-4px;top:45%}.hero-copy:after{left:0;bottom:-54px;font-size:15px}.#what:before,#what:after,#experience:before,#challenge:before,#family:before,#cities:after,#tickets:before,#why:before{font-size:13px;padding:6px 9px}.#what:before{top:4%;right:3%}.#what:after{bottom:2%;left:2%}.#experience:before{top:3%;right:2%}.#challenge:before{top:2%;right:2%}.#family:before{top:2%;left:2%}.#cities:after{bottom:2%;right:2%}.#tickets:before{top:3%;right:2%}.#why:before{top:3%;left:2%}}
+          '''
+
+          marker='  </style>'
+          if 'HOP FEST PHASE 1 — FESTIVAL ENERGY' not in s:
+              s=s.replace(marker, css+'\n'+marker, 1)
+
+          hero_old='<div class="hero-collage"><svg class="object speed doodle">'
+          hero_new='<div class="hero-collage"><div class="festival-sticker sticker-yellow hero-sticker">PLAY<br>ALL DAY</div><svg class="object speed doodle">'
+          s=s.replace(hero_old,hero_new,1)
+
+          # Make the hero copy visually less dependent on the removed eyebrow.
+          s=s.replace('<div class="hero-kicker eyebrow label">The kids\' sports carnival</div><h1', '<h1', 1)
+          # Keep all other legacy eyebrow elements suppressed by the existing global rule.
+
+          # Add a compact festival ticker without changing information architecture.
+          ticker='<div class="hop-ticker" aria-hidden="true"><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span></div>'
+          s=s.replace('    <section id="what">', '    '+ticker+'\n    <section id="what">', 1)
+
+          ticker_css='''\n          .hop-ticker{display:flex;align-items:center;justify-content:center;gap:18px;min-height:48px;padding:8px 24px;background:var(--yellow);color:var(--black);border-top:3px solid var(--black);border-bottom:3px solid var(--black);overflow:hidden;white-space:nowrap;font:400 20px/1 Anton,Impact,sans-serif;letter-spacing:.05em}\n          .hop-ticker i{font-style:normal;color:var(--pink);font-size:17px;text-shadow:1px 1px 0 var(--black)}\n          @media(max-width:560px){.hop-ticker{gap:11px;font-size:16px;min-height:42px;padding:6px 12px}.hop-ticker i{font-size:13px}}\n          '''
+          s=s.replace(marker, ticker_css+'\n'+marker, 1)
+
+          p.write_text(s)
+      - name: Commit Phase 1 and remove workflow
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git rm .github/workflows/hopfest-phase1.yml
+          git commit -m 'Add HOP FEST Phase 1 festival energy [hopphase1]'
+          git push
