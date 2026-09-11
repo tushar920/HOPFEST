@@ -1,0 +1,32 @@
+name: Apply HOP FEST site fixes
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  fix:
+    if: "!contains(github.event.head_commit.message, '[hopfix]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix sitewide CSS
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text()
+          s = s.replace('.eyebrow{display:flex;gap:12px;align-items:center}', '.eyebrow{display:none !important}')
+          s = s.replace('transition:transform .18s ease;z-index:1}.btn:hover{transform:translate(-3px,-3px)}.btn:after{content:"";position:absolute;inset:6px -7px -7px 7px;background:var(--black);z-index:-1}', 'transition:transform .18s ease,box-shadow .18s ease;z-index:1;box-shadow:5px 5px 0 var(--black)}.btn:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--black)}')
+          s = s.replace('.hero-ctas .btn-outline{background:transparent;border-color:#fff;color:#fff}.hero-ctas .btn-outline:after{background:#fff}', '.hero-ctas .btn-outline{background:transparent;border-color:#fff;color:#fff;box-shadow:none}')
+          p.write_text(s)
+          assert '.btn:after{' not in s
+          assert '.eyebrow{display:flex' not in s
+      - name: Commit fixes and remove workflow
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/hopfest-site-fix.yml
+          git add index.html
+          git commit -m 'Fix HOP FEST sitewide labels and CTA shadows [hopfix]'
+          git push
