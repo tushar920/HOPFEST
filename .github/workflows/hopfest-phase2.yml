@@ -1,0 +1,51 @@
+name: HOP FEST Phase 2
+on:
+  push:
+    paths:
+      - '.github/workflows/hopfest-phase2.yml'
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wire Phase 2
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text()
+          css='''
+/* HOP FEST PHASE 2 — INTERACTION */
+.p2-reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.75,.25,1)}
+.p2-reveal.p2-visible{opacity:1;transform:none}
+.p2-stagger>*{transition-delay:calc(var(--p2-i,0) * 80ms)}
+.p2-cursor{transition:transform .12s ease-out}
+.hop-dash{margin-top:38px;padding:18px;border:3px solid var(--black);background:var(--yellow);color:var(--black);box-shadow:6px 6px 0 var(--pink);transform:rotate(-1deg);position:relative;overflow:hidden}
+.hop-dash-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:14px}.hop-dash-title{font:400 25px/1 Anton,Impact,sans-serif}.hop-dash-score{font:800 11px Inter,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.hop-dash-track{height:48px;border:3px solid var(--black);background:var(--cream);position:relative;overflow:hidden}.hop-dash-track:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 19%,rgba(9,9,9,.12) 19% 20%)}
+.hop-runner{position:absolute;left:2%;top:50%;width:32px;height:32px;border:3px solid var(--black);background:var(--pink);transform:translateY(-50%) rotate(-8deg);box-shadow:3px 3px 0 var(--black);transition:left .18s cubic-bezier(.2,.8,.2,1),transform .18s ease}.hop-runner:after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:var(--black);right:4px;top:4px}
+.hop-dash-actions{display:flex;align-items:center;gap:14px;margin-top:14px;flex-wrap:wrap}.hop-dash-btn{cursor:pointer;padding:11px 18px;border:3px solid var(--black);background:var(--blue);color:#fff;font:400 18px/1 Anton,Impact,sans-serif;box-shadow:4px 4px 0 var(--black);transition:transform .12s ease,box-shadow .12s ease}.hop-dash-btn:hover{transform:translate(-2px,-2px) rotate(-1deg);box-shadow:6px 6px 0 var(--black)}.hop-dash-btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--black)}.hop-dash-status{font:400 16px/1 Anton,Impact,sans-serif}
+@media(max-width:900px){.hop-dash{margin-top:28px}.hop-dash-head{display:block}.hop-dash-score{display:block;margin-top:6px}}@media(max-width:560px){.hop-dash-title{font-size:21px}.hop-dash{padding:14px}.hop-dash-track{height:42px}}@media(prefers-reduced-motion:reduce){.p2-reveal{opacity:1;transform:none;transition:none}.p2-cursor{transition:none}.hop-runner{transition:none}}
+'''
+          s=s.replace('</style>',css+'</style>',1)
+          s=s.replace('<div class="mpg-grid">','<div class="mpg-grid p2-stagger">',1)
+          s=s.replace('<div class="exp-zones">','<div class="exp-zones p2-stagger">',1)
+          s=s.replace('<div class="date-grid">','<div class="date-grid p2-stagger">',1)
+          marker='<p class="challenge-copy copy">Speed. Strength. Agility. One high-energy challenge. Race your friends. Beat the clock. Push your limits.</p>'
+          dash='''<div class="hop-dash" aria-label="Interactive HOP Dash"><div class="hop-dash-head"><div class="hop-dash-title">HOP DASH — BEAT THE CLOCK</div><div class="hop-dash-score" id="hopDashScore">0 / 10 HOPS</div></div><div class="hop-dash-track"><div class="hop-runner" id="hopRunner" aria-hidden="true"></div></div><div class="hop-dash-actions"><button class="hop-dash-btn" id="hopDashBtn" type="button">HOP! →</button><span class="hop-dash-status" id="hopDashStatus">Tap HOP to start.</span></div></div>'''
+          s=s.replace(marker,marker+dash,1)
+          s=s.replace('</script>\n</body>','<script src="assets/js/phase2.js"></script>\n</body>',1)
+          p.write_text(s)
+          PY
+      - name: Commit and clean up
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Execute HOP FEST Phase 2 [hopphase2]' || true
+          rm .github/workflows/hopfest-phase2.yml
+          git add .github/workflows/hopfest-phase2.yml
+          git commit -m 'Remove temporary Phase 2 workflow [hopphase2]' || true
+          git push
