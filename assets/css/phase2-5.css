@@ -19,15 +19,14 @@ body{letter-spacing:.005em}
 .hero-ticket small{font-family:var(--p25-marker);font-size:14px;line-height:1;letter-spacing:.04em;text-transform:none}
 .copy,.city-info,.date-card p,footer{font-family:Inter,Arial,sans-serif}
 
-/* Use the supplied GitHub photography and completely disable the old
-   placeholder treatment/stripe overlay. */
+/* Use the supplied GitHub photography and completely disable the old placeholder treatment/stripe overlay. */
 .photo .asset-label{display:none !important}
 .photo:before{display:none !important}
 .photo:after{background:none !important}
 .photo.missing img{opacity:0 !important}
 
-/* Hero: fisheye supplied image */
-.hero-main{background-image:url('/assets/images/Hopfest_fisheye2.png'),url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+/* Hero: preserve the full 3:2 fisheye composition instead of cropping it. */
+.hero-main{background-image:url('/assets/images/Hopfest_fisheye2.png'),url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:contain;background-repeat:no-repeat;background-color:#1c4892}
 .hero-main img{display:none !important}
 .hero-main .asset-label{display:none !important}
 
@@ -57,5 +56,5 @@ body{letter-spacing:.005em}
 .final-photo{background-image:url('/assets/images/Hopfest_fisheye2.png'),url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
 .final-photo img{display:none !important}
 
-@media(max-width:700px){.what-sticker{font-size:20px}.hero-ticket small{font-size:12px}}
+@media(max-width:700px){.what-sticker{font-size:20px}.hero-ticket small{font-size:12px}.hero-main{background-size:contain}}
 @media(prefers-reduced-motion:reduce){.zone h3,.city-dot,.date-card h3,.mpg-word{transition:none}}
