@@ -1,8 +1,8 @@
 /* HOP FEST — Phase 2.5: Type + Attitude */
 :root{
   --p25-ink:#090909;
-  --p25-marker:'Patrick Hand', 'Comic Sans MS', cursive;
-  --p25-display:'Bowlby One SC', Anton, Impact, sans-serif;
+  --p25-marker:'Patrick Hand','Comic Sans MS',cursive;
+  --p25-display:'Bowlby One SC',Anton,Impact,sans-serif;
 }
 body{letter-spacing:.005em}
 .hero-sub,.challenge-sub,.zone-no,.city-dot,.date-card h3,.family-highlight{font-family:var(--p25-display);letter-spacing:.015em}
@@ -19,42 +19,43 @@ body{letter-spacing:.005em}
 .hero-ticket small{font-family:var(--p25-marker);font-size:14px;line-height:1;letter-spacing:.04em;text-transform:none}
 .copy,.city-info,.date-card p,footer{font-family:Inter,Arial,sans-serif}
 
-/* Real HOP FEST photography */
-.photo.missing .asset-label,.photo.missing:before{display:none !important}
+/* Use the supplied GitHub photography and completely disable the old
+   placeholder treatment/stripe overlay. */
+.photo .asset-label{display:none !important}
+.photo:before{display:none !important}
+.photo:after{background:none !important}
 .photo.missing img{opacity:0 !important}
-.hero-main{background-image:url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.hero-side{background-image:url('../images/Hopfest1.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.mpg:nth-child(1){background-image:url('../images/Hopfest5.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.mpg:nth-child(2){background-image:url('../images/Hopfest3.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.mpg:nth-child(3){background-image:url('../images/Hopfest4.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.zone:nth-child(1) .photo{background-image:url('../images/Hopfest5.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.zone:nth-child(2) .photo{background-image:url('../images/Hopfest4.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.zone:nth-child(3) .photo{background-image:url('../images/Hopfest1.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.zone:nth-child(4) .photo{background-image:url('../images/Hopfest3.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.zone:nth-child(5) .photo{background-image:url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.challenge-photo{background-image:url('../images/Hopfest4.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.family-photos .photo:nth-child(1){background-image:url('../images/Hopfest1.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.family-photos .photo:nth-child(2){background-image:url('../images/Hopfest3.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.family-photos .photo:nth-child(3){background-image:url('../images/Hopfest5.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
-.final-photo{background-image:url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
 
-/* Hard override the old placeholder <img> elements too. This makes the supplied
-   GitHub images render even when the old placeholder src is still in the HTML. */
-.hero-main img{content:url('../images/Hopfest_fisheye2.png') !important;opacity:1 !important}
-.hero-side img{content:url('../images/Hopfest1.png') !important;opacity:1 !important}
-.mpg:nth-child(1) img{content:url('../images/Hopfest5.png') !important;opacity:1 !important}
-.mpg:nth-child(2) img{content:url('../images/Hopfest3.png') !important;opacity:1 !important}
-.mpg:nth-child(3) img{content:url('../images/Hopfest4.png') !important;opacity:1 !important}
-.zone:nth-child(1) .photo img{content:url('../images/Hopfest5.png') !important;opacity:1 !important}
-.zone:nth-child(2) .photo img{content:url('../images/Hopfest4.png') !important;opacity:1 !important}
-.zone:nth-child(3) .photo img{content:url('../images/Hopfest1.png') !important;opacity:1 !important}
-.zone:nth-child(4) .photo img{content:url('../images/Hopfest3.png') !important;opacity:1 !important}
-.zone:nth-child(5) .photo img{content:url('../images/Hopfest_fisheye2.png') !important;opacity:1 !important}
-.challenge-photo img{content:url('../images/Hopfest4.png') !important;opacity:1 !important}
-.family-photos .photo:nth-child(1) img{content:url('../images/Hopfest1.png') !important;opacity:1 !important}
-.family-photos .photo:nth-child(2) img{content:url('../images/Hopfest3.png') !important;opacity:1 !important}
-.family-photos .photo:nth-child(3) img{content:url('../images/Hopfest5.png') !important;opacity:1 !important}
-.final-photo img{content:url('../images/Hopfest_fisheye2.png') !important;opacity:1 !important}
+/* Hero: fisheye supplied image */
+.hero-main{background-image:url('/assets/images/Hopfest_fisheye2.png'),url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.hero-main img{display:none !important}
+.hero-main .asset-label{display:none !important}
+
+.hero-side{background-image:url('/assets/images/Hopfest1.png'),url('../images/Hopfest1.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.hero-side img{display:none !important}
+
+.mpg:nth-child(1){background-image:url('/assets/images/Hopfest5.png'),url('../images/Hopfest5.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.mpg:nth-child(2){background-image:url('/assets/images/Hopfest3.png'),url('../images/Hopfest3.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.mpg:nth-child(3){background-image:url('/assets/images/Hopfest4.png'),url('../images/Hopfest4.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.mpg img{display:none !important}
+
+.zone:nth-child(1) .photo{background-image:url('/assets/images/Hopfest5.png'),url('../images/Hopfest5.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(2) .photo{background-image:url('/assets/images/Hopfest4.png'),url('../images/Hopfest4.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(3) .photo{background-image:url('/assets/images/Hopfest1.png'),url('../images/Hopfest1.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(4) .photo{background-image:url('/assets/images/Hopfest3.png'),url('../images/Hopfest3.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(5) .photo{background-image:url('/assets/images/Hopfest_fisheye2.png'),url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone .photo img{display:none !important}
+
+.challenge-photo{background-image:url('/assets/images/Hopfest4.png'),url('../images/Hopfest4.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.challenge-photo img{display:none !important}
+
+.family-photos .photo:nth-child(1){background-image:url('/assets/images/Hopfest1.png'),url('../images/Hopfest1.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.family-photos .photo:nth-child(2){background-image:url('/assets/images/Hopfest3.png'),url('../images/Hopfest3.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.family-photos .photo:nth-child(3){background-image:url('/assets/images/Hopfest5.png'),url('../images/Hopfest5.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.family-photos .photo img{display:none !important}
+
+.final-photo{background-image:url('/assets/images/Hopfest_fisheye2.png'),url('../images/Hopfest_fisheye2.png') !important;background-position:center;background-size:cover;background-repeat:no-repeat}
+.final-photo img{display:none !important}
 
 @media(max-width:700px){.what-sticker{font-size:20px}.hero-ticket small{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.zone h3,.city-dot,.date-card h3,.mpg-word{transition:none}}
