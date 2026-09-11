@@ -97,6 +97,34 @@ body{letter-spacing:.005em}
 .date-card p,
 footer{font-family:Inter,Arial,sans-serif}
 
+/* Supplied HOP FEST photography: use the real event images in the existing
+   photo slots without changing the page structure. The requested fisheye
+   image is the hero lead visual. */
+.photo.missing .asset-label,
+.photo.missing:before{display:none}
+.photo.missing img{opacity:0}
+
+.hero-main{background-image:url('../images/Hopfest_fisheye2.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+.hero-side{background-image:url('../images/Hopfest1.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+
+.mpg:nth-child(1){background-image:url('../images/Hopfest5.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+.mpg:nth-child(2){background-image:url('../images/Hopfest3.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+.mpg:nth-child(3){background-image:url('../images/Hopfest4.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+
+.zone:nth-child(1) .photo{background-image:url('../images/Hopfest5.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(2) .photo{background-image:url('../images/Hopfest4.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(3) .photo{background-image:url('../images/Hopfest1.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(4) .photo{background-image:url('../images/Hopfest3.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+.zone:nth-child(5) .photo{background-image:url('../images/Hopfest_fisheye2.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+
+.challenge-photo{background-image:url('../images/Hopfest4.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+
+.family-photos .photo:nth-child(1){background-image:url('../images/Hopfest1.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+.family-photos .photo:nth-child(2){background-image:url('../images/Hopfest3.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+.family-photos .photo:nth-child(3){background-image:url('../images/Hopfest5.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+
+.final-photo{background-image:url('../images/Hopfest_fisheye2.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+
 @media(max-width:700px){
   .what-sticker{font-size:20px}
   .hero-ticket small{font-size:12px}
