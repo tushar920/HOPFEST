@@ -10,14 +10,61 @@ body{letter-spacing:.005em}
 /* Supplied HOP FEST photography — remove all placeholder/stripe treatments. */
 .photo .asset-label,.photo:before{display:none!important}.photo:after{background:none!important}.photo.missing img{opacity:1!important}
 
-/* HERO: use the actual image element, not a background layer. The source photo is 1536×1024 (3:2), so contain it inside the existing hero frame without cropping. */
+/* HERO: use the actual image element, not a background layer. */
 .hero-main{background:#1c4892!important;overflow:hidden}.hero-main img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;object-position:center!important;content:url('../images/Hopfest_fisheye2.png?v=5')!important;opacity:1!important}.hero-main .asset-label{display:none!important}
-
 .hero-side{background-image:url('../images/Hopfest1.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.hero-side img{display:none!important}
 .mpg:nth-child(1){background-image:url('../images/Hopfest5.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.mpg:nth-child(2){background-image:url('../images/Hopfest3.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.mpg:nth-child(3){background-image:url('../images/Hopfest4.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.mpg img{display:none!important}
 .zone:nth-child(1) .photo{background-image:url('../images/Hopfest5.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.zone:nth-child(2) .photo{background-image:url('../images/Hopfest4.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.zone:nth-child(3) .photo{background-image:url('../images/Hopfest1.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.zone:nth-child(4) .photo{background-image:url('../images/Hopfest3.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.zone:nth-child(5) .photo{background-image:url('../images/Hopfest_fisheye2.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.zone .photo img{display:none!important}
 .challenge-photo{background-image:url('../images/Hopfest4.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.challenge-photo img{display:none!important}
 .family-photos .photo:nth-child(1){background-image:url('../images/Hopfest1.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.family-photos .photo:nth-child(2){background-image:url('../images/Hopfest3.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.family-photos .photo:nth-child(3){background-image:url('../images/Hopfest5.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.family-photos .photo img{display:none!important}
 .final-photo{background-image:url('../images/Hopfest_fisheye2.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.final-photo img{display:none!important}
-@media(max-width:700px){.what-sticker{font-size:20px}.hero-ticket small{font-size:12px}.hero-main img{object-fit:contain!important}}
-@media(prefers-reduced-motion:reduce){.zone h3,.city-dot,.date-card h3,.mpg-word{transition:none}}
+
+/* =========================================================
+   PHASE 1 — MOVE. PLAY. GROW.
+   Turn the three editorial photo panels into interactive festival zones.
+   ========================================================= */
+#what .section-head{position:relative;z-index:7}
+#what .section-head h2{position:relative;display:inline-block}
+#what .section-head h2:after{content:'3 WAYS TO HOP';position:absolute;right:-112px;top:-17px;padding:7px 10px;background:var(--yellow);border:2px solid var(--black);box-shadow:3px 3px 0 var(--black);font:800 9px/1 Inter,Arial,sans-serif;letter-spacing:.11em;transform:rotate(4deg)}
+#what .section-head:after{content:'RACE  +  PLAY  +  FRIENDS  +  ENERGY';display:block;margin:25px auto 0;width:max-content;max-width:90%;padding:9px 14px;background:var(--black);color:var(--yellow);font:800 10px/1 Inter,Arial,sans-serif;letter-spacing:.13em;transform:rotate(-1.2deg);box-shadow:4px 4px 0 var(--pink)}
+.mpg-grid{position:relative;perspective:1100px}
+.mpg{cursor:pointer;isolation:isolate;transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s ease,filter .3s ease;will-change:transform;overflow:visible}
+.mpg:before{content:'';position:absolute;inset:-10px;z-index:-1;border:2px dashed var(--black);opacity:0;transform:rotate(-2deg) scale(.96);transition:opacity .25s ease,transform .35s ease}
+.mpg:after{content:'HOP IN  →';position:absolute;right:16px;top:15px;z-index:6;padding:9px 11px;background:var(--yellow);color:var(--black);border:2px solid var(--black);box-shadow:3px 3px 0 var(--black);font:800 9px/1 Inter,Arial,sans-serif;letter-spacing:.12em;transform:translateY(-12px) rotate(3deg);opacity:0;transition:opacity .2s ease,transform .3s cubic-bezier(.2,.8,.2,1)}
+.mpg:hover{transform:translateY(-12px) rotate(-1deg) scale(1.025);box-shadow:9px 12px 0 var(--black);z-index:8;filter:saturate(1.08)}
+.mpg:nth-child(2):hover{transform:translateY(-12px) rotate(2deg) scale(1.035)}
+.mpg:nth-child(3):hover{transform:translateY(-12px) rotate(-.5deg) scale(1.025)}
+.mpg:hover:before{opacity:1;transform:rotate(1deg) scale(1)}
+.mpg:hover:after{opacity:1;transform:translateY(0) rotate(3deg)}
+.mpg:focus-visible{outline:4px solid var(--pink);outline-offset:7px}
+.mpg img{transition:transform .55s cubic-bezier(.2,.8,.2,1);transform:scale(1)}
+.mpg:hover img{transform:scale(1.06)}
+.mpg:before,.mpg:after{pointer-events:none}
+.mpg-word{transition:transform .3s cubic-bezier(.2,.8,.2,1),letter-spacing .3s ease,text-shadow .3s ease}
+.mpg:hover .mpg-word{transform:translate(7px,-4px) rotate(-2deg);letter-spacing:.035em;text-shadow:5px 5px 0 var(--black)}
+.mpg:nth-child(2):hover .mpg-word{transform:translate(-2px,-5px) rotate(2deg)}
+.mpg:nth-child(3):hover .mpg-word{transform:translate(6px,-3px) rotate(-1deg)}
+.mpg:nth-child(1):after{content:'READY TO MOVE?  →'}
+.mpg:nth-child(2):after{content:'YOUR TURN!  →';background:var(--pink);color:#fff}
+.mpg:nth-child(3):after{content:'TRY SOMETHING NEW  →';background:var(--lime)}
+.what-sticker{transition:transform .35s ease}.mpg-grid:hover .what-sticker{transform:rotate(9deg) translate(4px,-4px)}
+
+/* Small festival annotations around the photo row. */
+#what .mpg-grid:before{content:'01 — GO!';position:absolute;left:-48px;top:17%;z-index:9;font:400 18px/1 var(--p25-marker);transform:rotate(-8deg);color:var(--pink)}
+#what .mpg-grid:after{content:'02 — PLAY HARD';position:absolute;right:-64px;bottom:14%;z-index:9;font:400 18px/1 var(--p25-marker);transform:rotate(8deg);color:var(--purple)}
+
+@media(max-width:850px){
+  #what .section-head h2:after{right:-65px;top:-27px}
+  #what .mpg-grid:before{left:-8px;top:8%}.mpg-grid:after{right:-8px;bottom:7%}
+}
+@media(max-width:700px){
+  #what .section-head h2:after{display:none}
+  #what .section-head:after{font-size:8px;letter-spacing:.08em;line-height:1.3}
+  .mpg:hover,.mpg:nth-child(2):hover,.mpg:nth-child(3):hover{transform:translateY(-6px) scale(1.015)}
+  .mpg:hover .mpg-word{transform:translate(4px,-3px)}
+  .mpg:after{opacity:1;transform:translateY(0) rotate(3deg);font-size:8px;padding:8px 9px}
+  #what .mpg-grid:before,#what .mpg-grid:after{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .mpg,.mpg img,.mpg:before,.mpg:after,.mpg-word,.what-sticker{transition:none!important}
+}
