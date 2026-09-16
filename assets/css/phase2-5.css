@@ -1,4 +1,4 @@
-@import url('./phase2-5-base.css');
+@import url('./hero-fix.css');
 
 /* HERO V3 — clean composition based on the supplied mobile reference. */
 #hero .hero-sticker{display:none!important}
