@@ -3,35 +3,30 @@
 #what .wrap{width:100%!important;max-width:none!important;margin:0!important}
 #what .section-head{display:block!important;width:calc(100% - 40px)!important;max-width:680px!important;margin:0 auto 30px!important;text-align:center!important}
 #what .section-head .eyebrow{display:none!important}
-#what .section-head h2.title{font-family:'Arial Black',Impact,sans-serif!important;font-size:clamp(44px,12vw,78px)!important;line-height:.86!important;letter-spacing:-.045em!important;text-transform:uppercase!important;color:var(--black)!important;text-shadow:none!important;margin:0!important;max-width:none!important}
-#what .section-head h2.title{font-size:0!important}
+#what .section-head h2.title{font-family:'Arial Black',Impact,sans-serif!important;font-size:0!important;line-height:.86!important;letter-spacing:-.045em!important;text-transform:uppercase!important;color:var(--black)!important;text-shadow:none!important;margin:0!important;max-width:none!important}
 #what .section-head h2.title:after{content:'WHAT CAN YOU DO\A AT HOP FEST?'!important;white-space:pre!important;font-size:clamp(44px,12vw,78px)!important}
 #what .section-head .copy{font-size:0!important;line-height:1.35!important;color:var(--black)!important;margin:17px auto 0!important;max-width:500px!important}
+#what .section-head .copy:before{content:''!important;display:block!important;width:130px!important;height:5px!important;background:var(--yellow)!important;margin:0 auto 10px!important;transform:rotate(-2deg)!important}
 #what .section-head .copy:after{content:'Try new activities, take on fun challenges and make unforgettable memories.'!important;font-size:15px!important}
-#what .section-head .copy:before{content:''!important;display:block!important;width:130px!important;height:5px!important;background:var(--yellow)!important;margin:11px auto 8px!important;transform:rotate(-2deg)!important}
 #what .mpg-grid{display:flex!important;align-items:stretch!important;gap:16px!important;width:100%!important;max-width:none!important;margin:0!important;padding:10px 20px 28px!important;overflow-x:auto!important;overflow-y:visible!important;scroll-snap-type:x mandatory!important;-webkit-overflow-scrolling:touch!important;scrollbar-width:none!important}
 #what .mpg-grid::-webkit-scrollbar{display:none!important}
 #what .mpg-grid:before,#what .mpg-grid:after{display:none!important}
 #what .mpg{display:contents!important}
 #what .mpg img,#what .mpg .asset-label,#what .mpg .mpg-word{display:none!important}
-#what .mpg:before,#what .mpg:after{content:''!important;position:relative!important;display:block!important;flex:0 0 82vw!important;width:82vw!important;height:430px!important;border:3px solid var(--black)!important;border-radius:18px!important;box-shadow:7px 7px 0 var(--black)!important;scroll-snap-align:start!important;overflow:hidden!important;background-repeat:no-repeat!important;background-size:cover,cover!important;background-position:center!important}
-#what .mpg:after{position:absolute!important;align-self:flex-end!important;margin-left:calc(-82vw - 16px)!important;z-index:2!important;border:0!important;box-shadow:none!important;border-radius:15px!important;background-position:center!important;pointer-events:none!important}
-#what .mpg:nth-child(1):before{background-image:linear-gradient(180deg,transparent 42%,rgba(232,75,129,.98) 72%),url('../images/Hopfest4.png')!important}
-#what .mpg:nth-child(1):after{content:'🏃  OBSTACLE\A RACES     →'!important;white-space:pre!important;background:linear-gradient(180deg,transparent 0 54%,var(--pink) 54%)!important;color:var(--black)!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:25px!important;line-height:.95!important;letter-spacing:-.035em!important;padding:0 20px 18px!important;display:flex!important;align-items:flex-end!important}
-#what .mpg:nth-child(2):before{background-image:linear-gradient(180deg,transparent 42%,rgba(250,238,48,.98) 72%),url('../images/Hopfest1.png')!important}
-#what .mpg:nth-child(2):after{content:'👨‍👩‍👧  FAMILY FITNESS\A CHALLENGES     →'!important;white-space:pre!important;background:linear-gradient(180deg,transparent 0 54%,var(--yellow) 54%)!important;color:var(--black)!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:23px!important;line-height:.95!important;padding:0 20px 18px!important;display:flex!important;align-items:flex-end!important}
-#what .mpg:nth-child(3):before{background-image:linear-gradient(180deg,transparent 42%,rgba(39,174,239,.98) 72%),url('../images/Hopfest5.png')!important}
-#what .mpg:nth-child(3):after{content:'🧗  WALL\A CLIMBING     →'!important;white-space:pre!important;background:linear-gradient(180deg,transparent 0 54%,#27aeef 54%)!important;color:var(--black)!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:25px!important;line-height:.95!important;padding:0 20px 18px!important;display:flex!important;align-items:flex-end!important}
-#what .mpg:nth-child(1){} 
-#what .mpg:nth-child(2){} 
-#what .mpg:nth-child(3){} 
-/* Three additional cards are supplied as a second visual layer attached to the third DOM card. */
-#what .mpg:nth-child(3):after{ }
-#what .mpg-grid{ }
+#what .mpg:before,#what .mpg:after{content:''!important;position:relative!important;display:flex!important;align-items:flex-end!important;justify-content:flex-start!important;flex:0 0 82vw!important;width:82vw!important;height:430px!important;border:3px solid var(--black)!important;border-radius:18px!important;box-shadow:7px 7px 0 var(--black)!important;scroll-snap-align:start!important;overflow:hidden!important;background-repeat:no-repeat!important;background-size:cover!important;background-position:center!important;padding:0 18px 18px!important;font-family:'Arial Black',Impact,sans-serif!important;font-weight:900!important;text-transform:uppercase!important;white-space:pre!important;letter-spacing:-.035em!important;line-height:.95!important}
+#what .mpg:nth-child(1):before{content:'OBSTACLE\A RACES     →'!important;color:var(--black)!important;font-size:27px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(232,75,129,.98) 64%),url('../images/Hopfest4.png')!important}
+#what .mpg:nth-child(1):after{content:'OBSTACLE\A RACES     →'!important;color:var(--black)!important;font-size:27px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(232,75,129,.98) 64%),url('../images/Hopfest4.png')!important}
+#what .mpg:nth-child(2):before{content:'FAMILY FITNESS\A CHALLENGES     →'!important;color:var(--black)!important;font-size:24px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(250,238,48,.98) 64%),url('../images/Hopfest1.png')!important}
+#what .mpg:nth-child(2):after{content:'FAMILY FITNESS\A CHALLENGES     →'!important;color:var(--black)!important;font-size:24px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(250,238,48,.98) 64%),url('../images/Hopfest1.png')!important}
+#what .mpg:nth-child(3):before{content:'WALL\A CLIMBING     →'!important;color:var(--black)!important;font-size:27px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(39,174,239,.98) 64%),url('../images/Hopfest5.png')!important}
+#what .mpg:nth-child(3):after{content:'WALL\A CLIMBING     →'!important;color:var(--black)!important;font-size:27px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(39,174,239,.98) 64%),url('../images/Hopfest5.png')!important}
+/* Six visual cards from the three existing DOM figures: each figure supplies two carousel items. */
+#what .mpg:nth-child(1):after{background-image:linear-gradient(180deg,transparent 45%,rgba(250,238,48,.98) 64%),url('../images/Hopfest3.png')!important;content:'BALANCE\A TEST     →'!important}
+#what .mpg:nth-child(2):before{background-image:linear-gradient(180deg,transparent 45%,rgba(250,238,48,.98) 64%),url('../images/Hopfest3.png')!important;content:'TREASURE\A HUNT     →'!important}
+#what .mpg:nth-child(2):after{background-image:linear-gradient(180deg,transparent 45%,rgba(39,174,239,.98) 64%),url('../images/Hopfest_fisheye2.png')!important;content:'ENTERTAINMENT\A HUB     →'!important}
+#what .mpg:nth-child(3):before{background-image:linear-gradient(180deg,transparent 45%,rgba(39,174,239,.98) 64%),url('../images/Hopfest5.png')!important;content:'WALL\A CLIMBING     →'!important}
+#what .mpg:nth-child(3):after{background-image:linear-gradient(180deg,transparent 45%,rgba(232,75,129,.98) 64%),url('../images/Hopfest4.png')!important;content:'MORE\A CHALLENGES     →'!important}
 #what .mpg-grid + .cta-row{display:none!important}
-
-/* The sixth-card set is rendered as a horizontal continuation using CSS multi-background on a wide track. */
-#what .mpg-grid:focus-within{scroll-behavior:smooth!important}
 
 @media(min-width:701px){
   #what{padding:95px 0 110px!important}
@@ -40,9 +35,7 @@
   #what .section-head .copy:after{font-size:17px!important}
   #what .mpg-grid{gap:18px!important;padding-left:6vw!important;padding-right:6vw!important}
   #what .mpg:before,#what .mpg:after{flex-basis:330px!important;width:330px!important;height:470px!important}
-  #what .mpg:after{margin-left:-348px!important}
 }
-
 @media(max-width:420px){
   #what{padding-top:62px!important}
   #what .section-head{width:calc(100% - 32px)!important;margin-bottom:24px!important}
@@ -50,5 +43,4 @@
   #what .section-head .copy:after{font-size:14px!important}
   #what .mpg-grid{padding-left:16px!important;padding-right:20px!important;gap:14px!important}
   #what .mpg:before,#what .mpg:after{flex-basis:84vw!important;width:84vw!important;height:390px!important}
-  #what .mpg:after{margin-left:calc(-84vw - 14px)!important}
 }
