@@ -1,88 +1,19 @@
-/* HOP FEST — Phase 2.5: Type + Attitude */
-:root{--p25-ink:#090909;--p25-marker:'Patrick Hand','Comic Sans MS',cursive;--p25-display:'Bowlby One SC',Anton,Impact,sans-serif}
-body{letter-spacing:.005em}
-.hero-sub,.challenge-sub,.zone-no,.city-dot,.date-card h3,.family-highlight{font-family:var(--p25-display);letter-spacing:.015em}
-.hero-copy h1,.section-head h2,.experience-head h2,.challenge-grid h2,.family-grid h2,.cities-head h2,.tickets-head h2,.final-cta h2{text-shadow:3px 3px 0 var(--p25-ink)}
-.what-sticker,.hero-ticket small,.exp-star,.hero-collage .object,.challenge-grid .object,.family-grid .object{font-family:var(--p25-marker)}
-.what-sticker{font-size:24px;letter-spacing:.01em}.zone h3,.mpg-word{text-transform:uppercase;letter-spacing:.015em}.zone h3{text-shadow:2px 2px 0 var(--p25-ink)}
-.nav-links a,.nav .btn,.mobile-menu a{letter-spacing:.035em}.label{font-family:Inter,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:.12em}.zone h3,.city-dot,.date-card h3,.mpg-word{transition:transform .2s cubic-bezier(.2,.75,.25,1),letter-spacing .2s ease}.zone:hover h3{transform:translateX(4px) rotate(-1deg);letter-spacing:.025em}.city-node:hover .city-dot{letter-spacing:.035em}.hero-ticket small{font-family:var(--p25-marker);font-size:14px;line-height:1;letter-spacing:.04em;text-transform:none}.copy,.city-info,.date-card p,footer{font-family:Inter,Arial,sans-serif}
+@import url('./phase2-5-base.css');
 
-.photo .asset-label,.photo:before{display:none!important}.photo:after{background:none!important}.photo.missing img{opacity:1!important}
-.hero-main{background:#1c4892!important;overflow:hidden}.hero-main img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;object-position:center!important;content:url('../images/Hopfest_fisheye2.png?v=5')!important;opacity:1!important}.hero-main .asset-label{display:none!important}
-.hero-side{background-image:url('../images/Hopfest1.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.hero-side img{display:none!important}
-.mpg:nth-child(1){background-image:url('../images/Hopfest5.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.mpg:nth-child(2){background-image:url('../images/Hopfest3.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.mpg:nth-child(3){background-image:url('../images/Hopfest4.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.mpg img{display:none!important}
-.zone:nth-child(1) .photo{background-image:url('../images/Hopfest5.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.zone:nth-child(2) .photo{background-image:url('../images/Hopfest4.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.zone:nth-child(3) .photo{background-image:url('../images/Hopfest1.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.zone:nth-child(4) .photo{background-image:url('../images/Hopfest3.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.zone:nth-child(5) .photo{background-image:url('../images/Hopfest_fisheye2.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.zone .photo img{display:none!important}
-.challenge-photo{background-image:url('../images/Hopfest4.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.challenge-photo img{display:none!important}
-.family-photos .photo:nth-child(1){background-image:url('../images/Hopfest1.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.family-photos .photo:nth-child(2){background-image:url('../images/Hopfest3.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.family-photos .photo:nth-child(3){background-image:url('../images/Hopfest5.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.family-photos .photo img{display:none!important}
-.final-photo{background-image:url('../images/Hopfest_fisheye2.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.final-photo img{display:none!important}
-
-#what .section-head{position:relative;z-index:7}
-#what .section-head h2{position:relative;display:inline-block}
-#what .section-head h2:after{content:'3 WAYS TO HOP';position:absolute;right:-112px;top:-17px;padding:7px 10px;background:var(--yellow);border:2px solid var(--black);box-shadow:3px 3px 0 var(--black);font:800 9px/1 Inter,Arial,sans-serif;letter-spacing:.11em;transform:rotate(4deg)}
-#what .section-head:after{content:'RACE  +  PLAY  +  FRIENDS  +  ENERGY';display:block;margin:25px auto 0;width:max-content;max-width:90%;padding:9px 14px;background:var(--black);color:var(--yellow);font:800 10px/1 Inter,Arial,sans-serif;letter-spacing:.13em;transform:rotate(-1.2deg);box-shadow:4px 4px 0 var(--pink)}
-.mpg-grid{position:relative;perspective:1100px}.mpg{cursor:pointer;isolation:isolate;transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s ease,filter .3s ease;will-change:transform;overflow:visible}.mpg:before{content:'';position:absolute;inset:-10px;z-index:-1;border:2px dashed var(--black);opacity:0;transform:rotate(-2deg) scale(.96);transition:opacity .25s ease,transform .35s ease}.mpg:after{content:'HOP IN  →';position:absolute;right:16px;top:15px;z-index:6;padding:9px 11px;background:var(--yellow);color:var(--black);border:2px solid var(--black);box-shadow:3px 3px 0 var(--black);font:800 9px/1 Inter,Arial,sans-serif;letter-spacing:.12em;transform:translateY(-12px) rotate(3deg);opacity:0;transition:opacity .2s ease,transform .3s cubic-bezier(.2,.8,.2,1)}.mpg:hover{transform:translateY(-12px) rotate(-1deg) scale(1.025);box-shadow:9px 12px 0 var(--black);z-index:8;filter:saturate(1.08)}.mpg:nth-child(2):hover{transform:translateY(-12px) rotate(2deg) scale(1.035)}.mpg:nth-child(3):hover{transform:translateY(-12px) rotate(-.5deg) scale(1.025)}.mpg:hover:before{opacity:1;transform:rotate(1deg) scale(1)}.mpg:hover:after{opacity:1;transform:translateY(0) rotate(3deg)}.mpg:focus-visible{outline:4px solid var(--pink);outline-offset:7px}.mpg img{transition:transform .55s cubic-bezier(.2,.8,.2,1);transform:scale(1)}.mpg:hover img{transform:scale(1.06)}.mpg:before,.mpg:after{pointer-events:none}.mpg-word{transition:transform .3s cubic-bezier(.2,.8,.2,1),letter-spacing .3s ease,text-shadow .3s ease}.mpg:hover .mpg-word{transform:translate(7px,-4px) rotate(-2deg);letter-spacing:.035em;text-shadow:5px 5px 0 var(--black)}.mpg:nth-child(2):hover .mpg-word{transform:translate(-2px,-5px) rotate(2deg)}.mpg:nth-child(3):hover .mpg-word{transform:translate(6px,-3px) rotate(-1deg)}.mpg:nth-child(1):after{content:'READY TO MOVE?  →'}.mpg:nth-child(2):after{content:'YOUR TURN!  →';background:var(--pink);color:#fff}.mpg:nth-child(3):after{content:'TRY SOMETHING NEW  →';background:var(--lime)}.what-sticker{transition:transform .35s ease}.mpg-grid:hover .what-sticker{transform:rotate(9deg) translate(4px,-4px)}
-#what .mpg-grid:before{content:'01 — GO!';position:absolute;left:-48px;top:17%;z-index:9;font:400 18px/1 var(--p25-marker);transform:rotate(-8deg);color:var(--pink)}#what .mpg-grid:after{content:'02 — PLAY HARD';position:absolute;right:-64px;bottom:14%;z-index:9;font:400 18px/1 var(--p25-marker);transform:rotate(8deg);color:var(--purple)}
-@media(max-width:850px){#what .section-head h2:after{right:-65px;top:-27px}#what .mpg-grid:before{left:-8px;top:8%}.mpg-grid:after{right:-8px;bottom:7%}}
-@media(max-width:700px){#what .section-head h2:after{display:none}#what .section-head:after{font-size:8px;letter-spacing:.08em;line-height:1.3}.mpg:hover,.mpg:nth-child(2):hover,.mpg:nth-child(3):hover{transform:translateY(-6px) scale(1.015)}.mpg:hover .mpg-word{transform:translate(4px,-3px)}.mpg:after{opacity:1;transform:translateY(0) rotate(3deg);font-size:8px;padding:8px 9px}#what .mpg-grid:before,#what .mpg-grid:after{font-size:14px}}
-@media(prefers-reduced-motion:reduce){.mpg,.mpg img,.mpg:before,.mpg:after,.mpg-word,.what-sticker{transition:none!important}}
-
-/* HERO V2 — match the supplied HOP FEST reference. */
-#hero{min-height:calc(100svh - 72px);height:auto;padding:0;background:#1c4892;position:relative;display:block;overflow:hidden}
-#hero .hero-grid{width:100%;display:block;position:relative}
-#hero .hero-copy{position:absolute;z-index:8;left:22px;right:22px;top:58px;text-align:left}
-#hero .hero-kicker{display:none}
-#hero .hero-copy h1{position:relative;font-family:var(--p25-display)!important;font-weight:400!important;font-size:clamp(59px,17.5vw,103px);line-height:.82;max-width:430px;color:var(--yellow);text-shadow:6px 7px 0 var(--black);margin:0;letter-spacing:-.015em;text-transform:uppercase}
-#hero .hero-copy h1:before{content:'';position:absolute;left:-7px;top:-26px;width:54px;height:24px;background:linear-gradient(90deg,transparent 0 9px,var(--pink) 9px 14px,transparent 14px 27px,var(--pink) 27px 32px,transparent 32px 45px,var(--pink) 45px 50px,transparent 50px);transform:rotate(-8deg)}
-#hero .hero-sub{font-family:Inter,Arial,sans-serif!important;font-size:clamp(19px,5.1vw,28px)!important;font-weight:800!important;line-height:1.02;margin:20px 0 11px;max-width:350px;color:var(--black)!important;text-shadow:none!important;letter-spacing:.01em;text-transform:uppercase}
-#hero .hero-copy p{font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.36;max-width:315px;color:var(--black);margin:0 0 18px;text-shadow:none}
-#hero .hero-ctas{display:block}.hero-ctas .btn{font-family:var(--p25-display)!important;font-size:0!important;letter-spacing:.01em;padding:14px 28px;min-height:58px;min-width:190px;background:var(--pink)!important;color:#fff!important;border:3px solid var(--black);box-shadow:5px 5px 0 var(--black);clip-path:polygon(4% 0,100% 0,97% 100%,0 100%);transform:rotate(-1.5deg)}
-#hero .hero-ctas .btn:before{content:'GET YOUR PASS  →';font:400 20px/1 var(--p25-display);white-space:nowrap}
-#hero .hero-ctas .btn:hover{transform:translate(-2px,-2px) rotate(-1.5deg);box-shadow:7px 7px 0 var(--black)}
-#hero .hero-ctas .btn-outline{display:none}
-#hero .hero-collage{height:calc(100svh - 72px);min-height:690px;position:relative}
-#hero .hero-main{position:absolute;inset:0;width:100%;height:100%;clip-path:none;transform:none;box-shadow:none;background:#1c4892!important;border:0;z-index:1}
-#hero .hero-main:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.08) 0%,rgba(255,255,255,.02) 38%,rgba(8,21,54,.18) 72%,rgba(8,21,54,.34) 100%);z-index:2;pointer-events:none}
-#hero .hero-main img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;content:url('../images/Hopfest_fisheye2.png?v=hero-v2')!important;filter:saturate(1.08) contrast(1.03);opacity:1!important}
+/* HERO V3 — clean composition based on the supplied mobile reference. */
+#hero .hero-sticker{display:none!important}
 #hero .hero-side,#hero .hero-ticket,#hero .hero-collage .object{display:none!important}
-#hero .flag-line{display:none}
-#hero .hero-copy:after{display:none!important}
-#hero .hero-copy:before{display:none!important}
-
-@media(max-width:700px){
-  header{background:#fff;border-bottom:3px solid var(--black)}
-  .nav{height:88px;padding:0 22px}
-  .brand img{width:106px;height:54px}
-  .nav-links{display:none}
-  .nav .btn{display:inline-flex!important;font-size:0!important;min-width:0;padding:12px 17px;min-height:48px;background:var(--pink)!important;color:#fff!important;border:3px solid var(--black);box-shadow:4px 4px 0 var(--black);clip-path:polygon(4% 0,100% 0,97% 100%,0 100%);transform:rotate(-1.5deg)}
-  .nav .btn:before{content:'GET YOUR PASS  →';font:400 13px/1 var(--p25-display);white-space:nowrap}
-  .nav .btn:hover{transform:translate(-2px,-2px) rotate(-1.5deg)}
-  .burger{display:block;width:42px;height:42px;margin-left:4px}
-  .burger span{height:4px;margin:6px 0;background:var(--black)}
-  .nav{justify-content:space-between;gap:12px}
-  .nav .btn{margin-left:auto}
-  #hero .hero-copy{left:22px;right:22px;top:66px}
-  #hero .hero-copy h1{font-size:17.5vw;max-width:410px}
-  #hero .hero-sub{font-size:20px!important;max-width:300px;margin-top:18px}
-  #hero .hero-copy p{font-size:13px;max-width:285px;margin-bottom:17px}
-  #hero .hero-collage{min-height:650px}
-}
-@media(max-width:420px){
-  #hero .hero-copy{left:18px;right:18px;top:53px}
-  #hero .hero-copy h1{font-size:19.2vw}
-  #hero .hero-copy h1:before{left:-4px;top:-21px;transform:scale(.85) rotate(-8deg);transform-origin:left center}
-  #hero .hero-sub{font-size:18px!important;max-width:280px}
-  #hero .hero-copy p{font-size:12.5px;max-width:275px}
-  #hero .hero-ctas .btn{min-width:180px;padding:13px 24px}
-  #hero .hero-ctas .btn:before{font-size:18px}
-}
-@media(min-width:701px){
-  #hero{min-height:calc(100vh - 88px);height:auto;padding:0;display:flex;align-items:stretch}
-  #hero .hero-grid{display:block;width:100%;min-height:calc(100vh - 88px)}
-  #hero .hero-collage{height:calc(100vh - 88px);min-height:720px}
-  #hero .hero-main img{object-position:center center!important}
-  #hero .hero-copy{left:7vw;right:auto;top:9vh;max-width:520px}
-  #hero .hero-copy h1{font-size:clamp(82px,9vw,142px);max-width:560px}
-  #hero .hero-sub{font-size:clamp(24px,2.4vw,35px)!important;max-width:480px}
-  #hero .hero-copy p{font-size:16px;max-width:460px}
-}
-@media(prefers-reduced-motion:reduce){#hero .hero-main img{filter:none}}
+#hero .hero-copy:before,#hero .hero-copy:after{display:none!important}
+#hero .hero-copy h1{font-family:'Bowlby One SC',Anton,Impact,sans-serif!important;font-weight:400!important;text-transform:uppercase;color:var(--yellow)!important;text-shadow:6px 7px 0 var(--black)!important;letter-spacing:-.02em;line-height:.82;white-space:nowrap;width:130%;max-width:none;transform:scaleX(.82);transform-origin:left top;margin:0}
+#hero .hero-copy h1:before{content:'';display:block;position:absolute;left:2px;top:-25px;width:58px;height:22px;background:linear-gradient(90deg,var(--pink) 0 5px,transparent 5px 20px,var(--pink) 20px 25px,transparent 25px 40px,var(--pink) 40px 45px,transparent 45px);transform:rotate(-7deg)}
+#hero .hero-sub{font-family:Inter,Arial,sans-serif!important;font-weight:800!important;text-transform:uppercase;color:var(--black)!important;text-shadow:none!important;letter-spacing:.005em;line-height:1.02;max-width:310px}
+#hero .hero-copy p{font-family:Inter,Arial,sans-serif!important;color:var(--black)!important;text-shadow:none!important;line-height:1.38;max-width:310px}
+#hero .hero-ctas .btn{font-family:'Bowlby One SC',Anton,Impact,sans-serif!important;font-size:0!important;background:var(--pink)!important;color:#fff!important;border:3px solid var(--black);box-shadow:5px 5px 0 var(--black);clip-path:polygon(3% 0,100% 0,98% 100%,0 100%);transform:rotate(-1deg);position:relative;min-width:0}
+#hero .hero-ctas .btn:before{content:'GET YOUR PASS  →';font:400 20px/1 'Bowlby One SC',Anton,Impact,sans-serif;white-space:nowrap}
+#hero .hero-ctas .btn:after{content:'';position:absolute;right:52px;top:9px;bottom:9px;border-left:2px dashed rgba(255,255,255,.9)}
+#hero .hero-ctas .btn svg{display:none!important}
+#hero .hero-main img{object-fit:cover!important;object-position:center 44%!important;filter:saturate(1.03) contrast(1.02)!important}
+#hero .hero-main:after{background:linear-gradient(180deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,0) 48%,rgba(8,21,54,.22) 100%)!important}
+@media(max-width:700px){#hero .hero-copy{left:20px;right:20px;top:88px}#hero .hero-copy h1{font-size:17.2vw;line-height:.82;width:128%;transform:scaleX(.82)}#hero .hero-sub{font-size:18px!important;margin:18px 0 9px;max-width:300px}#hero .hero-copy p{font-size:13px;max-width:285px;margin:0 0 18px}#hero .hero-ctas .btn{padding:15px 25px;min-height:58px;min-width:206px}#hero .hero-ctas .btn:before{font-size:18px}#hero .hero-ctas .btn:after{right:48px}#hero .hero-collage{height:calc(100svh - 72px);min-height:700px}#hero .hero-main img{object-position:center 44%!important}.nav .btn:before{content:'GET YOUR PASS  →';font:400 13px/1 'Bowlby One SC',Anton,Impact,sans-serif}.nav .btn svg{display:none!important}}
+@media(max-width:420px){#hero .hero-copy{left:18px;right:18px;top:78px}#hero .hero-copy h1{font-size:17.8vw;width:132%;transform:scaleX(.78)}#hero .hero-sub{font-size:17px!important;margin-top:16px;max-width:275px}#hero .hero-copy p{font-size:12.5px;max-width:270px;margin-bottom:16px}#hero .hero-ctas .btn{min-width:196px;padding:14px 23px}#hero .hero-ctas .btn:before{font-size:17px}}
+@media(min-width:701px){#hero .hero-copy{left:7vw;right:auto;top:10vh;max-width:570px}#hero .hero-copy h1{font-size:clamp(82px,8.5vw,138px);width:125%;transform:scaleX(.8)}#hero .hero-sub{font-size:clamp(24px,2.4vw,34px)!important;margin-top:22px;max-width:470px}#hero .hero-copy p{font-size:16px;max-width:430px}#hero .hero-collage{height:calc(100vh - 88px);min-height:720px}}
