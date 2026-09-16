@@ -1,1 +1,52 @@
 @import url('./hero-fix.css');
+
+/* HOP FEST — ACTIVITIES SECTION 01
+   Mobile-first: answer “What will I actually DO?” with visual activity cards. */
+#what{background:var(--blue)!important;color:#fff!important;padding:78px 0 88px!important;overflow:hidden!important}
+#what .wrap{width:min(1240px,calc(100% - 40px))!important}
+#what .section-head{max-width:760px!important;margin:0 auto 34px!important;text-align:left!important}
+#what .section-head h2.title{font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;font-size:clamp(48px,7vw,82px)!important;line-height:.88!important;letter-spacing:-.035em!important;text-transform:uppercase!important;color:var(--yellow)!important;text-shadow:5px 5px 0 var(--black)!important;max-width:650px!important}
+#what .section-head h2.title{font-size:0!important}
+#what .section-head h2.title:after{content:'WHAT WILL I DO?'!important;font-size:clamp(48px,7vw,82px)!important}
+#what .section-head .copy{font-family:Inter,Arial,sans-serif!important;font-size:15px!important;line-height:1.45!important;color:#fff!important;max-width:520px!important;margin:15px 0 0!important}
+#what .section-head .copy{font-size:0!important}
+#what .section-head .copy:after{content:'Sports, races, challenges and games — all built into one action-packed day.'!important;font-size:15px!important}
+
+#what .mpg-grid{display:flex!important;gap:18px!important;max-width:none!important;margin:0!important;align-items:stretch!important;overflow-x:auto!important;overflow-y:visible!important;padding:8px 5px 20px 5px!important;scroll-snap-type:x mandatory!important;-webkit-overflow-scrolling:touch!important;scrollbar-width:none!important}
+#what .mpg-grid::-webkit-scrollbar{display:none!important}
+#what .mpg{position:relative!important;flex:0 0 82vw!important;width:82vw!important;height:390px!important;margin:0!important;transform:none!important;border:3px solid var(--black)!important;box-shadow:7px 7px 0 var(--black)!important;scroll-snap-align:start!important;overflow:hidden!important;background:var(--black)!important}
+#what .mpg:nth-child(1),#what .mpg:nth-child(2),#what .mpg:nth-child(3){height:390px!important;transform:none!important;z-index:auto!important}
+#what .mpg:after{content:''!important;position:absolute!important;inset:0!important;border:0!important;pointer-events:none!important;z-index:2!important;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.72) 100%)!important}
+#what .mpg img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important}
+#what .mpg .asset-label{display:none!important}
+#what .mpg-word{position:absolute!important;left:18px!important;right:18px!important;bottom:18px!important;z-index:5!important;font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;font-size:0!important;line-height:.88!important;letter-spacing:-.025em!important;text-transform:uppercase!important;color:#fff!important;text-shadow:4px 4px 0 var(--black)!important}
+#what .mpg:nth-child(1) .mpg-word:after{content:'OBSTACLE RACES'!important;font-size:clamp(34px,9vw,58px)!important;color:var(--yellow)!important}
+#what .mpg:nth-child(2) .mpg-word:after{content:'FITNESS CHALLENGES'!important;font-size:clamp(30px,8vw,52px)!important;color:#fff!important}
+#what .mpg:nth-child(3) .mpg-word:after{content:'TEAM GAMES'!important;font-size:clamp(38px,9vw,58px)!important;color:var(--lime)!important}
+#what .what-sticker,#what .what-arrow{display:none!important}
+#what .mpg-grid:after{content:'SWIPE  →'!important;position:sticky!important;right:0!important;align-self:flex-end!important;flex:0 0 auto!important;margin:0 2px 4px -7px!important;padding:10px 13px!important;background:var(--pink)!important;color:#fff!important;border:3px solid var(--black)!important;box-shadow:4px 4px 0 var(--black)!important;font:400 14px/.9 'Bowlby One SC',Impact,sans-serif!important;z-index:8!important}
+
+@media(min-width:701px){
+  #what{padding:105px 0 115px!important}
+  #what .wrap{width:min(1180px,calc(100% - 48px))!important}
+  #what .section-head{margin-bottom:46px!important;text-align:left!important}
+  #what .section-head h2.title:after{font-size:clamp(58px,6vw,82px)!important}
+  #what .section-head .copy:after{font-size:17px!important}
+  #what .mpg-grid{display:grid!important;grid-template-columns:1.05fr .9fr 1.05fr!important;gap:16px!important;overflow:visible!important;padding:8px 5px 12px!important}
+  #what .mpg{width:auto!important;flex:auto!important;height:470px!important}
+  #what .mpg:nth-child(1){height:470px!important}
+  #what .mpg:nth-child(2){height:410px!important;margin-top:30px!important}
+  #what .mpg:nth-child(3){height:500px!important}
+  #what .mpg-grid:after{display:none!important}
+}
+
+@media(max-width:420px){
+  #what{padding-top:68px!important}
+  #what .section-head h2.title:after{font-size:46px!important}
+  #what .section-head .copy:after{font-size:14px!important}
+  #what .mpg{flex-basis:84vw!important;height:360px!important}
+  #what .mpg:nth-child(1),#what .mpg:nth-child(2),#what .mpg:nth-child(3){height:360px!important}
+  #what .mpg:nth-child(1) .mpg-word:after{font-size:33px!important}
+  #what .mpg:nth-child(2) .mpg-word:after{font-size:29px!important}
+  #what .mpg:nth-child(3) .mpg-word:after{font-size:36px!important}
+}
