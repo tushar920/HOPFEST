@@ -14,18 +14,13 @@
 #what .mpg{display:contents!important}
 #what .mpg img,#what .mpg .asset-label,#what .mpg .mpg-word{display:none!important}
 #what .mpg:before,#what .mpg:after{content:''!important;position:relative!important;display:flex!important;align-items:flex-end!important;justify-content:flex-start!important;flex:0 0 82vw!important;width:82vw!important;height:430px!important;border:3px solid var(--black)!important;border-radius:18px!important;box-shadow:7px 7px 0 var(--black)!important;scroll-snap-align:start!important;overflow:hidden!important;background-repeat:no-repeat!important;background-size:cover!important;background-position:center!important;padding:0 18px 18px!important;font-family:'Arial Black',Impact,sans-serif!important;font-weight:900!important;text-transform:uppercase!important;white-space:pre!important;letter-spacing:-.035em!important;line-height:.95!important}
+/* Sequence: Obstacle Races → Family Fitness → Wall Climbing → Balance Test → Treasure Hunt → Entertainment Hub */
 #what .mpg:nth-child(1):before{content:'OBSTACLE\A RACES     →'!important;color:var(--black)!important;font-size:27px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(232,75,129,.98) 64%),url('../images/Hopfest4.png')!important}
-#what .mpg:nth-child(1):after{content:'OBSTACLE\A RACES     →'!important;color:var(--black)!important;font-size:27px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(232,75,129,.98) 64%),url('../images/Hopfest4.png')!important}
-#what .mpg:nth-child(2):before{content:'FAMILY FITNESS\A CHALLENGES     →'!important;color:var(--black)!important;font-size:24px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(250,238,48,.98) 64%),url('../images/Hopfest1.png')!important}
-#what .mpg:nth-child(2):after{content:'FAMILY FITNESS\A CHALLENGES     →'!important;color:var(--black)!important;font-size:24px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(250,238,48,.98) 64%),url('../images/Hopfest1.png')!important}
-#what .mpg:nth-child(3):before{content:'WALL\A CLIMBING     →'!important;color:var(--black)!important;font-size:27px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(39,174,239,.98) 64%),url('../images/Hopfest5.png')!important}
-#what .mpg:nth-child(3):after{content:'WALL\A CLIMBING     →'!important;color:var(--black)!important;font-size:27px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(39,174,239,.98) 64%),url('../images/Hopfest5.png')!important}
-/* Six visual cards from the three existing DOM figures: each figure supplies two carousel items. */
-#what .mpg:nth-child(1):after{background-image:linear-gradient(180deg,transparent 45%,rgba(250,238,48,.98) 64%),url('../images/Hopfest3.png')!important;content:'BALANCE\A TEST     →'!important}
-#what .mpg:nth-child(2):before{background-image:linear-gradient(180deg,transparent 45%,rgba(250,238,48,.98) 64%),url('../images/Hopfest3.png')!important;content:'TREASURE\A HUNT     →'!important}
-#what .mpg:nth-child(2):after{background-image:linear-gradient(180deg,transparent 45%,rgba(39,174,239,.98) 64%),url('../images/Hopfest_fisheye2.png')!important;content:'ENTERTAINMENT\A HUB     →'!important}
-#what .mpg:nth-child(3):before{background-image:linear-gradient(180deg,transparent 45%,rgba(39,174,239,.98) 64%),url('../images/Hopfest5.png')!important;content:'WALL\A CLIMBING     →'!important}
-#what .mpg:nth-child(3):after{background-image:linear-gradient(180deg,transparent 45%,rgba(232,75,129,.98) 64%),url('../images/Hopfest4.png')!important;content:'MORE\A CHALLENGES     →'!important}
+#what .mpg:nth-child(1):after{content:'FAMILY FITNESS\A CHALLENGES     →'!important;color:var(--black)!important;font-size:23px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(250,238,48,.98) 64%),url('../images/Hopfest1.png')!important}
+#what .mpg:nth-child(2):before{content:'WALL\A CLIMBING     →'!important;color:var(--black)!important;font-size:27px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(39,174,239,.98) 64%),url('../images/Hopfest5.png')!important}
+#what .mpg:nth-child(2):after{content:'BALANCE\A TEST     →'!important;color:var(--black)!important;font-size:27px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(232,75,129,.98) 64%),url('../images/Hopfest4.png')!important}
+#what .mpg:nth-child(3):before{content:'TREASURE\A HUNT     →'!important;color:var(--black)!important;font-size:27px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(250,238,48,.98) 64%),url('../images/Hopfest3.png')!important}
+#what .mpg:nth-child(3):after{content:'ENTERTAINMENT\A HUB     →'!important;color:var(--black)!important;font-size:24px!important;background-image:linear-gradient(180deg,transparent 45%,rgba(39,174,239,.98) 64%),url('../images/Hopfest_fisheye2.png')!important}
 #what .mpg-grid + .cta-row{display:none!important}
 
 @media(min-width:701px){
