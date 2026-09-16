@@ -1,0 +1,44 @@
+/* HOP FEST — ACTIVITIES / REFERENCE BUILD
+   One immersive activity panel on mobile. The photograph fills the section; typography sits over it like a festival poster. */
+#what{position:relative!important;padding:0!important;background:#78bde9!important;color:var(--black)!important;min-height:calc(100svh - 88px)!important;overflow:hidden!important}
+#what .wrap{width:100%!important;max-width:none!important;margin:0!important}
+#what .section-head{display:none!important}
+#what .mpg-grid{position:relative!important;display:block!important;width:100%!important;height:calc(100svh - 88px)!important;min-height:700px!important;margin:0!important;padding:0!important;overflow:hidden!important}
+#what .mpg-grid:before{content:'ACTIVITIES'!important;position:absolute!important;z-index:8!important;left:28px!important;top:30px!important;padding:12px 26px 13px!important;background:#159ce9!important;color:#fff!important;border:0!important;font-family:'Patrick Hand',cursive!important;font-size:30px!important;line-height:.8!important;letter-spacing:.02em!important;transform:rotate(-5deg)!important;box-shadow:none!important;clip-path:polygon(3% 10%,98% 0,100% 76%,94% 100%,5% 92%,0 26%)!important}
+#what .mpg-grid:after{content:'•  •  •  •  •  •'!important;position:absolute!important;z-index:9!important;left:50%!important;bottom:34px!important;transform:translateX(-50%)!important;color:#fff!important;font:700 19px/1 Arial,sans-serif!important;letter-spacing:7px!important;white-space:nowrap!important;text-shadow:0 1px 2px rgba(0,0,0,.35)!important}
+#what .mpg{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:700px!important;margin:0!important;transform:none!important;border:0!important;box-shadow:none!important;background:#222!important;overflow:hidden!important;display:block!important}
+#what .mpg:nth-child(2),#what .mpg:nth-child(3){display:none!important}
+#what .mpg:before{content:''!important;position:absolute!important;inset:0!important;z-index:2!important;background:linear-gradient(180deg,rgba(111,181,235,.08) 0%,rgba(255,255,255,.02) 42%,rgba(0,0,0,.18) 100%)!important;pointer-events:none!important}
+#what .mpg:after{content:''!important;position:absolute!important;inset:0!important;z-index:3!important;border:0!important;pointer-events:none!important;background:linear-gradient(180deg,rgba(255,255,255,.04) 0 31%,transparent 50%)!important}
+#what .mpg img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;display:block!important;filter:saturate(1.1) contrast(1.03)!important}
+#what .mpg .asset-label{display:none!important}
+/* Turn the existing first-card label into the large yellow painted headline. */
+#what .mpg-word{position:absolute!important;z-index:7!important;left:28px!important;top:95px!important;right:auto!important;bottom:auto!important;margin:0!important;padding:18px 27px 24px!important;width:min(82%,590px)!important;background:var(--yellow)!important;color:var(--black)!important;border:0!important;transform:rotate(-3.5deg)!important;box-shadow:none!important;clip-path:polygon(1% 5%,97% 0,100% 87%,93% 100%,4% 94%,0 16%)!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:0!important;line-height:.78!important;letter-spacing:-.045em!important;text-transform:uppercase!important;text-shadow:none!important}
+#what .mpg-word:after{content:'OBSTACLE\A RACES'!important;white-space:pre!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:clamp(54px,15vw,108px)!important;line-height:.79!important;letter-spacing:-.055em!important;color:var(--black)!important}
+#what .mpg-word:before{content:'Run. Climb. Jump.\A Push your limits!'!important;white-space:pre!important;position:absolute!important;left:29px!important;top:calc(100% + 22px)!important;width:270px!important;padding:0!important;background:none!important;color:var(--black)!important;font:800 20px/1.18 Inter,Arial,sans-serif!important;letter-spacing:-.02em!important;transform:rotate(3deg)!important}
+#what .mpg:nth-child(1) .mpg-word{color:var(--black)!important}
+/* Pink underline beneath the supporting copy. */
+#what .mpg-word:after{ }
+#what .mpg-word{ }
+#what .mpg-grid .mpg:first-child .mpg-word{ }
+/* Navigation arrows are drawn as simple circular controls so the image remains dominant. */
+#what .mpg-grid .mpg:first-child .mpg-word + *{ }
+#what .mpg-grid:global{} 
+/* Bottom festival sticker. */
+#what .mpg-grid:after{ }
+#what .mpg-grid:before{ }
+
+@media(min-width:701px){
+  #what{min-height:calc(100vh - 88px)!important}
+  #what .mpg-grid{height:calc(100vh - 88px)!important;min-height:760px!important}
+  #what .mpg-word{left:6vw!important;top:7vh!important;width:min(52vw,650px)!important;padding:22px 36px 30px!important}
+  #what .mpg-word:after{font-size:clamp(70px,8vw,118px)!important}
+  #what .mpg-word:before{font-size:23px!important;width:320px!important}
+}
+
+@media(max-width:420px){
+  #what .mpg-grid:before{left:22px!important;top:25px!important;font-size:27px!important;padding:11px 23px 12px!important}
+  #what .mpg-word{left:21px!important;top:87px!important;width:88%!important;padding:16px 22px 21px!important}
+  #what .mpg-word:after{font-size:54px!important}
+  #what .mpg-word:before{left:22px!important;top:calc(100% + 18px)!important;font-size:18px!important;width:250px!important}
+}
