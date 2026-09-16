@@ -7,10 +7,7 @@ body{letter-spacing:.005em}
 .what-sticker{font-size:24px;letter-spacing:.01em}.zone h3,.mpg-word{text-transform:uppercase;letter-spacing:.015em}.zone h3{text-shadow:2px 2px 0 var(--p25-ink)}
 .nav-links a,.nav .btn,.mobile-menu a{letter-spacing:.035em}.label{font-family:Inter,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:.12em}.zone h3,.city-dot,.date-card h3,.mpg-word{transition:transform .2s cubic-bezier(.2,.75,.25,1),letter-spacing .2s ease}.zone:hover h3{transform:translateX(4px) rotate(-1deg);letter-spacing:.025em}.city-node:hover .city-dot{letter-spacing:.035em}.hero-ticket small{font-family:var(--p25-marker);font-size:14px;line-height:1;letter-spacing:.04em;text-transform:none}.copy,.city-info,.date-card p,footer{font-family:Inter,Arial,sans-serif}
 
-/* Supplied HOP FEST photography — remove all placeholder/stripe treatments. */
 .photo .asset-label,.photo:before{display:none!important}.photo:after{background:none!important}.photo.missing img{opacity:1!important}
-
-/* HERO: use the actual image element, not a background layer. */
 .hero-main{background:#1c4892!important;overflow:hidden}.hero-main img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;object-position:center!important;content:url('../images/Hopfest_fisheye2.png?v=5')!important;opacity:1!important}.hero-main .asset-label{display:none!important}
 .hero-side{background-image:url('../images/Hopfest1.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.hero-side img{display:none!important}
 .mpg:nth-child(1){background-image:url('../images/Hopfest5.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.mpg:nth-child(2){background-image:url('../images/Hopfest3.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.mpg:nth-child(3){background-image:url('../images/Hopfest4.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.mpg img{display:none!important}
@@ -19,52 +16,43 @@ body{letter-spacing:.005em}
 .family-photos .photo:nth-child(1){background-image:url('../images/Hopfest1.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.family-photos .photo:nth-child(2){background-image:url('../images/Hopfest3.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.family-photos .photo:nth-child(3){background-image:url('../images/Hopfest5.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.family-photos .photo img{display:none!important}
 .final-photo{background-image:url('../images/Hopfest_fisheye2.png?v=5')!important;background-position:center;background-size:cover;background-repeat:no-repeat}.final-photo img{display:none!important}
 
-/* =========================================================
-   PHASE 1 — MOVE. PLAY. GROW.
-   Turn the three editorial photo panels into interactive festival zones.
-   ========================================================= */
 #what .section-head{position:relative;z-index:7}
 #what .section-head h2{position:relative;display:inline-block}
 #what .section-head h2:after{content:'3 WAYS TO HOP';position:absolute;right:-112px;top:-17px;padding:7px 10px;background:var(--yellow);border:2px solid var(--black);box-shadow:3px 3px 0 var(--black);font:800 9px/1 Inter,Arial,sans-serif;letter-spacing:.11em;transform:rotate(4deg)}
 #what .section-head:after{content:'RACE  +  PLAY  +  FRIENDS  +  ENERGY';display:block;margin:25px auto 0;width:max-content;max-width:90%;padding:9px 14px;background:var(--black);color:var(--yellow);font:800 10px/1 Inter,Arial,sans-serif;letter-spacing:.13em;transform:rotate(-1.2deg);box-shadow:4px 4px 0 var(--pink)}
-.mpg-grid{position:relative;perspective:1100px}
-.mpg{cursor:pointer;isolation:isolate;transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s ease,filter .3s ease;will-change:transform;overflow:visible}
-.mpg:before{content:'';position:absolute;inset:-10px;z-index:-1;border:2px dashed var(--black);opacity:0;transform:rotate(-2deg) scale(.96);transition:opacity .25s ease,transform .35s ease}
-.mpg:after{content:'HOP IN  →';position:absolute;right:16px;top:15px;z-index:6;padding:9px 11px;background:var(--yellow);color:var(--black);border:2px solid var(--black);box-shadow:3px 3px 0 var(--black);font:800 9px/1 Inter,Arial,sans-serif;letter-spacing:.12em;transform:translateY(-12px) rotate(3deg);opacity:0;transition:opacity .2s ease,transform .3s cubic-bezier(.2,.8,.2,1)}
-.mpg:hover{transform:translateY(-12px) rotate(-1deg) scale(1.025);box-shadow:9px 12px 0 var(--black);z-index:8;filter:saturate(1.08)}
-.mpg:nth-child(2):hover{transform:translateY(-12px) rotate(2deg) scale(1.035)}
-.mpg:nth-child(3):hover{transform:translateY(-12px) rotate(-.5deg) scale(1.025)}
-.mpg:hover:before{opacity:1;transform:rotate(1deg) scale(1)}
-.mpg:hover:after{opacity:1;transform:translateY(0) rotate(3deg)}
-.mpg:focus-visible{outline:4px solid var(--pink);outline-offset:7px}
-.mpg img{transition:transform .55s cubic-bezier(.2,.8,.2,1);transform:scale(1)}
-.mpg:hover img{transform:scale(1.06)}
-.mpg:before,.mpg:after{pointer-events:none}
-.mpg-word{transition:transform .3s cubic-bezier(.2,.8,.2,1),letter-spacing .3s ease,text-shadow .3s ease}
-.mpg:hover .mpg-word{transform:translate(7px,-4px) rotate(-2deg);letter-spacing:.035em;text-shadow:5px 5px 0 var(--black)}
-.mpg:nth-child(2):hover .mpg-word{transform:translate(-2px,-5px) rotate(2deg)}
-.mpg:nth-child(3):hover .mpg-word{transform:translate(6px,-3px) rotate(-1deg)}
-.mpg:nth-child(1):after{content:'READY TO MOVE?  →'}
-.mpg:nth-child(2):after{content:'YOUR TURN!  →';background:var(--pink);color:#fff}
-.mpg:nth-child(3):after{content:'TRY SOMETHING NEW  →';background:var(--lime)}
-.what-sticker{transition:transform .35s ease}.mpg-grid:hover .what-sticker{transform:rotate(9deg) translate(4px,-4px)}
+.mpg-grid{position:relative;perspective:1100px}.mpg{cursor:pointer;isolation:isolate;transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s ease,filter .3s ease;will-change:transform;overflow:visible}.mpg:before{content:'';position:absolute;inset:-10px;z-index:-1;border:2px dashed var(--black);opacity:0;transform:rotate(-2deg) scale(.96);transition:opacity .25s ease,transform .35s ease}.mpg:after{content:'HOP IN  →';position:absolute;right:16px;top:15px;z-index:6;padding:9px 11px;background:var(--yellow);color:var(--black);border:2px solid var(--black);box-shadow:3px 3px 0 var(--black);font:800 9px/1 Inter,Arial,sans-serif;letter-spacing:.12em;transform:translateY(-12px) rotate(3deg);opacity:0;transition:opacity .2s ease,transform .3s cubic-bezier(.2,.8,.2,1)}.mpg:hover{transform:translateY(-12px) rotate(-1deg) scale(1.025);box-shadow:9px 12px 0 var(--black);z-index:8;filter:saturate(1.08)}.mpg:nth-child(2):hover{transform:translateY(-12px) rotate(2deg) scale(1.035)}.mpg:nth-child(3):hover{transform:translateY(-12px) rotate(-.5deg) scale(1.025)}.mpg:hover:before{opacity:1;transform:rotate(1deg) scale(1)}.mpg:hover:after{opacity:1;transform:translateY(0) rotate(3deg)}.mpg:focus-visible{outline:4px solid var(--pink);outline-offset:7px}.mpg img{transition:transform .55s cubic-bezier(.2,.8,.2,1);transform:scale(1)}.mpg:hover img{transform:scale(1.06)}.mpg:before,.mpg:after{pointer-events:none}.mpg-word{transition:transform .3s cubic-bezier(.2,.8,.2,1),letter-spacing .3s ease,text-shadow .3s ease}.mpg:hover .mpg-word{transform:translate(7px,-4px) rotate(-2deg);letter-spacing:.035em;text-shadow:5px 5px 0 var(--black)}.mpg:nth-child(2):hover .mpg-word{transform:translate(-2px,-5px) rotate(2deg)}.mpg:nth-child(3):hover .mpg-word{transform:translate(6px,-3px) rotate(-1deg)}.mpg:nth-child(1):after{content:'READY TO MOVE?  →'}.mpg:nth-child(2):after{content:'YOUR TURN!  →';background:var(--pink);color:#fff}.mpg:nth-child(3):after{content:'TRY SOMETHING NEW  →';background:var(--lime)}.what-sticker{transition:transform .35s ease}.mpg-grid:hover .what-sticker{transform:rotate(9deg) translate(4px,-4px)}
+#what .mpg-grid:before{content:'01 — GO!';position:absolute;left:-48px;top:17%;z-index:9;font:400 18px/1 var(--p25-marker);transform:rotate(-8deg);color:var(--pink)}#what .mpg-grid:after{content:'02 — PLAY HARD';position:absolute;right:-64px;bottom:14%;z-index:9;font:400 18px/1 var(--p25-marker);transform:rotate(8deg);color:var(--purple)}
+@media(max-width:850px){#what .section-head h2:after{right:-65px;top:-27px}#what .mpg-grid:before{left:-8px;top:8%}.mpg-grid:after{right:-8px;bottom:7%}}
+@media(max-width:700px){#what .section-head h2:after{display:none}#what .section-head:after{font-size:8px;letter-spacing:.08em;line-height:1.3}.mpg:hover,.mpg:nth-child(2):hover,.mpg:nth-child(3):hover{transform:translateY(-6px) scale(1.015)}.mpg:hover .mpg-word{transform:translate(4px,-3px)}.mpg:after{opacity:1;transform:translateY(0) rotate(3deg);font-size:8px;padding:8px 9px}#what .mpg-grid:before,#what .mpg-grid:after{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.mpg,.mpg img,.mpg:before,.mpg:after,.mpg-word,.what-sticker{transition:none!important}}
 
-/* Small festival annotations around the photo row. */
-#what .mpg-grid:before{content:'01 — GO!';position:absolute;left:-48px;top:17%;z-index:9;font:400 18px/1 var(--p25-marker);transform:rotate(-8deg);color:var(--pink)}
-#what .mpg-grid:after{content:'02 — PLAY HARD';position:absolute;right:-64px;bottom:14%;z-index:9;font:400 18px/1 var(--p25-marker);transform:rotate(8deg);color:var(--purple)}
-
-@media(max-width:850px){
-  #what .section-head h2:after{right:-65px;top:-27px}
-  #what .mpg-grid:before{left:-8px;top:8%}.mpg-grid:after{right:-8px;bottom:7%}
+/* HERO V1 — mobile-first build from the approved full-page reference. */
+#hero{min-height:calc(100svh - 72px);height:auto;padding:0;background:#1c4892;position:relative;display:block;overflow:hidden}
+#hero .hero-grid{width:100%;display:block;position:relative}
+#hero .hero-copy{position:absolute;z-index:8;left:22px;right:22px;top:54px;text-align:left}
+#hero .hero-kicker{display:none}
+#hero .hero-copy h1{font-size:clamp(66px,19vw,112px);line-height:.82;max-width:430px;color:var(--yellow);text-shadow:5px 5px 0 var(--black);margin:0;letter-spacing:.005em}
+#hero .hero-sub{font-family:var(--p25-display);font-size:clamp(22px,6vw,31px);line-height:.98;margin:18px 0 10px;max-width:320px;color:#fff;text-shadow:2px 2px 0 var(--black)}
+#hero .hero-copy p{font-size:14px;line-height:1.38;max-width:315px;color:#fff;margin:0 0 18px;text-shadow:1px 1px 0 rgba(0,0,0,.45)}
+#hero .hero-ctas{display:block}.hero-ctas .btn{font-size:18px;padding:14px 24px;min-height:52px}.hero-ctas .btn-outline{display:none}
+#hero .hero-collage{height:calc(100svh - 72px);min-height:690px;position:relative}
+#hero .hero-main{position:absolute;inset:0;width:100%;height:100%;clip-path:none;transform:none;box-shadow:none;background:#1c4892!important;border:0;z-index:1}
+#hero .hero-main:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,21,54,.25) 0%,rgba(8,21,54,.08) 34%,rgba(8,21,54,.15) 58%,rgba(8,21,54,.55) 100%);z-index:2;pointer-events:none}
+#hero .hero-main img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;content:url('../images/Hopfest_fisheye2.png?v=hero-mobile')!important;filter:saturate(1.08) contrast(1.03);opacity:1!important}
+#hero .hero-side,#hero .hero-ticket,#hero .hero-collage .object{display:none!important}
+#hero .flag-line{display:none}
+#hero .hero-copy:after{content:'MORE THAN A GAME';display:inline-block;margin-top:16px;padding:8px 12px;background:var(--yellow);color:var(--black);border:3px solid var(--black);box-shadow:4px 4px 0 var(--black);font:400 14px/.9 var(--p25-marker);transform:rotate(-4deg)}
+#hero .hero-copy:before{content:'';position:absolute;width:76px;height:14px;right:8px;top:-22px;border-top:4px solid var(--yellow);border-bottom:4px solid var(--yellow);transform:rotate(-8deg);opacity:.95}
+@media(min-width:701px){
+  #hero{min-height:calc(100vh - 88px);height:auto;padding:0;display:flex;align-items:stretch}
+  #hero .hero-grid{display:block;width:100%;min-height:calc(100vh - 88px)}
+  #hero .hero-collage{height:calc(100vh - 88px);min-height:720px}
+  #hero .hero-main img{object-position:center center!important}
+  #hero .hero-copy{left:7vw;right:auto;top:10vh;max-width:520px}
+  #hero .hero-copy h1{font-size:clamp(82px,9vw,142px);max-width:560px}
+  #hero .hero-sub{font-size:clamp(27px,3vw,42px);max-width:480px}
+  #hero .hero-copy p{font-size:17px;max-width:460px}
+  #hero .hero-ctas .btn-outline{display:none}
 }
-@media(max-width:700px){
-  #what .section-head h2:after{display:none}
-  #what .section-head:after{font-size:8px;letter-spacing:.08em;line-height:1.3}
-  .mpg:hover,.mpg:nth-child(2):hover,.mpg:nth-child(3):hover{transform:translateY(-6px) scale(1.015)}
-  .mpg:hover .mpg-word{transform:translate(4px,-3px)}
-  .mpg:after{opacity:1;transform:translateY(0) rotate(3deg);font-size:8px;padding:8px 9px}
-  #what .mpg-grid:before,#what .mpg-grid:after{font-size:14px}
-}
-@media(prefers-reduced-motion:reduce){
-  .mpg,.mpg img,.mpg:before,.mpg:after,.mpg-word,.what-sticker{transition:none!important}
-}
+@media(max-width:420px){#hero .hero-copy{left:18px;right:18px;top:44px}#hero .hero-copy h1{font-size:20vw}#hero .hero-sub{font-size:21px}#hero .hero-copy p{font-size:13px;max-width:285px}#hero .hero-collage{min-height:650px}}
+@media(prefers-reduced-motion:reduce){#hero .hero-main img{filter:none}}
