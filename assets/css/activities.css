@@ -7,3 +7,37 @@
 #what .section-head{display:block!important}
 #what .what-sticker,#what .what-arrow{display:none!important}
 #what:before,#what:after{display:none!important;content:none!important}
+
+/* MORE AT HOP FEST — carnival strip */
+#experience{position:relative!important;background:var(--cream)!important;color:var(--black)!important;padding:72px 0 64px!important;overflow:hidden!important}
+#experience .wrap{width:100%!important;max-width:none!important;margin:0!important}
+#experience .experience-head{display:block!important;margin:0 20px 30px!important;position:relative!important;text-align:left!important}
+#experience .experience-head h2{font-size:0!important;line-height:.82!important;margin:0!important;max-width:700px!important}
+#experience .experience-head h2:after{content:'THERE’S MORE\A TO HOP INTO.'!important;display:block!important;white-space:pre!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:clamp(45px,11vw,72px)!important;line-height:.8!important;letter-spacing:-.055em!important}
+#experience .experience-head .copy{font-size:0!important;margin:15px 0 0!important;max-width:360px!important}
+#experience .experience-head .copy:before{content:'MORE AT HOP FEST'!important;display:inline-block!important;background:var(--pink)!important;color:#fff!important;border:3px solid var(--black)!important;box-shadow:4px 4px 0 var(--black)!important;padding:7px 11px!important;font:800 10px/1 Inter,Arial,sans-serif!important;letter-spacing:.12em!important;transform:rotate(-2deg)!important}
+#experience .experience-head .copy:after{content:'Food, music, rides, stalls, photos and carnival fun.'!important;display:block!important;font:700 13px/1.35 Inter,Arial,sans-serif!important;margin-top:12px!important}
+#experience .exp-zones{display:flex!important;gap:16px!important;width:100%!important;margin:0!important;padding:10px 20px 28px!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;-webkit-overflow-scrolling:touch!important;scrollbar-width:none!important;grid-template-columns:none!important;grid-template-rows:none!important}
+#experience .exp-zones::-webkit-scrollbar{display:none!important}
+#experience .zone{position:relative!important;flex:0 0 78vw!important;width:78vw!important;height:350px!important;min-height:350px!important;display:flex!important;align-items:flex-end!important;padding:20px!important;border:3px solid var(--black)!important;box-shadow:7px 7px 0 var(--black)!important;overflow:hidden!important;scroll-snap-align:start!important;background-image:none!important;transform:none!important}
+#experience .zone .photo,#experience .zone .zone-content,#experience .zone .zone-object{display:none!important}
+#experience .zone:before{content:''!important;position:absolute!important;inset:0!important;display:block!important;opacity:.13!important;background:repeating-linear-gradient(-45deg,transparent 0 15px,#fff 15px 18px)!important;pointer-events:none!important}
+#experience .zone:after{position:absolute!important;left:20px!important;right:14px!important;bottom:20px!important;z-index:4!important;font-family:'Arial Black',Impact,sans-serif!important;font-weight:900!important;text-transform:uppercase!important;letter-spacing:-.055em!important;line-height:.82!important;font-size:clamp(35px,10vw,52px)!important;color:var(--black)!important;text-shadow:3px 3px 0 rgba(255,255,255,.65)!important;white-space:pre-line!important}
+#experience .zone:nth-child(1){background:var(--orange)!important;transform:rotate(-1.5deg)!important}
+#experience .zone:nth-child(1):after{content:'GRAB\A A BITE →'!important}
+#experience .zone:nth-child(2){background:var(--pink)!important;transform:rotate(1.2deg)!important}
+#experience .zone:nth-child(2):after{content:'TAKE SOMETHING\A HOME →'!important}
+#experience .zone:nth-child(3){background:var(--purple)!important;transform:rotate(-1deg)!important}
+#experience .zone:nth-child(3):after{content:'LIGHTS. MUSIC.\A ACTION. →'!important;color:#fff!important;text-shadow:3px 3px 0 var(--black)!important}
+#experience .zone:nth-child(4){background:var(--lime)!important;transform:rotate(1.5deg)!important}
+#experience .zone:nth-child(4):after{content:'SNAP\A THE MOMENT →'!important}
+#experience .zone:nth-child(5){background:var(--blue)!important;transform:rotate(-1.2deg)!important}
+#experience .zone:nth-child(5):after{content:'LET’S GO!\A →'!important;color:var(--yellow)!important;text-shadow:3px 3px 0 var(--black)!important}
+#experience .experience-head:after{content:'SWIPE →'!important;display:inline-block!important;margin-top:14px!important;background:var(--yellow)!important;border:3px solid var(--black)!important;box-shadow:4px 4px 0 var(--black)!important;padding:7px 10px!important;font:400 13px/.9 Anton,Impact,sans-serif!important;transform:rotate(2deg)!important}
+@media(min-width:701px){
+  #experience{padding:86px 0 78px!important}
+  #experience .experience-head{margin:0 6vw 34px!important}
+  #experience .experience-head h2:after{font-size:clamp(55px,7vw,88px)!important}
+  #experience .exp-zones{gap:18px!important;padding:12px 6vw 30px!important}
+  #experience .zone{flex-basis:31vw!important;width:31vw!important;max-width:390px!important;height:405px!important;min-height:405px!important}
+}
