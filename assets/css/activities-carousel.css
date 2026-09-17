@@ -1,67 +1,60 @@
-/* HOP FEST — ACTIVITIES CAROUSEL / FULL-BACKGROUND FINAL */
-#what{position:relative!important;padding:0!important;min-height:calc(100svh - 88px)!important;background:#f8f5ef!important;color:var(--black)!important;overflow:hidden!important}
+/* HOP FEST — ACTIVITIES CAROUSEL / FULL BACKGROUND REFERENCE */
+#what{position:relative!important;padding:0!important;min-height:calc(100svh - 88px)!important;background:#78bde9!important;color:var(--black)!important;overflow:hidden!important}
 #what .wrap{width:100%!important;max-width:none!important;margin:0!important}
 
-/* Heading sits directly over the image, matching the supplied reference. */
-#what .section-head{position:absolute!important;z-index:20!important;top:34px!important;left:7vw!important;right:7vw!important;width:auto!important;max-width:760px!important;margin:0!important;text-align:left!important}
+/* Heading + intro: no decorative stars or floating ornaments. */
+#what .section-head{position:absolute!important;z-index:20!important;top:30px!important;left:6vw!important;right:6vw!important;width:auto!important;max-width:760px!important;margin:0!important;text-align:left!important}
 #what .section-head .eyebrow{display:none!important}
-#what .section-head h2.title{font-family:'Arial Black',Impact,sans-serif!important;font-size:0!important;line-height:.82!important;letter-spacing:-.055em!important;text-transform:uppercase!important;color:var(--black)!important;text-shadow:none!important;margin:0!important}
-#what .section-head h2.title:after{content:'WHAT CAN YOU DO\A AT HOP FEST?'!important;display:block!important;white-space:pre!important;font-size:clamp(48px,6.2vw,82px)!important;line-height:.82!important}
-#what .section-head .copy{font-family:Inter,Arial,sans-serif!important;font-size:0!important;line-height:1.35!important;color:var(--black)!important;margin:17px 0 0!important;max-width:590px!important}
+#what .section-head:before,#what .section-head:after{display:none!important;content:none!important}
+#what .section-head h2.title{font-family:'Arial Black',Impact,sans-serif!important;font-size:0!important;line-height:.82!important;letter-spacing:-.055em!important;text-transform:uppercase!important;color:var(--black)!important;text-shadow:0 2px 0 rgba(255,255,255,.35)!important;margin:0!important}
+#what .section-head h2.title:after{content:'WHAT CAN YOU DO\A AT HOP FEST?'!important;display:block!important;white-space:pre!important;font-size:clamp(46px,6.1vw,80px)!important;line-height:.82!important}
+#what .section-head .copy{font-family:Inter,Arial,sans-serif!important;font-size:0!important;line-height:1.35!important;color:var(--black)!important;margin:17px 0 0!important;max-width:570px!important}
 #what .section-head .copy:before{content:''!important;display:block!important;width:135px!important;height:6px!important;background:var(--yellow)!important;margin:0 0 13px!important;transform:rotate(-2deg)!important}
-#what .section-head .copy:after{content:'Try new activities, take on fun challenges and make unforgettable memories.'!important;font-size:17px!important}
+#what .section-head .copy:after{content:'Try new activities, take on fun challenges and make unforgettable memories.'!important;display:block!important;font-size:17px!important;line-height:1.35!important}
 
-/* Six full-screen slides. Existing three .mpg elements are used as two slides each. */
+/* Six edge-to-edge slides. Each slide is the photograph itself — no card, no white space. */
 #what .mpg-grid{position:relative!important;display:flex!important;align-items:stretch!important;width:100%!important;height:calc(100svh - 88px)!important;min-height:700px!important;margin:0!important;padding:0!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;-webkit-overflow-scrolling:touch!important;scrollbar-width:none!important}
 #what .mpg-grid::-webkit-scrollbar{display:none!important}
 #what .mpg{display:contents!important}
 #what .mpg img,#what .mpg .asset-label,#what .mpg .mpg-word{display:none!important}
+#what .mpg:before,#what .mpg:after{content:''!important;position:relative!important;flex:0 0 100vw!important;width:100vw!important;height:100%!important;min-height:700px!important;display:flex!important;align-items:flex-end!important;justify-content:flex-start!important;box-sizing:border-box!important;padding:0 6vw 64px!important;border:0!important;border-radius:0!important;box-shadow:none!important;scroll-snap-align:start!important;overflow:hidden!important;background-repeat:no-repeat!important;background-size:cover!important;background-position:center!important;background-color:#78bde9!important;color:var(--black)!important;font-family:'Arial Black',Impact,sans-serif!important;font-weight:900!important;text-transform:uppercase!important;white-space:pre!important;letter-spacing:-.055em!important;line-height:.79!important;text-shadow:none!important}
 
-#what .mpg:before,#what .mpg:after{content:''!important;position:relative!important;flex:0 0 100vw!important;width:100vw!important;height:100%!important;min-height:700px!important;display:flex!important;align-items:flex-end!important;justify-content:flex-start!important;box-sizing:border-box!important;padding:0 7vw 70px!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:hidden!important;scroll-snap-align:start!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+/* Keep the actual photograph visible from edge to edge. Yellow only sits behind the activity title. */
+#what .mpg:nth-child(1):before{content:'OBSTACLE\A RACES     →'!important;font-size:clamp(44px,6.8vw,92px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 66%,rgba(250,238,48,0) 66%,rgba(250,238,48,.97) 76%,rgba(250,238,48,.97) 100%),url('../images/Hopfest4.png')!important;background-position:center!important}
+#what .mpg:nth-child(1):after{content:'FAMILY FITNESS\A CHALLENGES     →'!important;font-size:clamp(39px,6vw,78px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 63%,rgba(250,238,48,0) 63%,rgba(250,238,48,.97) 73%,rgba(250,238,48,.97) 100%),url('../images/Hopfest1.png')!important;background-position:center!important}
+#what .mpg:nth-child(2):before{content:'WALL\A CLIMBING     →'!important;font-size:clamp(44px,6.8vw,92px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 66%,rgba(39,174,239,0) 66%,rgba(39,174,239,.97) 76%,rgba(39,174,239,.97) 100%),url('../images/Hopfest5.png')!important;background-position:center!important}
+#what .mpg:nth-child(2):after{content:'BALANCE\A TEST     →'!important;font-size:clamp(44px,6.8vw,92px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 66%,rgba(232,75,129,0) 66%,rgba(232,75,129,.97) 76%,rgba(232,75,129,.97) 100%),url('../images/Hopfest4.png')!important;background-position:center!important}
+#what .mpg:nth-child(3):before{content:'TREASURE\A HUNT     →'!important;font-size:clamp(44px,6.8vw,92px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 66%,rgba(250,238,48,0) 66%,rgba(250,238,48,.97) 76%,rgba(250,238,48,.97) 100%),url('../images/Hopfest3.png')!important;background-position:center!important}
+#what .mpg:nth-child(3):after{content:'ENTERTAINMENT\A HUB     →'!important;font-size:clamp(39px,6vw,78px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 63%,rgba(39,174,239,0) 63%,rgba(39,174,239,.97) 73%,rgba(39,174,239,.97) 100%),url('../images/Hopfest_fisheye2.png')!important;background-position:center!important}
 
-/* Image readability: keep the photograph dominant, with only a subtle copy-safe wash. */
-#what .mpg:before,#what .mpg:after{background-color:#777!important;background-blend-mode:normal!important}
-
-/* Activity 1 — Obstacle Races */
-#what .mpg:nth-child(1):before{content:'OBSTACLE\A RACES     →'!important;background-image:linear-gradient(180deg,rgba(255,255,255,0) 48%,rgba(232,75,129,.97) 74%,rgba(232,75,129,.97) 100%),url('../images/Hopfest4.png')!important;color:var(--black)!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:clamp(46px,7vw,92px)!important;line-height:.78!important;letter-spacing:-.055em!important;white-space:pre!important}
-/* Activity 2 — Family Fitness Challenges */
-#what .mpg:nth-child(1):after{content:'FAMILY FITNESS\A CHALLENGES     →'!important;background-image:linear-gradient(180deg,rgba(255,255,255,0) 46%,rgba(250,238,48,.97) 72%,rgba(250,238,48,.97) 100%),url('../images/Hopfest1.png')!important;color:var(--black)!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:clamp(40px,6.2vw,80px)!important;line-height:.79!important;letter-spacing:-.055em!important;white-space:pre!important}
-/* Activity 3 — Wall Climbing */
-#what .mpg:nth-child(2):before{content:'WALL\A CLIMBING     →'!important;background-image:linear-gradient(180deg,rgba(255,255,255,0) 46%,rgba(39,174,239,.97) 72%,rgba(39,174,239,.97) 100%),url('../images/Hopfest5.png')!important;color:var(--black)!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:clamp(46px,7vw,92px)!important;line-height:.79!important;letter-spacing:-.055em!important;white-space:pre!important}
-/* Activity 4 — Balance Test */
-#what .mpg:nth-child(2):after{content:'BALANCE\A TEST     →'!important;background-image:linear-gradient(180deg,rgba(255,255,255,0) 46%,rgba(232,75,129,.97) 72%,rgba(232,75,129,.97) 100%),url('../images/Hopfest4.png')!important;color:var(--black)!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:clamp(46px,7vw,92px)!important;line-height:.79!important;letter-spacing:-.055em!important;white-space:pre!important}
-/* Activity 5 — Treasure Hunt */
-#what .mpg:nth-child(3):before{content:'TREASURE\A HUNT     →'!important;background-image:linear-gradient(180deg,rgba(255,255,255,0) 46%,rgba(250,238,48,.97) 72%,rgba(250,238,48,.97) 100%),url('../images/Hopfest3.png')!important;color:var(--black)!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:clamp(46px,7vw,92px)!important;line-height:.79!important;letter-spacing:-.055em!important;white-space:pre!important}
-/* Activity 6 — Entertainment Hub */
-#what .mpg:nth-child(3):after{content:'ENTERTAINMENT\A HUB     →'!important;background-image:linear-gradient(180deg,rgba(255,255,255,0) 46%,rgba(39,174,239,.97) 72%,rgba(39,174,239,.97) 100%),url('../images/Hopfest_fisheye2.png')!important;color:var(--black)!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:clamp(40px,6.2vw,80px)!important;line-height:.79!important;letter-spacing:-.055em!important;white-space:pre!important}
-
-/* Hide old decorative pseudo-elements/stars from the previous build. */
+/* Remove all previous star/sticker treatments. */
 #what .what-sticker,#what .what-arrow,#what .mpg-grid + .cta-row{display:none!important}
 
-/* Small slide affordance at the bottom. */
-#what .mpg-grid:after{content:'●  ○  ○  ○  ○  ○'!important;position:fixed!important;z-index:30!important;left:50%!important;bottom:23px!important;transform:translateX(-50%)!important;color:#fff!important;background:rgba(0,0,0,.28)!important;border-radius:20px!important;padding:9px 15px!important;font:700 14px/1 Arial,sans-serif!important;letter-spacing:3px!important;white-space:nowrap!important;pointer-events:none!important}
+/* Simple carousel affordances. */
+#what .mpg-grid:before{content:'←'!important;position:fixed!important;z-index:30!important;left:28px!important;top:56%!important;transform:translateY(-50%)!important;width:54px!important;height:54px!important;border-radius:50%!important;background:#fff!important;color:var(--black)!important;border:3px solid var(--black)!important;box-shadow:4px 4px 0 rgba(0,0,0,.18)!important;font:400 34px/48px Arial,sans-serif!important;text-align:center!important;pointer-events:none!important}
+#what .mpg-grid:after{content:'●   ○   ○   ○   ○   ○'!important;position:fixed!important;z-index:30!important;left:50%!important;bottom:20px!important;transform:translateX(-50%)!important;background:rgba(0,0,0,.30)!important;color:#fff!important;border-radius:20px!important;padding:9px 13px!important;font:700 13px/1 Arial,sans-serif!important;letter-spacing:3px!important;white-space:nowrap!important;pointer-events:none!important}
 
 @media(max-width:700px){
   #what{min-height:calc(100svh - 88px)!important}
-  #what .section-head{top:28px!important;left:22px!important;right:22px!important}
-  #what .section-head h2.title:after{font-size:clamp(39px,11.2vw,58px)!important;line-height:.83!important}
+  #what .section-head{top:27px!important;left:20px!important;right:20px!important}
+  #what .section-head h2.title:after{font-size:clamp(38px,10.8vw,58px)!important;line-height:.84!important}
   #what .section-head .copy{margin-top:14px!important;max-width:330px!important}
-  #what .section-head .copy:before{width:130px!important;height:5px!important;margin-bottom:10px!important}
-  #what .section-head .copy:after{font-size:14px!important;line-height:1.35!important}
+  #what .section-head .copy:before{width:125px!important;height:5px!important;margin-bottom:10px!important}
+  #what .section-head .copy:after{font-size:13px!important;line-height:1.35!important}
   #what .mpg-grid{height:calc(100svh - 88px)!important;min-height:680px!important}
-  #what .mpg:before,#what .mpg:after{flex-basis:100vw!important;width:100vw!important;min-height:680px!important;padding:0 21px 72px!important;background-position:center!important}
-  #what .mpg:nth-child(1):before{font-size:clamp(42px,11vw,61px)!important}
-  #what .mpg:nth-child(1):after{font-size:clamp(35px,9.2vw,53px)!important}
-  #what .mpg:nth-child(2):before{font-size:clamp(42px,11vw,61px)!important}
-  #what .mpg:nth-child(2):after{font-size:clamp(42px,11vw,61px)!important}
-  #what .mpg:nth-child(3):before{font-size:clamp(42px,11vw,61px)!important}
-  #what .mpg:nth-child(3):after{font-size:clamp(35px,9.2vw,53px)!important}
-  #what .mpg-grid:after{bottom:18px!important;font-size:12px!important;padding:8px 12px!important}
+  #what .mpg:before,#what .mpg:after{flex-basis:100vw!important;width:100vw!important;min-height:680px!important;padding:0 21px 70px!important;background-position:center!important}
+  #what .mpg:nth-child(1):before{font-size:clamp(40px,10.5vw,58px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 69%,rgba(250,238,48,0) 69%,rgba(250,238,48,.98) 78%,rgba(250,238,48,.98) 100%),url('../images/Hopfest4.png')!important}
+  #what .mpg:nth-child(1):after{font-size:clamp(34px,8.8vw,51px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 66%,rgba(250,238,48,0) 66%,rgba(250,238,48,.98) 75%,rgba(250,238,48,.98) 100%),url('../images/Hopfest1.png')!important}
+  #what .mpg:nth-child(2):before{font-size:clamp(40px,10.5vw,58px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 69%,rgba(39,174,239,0) 69%,rgba(39,174,239,.98) 78%,rgba(39,174,239,.98) 100%),url('../images/Hopfest5.png')!important}
+  #what .mpg:nth-child(2):after{font-size:clamp(40px,10.5vw,58px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 69%,rgba(232,75,129,0) 69%,rgba(232,75,129,.98) 78%,rgba(232,75,129,.98) 100%),url('../images/Hopfest4.png')!important}
+  #what .mpg:nth-child(3):before{font-size:clamp(40px,10.5vw,58px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 69%,rgba(250,238,48,0) 69%,rgba(250,238,48,.98) 78%,rgba(250,238,48,.98) 100%),url('../images/Hopfest3.png')!important}
+  #what .mpg:nth-child(3):after{font-size:clamp(34px,8.8vw,51px)!important;background-image:linear-gradient(180deg,transparent 0%,transparent 66%,rgba(39,174,239,0) 66%,rgba(39,174,239,.98) 75%,rgba(39,174,239,.98) 100%),url('../images/Hopfest_fisheye2.png')!important}
+  #what .mpg-grid:before{left:15px!important;top:57%!important;width:49px!important;height:49px!important;font-size:30px!important;line-height:44px!important}
+  #what .mpg-grid:after{bottom:18px!important;font-size:11px!important;padding:8px 11px!important}
 }
 
 @media(max-width:420px){
-  #what .section-head{top:25px!important}
-  #what .section-head h2.title:after{font-size:38px!important}
-  #what .section-head .copy:after{font-size:13px!important}
-  #what .mpg:before,#what .mpg:after{padding-bottom:69px!important}
+  #what .section-head{top:23px!important}
+  #what .section-head h2.title:after{font-size:37px!important}
+  #what .section-head .copy:after{font-size:12.5px!important}
 }
