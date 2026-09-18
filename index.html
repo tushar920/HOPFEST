@@ -709,7 +709,22 @@ body{background:var(--cream)}
   #prizes .top-prize-grid span{margin:8px 10px 14px!important}
 }
 </style>
-</head>
+<style id="hop-final-cta-v2">
+#why{position:relative!important;min-height:720px!important;padding:0!important;margin:0!important;overflow:hidden!important;background:#0758b8!important;color:#fff!important}
+#why .final-kicker{position:relative!important;z-index:5!important;display:inline-block!important;margin:34px 0 0 24px!important;padding:10px 16px!important;background:#e84b81!important;border:3px solid #090909!important;box-shadow:5px 5px 0 #090909!important;font:400 19px/1 Anton,Impact,sans-serif!important;transform:rotate(-3deg)!important}
+#why .final-copy{position:relative!important;z-index:6!important;margin:28px 24px 0!important}
+#why h2{margin:0!important;font:400 70px/.76 Anton,Impact,sans-serif!important;letter-spacing:-.01em!important;color:#fff!important;text-shadow:5px 5px 0 #090909!important}
+#why h2 span{display:inline-block!important;padding:3px 8px 5px!important;background:#faee30!important;color:#090909!important;text-shadow:none!important}
+#why .final-copy p{max-width:320px!important;margin:18px 0 20px!important;font:700 15px/1.35 Inter,Arial,sans-serif!important}
+#why .final-cta{display:inline-flex!important;align-items:center!important;gap:10px!important;padding:13px 18px!important;background:#faee30!important;color:#090909!important;border:3px solid #090909!important;box-shadow:5px 5px 0 #090909!important;font:400 20px/1 Anton,Impact,sans-serif!important;text-decoration:none!important}
+#why .final-cta svg{width:22px!important;height:22px!important;fill:none!important;stroke:currentColor!important;stroke-width:2!important}
+#why .final-photo{position:absolute!important;z-index:2!important;left:16px!important;right:16px!important;bottom:0!important;height:310px!important;border:3px solid #090909!important;box-shadow:7px 7px 0 #090909!important;transform:rotate(-1deg)!important;overflow:hidden!important;background:#ddd!important}
+#why .final-photo:after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(180deg,rgba(7,88,184,.05),rgba(7,88,184,.5))!important}
+#why .final-photo img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;display:block!important}
+#why .final-stamp{position:absolute!important;z-index:10!important;right:18px!important;bottom:250px!important;padding:10px 12px!important;background:#f15b8d!important;color:#fff!important;border:3px solid #090909!important;box-shadow:5px 5px 0 #090909!important;text-align:center!important;font:400 19px/.85 Anton,Impact,sans-serif!important;transform:rotate(6deg)!important}
+@media(max-width:420px){#why{min-height:690px!important}#why .final-kicker{margin-left:20px!important;font-size:18px!important}#why .final-copy{margin-left:20px!important;margin-right:20px!important}#why h2{font-size:62px!important}#why .final-copy p{font-size:14px!important;max-width:285px!important}#why .final-photo{left:12px!important;right:12px!important;height:285px!important}#why .final-stamp{right:14px!important;bottom:230px!important;font-size:17px!important}}
+@media(min-width:701px){#why{min-height:700px!important}#why .final-kicker{margin:55px 0 0 6vw!important;font-size:24px!important}#why .final-copy{margin:40px 0 0 6vw!important;width:45%!important}#why h2{font-size:104px!important}#why .final-copy p{font-size:18px!important;max-width:470px!important}#why .final-photo{left:auto!important;right:5vw!important;bottom:35px!important;width:46%!important;height:570px!important}#why .final-stamp{right:7%!important;bottom:80px!important;font-size:24px!important}}
+</style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
@@ -842,7 +857,16 @@ body{background:var(--cream)}
   </div>
 </section>
 
-    <section id="why"><svg class="object final-star doodle" style="color:var(--pink)"><use href="#star"/></svg><svg class="object final-trophy doodle" style="color:var(--yellow)"><use href="#trophy"/></svg><figure class="photo final-photo missing"><img src="assets/images/event/final-celebration.jpg" alt="Children running and celebrating at HOP FEST" loading="lazy" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">FINAL EVENT PHOTO: wide celebration, running, jumping, flags<br>1800 × 1100</span></figure><div class="wrap final-content"><h2 class="display">Ready<br>to HOP<br>out?</h2><div class="final-list">Leave the screens behind.<br>Bring your crew.<br>Get outside.<br>Get moving.<br>Get playing.</div><div class="final-tag">HOP. PLAY. REPEAT.</div><a class="btn btn-yellow" href="#tickets">Get Your Pass <svg><use href="#arrow"/></svg></a></div></section>
+    <section id="why" aria-label="Ready to HOP">
+  <div class="final-kicker">06 — READY TO HOP?</div>
+  <div class="final-copy">
+    <h2>YOUR KIDS<br>ARE <span>READY.</span></h2>
+    <p>A day of movement, challenges, games, music and carnival fun.</p>
+    <a class="final-cta" href="#tickets">GET YOUR PASS <svg><use href="#arrow"/></svg></a>
+  </div>
+  <div class="final-photo"><img src="assets/images/Hopfest_fisheye2.png" alt="Kids and families enjoying HOP FEST"></div>
+  <div class="final-stamp">HOP<br>PLAY<br>REPEAT.</div>
+</section>
   </main>
 
   <footer><div class="wrap"><div class="foot-grid"><div class="foot-brand brand logo-missing"><img src="assets/logo/hop-fest-logo-final.png" alt="HOP FEST" onload="this.parentElement.classList.remove('logo-missing')" onerror="this.parentElement.classList.add('logo-missing')"><span class="brand-fallback">HOP FEST</span><p>India's biggest fitness carnival for kids and families — built by Legaxy Sports Academy.</p></div><div class="foot-links"><a href="#what">What Is Hop?</a><a href="#experience">Experiences</a><a href="#cities">Cities</a><a href="#tickets">Tickets</a></div></div><div class="foot-bottom"><span>© 2026 HOP FEST — A LEGAXY SPORTS PRODUCTION</span><span>HOP. PLAY. REPEAT.</span></div></div></footer>
