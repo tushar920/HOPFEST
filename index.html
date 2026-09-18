@@ -146,6 +146,31 @@ body{background:var(--cream)}
  #experience .zone-desc{font-size:11px!important;padding:5px 8px!important;bottom:11px!important}
 }
 </style>
+
+<style id="hop-activities-final">
+@media(max-width:700px){
+  .hop-ticker{display:none!important}
+  #what{position:relative!important;height:780px!important;min-height:780px!important;padding:0!important;margin:0!important;background:#78bde9!important;overflow:hidden!important;color:#000!important}
+  #what .wrap,#what .what-sticker,#what .what-arrow{display:none!important}
+  #what .activity-head{position:absolute!important;z-index:20!important;top:34px!important;left:20px!important;right:20px!important;margin:0!important;padding:0!important;color:#000!important}
+  #what .activity-head h2{display:block!important;margin:0!important;padding:0!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:36px!important;line-height:.84!important;letter-spacing:-.055em!important;text-transform:uppercase!important;text-shadow:0 2px 0 rgba(255,255,255,.45)!important}
+  #what .activity-rule{display:block!important;width:225px!important;height:6px!important;background:var(--yellow)!important;margin:20px 0 13px!important;transform:rotate(-2deg)!important}
+  #what .activity-head p{display:block!important;margin:0!important;max-width:350px!important;font:400 13px/1.35 Inter,Arial,sans-serif!important;color:#000!important}
+  #what .activity-carousel{position:absolute!important;inset:0!important;display:flex!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important}
+  #what .activity-carousel::-webkit-scrollbar{display:none!important}
+  #what .activity-slide{position:relative!important;flex:0 0 100%!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;scroll-snap-align:start!important;overflow:hidden!important;background:#78bde9!important}
+  #what .activity-slide img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;margin:0!important;padding:0!important}
+  #what .activity-slide:after{content:''!important;position:absolute!important;inset:0!important;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.14) 70%,rgba(0,0,0,.25) 100%)!important;pointer-events:none!important}
+  #what .activity-slide h3{position:absolute!important;z-index:5!important;left:36px!important;bottom:72px!important;margin:0!important;padding:0!important;font-family:'Arial Black',Impact,sans-serif!important;font-size:43px!important;line-height:.79!important;letter-spacing:-.055em!important;color:var(--yellow)!important;text-transform:uppercase!important;text-shadow:4px 4px 0 #000,-1px -1px 0 #000!important}
+  #what .activity-slide h3 b{font-family:Arial,sans-serif!important;font-size:40px!important;letter-spacing:0!important;margin-left:8px!important;vertical-align:middle!important}
+  #what .activity-prev{position:absolute!important;z-index:30!important;left:24px!important;top:56%!important;width:50px!important;height:50px!important;border:3px solid #000!important;border-radius:50%!important;background:#fff!important;color:#000!important;box-shadow:3px 3px 0 rgba(0,0,0,.2)!important;font:400 30px/40px Arial,sans-serif!important;padding:0!important}
+  #what .activity-dots{position:absolute!important;z-index:30!important;bottom:18px!important;left:50%!important;transform:translateX(-50%)!important;display:flex!important;gap:9px!important;padding:7px 11px!important;background:rgba(0,0,0,.35)!important;border-radius:20px!important}
+  #what .activity-dots button{width:9px!important;height:9px!important;min-width:9px!important;padding:0!important;margin:0!important;border:0!important;border-radius:50%!important;background:#fff!important}
+  #what .activity-dots button.active{background:var(--yellow)!important}
+}
+@media(max-width:420px){#what .activity-head h2{font-size:35px!important}#what .activity-slide h3{font-size:41px!important;left:36px!important}}
+@media(min-width:701px){#what{position:relative!important;min-height:calc(100vh - 88px)!important}#what .activity-head{position:absolute!important;z-index:20!important;top:55px!important;left:6vw!important}.activity-carousel{display:flex;overflow:hidden}.activity-slide{position:relative;flex:0 0 100%;min-height:calc(100vh - 88px)}.activity-slide img{width:100%;height:100%;object-fit:cover}.activity-slide h3{position:absolute;left:6vw;bottom:70px;font:900 clamp(55px,6vw,90px)/.8 'Arial Black',Impact,sans-serif;color:var(--yellow);text-shadow:5px 5px #000}}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -180,7 +205,25 @@ body{background:var(--cream)}
     </section>
 
     <div class="hop-ticker" aria-hidden="true"><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span></div>
-    <section id="what"><svg class="object what-arrow doodle"><use href="#speed"/></svg><div class="what-sticker">100%<br>PLAY</div><div class="wrap"><div class="section-head"><div class="eyebrow label">What is HOP FEST?</div><h2 class="display title">Move. Play. Grow.</h2><p class="copy">HOP FEST brings together movement, play and healthy competition in a fun, vibrant festival environment. Through games, challenges and active experiences, kids get to move more, build confidence, make friends and simply have a great time.</p></div><div class="mpg-grid"><figure class="photo mpg missing"><img src="assets/images/kids/kids-sprint.jpg" alt="Kids sprinting" loading="lazy" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">kids sprinting<br>900 × 1200</span><span class="mpg-word display">Move.</span></figure><figure class="photo mpg missing"><img src="assets/images/kids/kids-play.jpg" alt="Children playing together" loading="lazy" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">active play moment<br>900 × 1100</span><span class="mpg-word display">Play.</span></figure><figure class="photo mpg missing"><img src="assets/images/kids/kids-celebrate.jpg" alt="Child celebrating a challenge" loading="lazy" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">challenge celebration<br>1000 × 1300</span><span class="mpg-word display">Grow.</span></figure></div><div class="cta-row"><a class="btn btn-outline" href="#experience">Discover HOP FEST <svg><use href="#arrow"/></svg></a></div></div></section>
+    <section id="what" aria-label="What can you do at HOP FEST">
+  <div class="activity-head">
+    <h2>WHAT CAN YOU DO<br>AT HOP FEST?</h2>
+    <span class="activity-rule"></span>
+    <p>Try new activities, take on fun challenges and make unforgettable memories.</p>
+  </div>
+  <div class="activity-carousel" aria-label="HOP FEST activities">
+    <article class="activity-slide is-active"><img src="assets/images/Hopfest4.png" alt="Obstacle races at HOP FEST"><h3>OBSTACLE<br>RACES <b>→</b></h3></article>
+    <article class="activity-slide"><img src="assets/images/Hopfest1.png" alt="Family fitness challenges at HOP FEST"><h3>FAMILY FITNESS<br>CHALLENGES <b>→</b></h3></article>
+    <article class="activity-slide"><img src="assets/images/Hopfest5.png" alt="Wall climbing at HOP FEST"><h3>WALL<br>CLIMBING <b>→</b></h3></article>
+    <article class="activity-slide"><img src="assets/images/Hopfest4.png" alt="Balance test at HOP FEST"><h3>BALANCE<br>TEST <b>→</b></h3></article>
+    <article class="activity-slide"><img src="assets/images/Hopfest3.png" alt="Treasure hunt at HOP FEST"><h3>TREASURE<br>HUNT <b>→</b></h3></article>
+    <article class="activity-slide"><img src="assets/images/Hopfest_fisheye2.png" alt="Entertainment hub at HOP FEST"><h3>ENTERTAINMENT<br>HUB <b>→</b></h3></article>
+  </div>
+  <button class="activity-prev" type="button" aria-label="Previous activity">←</button>
+  <div class="activity-dots" aria-label="Activity slide navigation">
+    <button class="active" aria-label="Activity 1"></button><button aria-label="Activity 2"></button><button aria-label="Activity 3"></button><button aria-label="Activity 4"></button><button aria-label="Activity 5"></button><button aria-label="Activity 6"></button>
+  </div>
+</section>
 
     <section id="experience">
   <div class="wrap">
@@ -216,6 +259,10 @@ body{background:var(--cream)}
 
   <footer><div class="wrap"><div class="foot-grid"><div class="foot-brand brand logo-missing"><img src="assets/logo/hop-fest-logo-final.png" alt="HOP FEST" onload="this.parentElement.classList.remove('logo-missing')" onerror="this.parentElement.classList.add('logo-missing')"><span class="brand-fallback">HOP FEST</span><p>India's biggest fitness carnival for kids and families — built by Legaxy Sports Academy.</p></div><div class="foot-links"><a href="#what">What Is Hop?</a><a href="#experience">Experiences</a><a href="#cities">Cities</a><a href="#tickets">Tickets</a></div></div><div class="foot-bottom"><span>© 2026 HOP FEST — A LEGAXY SPORTS PRODUCTION</span><span>HOP. PLAY. REPEAT.</span></div></div></footer>
   <script>const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');b.addEventListener('click',()=>{const open=m.classList.toggle('open');b.setAttribute('aria-expanded',open)});m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded','false')}));</script>
+
+<script id="hop-activities-carousel">
+(()=>{const c=document.querySelector('.activity-carousel');if(!c)return;const slides=[...c.querySelectorAll('.activity-slide')],dots=[...document.querySelectorAll('.activity-dots button')],prev=document.querySelector('.activity-prev');let active=0;const set=i=>{active=Math.max(0,Math.min(slides.length-1,i));slides[active].scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});dots.forEach((d,n)=>d.classList.toggle('active',n===active));};c.addEventListener('scroll',()=>{const i=Math.round(c.scrollLeft/c.clientWidth);if(i!==active){active=i;dots.forEach((d,n)=>d.classList.toggle('active',n===active));}},{passive:true});dots.forEach((d,i)=>d.addEventListener('click',()=>set(i)));prev.addEventListener('click',()=>set(active-1));})();
+</script>
 </body>
 </html>
 
