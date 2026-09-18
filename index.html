@@ -420,7 +420,45 @@ body{background:var(--cream)}
   #what .activity-slide h3{font-size:38px!important;left:36px!important;bottom:60px!important}
 }
 </style>
-</head>
+<style id="hop-cities-final">
+@media(max-width:700px){
+ #cities{background:#0758b8!important;color:#fff!important;padding:0!important;margin:0!important;min-height:900px!important;overflow:hidden!important}
+ #cities .cities-wrap{width:100%!important;max-width:none!important;padding:42px 0 0!important;margin:0!important}
+ #cities .cities-kicker{display:inline-block!important;margin:0 0 14px 36px!important;padding:10px 22px!important;background:var(--pink)!important;border:3px solid #000!important;box-shadow:5px 5px 0 #000!important;font:400 22px/1 Anton,Impact,sans-serif!important;transform:rotate(-3deg)!important}
+ #cities h2{margin:0 30px!important;font-family:Anton,Impact,sans-serif!important;font-size:58px!important;line-height:.78!important;letter-spacing:-.01em!important;color:var(--yellow)!important;text-shadow:5px 5px 0 #000!important}
+ #cities .cities-intro{margin:18px 30px 28px!important;font:700 18px/1.2 Inter,Arial,sans-serif!important;color:#fff!important}
+ #cities .city-cards{display:flex!important;gap:16px!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;padding:8px 36px 16px!important;scrollbar-width:none!important}
+ #cities .city-cards::-webkit-scrollbar{display:none!important}
+ #cities .city-card{flex:0 0 78vw!important;max-width:330px!important;background:#fff!important;color:#000!important;border:3px solid #000!important;border-radius:18px!important;overflow:hidden!important;scroll-snap-align:start!important;box-shadow:6px 6px 0 #000!important}
+ #cities .city-photo{height:245px!important;overflow:hidden!important}
+ #cities .city-photo img{width:100%!important;height:100%!important;object-fit:cover!important}
+ #cities .city-card-body{padding:18px 18px 16px!important}
+ #cities .city-card h3{margin:0!important;font:400 38px/.9 Anton,Impact,sans-serif!important}
+ #cities .city-rule{width:130px!important;height:6px!important;background:var(--yellow)!important;margin:8px 0 16px!important;transform:rotate(-2deg)!important}
+ #cities .city-detail{font:700 13px/1.6 Inter,Arial,sans-serif!important;min-height:43px!important}
+ #cities .city-ticket{display:block!important;margin-top:16px!important;padding:13px 14px!important;text-align:center!important;text-decoration:none!important;background:var(--pink)!important;color:#fff!important;border:3px solid #000!important;box-shadow:3px 3px 0 #000!important;font:400 20px/.9 Anton,Impact,sans-serif!important}
+ #cities .city-dots{display:flex!important;justify-content:center!important;gap:11px!important;margin:14px 0 35px!important}
+ #cities .city-dots span{width:11px!important;height:11px!important;border-radius:50%!important;background:#2aa6ed!important}
+ #cities .city-dots .active{background:var(--pink)!important}
+ #cities .city-bottom-note{margin-top:0!important;min-height:170px!important;padding:38px 36px!important;background:#ccecff!important;color:#000!important;display:flex!important;justify-content:space-between!important;align-items:flex-start!important;font:400 17px/1.15 var(--p25-marker),Arial,sans-serif!important;transform:skewY(-3deg)!important}
+ #cities .city-bottom-note span:last-child{background:var(--yellow)!important;padding:12px!important;transform:rotate(2deg)!important}
+}
+@media(min-width:701px){
+ #cities{background:#0758b8!important;color:#fff!important;padding:80px 0!important}
+ #cities .cities-wrap{max-width:1200px!important;margin:auto!important}
+ #cities .cities-kicker{display:inline-block!important;background:var(--pink)!important;padding:12px 24px!important;font:400 24px Anton,Impact,sans-serif!important}
+ #cities h2{font:400 90px/.78 Anton,Impact,sans-serif!important;color:var(--yellow)!important;text-shadow:6px 6px #000!important;margin:22px 0}
+ #cities .cities-intro{font:700 24px/1.2 Inter,sans-serif!important}
+ #cities .city-cards{display:flex!important;gap:24px!important;margin:35px 0!important;overflow:hidden!important;padding:10px}
+ #cities .city-card{flex:1;background:#fff;color:#000;border:3px solid #000;border-radius:18px;overflow:hidden;box-shadow:7px 7px #000}
+ #cities .city-photo{height:300px}.city-photo img{width:100%;height:100%;object-fit:cover}
+ #cities .city-card-body{padding:22px}.city-card h3{font:400 48px Anton,Impact,sans-serif;margin:0}
+ #cities .city-rule{width:150px;height:7px;background:var(--yellow);margin:10px 0 18px}.city-detail{min-height:48px}
+ #cities .city-ticket{display:block;margin-top:18px;padding:16px;background:var(--pink);color:#fff;text-align:center;font:400 22px Anton,Impact,sans-serif}
+ #cities .city-dots{display:flex;justify-content:center;gap:12px}.city-dots span{width:12px;height:12px;border-radius:50%;background:#2aa6ed}.city-dots .active{background:var(--pink)}
+ #cities .city-bottom-note{display:flex;justify-content:space-between;margin-top:55px;padding:40px;background:#ccecff;color:#000}
+}
+</style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
@@ -499,7 +537,33 @@ body{background:var(--cream)}
 
     <section id="family"><svg class="object family-medal doodle"><use href="#medal"/></svg><div class="wrap family-grid"><div><div class="eyebrow label">Bring your crew</div><h2 class="display">Don't just watch.<br>Jump in.</h2><p class="copy">HOP FEST is made for kids — and built for families. Race together. Play together. Challenge each other. Make a day of it.</p><div class="family-highlight display">One day.<br>A whole lot of play.</div><div style="margin-top:31px"><a class="btn btn-outline" href="#cities">Discover the family experience <svg><use href="#arrow"/></svg></a></div></div><div class="family-photos"><figure class="photo missing"><img src="assets/images/family/parent-child-high-five.jpg" alt="Parent and child high-fiving" loading="lazy" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">parent + child high-five<br>800 × 900</span></figure><figure class="photo missing"><img src="assets/images/family/family-race.jpg" alt="Family participating in a race" loading="lazy" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">family racing together<br>900 × 1100</span></figure><figure class="photo missing"><img src="assets/images/family/family-laughing.jpg" alt="Family laughing together at the festival" loading="lazy" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">candid shared moment<br>900 × 600</span></figure></div></div></section>
 
-    <section id="cities"><svg class="object route-ball doodle" style="color:var(--yellow)"><use href="#ball-icon"/></svg><svg class="object route-flag doodle" style="color:var(--pink)"><use href="#flag"/></svg><div class="wrap"><div class="cities-head"><div class="eyebrow label" style="color:var(--yellow)">The HOP FEST tour</div><h2 class="display title">Where are we hopping next?</h2><p class="copy">HOP FEST is bringing the energy to cities across India.</p></div><div class="city-route"><div class="city-node cn-1"><div class="city-dot">Pune</div><div class="city-info">Date: TBD<br>Venue: TBD</div></div><div class="city-node cn-2"><div class="city-dot">Mumbai</div><div class="city-info">Date: TBD<br>Venue: TBD</div></div><div class="city-node cn-3"><div class="city-dot">B'luru</div><div class="city-info">Date: TBD<br>Venue: TBD</div></div><div class="city-node cn-4"><div class="city-dot">Your<br>City</div><div class="city-info">HOP FEST is coming to you.</div></div></div></div></section>
+    <section id="cities" aria-label="Where is HOP FEST">
+  <div class="cities-wrap">
+    <div class="cities-kicker">04 — CITIES</div>
+    <h2>WHERE IS<br>HOP FEST?</h2>
+    <p class="cities-intro">Same energy. More cities.<br>Find a HOP FEST near you!</p>
+    <div class="city-cards" aria-label="HOP FEST cities">
+      <article class="city-card">
+        <div class="city-photo"><img src="assets/images/Hopfest_fisheye2.png" alt="HOP FEST in Delhi"></div>
+        <div class="city-card-body"><h3>DELHI</h3><div class="city-rule"></div><div class="city-detail">DATE: TBD<br>VENUE: TBD</div><a href="#tickets" class="city-ticket">GET TICKETS →</a></div>
+      </article>
+      <article class="city-card">
+        <div class="city-photo"><img src="assets/images/Hopfest1.png" alt="HOP FEST in Gurgaon"></div>
+        <div class="city-card-body"><h3>GURGAON</h3><div class="city-rule"></div><div class="city-detail">DATE: TBD<br>VENUE: TBD</div><a href="#tickets" class="city-ticket">GET TICKETS →</a></div>
+      </article>
+      <article class="city-card">
+        <div class="city-photo"><img src="assets/images/Hopfest3.png" alt="HOP FEST in Jaipur"></div>
+        <div class="city-card-body"><h3>JAIPUR</h3><div class="city-rule"></div><div class="city-detail">DATE: TBD<br>VENUE: TBD</div><a href="#tickets" class="city-ticket">GET TICKETS →</a></div>
+      </article>
+      <article class="city-card">
+        <div class="city-photo"><img src="assets/images/Hopfest5.png" alt="HOP FEST coming to your city"></div>
+        <div class="city-card-body"><h3>YOUR CITY</h3><div class="city-rule"></div><div class="city-detail">COMING SOON<br>STAY TUNED</div><a href="#tickets" class="city-ticket">STAY TUNED →</a></div>
+      </article>
+    </div>
+    <div class="city-dots" aria-hidden="true"><span class="active"></span><span></span><span></span><span></span></div>
+    <div class="city-bottom-note"><span>DIFFERENT CITIES<br>SAME GOOD VIBES</span><span>KIDS<br>FAMILIES<br>COMMUNITY<br>FUN ♥</span></div>
+  </div>
+</section>
 
     <section id="tickets"><div class="wrap"><div class="eyebrow label">When is HOP FEST?</div><h2 class="display title">Save the date.<br>HOP is coming.</h2><div class="date-grid"><article class="date-card"><div class="city display">Pune</div><div class="tbd display">TBD</div></article><article class="date-card"><div class="city display">Mumbai</div><div class="tbd display">TBD</div></article><article class="date-card"><div class="city display">Bengaluru</div><div class="tbd display">TBD</div></article></div><div class="cta-row"><a class="btn btn-pink" href="#final">Get Your Pass <svg><use href="#arrow"/></svg></a></div></div></section>
 
