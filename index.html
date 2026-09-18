@@ -726,7 +726,162 @@ body{background:var(--cream)}
 @media(min-width:701px){#why{min-height:700px!important}#why .final-kicker{margin:55px 0 0 6vw!important;font-size:24px!important}#why .final-copy{margin:40px 0 0 6vw!important;width:45%!important}#why h2{font-size:104px!important}#why .final-copy p{font-size:18px!important;max-width:470px!important}#why .final-photo{left:auto!important;right:5vw!important;bottom:35px!important;width:46%!important;height:570px!important}#why .final-stamp{right:7%!important;bottom:80px!important;font-size:24px!important}}
 </style><style id="hop-final-cta-v3">
 #why .final-top-note{position:absolute!important;top:24px!important;right:20px!important;z-index:20!important;font:700 9px/1 Inter,Arial,sans-serif!important;letter-spacing:.08em!important;color:#fff!important}
-</style></head>
+</style><style id="hop-final-cta-v4">
+/* FINAL CTA — clean mobile composition: photo first, copy second, zero overlap */
+#why{
+  position:relative!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:stretch!important;
+  justify-content:flex-start!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:0 0 44px!important;
+  margin:0!important;
+  overflow:hidden!important;
+  background:#0758b8!important;
+  color:#fff!important;
+  text-align:left!important;
+}
+#why .final-photo{
+  position:relative!important;
+  order:1!important;
+  left:auto!important;right:auto!important;bottom:auto!important;
+  width:100%!important;height:300px!important;
+  margin:0!important;
+  border:0!important;
+  border-bottom:4px solid #090909!important;
+  box-shadow:none!important;
+  transform:none!important;
+  overflow:hidden!important;
+  background:#ddd!important;
+}
+#why .final-photo:after{
+  content:""!important;
+  position:absolute!important;inset:0!important;
+  background:linear-gradient(180deg,rgba(9,9,9,.02),rgba(7,88,184,.22))!important;
+}
+#why .final-photo img{
+  width:100%!important;height:100%!important;
+  object-fit:cover!important;
+  object-position:center 48%!important;
+}
+#why .final-kicker{
+  position:relative!important;
+  order:2!important;
+  z-index:5!important;
+  display:inline-block!important;
+  align-self:flex-start!important;
+  margin:28px 20px 0!important;
+  padding:10px 15px!important;
+  background:#e84b81!important;
+  border:3px solid #090909!important;
+  box-shadow:5px 5px 0 #090909!important;
+  font:400 18px/1 Anton,Impact,sans-serif!important;
+  transform:rotate(-2deg)!important;
+}
+#why .final-top-note{display:none!important}
+#why .final-copy{
+  position:relative!important;
+  order:3!important;
+  z-index:4!important;
+  width:auto!important;
+  margin:28px 20px 0!important;
+  padding:0!important;
+}
+#why h2{
+  margin:0!important;
+  max-width:360px!important;
+  font:400 68px/.78 Anton,Impact,sans-serif!important;
+  letter-spacing:-.015em!important;
+  color:#fff!important;
+  text-shadow:5px 5px 0 #090909!important;
+}
+#why h2 span{
+  display:inline-block!important;
+  margin-top:5px!important;
+  padding:3px 8px 5px!important;
+  background:#faee30!important;
+  color:#090909!important;
+  text-shadow:none!important;
+}
+#why .final-copy p{
+  max-width:330px!important;
+  margin:22px 0 22px!important;
+  font:700 15px/1.45 Inter,Arial,sans-serif!important;
+  color:#fff!important;
+}
+#why .final-cta{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:14px!important;
+  min-width:230px!important;
+  padding:14px 20px!important;
+  background:#faee30!important;
+  color:#090909!important;
+  border:3px solid #090909!important;
+  box-shadow:6px 6px 0 #090909!important;
+  font:400 22px/1 Anton,Impact,sans-serif!important;
+}
+#why .final-cta svg{width:23px!important;height:23px!important}
+#why .final-stamp{
+  position:relative!important;
+  order:4!important;
+  align-self:flex-end!important;
+  right:auto!important;bottom:auto!important;
+  margin:28px 20px 0!important;
+  padding:8px 11px!important;
+  background:#e84b81!important;
+  color:#fff!important;
+  border:3px solid #090909!important;
+  box-shadow:4px 4px 0 #090909!important;
+  font:400 16px/.86 Anton,Impact,sans-serif!important;
+  transform:rotate(4deg)!important;
+}
+#why:before{display:none!important}
+@media(max-width:420px){
+  #why .final-photo{height:285px!important}
+  #why .final-kicker{margin-top:25px!important}
+  #why .final-copy{margin-top:25px!important}
+  #why h2{font-size:64px!important}
+}
+@media(min-width:701px){
+  #why{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    grid-template-rows:auto 1fr!important;
+    column-gap:5vw!important;
+    min-height:720px!important;
+    padding:55px 6vw!important;
+  }
+  #why .final-photo{
+    grid-column:2!important;grid-row:1 / span 2!important;
+    width:100%!important;height:610px!important;
+    align-self:center!important;
+    border:3px solid #090909!important;
+    box-shadow:8px 8px 0 #090909!important;
+    transform:rotate(1deg)!important;
+  }
+  #why .final-kicker{
+    grid-column:1!important;grid-row:1!important;
+    margin:0!important;align-self:start!important;
+    font-size:22px!important;
+  }
+  #why .final-copy{
+    grid-column:1!important;grid-row:2!important;
+    margin:35px 0 0!important;
+    align-self:start!important;
+  }
+  #why h2{font-size:104px!important;max-width:600px!important}
+  #why .final-copy p{font-size:18px!important;max-width:480px!important}
+  #why .final-stamp{
+    position:absolute!important;right:4vw!important;bottom:45px!important;
+    margin:0!important;font-size:22px!important;
+  }
+}
+</style>
+</head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
