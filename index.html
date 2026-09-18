@@ -500,7 +500,216 @@ body{background:var(--cream)}
  #prizes .top-prize-grid::-webkit-scrollbar{display:none}
  #prizes .top-prize-grid article{flex:0 0 43vw;scroll-snap-align:start}
 }
-</style></head>
+</style>
+<style id="hop-prizes-correction-v3">
+/* PRIZES V3 — mobile layout: no overlap, no horizontal clipping */
+#prizes{padding:0!important;margin:0!important;background:#fff!important;overflow:hidden!important}
+#prizes .prizes-hero{
+  position:relative!important;
+  min-height:650px!important;
+  padding:34px 24px 0!important;
+  background:#a0d63f!important;
+  overflow:hidden!important;
+}
+#prizes .prizes-kicker{
+  position:relative!important;z-index:10!important;
+  display:inline-block!important;
+  margin:0!important;
+  padding:10px 18px!important;
+  background:#e84b81!important;color:#fff!important;
+  border:3px solid #090909!important;
+  box-shadow:5px 5px 0 #090909!important;
+  font:400 20px/1 Anton,Impact,sans-serif!important;
+  transform:rotate(-3deg)!important;
+}
+#prizes h2{
+  position:relative!important;z-index:10!important;
+  width:100%!important;max-width:none!important;
+  margin:28px 0 16px!important;padding:0!important;
+  font:400 70px/.76 Anton,Impact,sans-serif!important;
+  letter-spacing:-.01em!important;color:#090909!important;
+  text-shadow:4px 4px 0 #fff!important;
+}
+#prizes h2 span{
+  display:inline-block!important;
+  margin:0!important;padding:3px 9px 5px!important;
+  background:#faee30!important;
+}
+#prizes .prizes-hero>p{
+  position:relative!important;z-index:10!important;
+  width:100%!important;max-width:330px!important;
+  margin:0!important;
+  font:700 15px/1.35 Inter,Arial,sans-serif!important;
+}
+#prizes .prize-hero-photo{
+  position:absolute!important;z-index:3!important;
+  left:22px!important;right:22px!important;
+  bottom:-2px!important;width:auto!important;height:300px!important;
+  margin:0!important;
+  border:3px solid #090909!important;
+  box-shadow:6px 6px 0 #090909!important;
+  transform:rotate(1deg)!important;
+  overflow:hidden!important;
+  background:#ddd!important;
+}
+#prizes .prize-hero-photo img{
+  width:100%!important;height:100%!important;
+  object-fit:cover!important;
+  object-position:center 43%!important;
+  opacity:1!important;
+  content:normal!important;
+}
+#prizes .prizes-body{
+  padding:34px 22px 42px!important;
+  background:#dff3ff!important;
+}
+#prizes .prizes-body h3{
+  margin:0 0 20px!important;
+  font:400 38px/.82 Anton,Impact,sans-serif!important;
+}
+#prizes .prize-grid{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:16px!important;
+  width:100%!important;
+  overflow:visible!important;
+  padding:0!important;
+}
+#prizes .prize-grid article{
+  display:flex!important;
+  flex-direction:column!important;
+  min-width:0!important;
+  min-height:260px!important;
+  padding:0 0 15px!important;
+  background:#fff!important;
+  border:3px solid #090909!important;
+  box-shadow:5px 5px 0 #090909!important;
+  overflow:hidden!important;
+  text-align:left!important;
+}
+#prizes .prize-grid article:before{
+  content:""!important;
+  display:block!important;
+  flex:0 0 135px!important;
+  width:100%!important;
+  height:135px!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+#prizes .prize-grid article:nth-child(1):before{background-image:url('../images/Hopfest1.png')!important;background-position:center 58%!important}
+#prizes .prize-grid article:nth-child(2):before{background-image:url('../images/Hopfest3.png')!important}
+#prizes .prize-grid article:nth-child(3):before{background-image:url('../images/Hopfest5.png')!important}
+#prizes .prize-grid article:nth-child(4):before{background-image:url('../images/Hopfest_fisheye2.png')!important}
+#prizes .prize-icon{display:none!important}
+#prizes .prize-grid strong{
+  display:block!important;
+  width:max-content!important;max-width:calc(100% - 18px)!important;
+  margin:12px 9px 0!important;
+  padding:7px 9px!important;
+  background:#e84b81!important;color:#fff!important;
+  font:400 17px/.9 Anton,Impact,sans-serif!important;
+}
+#prizes .prize-grid p{
+  margin:9px 10px 0!important;
+  font:700 11px/1.3 Inter,Arial,sans-serif!important;
+}
+#prizes .top-prizes{
+  display:block!important;
+  padding:38px 22px 48px!important;
+  background:#fff4a8!important;
+}
+#prizes .top-prizes>div:first-child{margin:0 0 24px!important}
+#prizes .top-prizes h3{
+  margin:0!important;
+  font:400 48px/.76 Anton,Impact,sans-serif!important;
+}
+#prizes .top-prizes p{
+  max-width:320px!important;
+  margin:13px 0 0!important;
+  font:700 14px/1.35 Inter,Arial,sans-serif!important;
+}
+#prizes .top-prize-grid{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:16px!important;
+  width:100%!important;
+  overflow:visible!important;
+}
+#prizes .top-prize-grid article{
+  display:grid!important;
+  grid-template-columns:125px 1fr!important;
+  grid-template-rows:auto 1fr!important;
+  align-items:center!important;
+  min-width:0!important;
+  min-height:135px!important;
+  padding:0!important;
+  background:#fff!important;
+  border:3px solid #090909!important;
+  box-shadow:5px 5px 0 #090909!important;
+  overflow:hidden!important;
+  text-align:left!important;
+}
+#prizes .top-prize-grid article:before{
+  content:""!important;
+  grid-row:1 / span 2!important;
+  display:block!important;
+  width:125px!important;height:100%!important;
+  min-height:129px!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+#prizes .top-prize-grid article:nth-child(1):before{background-image:url('../images/Hopfest_fisheye2.png')!important}
+#prizes .top-prize-grid article:nth-child(2):before{background-image:url('../images/Hopfest1.png')!important;background-position:center 55%!important}
+#prizes .top-prize-grid article:nth-child(3):before{background-image:url('../images/Hopfest3.png')!important}
+#prizes .top-prize-grid b{display:none!important}
+#prizes .top-prize-grid strong{
+  display:block!important;
+  width:max-content!important;max-width:calc(100% - 18px)!important;
+  margin:0 9px!important;padding:7px 9px!important;
+  background:#28a9df!important;color:#fff!important;
+  font:400 16px/.9 Anton,Impact,sans-serif!important;
+}
+#prizes .top-prize-grid span{
+  display:block!important;
+  margin:8px 9px 12px!important;
+  font:700 10px/1.3 Inter,Arial,sans-serif!important;
+}
+@media(max-width:420px){
+  #prizes .prizes-hero{min-height:620px!important;padding:32px 20px 0!important}
+  #prizes h2{font-size:64px!important;margin-top:25px!important}
+  #prizes .prizes-hero>p{font-size:14px!important;max-width:305px!important}
+  #prizes .prize-hero-photo{left:18px!important;right:18px!important;height:285px!important}
+  #prizes .prizes-body{padding-left:18px!important;padding-right:18px!important}
+  #prizes .prize-grid{gap:13px!important}
+  #prizes .prize-grid article{min-height:245px!important}
+  #prizes .prize-grid article:before{height:122px!important;flex-basis:122px!important}
+  #prizes .top-prizes{padding-left:18px!important;padding-right:18px!important}
+  #prizes .top-prizes h3{font-size:44px!important}
+  #prizes .top-prize-grid article{grid-template-columns:112px 1fr!important}
+  #prizes .top-prize-grid article:before{width:112px!important;min-height:120px!important}
+}
+@media(min-width:701px){
+  #prizes .prizes-hero{min-height:650px!important;padding:55px 6vw 0!important}
+  #prizes h2{width:50%!important;font-size:96px!important}
+  #prizes .prizes-hero>p{width:40%!important;font-size:17px!important}
+  #prizes .prize-hero-photo{left:auto!important;right:6vw!important;width:46%!important;height:82%!important;bottom:-15px!important}
+  #prizes .prizes-body{padding:58px 6vw!important}
+  #prizes .prizes-body h3{font-size:52px!important}
+  #prizes .prize-grid{grid-template-columns:repeat(4,1fr)!important;gap:20px!important}
+  #prizes .prize-grid article:before{height:220px!important;flex-basis:220px!important}
+  #prizes .top-prizes{padding:60px 6vw 70px!important}
+  #prizes .top-prizes>div:first-child{margin-bottom:30px!important}
+  #prizes .top-prizes h3{font-size:64px!important}
+  #prizes .top-prize-grid{grid-template-columns:repeat(3,1fr)!important;gap:20px!important}
+  #prizes .top-prize-grid article{display:block!important;min-height:320px!important}
+  #prizes .top-prize-grid article:before{width:100%!important;height:210px!important}
+  #prizes .top-prize-grid strong{margin:12px 10px 0!important}
+  #prizes .top-prize-grid span{margin:8px 10px 14px!important}
+}
+</style>
+</head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
