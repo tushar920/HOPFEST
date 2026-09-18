@@ -89,7 +89,7 @@ body{background:var(--cream)}
           @media(max-width:560px){.hop-ticker{gap:11px;font-size:16px;min-height:42px;padding:6px 12px}.hop-ticker i{font-size:13px}}
           
   </style>
-<link rel="stylesheet" href="assets/css/phase2-5.css?v=20260919"><style id="hop-more-final">
+<link rel="stylesheet" href="assets/css/phase2-5.css?v=20260921"><style id="hop-more-final">
 /* FINAL MORE AT HOP FEST — hard override */
 #experience{background:var(--cream)!important;color:var(--black)!important;padding:58px 0 54px!important;overflow:hidden!important}
 #experience:before,#experience:after,#experience .exp-star{display:none!important;content:none!important}
@@ -148,84 +148,32 @@ body{background:var(--cream)}
 </style>
 
 <style id="hop-activities-final">
-/* FINAL MOBILE ACTIVITIES — compact, header-safe, reference composition */
 @media(max-width:700px){
-  /* Header must occupy normal document space. Never let the activity section slide underneath it. */
-  header{
-    position:relative!important;
-    top:auto!important;
-    z-index:100!important;
-    height:auto!important;
-    background:#fff!important;
-  }
-  header .nav{
-    height:76px!important;
-  }
+  .hop-ticker{display:none!important}
   #what{
     position:relative!important;
-    width:100%!important;
-    height:calc(100svh - 76px)!important;
-    min-height:0!important;
-    margin:0!important;
+    height:calc(100svh - 112px)!important;
+    min-height:620px!important;
+    max-height:760px!important;
     padding:0!important;
-    overflow:hidden!important;
+    margin:0!important;
     background:#78bde9!important;
+    overflow:hidden!important;
     color:#000!important;
   }
   #what .wrap,#what .what-sticker,#what .what-arrow{display:none!important}
-
-  #what .activity-head{
-    position:absolute!important;
-    z-index:20!important;
-    top:34px!important;
-    left:20px!important;
-    right:20px!important;
-    width:auto!important;
-    margin:0!important;
-    padding:0!important;
-  }
-  #what .activity-head h2{
-    margin:0!important;
-    padding:0!important;
-    font-family:'Arial Black',Impact,sans-serif!important;
-    font-size:36px!important;
-    line-height:.84!important;
-    letter-spacing:-.055em!important;
-    text-transform:uppercase!important;
-    color:#000!important;
-    text-shadow:0 2px 0 rgba(255,255,255,.55)!important;
-  }
-  #what .activity-rule{
-    display:block!important;
-    width:225px!important;
-    height:6px!important;
-    margin:20px 0 13px!important;
-    background:var(--yellow)!important;
-    transform:rotate(-2deg)!important;
-  }
-  #what .activity-head p{
-    display:block!important;
-    margin:0!important;
-    max-width:350px!important;
-    color:#fff!important;
-    font:700 13px/1.35 Inter,Arial,sans-serif!important;
-    text-shadow:2px 2px 3px rgba(0,0,0,.55)!important;
-  }
-
   #what .activity-carousel{
     position:absolute!important;
     inset:0!important;
-    z-index:1!important;
     display:flex!important;
     width:100%!important;
     height:100%!important;
-    margin:0!important;
-    padding:0!important;
     overflow-x:auto!important;
     overflow-y:hidden!important;
     scroll-snap-type:x mandatory!important;
     -webkit-overflow-scrolling:touch!important;
     scrollbar-width:none!important;
+    z-index:1!important;
   }
   #what .activity-carousel::-webkit-scrollbar{display:none!important}
   #what .activity-slide{
@@ -234,13 +182,13 @@ body{background:var(--cream)}
     width:100%!important;
     height:100%!important;
     min-height:0!important;
-    margin:0!important;
-    padding:0!important;
     overflow:hidden!important;
     scroll-snap-align:start!important;
     background:#78bde9!important;
   }
   #what .activity-slide img{
+    position:absolute!important;
+    inset:0!important;
     display:block!important;
     width:100%!important;
     height:100%!important;
@@ -252,15 +200,53 @@ body{background:var(--cream)}
     content:''!important;
     position:absolute!important;
     inset:0!important;
-    z-index:2!important;
-    background:linear-gradient(180deg,rgba(0,0,0,0) 48%,rgba(0,0,0,.16) 78%,rgba(0,0,0,.30) 100%)!important;
+    background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,.18) 100%)!important;
     pointer-events:none!important;
+  }
+  #what .activity-head{
+    position:absolute!important;
+    z-index:20!important;
+    top:34px!important;
+    left:36px!important;
+    right:24px!important;
+    margin:0!important;
+    padding:0!important;
+    color:#000!important;
+    pointer-events:none!important;
+  }
+  #what .activity-head h2{
+    display:block!important;
+    margin:0!important;
+    padding:0!important;
+    font-family:'Arial Black',Impact,sans-serif!important;
+    font-size:36px!important;
+    line-height:.84!important;
+    letter-spacing:-.055em!important;
+    text-transform:uppercase!important;
+    color:#000!important;
+    text-shadow:0 2px 0 rgba(255,255,255,.45)!important;
+  }
+  #what .activity-rule{
+    display:block!important;
+    width:225px!important;
+    height:6px!important;
+    background:var(--yellow)!important;
+    margin:20px 0 13px!important;
+    transform:rotate(-2deg)!important;
+  }
+  #what .activity-head p{
+    display:block!important;
+    margin:0!important;
+    max-width:350px!important;
+    font:400 13px/1.35 Inter,Arial,sans-serif!important;
+    color:#fff!important;
+    text-shadow:1px 1px 3px rgba(0,0,0,.75)!important;
   }
   #what .activity-slide h3{
     position:absolute!important;
-    z-index:5!important;
+    z-index:10!important;
     left:36px!important;
-    bottom:66px!important;
+    bottom:72px!important;
     margin:0!important;
     padding:0!important;
     font-family:'Arial Black',Impact,sans-serif!important;
@@ -282,21 +268,21 @@ body{background:var(--cream)}
     position:absolute!important;
     z-index:30!important;
     left:24px!important;
-    top:58%!important;
+    top:56%!important;
     width:50px!important;
     height:50px!important;
-    padding:0!important;
     border:3px solid #000!important;
     border-radius:50%!important;
     background:#fff!important;
     color:#000!important;
     box-shadow:3px 3px 0 rgba(0,0,0,.2)!important;
     font:400 30px/40px Arial,sans-serif!important;
+    padding:0!important;
   }
   #what .activity-dots{
     position:absolute!important;
     z-index:30!important;
-    bottom:15px!important;
+    bottom:18px!important;
     left:50%!important;
     transform:translateX(-50%)!important;
     display:flex!important;
@@ -305,19 +291,23 @@ body{background:var(--cream)}
     background:rgba(0,0,0,.35)!important;
     border-radius:20px!important;
   }
-  #what .activity-dots button{
-    width:9px!important;height:9px!important;min-width:9px!important;
-    padding:0!important;margin:0!important;border:0!important;
-    border-radius:50%!important;background:#fff!important;
-  }
+  #what .activity-dots button{width:9px!important;height:9px!important;min-width:9px!important;padding:0!important;margin:0!important;border:0!important;border-radius:50%!important;background:#fff!important}
   #what .activity-dots button.active{background:var(--yellow)!important}
 }
 @media(max-width:420px){
-  #what .activity-head h2{font-size:34px!important}
-  #what .activity-head p{font-size:12.5px!important}
-  #what .activity-slide h3{font-size:39px!important}
+  #what{height:calc(100svh - 112px)!important;min-height:600px!important}
+  #what .activity-head{top:32px!important;left:36px!important}
+  #what .activity-head h2{font-size:35px!important}
+  #what .activity-slide h3{font-size:40px!important}
 }
-</style>
+@media(min-width:701px){
+  #what{position:relative!important;min-height:calc(100vh - 88px)!important}
+  #what .activity-head{position:absolute!important;z-index:20!important;top:55px!important;left:6vw!important}
+  #what .activity-carousel{display:flex!important;overflow:hidden!important}
+  #what .activity-slide{position:relative!important;flex:0 0 100%!important;min-height:calc(100vh - 88px)!important}
+  #what .activity-slide img{width:100%!important;height:100%!important;object-fit:cover!important}
+  #what .activity-slide h3{position:absolute!important;left:6vw!important;bottom:70px!important;font:900 clamp(55px,6vw,90px)/.8 'Arial Black',Impact,sans-serif!important;color:var(--yellow)!important;text-shadow:5px 5px #000}
+}
 <style id="hop-activities-fit-screen">
 /* FINAL MOBILE COMPOSITION — header remains visible, activities fit beneath it */
 @media(max-width:700px){
