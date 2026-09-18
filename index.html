@@ -89,7 +89,48 @@ body{background:var(--cream)}
           @media(max-width:560px){.hop-ticker{gap:11px;font-size:16px;min-height:42px;padding:6px 12px}.hop-ticker i{font-size:13px}}
           
   </style>
-<link rel="stylesheet" href="assets/css/phase2-5.css?v=20260918"></head>
+<link rel="stylesheet" href="assets/css/phase2-5.css?v=20260918"><style id="hop-more-final">
+/* FINAL MORE AT HOP FEST — hard override */
+#experience{background:var(--cream)!important;color:var(--black)!important;padding:58px 0 54px!important;overflow:hidden!important}
+#experience:before,#experience:after,#experience .exp-star{display:none!important;content:none!important}
+#experience .wrap{width:100%!important;max-width:none!important;margin:0!important}
+#experience .experience-head{display:block!important;margin:0 20px 28px!important;text-align:left!important}
+#experience .experience-head h2{font-family:Anton,Impact,sans-serif!important;font-size:40px!important;line-height:.82!important;letter-spacing:-.01em!important;margin:0!important;text-transform:uppercase!important}
+#experience .experience-head h2:before,#experience .experience-head h2:after{content:none!important;display:none!important}
+#experience .experience-head .copy{font:700 13px/1.35 Inter,Arial,sans-serif!important;margin:14px 0 0!important;max-width:360px!important}
+#experience .experience-head .copy:before,#experience .experience-head .copy:after{content:none!important;display:none!important}
+#experience .more-swipe{display:inline-block!important;margin-top:14px!important;background:var(--yellow)!important;color:var(--black)!important;border:3px solid var(--black)!important;box-shadow:4px 4px 0 var(--black)!important;padding:7px 11px!important;font:400 13px/.9 Anton,Impact,sans-serif!important;transform:rotate(2deg)!important}
+#experience .exp-zones{display:flex!important;gap:16px!important;align-items:stretch!important;width:100%!important;padding:8px 20px 24px!important;margin:0!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important}
+#experience .exp-zones::-webkit-scrollbar{display:none!important}
+#experience .zone{position:relative!important;display:block!important;flex:0 0 80vw!important;width:80vw!important;height:345px!important;min-height:345px!important;padding:0!important;margin:0!important;overflow:hidden!important;border:3px solid var(--black)!important;box-shadow:7px 7px 0 var(--black)!important;background-image:var(--card-image)!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;transform:none!important;scroll-snap-align:start!important}
+#experience .zone:nth-child(even){transform:rotate(1deg)!important}
+#experience .zone:nth-child(odd){transform:rotate(-1deg)!important}
+#experience .zone:before,#experience .zone:after{content:none!important;display:none!important}
+#experience .zone .zone-no{position:absolute!important;left:12px!important;top:12px!important;z-index:4!important;display:block!important;padding:5px 8px!important;background:var(--yellow)!important;color:var(--black)!important;font:400 17px/.9 Anton,Impact,sans-serif!important}
+#experience .zone:nth-child(2) .zone-no{background:var(--pink)!important;color:#fff!important}
+#experience .zone:nth-child(3) .zone-no{background:var(--purple)!important;color:#fff!important}
+#experience .zone:nth-child(4) .zone-no{background:var(--lime)!important;color:var(--black)!important}
+#experience .zone:nth-child(5) .zone-no{background:var(--orange)!important;color:#fff!important}
+#experience .zone:nth-child(6) .zone-no{background:var(--blue)!important;color:#fff!important}
+#experience .zone:nth-child(7) .zone-no{background:var(--yellow)!important;color:var(--black)!important}
+#experience .zone-title{position:absolute!important;left:12px!important;bottom:12px!important;z-index:5!important;display:inline-block!important;width:max-content!important;max-width:calc(100% - 24px)!important;padding:8px 14px 7px!important;background:var(--yellow)!important;color:var(--black)!important;border:3px solid var(--black)!important;box-shadow:4px 4px 0 var(--black)!important;border-radius:0!important;font:400 29px/.84 Anton,Impact,sans-serif!important;letter-spacing:.01em!important;white-space:normal!important;text-transform:uppercase!important}
+#experience .zone-title:after{content:none!important}
+#experience .zone:nth-child(2) .zone-title{background:var(--pink)!important;color:#fff!important}
+#experience .zone:nth-child(3) .zone-title{background:var(--purple)!important;color:#fff!important}
+#experience .zone:nth-child(4) .zone-title{background:var(--lime)!important;color:var(--black)!important}
+#experience .zone:nth-child(5) .zone-title{background:var(--blue)!important;color:var(--yellow)!important}
+#experience .zone:nth-child(6) .zone-title{background:var(--orange)!important;color:#fff!important}
+#experience .zone:nth-child(7) .zone-title{background:var(--yellow)!important;color:var(--black)!important}
+#experience .zone-title + *{display:none!important}
+@media(min-width:701px){
+#experience{padding:84px 0 72px!important}
+#experience .experience-head{margin:0 6vw 38px!important}
+#experience .experience-head h2{font-size:clamp(54px,7vw,90px)!important}
+#experience .experience-head .copy{font-size:14px!important}
+#experience .zone{flex-basis:31vw!important;width:31vw!important;max-width:400px!important;height:410px!important;min-height:410px!important}
+#experience .zone-title{font-size:clamp(34px,4.4vw,54px)!important}
+}
+</style>\n</head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
