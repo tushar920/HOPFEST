@@ -60,3 +60,30 @@
   #what .section-head h2.title:after{font-size:36px!important}
   #what .section-head .copy:after{font-size:12.5px!important}
 }
+
+
+/* MOBILE HEADER CLEARANCE — prevent carousel title/copy from entering sticky header */
+@media(max-width:700px){
+  #what{
+    padding-top:0!important;
+    min-height:calc(100svh - 76px)!important;
+  }
+  #what .section-head{
+    position:relative!important;
+    z-index:10!important;
+    padding:92px 20px 0!important;
+    margin:0!important;
+    min-height:210px!important;
+  }
+  #what .section-head h2,
+  #what .section-head .title{
+    position:relative!important;
+    z-index:12!important;
+    margin:0!important;
+  }
+  #what .section-head .copy{
+    position:relative!important;
+    z-index:12!important;
+    margin-top:16px!important;
+  }
+}
