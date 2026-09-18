@@ -87,3 +87,67 @@
     margin-top:16px!important;
   }
 }
+
+/* FINAL MOBILE ACTIVITIES LAYOUT — heading overlays the activity photography */
+@media(max-width:700px){
+  .hop-ticker{display:none!important}
+  #what{
+    position:relative!important;
+    height:calc(100svh - 265px)!important;
+    min-height:680px!important;
+    background:#78bde9!important;
+    overflow:hidden!important;
+    padding:0!important;
+  }
+  #what .section-head{
+    position:absolute!important;
+    z-index:25!important;
+    top:28px!important;
+    left:20px!important;
+    right:20px!important;
+    width:auto!important;
+    padding:0!important;
+    margin:0!important;
+    min-height:0!important;
+  }
+  #what .section-head h2.title:after{
+    font-size:36px!important;
+    line-height:.84!important;
+    text-shadow:0 2px 0 rgba(255,255,255,.45)!important;
+  }
+  #what .section-head .copy{
+    margin:13px 0 0!important;
+    max-width:330px!important;
+  }
+  #what .section-head .copy:before{
+    width:125px!important;
+    height:5px!important;
+    margin-bottom:10px!important;
+  }
+  #what .section-head .copy:after{
+    font-size:13px!important;
+    line-height:1.35!important;
+  }
+  #what .mpg-grid{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:680px!important;
+    z-index:1!important;
+  }
+  #what .mpg:before,#what .mpg:after{
+    min-height:100%!important;
+    height:100%!important;
+    padding:0 20px 68px!important;
+    background-position:center!important;
+  }
+  #what .mpg-grid:before{
+    top:57%!important;
+    z-index:30!important;
+  }
+  #what .mpg-grid:after{
+    bottom:17px!important;
+    z-index:30!important;
+  }
+}
