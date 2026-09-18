@@ -458,6 +458,48 @@ body{background:var(--cream)}
  #cities .city-dots{display:flex;justify-content:center;gap:12px}.city-dots span{width:12px;height:12px;border-radius:50%;background:#2aa6ed}.city-dots .active{background:var(--pink)}
  #cities .city-bottom-note{display:flex;justify-content:space-between;margin-top:55px;padding:40px;background:#ccecff;color:#000}
 }
+</style><style id="hop-prizes-final">
+#prizes{background:#fff!important;color:#000!important;padding:0!important;overflow:hidden!important}
+#prizes .prizes-hero{position:relative;min-height:560px;padding:46px 36px 40px;background:#8fcf3d;overflow:hidden}
+#prizes .prizes-kicker{display:inline-block;background:var(--pink);color:#fff;border:3px solid #000;box-shadow:5px 5px #000;padding:10px 20px;font:400 22px/1 Anton,Impact,sans-serif;transform:rotate(-3deg)}
+#prizes h2{position:relative;z-index:2;margin:28px 0 12px;font:400 72px/.78 Anton,Impact,sans-serif;color:#000;text-shadow:5px 5px #fff;letter-spacing:-.01em}
+#prizes h2 span{background:var(--yellow);padding:0 8px}
+#prizes .prizes-hero>p{position:relative;z-index:2;max-width:390px;margin:0;font:700 16px/1.3 Inter,Arial,sans-serif}
+#prizes .prize-hero-photo{position:absolute;right:-15px;bottom:-20px;width:52%;height:78%;overflow:hidden;transform:rotate(2deg);border:3px solid #000}
+#prizes .prize-hero-photo img{width:100%;height:100%;object-fit:cover}
+#prizes .prizes-body{background:#dff3ff;padding:30px 24px}
+#prizes .prizes-body h3{margin:0 0 18px 8px;font:400 30px/.9 Anton,Impact,sans-serif}
+#prizes .prize-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+#prizes .prize-grid article{background:#fff;border:2px solid #000;padding:12px 8px;text-align:center;box-shadow:3px 3px #000}
+#prizes .prize-icon{font-size:38px;line-height:1.1;margin-bottom:8px}
+#prizes .prize-grid strong{display:inline-block;background:var(--pink);color:#fff;padding:5px 6px;font:400 15px/.9 Anton,Impact,sans-serif}
+#prizes .prize-grid p{font:600 10px/1.25 Inter,Arial,sans-serif;margin:8px 0 0}
+#prizes .top-prizes{background:#fff4a8;padding:28px 24px 40px;display:grid;grid-template-columns:1fr 2fr;gap:20px;align-items:center}
+#prizes .top-prizes h3{margin:0;font:400 34px/.82 Anton,Impact,sans-serif}
+#prizes .top-prizes p{font:600 12px/1.35 Inter,Arial,sans-serif}
+#prizes .top-prize-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+#prizes .top-prize-grid article{background:#fff;border:2px solid #000;padding:14px 8px;text-align:center;box-shadow:3px 3px #000}
+#prizes .top-prize-grid b{display:block;font-size:34px;margin-bottom:8px}
+#prizes .top-prize-grid strong{display:block;background:#28a9df;color:#fff;padding:5px;font:400 13px/.9 Anton,Impact,sans-serif}
+#prizes .top-prize-grid span{display:block;margin-top:8px;font:600 9px/1.2 Inter,Arial,sans-serif}
+@media(max-width:700px){
+ #prizes .prizes-hero{min-height:520px;padding:38px 28px 28px}
+ #prizes .prizes-kicker{font-size:19px;padding:9px 17px}
+ #prizes h2{font-size:61px;margin-top:26px;max-width:310px}
+ #prizes .prizes-hero>p{font-size:14px;max-width:275px}
+ #prizes .prize-hero-photo{right:-28px;width:58%;height:65%;bottom:-12px}
+ #prizes .prizes-body{padding:28px 18px 32px}
+ #prizes .prizes-body h3{font-size:28px}
+ #prizes .prize-grid{display:flex;overflow-x:auto;gap:12px;padding:5px 5px 12px;scroll-snap-type:x mandatory;scrollbar-width:none}
+ #prizes .prize-grid::-webkit-scrollbar{display:none}
+ #prizes .prize-grid article{flex:0 0 39vw;scroll-snap-align:start}
+ #prizes .top-prizes{display:block;padding:30px 22px 38px}
+ #prizes .top-prizes h3{font-size:38px}
+ #prizes .top-prizes p{font-size:13px;max-width:300px}
+ #prizes .top-prize-grid{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;scrollbar-width:none}
+ #prizes .top-prize-grid::-webkit-scrollbar{display:none}
+ #prizes .top-prize-grid article{flex:0 0 43vw;scroll-snap-align:start}
+}
 </style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -565,7 +607,31 @@ body{background:var(--cream)}
   </div>
 </section>
 
-    <section id="tickets"><div class="wrap"><div class="eyebrow label">When is HOP FEST?</div><h2 class="display title">Save the date.<br>HOP is coming.</h2><div class="date-grid"><article class="date-card"><div class="city display">Pune</div><div class="tbd display">TBD</div></article><article class="date-card"><div class="city display">Mumbai</div><div class="tbd display">TBD</div></article><article class="date-card"><div class="city display">Bengaluru</div><div class="tbd display">TBD</div></article></div><div class="cta-row"><a class="btn btn-pink" href="#final">Get Your Pass <svg><use href="#arrow"/></svg></a></div></div></section>
+    <section id="prizes" aria-label="HOP FEST prizes">
+  <div class="prizes-hero">
+    <div class="prizes-kicker">05 — PRIZES</div>
+    <h2>EVERY<br>HOPPER <span>WINS.</span></h2>
+    <p>Because every child shows up, tries, plays and grows — and that’s a win!</p>
+    <div class="prize-hero-photo"><img src="assets/images/Hopfest1.png" alt="Happy HOP FEST child celebrating"></div>
+  </div>
+  <div class="prizes-body">
+    <h3>EVERY HOPPER GETS</h3>
+    <div class="prize-grid">
+      <article><div class="prize-icon">🏅</div><strong>MEDAL</strong><p>A symbol of your effort and spirit!</p></article>
+      <article><div class="prize-icon">🎒</div><strong>GOODIE KIT</strong><p>Fun goodies, merchandise and surprises.</p></article>
+      <article><div class="prize-icon">📜</div><strong>CERTIFICATE</strong><p>A celebration of your participation.</p></article>
+      <article><div class="prize-icon">⭐</div><strong>EXCLUSIVE EXTRAS</strong><p>Stickers, wristbands and other fun surprises.</p></article>
+    </div>
+  </div>
+  <div class="top-prizes">
+    <div><h3>TOP PERFORMERS<br>WIN MORE</h3><p>For those who go the extra mile — there are special prizes up for grabs!</p></div>
+    <div class="top-prize-grid">
+      <article><b>🏆</b><strong>TROPHIES</strong><span>For top performers in each category.</span></article>
+      <article><b>🎁</b><strong>EXCITING PRIZES</strong><span>From our brand partners.</span></article>
+      <article><b>★</b><strong>SPECIAL RECOGNITION</strong><span>For outstanding effort and achievement.</span></article>
+    </div>
+  </div>
+</section>
 
     <section id="why"><svg class="object final-star doodle" style="color:var(--pink)"><use href="#star"/></svg><svg class="object final-trophy doodle" style="color:var(--yellow)"><use href="#trophy"/></svg><figure class="photo final-photo missing"><img src="assets/images/event/final-celebration.jpg" alt="Children running and celebrating at HOP FEST" loading="lazy" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">FINAL EVENT PHOTO: wide celebration, running, jumping, flags<br>1800 × 1100</span></figure><div class="wrap final-content"><h2 class="display">Ready<br>to HOP<br>out?</h2><div class="final-list">Leave the screens behind.<br>Bring your crew.<br>Get outside.<br>Get moving.<br>Get playing.</div><div class="final-tag">HOP. PLAY. REPEAT.</div><a class="btn btn-yellow" href="#tickets">Get Your Pass <svg><use href="#arrow"/></svg></a></div></section>
   </main>
