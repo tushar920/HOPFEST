@@ -130,6 +130,20 @@ body{background:var(--cream)}
 #experience .zone{flex-basis:31vw!important;width:31vw!important;max-width:400px!important;height:410px!important;min-height:410px!important}
 #experience .zone-title{font-size:clamp(34px,4.4vw,54px)!important}
 }
+</style>\n<style id="hop-more-tile-copy">
+#experience .zone-desc{
+ position:absolute!important;left:12px!important;bottom:12px!important;z-index:6!important;
+ display:block!important;width:max-content!important;max-width:calc(100% - 24px)!important;
+ padding:6px 10px!important;background:var(--black)!important;color:#fff!important;
+ border:2px solid var(--black)!important;
+ font:700 12px/1.2 Inter,Arial,sans-serif!important;
+ letter-spacing:0!important;white-space:normal!important;
+}
+#experience .zone-title{bottom:48px!important}
+@media(max-width:420px){
+ #experience .zone-title{font-size:28px!important;bottom:47px!important;padding:8px 13px 7px!important}
+ #experience .zone-desc{font-size:11px!important;padding:5px 8px!important;bottom:11px!important}
+}
 </style>\n</head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -176,13 +190,13 @@ body{background:var(--cream)}
       <span class="more-swipe">SWIPE →</span>
     </div>
     <div class="exp-zones" aria-label="More at HOP FEST">
-      <article class="zone" style="--card-image:url('../images/Hopfest3.png')"><span class="zone-no">01</span><span class="zone-title">FOOD &amp; REFRESHMENTS →</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest1.png')"><span class="zone-no">02</span><span class="zone-title">KIDS STALLS &amp; SHOPPING →</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest_fisheye2.png')"><span class="zone-no">03</span><span class="zone-title">LIVE ENTERTAINMENT →</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest5.png')"><span class="zone-no">04</span><span class="zone-title">PHOTO AREAS →</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest4.png')"><span class="zone-no">05</span><span class="zone-title">RIDES &amp; CARNIVAL →</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest_fisheye2.png')"><span class="zone-no">06</span><span class="zone-title">STAGE PERFORMANCES →</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest3.png')"><span class="zone-no">07</span><span class="zone-title">CARICATURES &amp; TATTOOS →</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest3.png')"><span class="zone-no">01</span><span class="zone-title">FOOD &amp; REFRESHMENTS →</span><span class="zone-desc">Food &amp; refreshments</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest1.png')"><span class="zone-no">02</span><span class="zone-title">KIDS STALLS &amp; SHOPPING →</span><span class="zone-desc">Kids’ stalls &amp; goodies</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest_fisheye2.png')"><span class="zone-no">03</span><span class="zone-title">LIVE ENTERTAINMENT →</span><span class="zone-desc">Live entertainment &amp; stage shows</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest5.png')"><span class="zone-no">04</span><span class="zone-title">PHOTO AREAS →</span><span class="zone-desc">Photo zones &amp; fun installations</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest4.png')"><span class="zone-no">05</span><span class="zone-title">RIDES &amp; CARNIVAL →</span><span class="zone-desc">Rides &amp; carnival games</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest_fisheye2.png')"><span class="zone-no">06</span><span class="zone-title">STAGE PERFORMANCES →</span><span class="zone-desc">Stage performances</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest3.png')"><span class="zone-no">07</span><span class="zone-title">CARICATURES &amp; TATTOOS →</span><span class="zone-desc">Caricature artists &amp; temporary tattoos</span></article>
     </div>
   </div>
 </section>
