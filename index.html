@@ -960,6 +960,212 @@ body{background:var(--cream)}
   #why .final-photo:before{font-size:18px!important}
 }
 </style>
+
+<style id="hopfest-visual-identity-v1">
+:root{
+  --hf-blue:#1C4892;--hf-pink:#E84B81;--hf-lime:#A0CD3F;--hf-orange:#F68820;
+  --hf-green:#1A9D4D;--hf-purple:#683D98;--hf-yellow:#FAEE30;--hf-black:#211E1F;
+  --hf-white:#fff;--hf-cream:#FBF8F0;
+  --hf-display:"Bowlby One SC","Arial Black",Impact,sans-serif;
+  --hf-heading:Inter,Arial,sans-serif;--hf-body:Inter,Arial,sans-serif;
+}
+body{background:var(--hf-cream)!important;color:var(--hf-black)!important;font-family:var(--hf-body)!important}
+section{padding:0!important}
+h1,h2,h3,.display,.hero-sub,.btn,.label,.zone-no,.final-kicker,.final-stamp,.cities-kicker,
+.prizes-kicker,.prizes-body h3,.top-prizes h3,.city-card h3,.city-ticket,.activity-head h2,
+.activity-slide h3{font-family:var(--hf-display)!important;font-weight:400!important}
+p,.copy,.city-detail,.zone-desc,.prize-grid p,.top-prize-grid span{font-family:var(--hf-body)!important}
+.wrap{width:min(1180px,calc(100% - 36px))!important}
+header{background:var(--hf-blue)!important;border-bottom:4px solid var(--hf-black)!important}
+.nav{height:78px!important}
+.brand img{filter:none!important}
+.nav-links a{color:#fff!important}
+.nav-links a:hover{color:var(--hf-yellow)!important}
+.nav .btn{background:var(--hf-yellow)!important;color:var(--hf-black)!important;border:3px solid var(--hf-black)!important}
+.burger span{background:#fff!important}
+
+/* shared identity */
+.hf-sticker{position:absolute;z-index:8;background:var(--hf-pink);color:#fff;border:4px solid var(--hf-black);box-shadow:6px 6px 0 var(--hf-black);padding:11px 15px;font-family:var(--hf-display);line-height:.95;transform:rotate(-4deg)}
+.photo:after{border:4px solid var(--hf-black)!important}
+.btn{border:4px solid var(--hf-black)!important;box-shadow:6px 6px 0 var(--hf-black)!important;border-radius:0!important;clip-path:none!important}
+.btn-yellow{background:var(--hf-yellow)!important;color:var(--hf-black)!important}
+.btn-pink{background:var(--hf-pink)!important;color:#fff!important}
+
+/* HERO */
+#hero{min-height:calc(100svh - 78px)!important;background:var(--hf-blue)!important;color:#fff!important;display:block!important;padding:26px 0 46px!important}
+#hero .flag-line{display:none!important}
+#hero .hero-grid{display:grid!important;grid-template-columns:.78fr 1.22fr!important;gap:26px!important;align-items:center!important;width:min(1180px,calc(100% - 36px))!important}
+#hero .hero-copy{padding:28px 0!important}
+#hero .hero-kicker{display:inline-block;background:var(--hf-pink);color:#fff;border:4px solid var(--hf-black);padding:9px 14px;margin-bottom:20px;transform:rotate(-3deg);font-family:var(--hf-display)!important}
+#hero .hero-copy h1{font-family:var(--hf-display)!important;font-size:clamp(62px,8.5vw,120px)!important;line-height:.83!important;letter-spacing:-.035em!important;color:var(--hf-yellow)!important;text-shadow:5px 5px 0 var(--hf-black)!important}
+#hero .hero-sub{font-family:var(--hf-display)!important;font-size:clamp(24px,2.8vw,38px)!important;line-height:.95!important;color:#fff!important;margin:24px 0 14px!important}
+#hero .hero-copy p{max-width:440px!important;color:#fff!important;font-size:16px!important;line-height:1.5!important}
+#hero .hero-ctas{margin-top:25px!important}
+#hero .hero-collage{height:560px!important}
+#hero .hero-main{inset:18px 20px 35px 10px!important;clip-path:none!important;transform:rotate(-1.3deg)!important;box-shadow:8px 8px 0 var(--hf-black)!important}
+#hero .hero-side{right:-5px!important;bottom:0!important;width:190px!important;height:205px!important;transform:rotate(5deg)!important;box-shadow:7px 7px 0 var(--hf-black)!important}
+#hero .hero-main img,#hero .hero-side img{object-position:center!important}
+#hero .hero-ticket{background:var(--hf-pink)!important;border:4px solid var(--hf-black)!important;box-shadow:6px 6px 0 var(--hf-black)!important;transform:rotate(-6deg)!important}
+#hero .hero-sticker{background:var(--hf-yellow)!important;color:var(--hf-black)!important;border:4px solid var(--hf-black)!important;box-shadow:6px 6px 0 var(--hf-black)!important}
+#hero .object{color:var(--hf-yellow)!important}
+
+/* ACTIVITIES — photo first, graphic blocks */
+#what{background:var(--hf-yellow)!important;color:var(--hf-black)!important;padding:44px 0 54px!important}
+#what .activity-head{width:min(1180px,calc(100% - 36px));margin:0 auto 24px!important;text-align:left!important;position:relative;z-index:5}
+#what .activity-head h2{font-size:clamp(42px,6vw,74px)!important;line-height:.88!important;max-width:650px!important}
+#what .activity-rule{display:block!important;width:110px!important;height:8px!important;background:var(--hf-pink)!important;margin:16px 0!important}
+#what .activity-head p{font-size:15px!important;line-height:1.45!important;max-width:500px!important}
+#what .activity-carousel{width:min(1180px,calc(100% - 36px))!important;margin:auto!important;gap:20px!important}
+#what .activity-slide{border:4px solid var(--hf-black)!important;box-shadow:8px 8px 0 var(--hf-black)!important;background:var(--hf-blue)!important}
+#what .activity-slide img{filter:none!important}
+#what .activity-slide h3{background:var(--hf-blue)!important;color:var(--hf-yellow)!important;border-top:4px solid var(--hf-black)!important;font-size:clamp(29px,4vw,54px)!important;line-height:.88!important;padding:15px 17px!important}
+#what .activity-slide h3 b{color:var(--hf-pink)!important}
+#what .activity-prev{background:var(--hf-pink)!important;color:#fff!important;border:4px solid var(--hf-black)!important;box-shadow:5px 5px 0 var(--hf-black)!important}
+#what .activity-dots button{background:var(--hf-black)!important;border:0!important}
+#what .activity-dots button.active{background:var(--hf-pink)!important}
+
+/* MORE — colorful editorial card grid */
+#experience{background:var(--hf-cream)!important;padding:62px 0 70px!important}
+#experience .experience-head{width:min(1180px,calc(100% - 36px));margin:0 auto 30px!important;align-items:end!important}
+#experience .experience-head h2{font-size:clamp(45px,6vw,76px)!important;line-height:.86!important;max-width:650px!important}
+#experience .experience-head .copy{max-width:470px!important;margin-top:14px!important}
+#experience .more-swipe{background:var(--hf-pink)!important;color:#fff!important;border:4px solid var(--hf-black)!important;box-shadow:5px 5px 0 var(--hf-black)!important;padding:10px 13px!important;font-family:var(--hf-display)!important}
+#experience .exp-zones{width:min(1180px,calc(100% - 36px));margin:auto!important;display:grid!important;grid-template-columns:repeat(6,1fr)!important;grid-auto-rows:190px!important;gap:15px!important}
+#experience .zone{min-height:0!important;padding:18px!important;border:4px solid var(--hf-black)!important;box-shadow:6px 6px 0 var(--hf-black)!important;transform:none!important;display:flex!important;align-items:end!important}
+#experience .zone:nth-child(1){grid-column:span 3!important;grid-row:span 2!important;background:var(--hf-blue)!important}
+#experience .zone:nth-child(2){grid-column:span 3!important;background:var(--hf-pink)!important}
+#experience .zone:nth-child(3){grid-column:span 2!important;background:var(--hf-orange)!important}
+#experience .zone:nth-child(4){grid-column:span 2!important;background:var(--hf-lime)!important}
+#experience .zone:nth-child(5){grid-column:span 2!important;background:var(--hf-purple)!important}
+#experience .zone:nth-child(6){grid-column:span 3!important;background:var(--hf-yellow)!important;color:var(--hf-black)!important}
+#experience .zone:nth-child(7){grid-column:span 3!important;background:var(--hf-green)!important;color:#fff!important}
+#experience .zone .photo{opacity:.42!important}
+#experience .zone-no{font-family:var(--hf-display)!important;font-size:16px!important}
+#experience .zone-title{font-family:var(--hf-display)!important;font-size:clamp(22px,2.5vw,37px)!important;line-height:.9!important}
+#experience .zone-desc{display:block!important;font-size:11px!important;margin-top:7px!important;font-weight:700!important}
+
+/* CITIES */
+#cities{background:var(--hf-blue)!important;color:#fff!important;padding:64px 0 56px!important}
+#cities .cities-wrap{width:min(1180px,calc(100% - 36px))!important;margin:auto!important}
+#cities .cities-kicker{display:inline-block;background:var(--hf-pink);padding:9px 14px;border:4px solid var(--hf-black);box-shadow:5px 5px 0 var(--hf-black);transform:rotate(-3deg);margin-bottom:22px!important}
+#cities h2{font-family:var(--hf-display)!important;font-size:clamp(52px,7vw,92px)!important;line-height:.84!important;color:var(--hf-yellow)!important;text-shadow:5px 5px 0 var(--hf-black)!important}
+#cities .cities-intro{font-size:17px!important;line-height:1.45!important;margin:18px 0 30px!important}
+#cities .city-cards{display:flex!important;gap:18px!important;overflow-x:auto!important;padding:10px 4px 18px!important;scroll-snap-type:x mandatory!important}
+#cities .city-card{flex:0 0 min(310px,82vw)!important;background:var(--hf-cream)!important;color:var(--hf-black)!important;border:4px solid var(--hf-black)!important;box-shadow:7px 7px 0 var(--hf-pink)!important;scroll-snap-align:start!important}
+#cities .city-photo{height:220px!important;border-bottom:4px solid var(--hf-black)!important}
+#cities .city-photo img{width:100%!important;height:100%!important;object-fit:cover!important}
+#cities .city-card-body{padding:16px!important}
+#cities .city-card h3{font-size:36px!important;line-height:.9!important}
+#cities .city-rule{height:7px!important;width:70px!important;background:var(--hf-yellow)!important;margin:11px 0!important}
+#cities .city-detail{font-size:12px!important;line-height:1.5!important}
+#cities .city-ticket{display:inline-block!important;background:var(--hf-yellow)!important;border:3px solid var(--hf-black)!important;box-shadow:4px 4px 0 var(--hf-black)!important;padding:9px 11px!important;margin-top:14px!important;font-size:17px!important}
+#cities .city-bottom-note{display:flex!important;justify-content:space-between!important;margin-top:25px!important;font-family:var(--hf-display)!important;color:var(--hf-yellow)!important;font-size:20px!important;line-height:.95!important}
+
+/* PRIZES */
+#prizes{background:var(--hf-pink)!important;color:var(--hf-black)!important}
+#prizes .prizes-hero{background:var(--hf-yellow)!important;min-height:660px!important;padding:48px max(18px,calc((100% - 1180px)/2)) 40px!important}
+#prizes .prizes-kicker{display:inline-block;background:var(--hf-blue);color:#fff!important;border:4px solid var(--hf-black);box-shadow:5px 5px 0 var(--hf-black);padding:9px 14px;transform:rotate(-3deg)!important}
+#prizes .prizes-hero h2{font-family:var(--hf-display)!important;font-size:clamp(62px,9vw,125px)!important;line-height:.8!important;margin:25px 0 18px!important}
+#prizes .prizes-hero h2 span{background:var(--hf-blue)!important;color:var(--hf-yellow)!important;padding:0 8px!important;box-shadow:6px 6px 0 var(--hf-black)!important}
+#prizes .prizes-hero>p{max-width:480px!important;font-size:16px!important;line-height:1.45!important}
+#prizes .prize-hero-photo{width:min(650px,92%);height:300px!important;margin:26px auto 0!important;border:4px solid var(--hf-black)!important;box-shadow:8px 8px 0 var(--hf-black)!important;transform:rotate(1deg)!important}
+#prizes .prize-hero-photo img{width:100%;height:100%;object-fit:cover!important}
+#prizes .prizes-body{background:var(--hf-blue)!important;color:#fff!important;padding:54px max(18px,calc((100% - 1180px)/2))!important}
+#prizes .prizes-body h3,#prizes .top-prizes h3{font-size:clamp(38px,5vw,62px)!important;line-height:.88!important;color:var(--hf-yellow)!important}
+#prizes .prize-grid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:15px!important;margin-top:25px!important}
+#prizes .prize-grid article{background:var(--hf-cream)!important;color:var(--hf-black)!important;border:4px solid var(--hf-black)!important;box-shadow:6px 6px 0 var(--hf-pink)!important;padding:22px!important;min-height:180px!important}
+#prizes .prize-icon{display:none!important}
+#prizes .prize-grid strong,#prizes .top-prize-grid strong{font-family:var(--hf-display)!important;font-size:25px!important;line-height:.9!important}
+#prizes .prize-grid p{font-size:12px!important;line-height:1.4!important;margin-top:12px!important}
+#prizes .top-prizes{background:var(--hf-orange)!important;padding:55px max(18px,calc((100% - 1180px)/2)) 70px!important}
+#prizes .top-prizes>div:first-child p{max-width:500px!important;margin-top:12px!important;font-size:14px!important}
+#prizes .top-prize-grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:16px!important;margin-top:26px!important}
+#prizes .top-prize-grid article{background:var(--hf-yellow)!important;border:4px solid var(--hf-black)!important;box-shadow:6px 6px 0 var(--hf-black)!important;padding:22px!important;min-height:190px!important}
+#prizes .top-prize-grid b{display:none!important}
+#prizes .top-prize-grid span{display:block!important;font-size:12px!important;line-height:1.4!important;margin-top:10px!important}
+
+/* FINAL CTA — identity anchor */
+#why{background:var(--hf-blue)!important;color:#fff!important;min-height:760px!important;padding:0!important;display:block!important}
+#why .final-photo{position:absolute!important;left:4%;right:4%;top:26px!important;height:430px!important;inset-inline:auto!important;width:92%!important;border:4px solid var(--hf-black)!important;box-shadow:8px 8px 0 var(--hf-black)!important;z-index:1!important}
+#why .final-photo:after{background:linear-gradient(180deg,rgba(28,72,146,.05),rgba(28,72,146,.18))!important;border:0!important}
+#why .final-kicker{position:absolute!important;left:5%;top:455px!important;z-index:5!important;background:var(--hf-pink)!important;color:#fff!important;border:4px solid var(--hf-black)!important;box-shadow:6px 6px 0 var(--hf-black)!important;padding:12px 18px!important;transform:rotate(-3deg)!important}
+#why .final-top-note{display:none!important}
+#why .final-copy{position:absolute!important;left:42%;top:440px!important;z-index:5!important;text-align:left!important;width:52%!important}
+#why .final-copy h2{font-family:var(--hf-display)!important;font-size:clamp(58px,8vw,108px)!important;line-height:.78!important;color:#fff!important;text-shadow:5px 5px 0 var(--hf-black)!important}
+#why .final-copy h2 span{display:inline-block!important;background:var(--hf-yellow)!important;color:var(--hf-black)!important;padding:3px 9px!important;box-shadow:6px 6px 0 var(--hf-black)!important}
+#why .final-copy p{max-width:420px!important;margin:22px 0!important;font-size:15px!important;line-height:1.45!important}
+#why .final-cta{display:inline-flex!important;background:var(--hf-yellow)!important;color:var(--hf-black)!important;border:4px solid var(--hf-black)!important;box-shadow:6px 6px 0 var(--hf-black)!important;padding:14px 22px!important;font-family:var(--hf-display)!important;font-size:24px!important}
+#why .final-stamp{position:absolute!important;right:5%;top:555px!important;z-index:5!important;background:var(--hf-pink)!important;border:4px solid var(--hf-black)!important;box-shadow:6px 6px 0 var(--hf-black)!important;padding:13px!important;color:#fff!important;transform:rotate(6deg)!important}
+
+/* footer */
+footer{background:var(--hf-black)!important;color:#fff!important;border-top:8px solid var(--hf-yellow)!important}
+.foot-links a:hover{color:var(--hf-yellow)!important}
+
+/* decorative identity marks */
+#hero:after,#what:after,#experience:after,#cities:after,#prizes:after{content:"✦";position:absolute;font-family:var(--hf-display);font-size:90px;line-height:1;color:var(--hf-pink);pointer-events:none;z-index:2}
+#hero:after{right:2%;bottom:4%;color:var(--hf-orange);transform:rotate(15deg)}
+#what:after{right:3%;top:8%;color:var(--hf-blue);transform:rotate(-12deg)}
+#experience:after{left:2%;bottom:5%;color:var(--hf-green);transform:rotate(-10deg)}
+#cities:after{right:2%;top:6%;color:var(--hf-pink);transform:rotate(12deg)}
+#prizes:after{right:3%;top:7%;color:var(--hf-purple);transform:rotate(-8deg)}
+
+@media(max-width:900px){
+  #hero .hero-grid{grid-template-columns:1fr!important}
+  #hero .hero-collage{height:420px!important}
+  #experience .exp-zones{grid-template-columns:1fr 1fr!important;grid-auto-rows:185px!important}
+  #experience .zone:nth-child(n){grid-column:span 1!important;grid-row:span 1!important}
+  #experience .zone:nth-child(1){grid-column:span 2!important;grid-row:span 2!important}
+  #prizes .prize-grid{grid-template-columns:1fr 1fr!important}
+  #prizes .top-prize-grid{grid-template-columns:1fr!important}
+}
+@media(max-width:560px){
+  #hero{padding:16px 0 34px!important}
+  #hero .hero-grid{width:calc(100% - 28px)!important}
+  #hero .hero-copy{padding:20px 0 8px!important}
+  #hero .hero-copy h1{font-size:62px!important}
+  #hero .hero-sub{font-size:23px!important}
+  #hero .hero-ctas{gap:10px!important}
+  #hero .hero-ctas .btn{padding:12px 15px!important;font-size:16px!important}
+  #hero .hero-collage{height:300px!important}
+  #hero .hero-main{inset:10px 15px 22px 2px!important}
+  #hero .hero-side{width:110px!important;height:125px!important}
+  #hero .hero-ticket{width:120px!important;font-size:17px!important;padding:10px!important}
+  #what{padding:32px 0 42px!important}
+  #what .activity-head{width:calc(100% - 28px)!important}
+  #what .activity-head h2{font-size:42px!important}
+  #what .activity-carousel{width:calc(100% - 28px)!important}
+  #what .activity-slide{flex-basis:100%!important}
+  #what .activity-slide h3{font-size:30px!important}
+  #experience{padding:44px 0 52px!important}
+  #experience .experience-head{width:calc(100% - 28px)!important}
+  #experience .experience-head h2{font-size:45px!important}
+  #experience .exp-zones{width:calc(100% - 28px)!important;grid-template-columns:1fr 1fr!important;grid-auto-rows:160px!important;gap:11px!important}
+  #experience .zone{padding:12px!important}
+  #experience .zone:nth-child(1){grid-column:span 2!important;grid-row:span 2!important}
+  #experience .zone-title{font-size:22px!important}
+  #cities{padding:48px 0!important}
+  #cities .cities-wrap{width:calc(100% - 28px)!important}
+  #cities h2{font-size:56px!important}
+  #cities .city-card{flex-basis:82vw!important}
+  #cities .city-bottom-note{font-size:15px!important}
+  #prizes .prizes-hero{min-height:620px!important;padding:40px 14px 34px!important}
+  #prizes .prizes-hero h2{font-size:62px!important}
+  #prizes .prize-hero-photo{width:100%!important;height:250px!important}
+  #prizes .prizes-body,#prizes .top-prizes{padding-left:14px!important;padding-right:14px!important}
+  #prizes .prize-grid{grid-template-columns:1fr 1fr!important;gap:10px!important}
+  #prizes .prize-grid article{min-height:155px!important;padding:14px!important}
+  #prizes .prize-grid strong{font-size:20px!important}
+  #why{min-height:760px!important}
+  #why .final-photo{left:14px!important;right:auto!important;width:calc(100% - 28px)!important;height:290px!important;top:16px!important}
+  #why .final-kicker{left:20px!important;top:327px!important;font-size:18px!important}
+  #why .final-copy{left:20px!important;top:415px!important;width:calc(100% - 40px)!important}
+  #why .final-copy h2{font-size:57px!important;line-height:.82!important}
+  #why .final-copy p{font-size:14px!important;margin:18px 0!important}
+  #why .final-cta{font-size:21px!important;width:100%!important;justify-content:space-between!important}
+  #why .final-stamp{right:20px!important;top:640px!important;font-size:15px!important}
+  #hero:after,#what:after,#experience:after,#cities:after,#prizes:after{font-size:52px!important}
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -989,7 +1195,7 @@ body{background:var(--cream)}
       <div class="flag-line"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy"><h1 class="display">HOP OUT<br>&amp; PLAY.</h1><div class="hero-sub">India's Biggest Fitness Carnival</div><p>A high-energy festival where kids move, play, compete and have fun — together.</p><div class="hero-ctas"><a class="btn btn-yellow" href="#tickets">Hop In <svg><use href="#arrow"/></svg></a><a class="btn btn-outline" href="#what">Explore the Fest <svg><use href="#arrow"/></svg></a></div></div>
-        <div class="hero-collage"><div class="festival-sticker sticker-yellow hero-sticker">PLAY<br>ALL DAY</div><svg class="object speed doodle"><use href="#speed"/></svg><svg class="object ball doodle"><use href="#ball-icon"/></svg><svg class="object confetti doodle"><use href="#confetti"/></svg><figure class="photo hero-main missing"><img src="assets/images/hero/hero-kids-race.jpg" alt="Children sprinting through a HOP FEST race" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">HERO: children racing, jumping and cheering<br>1600 × 1200</span></figure><figure class="photo hero-side missing"><img src="assets/images/hero/hero-finish-line.jpg" alt="Child celebrating at a finish line" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">finish-line celebration<br>720 × 840</span></figure><div class="hero-ticket"><small>HOP FEST · ADMIT ONE</small>PLAY<br>ALL DAY</div></div>
+        <div class="hero-collage"><div class="festival-sticker sticker-yellow hero-sticker">PLAY<br>ALL DAY</div><svg class="object speed doodle"><use href="#speed"/></svg><svg class="object ball doodle"><use href="#ball-icon"/></svg><svg class="object confetti doodle"><use href="#confetti"/></svg><figure class="photo hero-main missing"><img src="assets/images/Hopfest_fisheye2.png" alt="Children sprinting through a HOP FEST race" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">HERO: children racing, jumping and cheering<br>1600 × 1200</span></figure><figure class="photo hero-side missing"><img src="assets/images/Hopfest1.png" alt="Child celebrating at a finish line" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">finish-line celebration<br>720 × 840</span></figure><div class="hero-ticket"><small>HOP FEST · ADMIT ONE</small>PLAY<br>ALL DAY</div></div>
       </div>
     </section>
 
