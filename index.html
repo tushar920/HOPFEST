@@ -1166,6 +1166,131 @@ footer{background:var(--hf-black)!important;color:#fff!important;border-top:8px 
   #hero:after,#what:after,#experience:after,#cities:after,#prizes:after{font-size:52px!important}
 }
 </style>
+
+<style id="hopfest-master-identity-v2">
+/* HOP FEST MASTER VISUAL SYSTEM — one coherent mobile-first language */
+:root{
+  --hf-blue:#1c4892;--hf-pink:#e84b81;--hf-lime:#a0cd3f;--hf-orange:#f68820;
+  --hf-purple:#683d98;--hf-yellow:#faee30;--hf-green:#1a9d4d;--hf-black:#090909;--hf-cream:#f7f5ef;
+}
+body{background:var(--hf-cream)!important;color:var(--hf-black)!important}
+section{overflow:hidden!important}
+h1,h2,h3,.display,.final-kicker,.final-stamp,.cities-kicker,.prizes-kicker,
+.activity-slide h3,.city-card h3,.city-ticket,.zone-no,.zone-title,.more-swipe{
+  font-family:'Bowlby One SC',Anton,Impact,sans-serif!important;
+  font-weight:400!important;
+  text-transform:uppercase!important;
+}
+p,.copy,.city-detail,.zone-desc,.prize-grid p,.top-prize-grid span{
+  font-family:Inter,Arial,sans-serif!important;
+}
+
+/* Header: simple blue festival bar */
+header{background:var(--hf-blue)!important;border-bottom:4px solid var(--hf-black)!important}
+@media(max-width:700px){
+  .nav{height:64px!important;padding:0 18px!important}
+  .brand img{width:82px!important;height:44px!important}
+  .nav .btn{height:42px!important;min-height:42px!important;padding:0 38px 0 14px!important;background:var(--hf-yellow)!important;color:var(--hf-black)!important;font-size:11px!important}
+  .nav .btn:after{border-left-color:var(--hf-black)!important;right:22px!important}
+  .burger{width:35px!important;height:35px!important}
+  .burger span{background:#fff!important;height:3px!important;margin:5px 0!important}
+}
+
+/* HERO — photo + giant type + ticket */
+#hero{background:var(--hf-blue)!important}
+#hero .hero-copy h1{color:var(--hf-yellow)!important;text-shadow:6px 6px 0 var(--hf-black)!important}
+#hero .hero-sub{color:#fff!important}
+#hero .hero-copy p{color:#fff!important}
+@media(max-width:700px){
+  #hero .hero-copy{top:42px!important;left:18px!important;right:18px!important}
+  #hero .hero-copy h1{font-size:clamp(57px,17vw,76px)!important;line-height:.82!important}
+  #hero .hero-sub{font-size:18px!important;max-width:290px!important}
+  #hero .hero-copy p{font-size:13px!important;max-width:310px!important;margin-bottom:30px!important}
+  #hero .hero-ctas .btn{width:245px!important;min-width:245px!important;height:56px!important;font-size:17px!important}
+}
+
+/* ACTIVITIES — yellow frame, real photo, blue title block */
+#what{background:var(--hf-yellow)!important;color:var(--hf-black)!important}
+@media(max-width:700px){
+  #what{height:calc(100svh - 64px)!important;min-height:610px!important;background:var(--hf-yellow)!important}
+  #what .activity-head{top:22px!important;left:18px!important;right:18px!important}
+  #what .activity-head h2{font-family:'Bowlby One SC',Anton,Impact,sans-serif!important;font-size:34px!important;line-height:.84!important;color:var(--hf-black)!important}
+  #what .activity-rule{width:88px!important;height:5px!important;background:var(--hf-pink)!important;margin:11px 0!important}
+  #what .activity-head p{font-size:12px!important;line-height:1.3!important;color:#fff!important;text-shadow:1px 1px 0 #000!important;max-width:310px!important}
+  #what .activity-carousel{padding:0!important;width:100%!important}
+  #what .activity-slide{border:3px solid var(--hf-black)!important;box-shadow:none!important;background:var(--hf-blue)!important}
+  #what .activity-slide img{height:100%!important;object-fit:cover!important}
+  #what .activity-slide h3{background:var(--hf-blue)!important;color:var(--hf-yellow)!important;border:0!important;padding:10px 13px!important;font-size:28px!important;line-height:.82!important;bottom:16px!important;left:18px!important;right:auto!important}
+  #what .activity-slide h3 b{color:var(--hf-pink)!important}
+  #what .activity-prev{left:14px!important;background:var(--hf-pink)!important;color:#fff!important;border:3px solid var(--hf-black)!important;box-shadow:3px 3px 0 #000!important}
+  #what .activity-dots{background:rgba(9,9,9,.6)!important}
+  #what .activity-dots button.active{background:var(--hf-pink)!important}
+}
+
+/* MORE — cards must actually show their photography */
+#experience{background:var(--hf-cream)!important;color:var(--hf-black)!important}
+#experience .zone{
+  background-image:var(--card-image)!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+#experience .zone:after{
+  content:""!important;position:absolute!important;inset:0!important;
+  background:linear-gradient(180deg,rgba(9,9,9,0) 35%,rgba(9,9,9,.72) 100%)!important;
+  z-index:1!important;pointer-events:none!important;
+}
+#experience .zone-title{z-index:3!important;border-radius:0!important;border:3px solid var(--hf-black)!important;box-shadow:5px 5px 0 var(--hf-black)!important}
+@media(max-width:700px){
+  #experience{padding:48px 0 48px!important}
+  #experience .experience-head h2{font-size:39px!important;line-height:.82!important}
+  #experience .experience-head .copy{font-size:12px!important}
+  #experience .more-swipe{background:var(--hf-pink)!important;color:#fff!important}
+  #experience .exp-zones{padding:8px 18px 25px!important;gap:14px!important}
+  #experience .zone{flex-basis:82vw!important;width:82vw!important;height:330px!important;min-height:330px!important}
+  #experience .zone-title{font-size:25px!important;padding:9px 12px!important}
+}
+
+/* CITIES — remove old skew/diagonal treatment */
+#cities{background:var(--hf-blue)!important}
+#cities .city-bottom-note{transform:none!important}
+#cities:after{content:"✦"!important;background:none!important;border:0!important;box-shadow:none!important;padding:0!important}
+@media(max-width:700px){
+  #cities{min-height:0!important;padding:46px 0 28px!important}
+  #cities .cities-wrap{padding:0!important}
+  #cities .cities-kicker{margin-left:18px!important;font-size:17px!important;padding:8px 13px!important}
+  #cities h2{margin:0 18px!important;font-size:51px!important;line-height:.82!important}
+  #cities .cities-intro{margin:16px 18px 24px!important;font-size:14px!important}
+  #cities .city-cards{padding-left:18px!important;padding-right:18px!important}
+  #cities .city-card{border-radius:0!important;box-shadow:6px 6px 0 var(--hf-pink)!important}
+  #cities .city-ticket{background:var(--hf-yellow)!important;color:var(--hf-black)!important}
+  #cities .city-bottom-note{min-height:110px!important;padding:24px 18px!important;background:var(--hf-yellow)!important;color:var(--hf-black)!important}
+  #cities .city-bottom-note span:last-child{background:var(--hf-pink)!important;color:#fff!important}
+}
+
+/* PRIZES — same blocks, outlines and palette */
+#prizes{background:var(--hf-blue)!important}
+#prizes .prizes-hero{background:var(--hf-yellow)!important}
+#prizes .prizes-body{background:var(--hf-blue)!important;color:#fff!important}
+#prizes .top-prizes{background:var(--hf-pink)!important}
+#prizes .prize-grid article,#prizes .top-prize-grid article{
+  border:3px solid var(--hf-black)!important;
+  box-shadow:5px 5px 0 var(--hf-black)!important;
+}
+#prizes .prize-grid strong{background:var(--hf-blue)!important;color:var(--hf-yellow)!important}
+#prizes .top-prize-grid strong{background:var(--hf-yellow)!important;color:var(--hf-black)!important}
+@media(max-width:700px){
+  #prizes .prizes-hero{min-height:540px!important}
+  #prizes h2{font-family:'Bowlby One SC',Anton,Impact,sans-serif!important;font-size:57px!important}
+  #prizes .prizes-body{padding-top:40px!important}
+}
+
+/* FINAL — same visual language, but restrained */
+#why{background:var(--hf-blue)!important}
+#why .final-copy h2{font-family:'Bowlby One SC',Anton,Impact,sans-serif!important}
+#why .final-copy h2 span{background:var(--hf-yellow)!important;color:var(--hf-black)!important}
+#why .final-cta{background:var(--hf-yellow)!important;color:var(--hf-black)!important}
+#why .final-kicker,#why .final-stamp{background:var(--hf-pink)!important;color:#fff!important}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -1230,13 +1355,13 @@ footer{background:var(--hf-black)!important;color:#fff!important;border-top:8px 
       <span class="more-swipe">SWIPE →</span>
     </div>
     <div class="exp-zones" aria-label="More at HOP FEST">
-      <article class="zone" style="--card-image:url('../images/Hopfest3.png')"><span class="zone-no">01</span><span class="zone-title">FOOD &amp; REFRESHMENTS →</span><span class="zone-desc">Food &amp; refreshments</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest1.png')"><span class="zone-no">02</span><span class="zone-title">KIDS STALLS &amp; SHOPPING →</span><span class="zone-desc">Kids’ stalls &amp; goodies</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest_fisheye2.png')"><span class="zone-no">03</span><span class="zone-title">LIVE ENTERTAINMENT →</span><span class="zone-desc">Live entertainment &amp; stage shows</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest5.png')"><span class="zone-no">04</span><span class="zone-title">PHOTO AREAS →</span><span class="zone-desc">Photo zones &amp; fun installations</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest4.png')"><span class="zone-no">05</span><span class="zone-title">RIDES &amp; CARNIVAL →</span><span class="zone-desc">Rides &amp; carnival games</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest_fisheye2.png')"><span class="zone-no">06</span><span class="zone-title">STAGE PERFORMANCES →</span><span class="zone-desc">Stage performances</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest3.png')"><span class="zone-no">07</span><span class="zone-title">CARICATURES &amp; TATTOOS →</span><span class="zone-desc">Caricature artists &amp; temporary tattoos</span></article>
+      <article class="zone" style="--card-image:url('assets/images/Hopfest3.png')"><span class="zone-no">01</span><span class="zone-title">FOOD &amp; REFRESHMENTS →</span><span class="zone-desc">Food &amp; refreshments</span></article>
+      <article class="zone" style="--card-image:url('assets/images/Hopfest1.png')"><span class="zone-no">02</span><span class="zone-title">KIDS STALLS &amp; SHOPPING →</span><span class="zone-desc">Kids’ stalls &amp; goodies</span></article>
+      <article class="zone" style="--card-image:url('assets/images/Hopfest_fisheye2.png')"><span class="zone-no">03</span><span class="zone-title">LIVE ENTERTAINMENT →</span><span class="zone-desc">Live entertainment &amp; stage shows</span></article>
+      <article class="zone" style="--card-image:url('assets/images/Hopfest5.png')"><span class="zone-no">04</span><span class="zone-title">PHOTO AREAS →</span><span class="zone-desc">Photo zones &amp; fun installations</span></article>
+      <article class="zone" style="--card-image:url('assets/images/Hopfest4.png')"><span class="zone-no">05</span><span class="zone-title">RIDES &amp; CARNIVAL →</span><span class="zone-desc">Rides &amp; carnival games</span></article>
+      <article class="zone" style="--card-image:url('assets/images/Hopfest_fisheye2.png')"><span class="zone-no">06</span><span class="zone-title">STAGE PERFORMANCES →</span><span class="zone-desc">Stage performances</span></article>
+      <article class="zone" style="--card-image:url('assets/images/Hopfest3.png')"><span class="zone-no">07</span><span class="zone-title">CARICATURES &amp; TATTOOS →</span><span class="zone-desc">Caricature artists &amp; temporary tattoos</span></article>
     </div>
   </div>
 </section>
