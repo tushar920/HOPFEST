@@ -1348,6 +1348,222 @@ header{
   #experience .zone-title{box-shadow:3px 3px 0 var(--brand-black)!important}
 }
 </style>
+
+<style id="hopfest-feedback-fix-v1">
+/* TARGETED VISUAL CORRECTIONS — copy/layout/function untouched */
+
+/* 1. ACTIVITIES: use the HOP FEST display/heading system, not Arial Black */
+#what .section-head h2.title:after,
+#what .mpg:before,
+#what .mpg:after{
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-weight:400!important;
+  letter-spacing:-.025em!important;
+}
+#what .section-head .copy:after{
+  font-family:'Anton','Arial Black',Impact,sans-serif!important;
+  font-weight:400!important;
+  line-height:1.18!important;
+  letter-spacing:.01em!important;
+}
+#what .section-head h2.title:after{
+  line-height:.92!important;
+}
+#what .mpg:before,#what .mpg:after{
+  text-shadow:none!important;
+  line-height:.9!important;
+}
+
+/* 2. MORE: one non-button visual swipe cue */
+#experience .experience-head:after{display:none!important;content:none!important}
+#experience .more-swipe{
+  display:inline-block!important;
+  margin-top:13px!important;
+  padding:3px 0 5px!important;
+  background:transparent!important;
+  color:var(--brand-pink)!important;
+  border:0!important;
+  border-bottom:3px solid var(--brand-yellow)!important;
+  box-shadow:none!important;
+  transform:rotate(-2deg)!important;
+  font-family:'Bowlby One SC','Anton',Impact,sans-serif!important;
+  font-size:14px!important;
+  line-height:1!important;
+  letter-spacing:.02em!important;
+  pointer-events:none!important;
+}
+#experience .more-swipe:before{
+  content:"✦"!important;
+  margin-right:7px!important;
+  color:var(--brand-orange)!important;
+}
+
+/* 3. CITY CARD TYPE: reduce oversized city names */
+#cities .city-card h3,
+#cities .city-card .city-card-body h3{
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-size:clamp(30px,3.3vw,46px)!important;
+  line-height:1!important;
+  letter-spacing:-.015em!important;
+}
+@media(max-width:700px){
+  #cities .city-card h3,
+  #cities .city-card .city-card-body h3{
+    font-size:34px!important;
+    line-height:1.02!important;
+  }
+}
+
+/* 4. PRIZES: WINS block without the cheap offset shadow */
+#prizes .prizes-hero h2 span{
+  background:var(--brand-blue)!important;
+  color:var(--brand-yellow)!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:none!important;
+  text-shadow:none!important;
+  padding:2px 9px 5px!important;
+}
+
+/* 5. HERO: make supporting copy readable over photography */
+#hero .hero-sub{
+  display:inline-block!important;
+  max-width:480px!important;
+  padding:4px 9px 5px!important;
+  background:var(--brand-blue)!important;
+  color:#fff!important;
+  border:3px solid var(--brand-black)!important;
+  line-height:1.02!important;
+}
+#hero .hero-copy p{
+  display:inline-block!important;
+  max-width:475px!important;
+  padding:7px 10px!important;
+  background:rgba(28,72,146,.94)!important;
+  color:#fff!important;
+  border-left:5px solid var(--brand-pink)!important;
+  line-height:1.42!important;
+}
+#hero .hero-ctas .btn-yellow{
+  background:var(--brand-pink)!important;
+  color:#fff!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:4px 4px 0 var(--brand-black)!important;
+  clip-path:none!important;
+  border-radius:0!important;
+}
+#hero .hero-ctas .btn-yellow:after{display:none!important}
+#hero .hero-copy:after{display:none!important;content:none!important}
+
+/* 6. ACTIVITY TITLES: no black offset shadow */
+#what .mpg:before,#what .mpg:after{
+  text-shadow:none!important;
+}
+
+/* 7. CITIES FOOTER STRIP: remove the bulky section; keep NEXT STOP as one graphic */
+#cities .city-bottom-note{display:none!important}
+#cities:after{
+  content:"NEXT STOP →"!important;
+  top:auto!important;
+  right:5%!important;
+  bottom:28px!important;
+  left:auto!important;
+  padding:12px 18px!important;
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:5px 5px 0 var(--brand-black)!important;
+  font-family:'Bowlby One SC','Anton',Impact,sans-serif!important;
+  font-size:23px!important;
+  line-height:1!important;
+  transform:rotate(-3deg)!important;
+}
+@media(max-width:700px){
+  #cities:after{
+    right:18px!important;
+    bottom:24px!important;
+    font-size:19px!important;
+    padding:10px 14px!important;
+  }
+}
+
+/* 8. PRIZE HERO PHOTO: don't let the next blue section cut it */
+#prizes .prizes-hero{
+  overflow:visible!important;
+  padding-bottom:48px!important;
+}
+#prizes .prize-hero-photo{
+  bottom:18px!important;
+  z-index:4!important;
+  height:68%!important;
+}
+@media(max-width:700px){
+  #prizes .prizes-hero{
+    min-height:560px!important;
+    padding-bottom:44px!important;
+  }
+  #prizes .prize-hero-photo{
+    bottom:14px!important;
+    height:63%!important;
+  }
+}
+
+/* 9. PRIZES / ALL HEADINGS: more breathing room and stronger brand font */
+#prizes .prizes-body h3,
+#prizes .top-prizes h3,
+#prizes .prize-grid strong,
+#prizes .top-prize-grid strong{
+  font-family:'Bowlby One SC','Anton',Impact,sans-serif!important;
+  line-height:1.02!important;
+  letter-spacing:-.01em!important;
+}
+#prizes .top-prizes p,
+#prizes .prize-grid p,
+#prizes .top-prize-grid span{
+  line-height:1.5!important;
+}
+#prizes .top-prizes h3{
+  line-height:.95!important;
+}
+
+/* 10. CTA SYSTEM: use the clean rectangular CTA language everywhere */
+.btn,.city-ticket,.final-cta{
+  border-radius:0!important;
+  clip-path:none!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:5px 5px 0 var(--brand-black)!important;
+  font-family:'Bowlby One SC','Anton',Impact,sans-serif!important;
+  line-height:1!important;
+  letter-spacing:.01em!important;
+}
+.city-ticket{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+}
+.final-cta{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+}
+@media(max-width:700px){
+  #hero .hero-sub{
+    font-size:17px!important;
+  }
+  #hero .hero-copy p{
+    font-size:13px!important;
+    max-width:330px!important;
+  }
+  #hero .hero-ctas .btn-yellow{
+    width:245px!important;
+    justify-content:center!important;
+  }
+}
+
+/* Remove old decorative labels that were creating visual noise */
+#what:before,#what:after,
+#experience:before,#experience:after{
+  display:none!important;
+  content:none!important;
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
