@@ -960,6 +960,394 @@ body{background:var(--cream)}
   #why .final-photo:before{font-size:18px!important}
 }
 </style>
+
+<style id="hopfest-brand-identity-v1">
+/* HOP FEST BRAND IDENTITY — DESIGN ONLY
+   Layout, copy, interactions and content intentionally untouched. */
+:root{
+  --brand-blue:#1C4892;
+  --brand-pink:#E84B81;
+  --brand-lime:#A0CD3F;
+  --brand-orange:#F68820;
+  --brand-green:#1A9D4D;
+  --brand-purple:#683D98;
+  --brand-yellow:#FAEE30;
+  --brand-white:#FFFFFF;
+  --brand-black:#000000;
+  --brand-paper:#FFFDF5;
+  --brand-display:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif;
+  --brand-heading:'Anton','Arial Black',Impact,sans-serif;
+  --brand-body:'Inter',Arial,sans-serif;
+  --brand-shadow:5px 5px 0 var(--brand-black);
+  --brand-shadow-sm:3px 3px 0 var(--brand-black);
+}
+
+/* GLOBAL TYPE + SURFACE */
+html,body{
+  background:var(--brand-paper)!important;
+  color:var(--brand-black)!important;
+  font-family:var(--brand-body)!important;
+}
+body{overflow-x:hidden!important}
+.display,
+h1,h2,h3,
+.hero-kicker,.hero-sub,.hero-ticket,
+.festival-sticker,.more-swipe,
+.cities-kicker,.city-card h3,.city-ticket,
+.prizes-kicker,.prizes-body h3,.top-prizes h3,
+.prize-grid strong,.top-prize-grid strong,
+.final-kicker,.final-stamp,.final-cta,
+.zone-no,.zone-title,.label{
+  font-family:var(--brand-display)!important;
+  font-weight:400!important;
+  letter-spacing:-.015em!important;
+  text-transform:uppercase!important;
+}
+p,.copy,.hero-copy p,.cities-intro,.city-detail,
+.zone-desc,.prize-grid p,.top-prize-grid span{
+  font-family:var(--brand-body)!important;
+}
+h1,h2,h3{color:var(--brand-black)}
+section{position:relative}
+
+/* LOGO / NAV */
+header{
+  background:var(--brand-blue)!important;
+  border-bottom:4px solid var(--brand-black)!important;
+}
+.brand img{object-fit:contain!important}
+.nav-links a{
+  color:var(--brand-white)!important;
+  transition:color .15s ease,transform .15s ease!important;
+}
+.nav-links a:hover{
+  color:var(--brand-yellow)!important;
+  transform:translateY(-1px)!important;
+}
+.nav .btn{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+  border-color:var(--brand-black)!important;
+  box-shadow:var(--brand-shadow)!important;
+}
+.burger span{background:var(--brand-white)!important}
+.mobile-menu{
+  background:var(--brand-blue)!important;
+  border-top-color:var(--brand-black)!important;
+}
+.mobile-menu a{
+  color:var(--brand-white)!important;
+  border-bottom-color:rgba(255,255,255,.25)!important;
+}
+
+/* SHARED BRAND BUTTON */
+.btn{
+  border:3px solid var(--brand-black)!important;
+  border-radius:0!important;
+  box-shadow:var(--brand-shadow)!important;
+  clip-path:none!important;
+  font-family:var(--brand-display)!important;
+  text-transform:uppercase!important;
+}
+.btn:hover{
+  transform:translate(-2px,-2px) rotate(-1deg)!important;
+  box-shadow:7px 7px 0 var(--brand-black)!important;
+}
+.btn-yellow{background:var(--brand-yellow)!important;color:var(--brand-black)!important}
+.btn-pink{background:var(--brand-pink)!important;color:#fff!important}
+.btn-outline{
+  background:transparent!important;
+  color:#fff!important;
+  border-color:#fff!important;
+  box-shadow:none!important;
+}
+
+/* PHOTOGRAPHY — crisp, candid, graphic treatment */
+.photo{
+  border:0!important;
+  background:var(--brand-blue)!important;
+}
+.photo:after{
+  border:4px solid var(--brand-black)!important;
+  box-shadow:none!important;
+}
+.photo img{filter:saturate(1.06) contrast(1.02)!important}
+
+/* HERO */
+#hero{
+  background:var(--brand-blue)!important;
+  color:#fff!important;
+}
+#hero .hero-copy h1{
+  font-family:var(--brand-display)!important;
+  color:var(--brand-yellow)!important;
+  text-shadow:5px 5px 0 var(--brand-black)!important;
+  letter-spacing:-.035em!important;
+}
+#hero .hero-sub{
+  color:#fff!important;
+  text-transform:uppercase!important;
+}
+#hero .hero-copy p{color:#fff!important}
+#hero .hero-main,
+#hero .hero-side{
+  border:4px solid var(--brand-black)!important;
+  box-shadow:7px 7px 0 var(--brand-black)!important;
+}
+#hero .hero-ticket{
+  background:var(--brand-pink)!important;
+  color:#fff!important;
+  border:4px solid var(--brand-black)!important;
+  box-shadow:var(--brand-shadow)!important;
+}
+#hero .hero-sticker{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+  border:4px solid var(--brand-black)!important;
+  box-shadow:var(--brand-shadow)!important;
+}
+#hero .object{color:var(--brand-pink)!important}
+
+/* ACTIVITIES — brand yellow canvas + blue/pink blocks */
+#what{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+}
+#what .activity-head h2{
+  color:var(--brand-black)!important;
+  font-family:var(--brand-display)!important;
+}
+#what .activity-rule{
+  background:var(--brand-pink)!important;
+}
+#what .activity-head p{
+  color:var(--brand-black)!important;
+}
+#what .activity-slide{
+  border:4px solid var(--brand-black)!important;
+  box-shadow:7px 7px 0 var(--brand-black)!important;
+  background:var(--brand-blue)!important;
+}
+#what .activity-slide h3{
+  background:var(--brand-blue)!important;
+  color:var(--brand-yellow)!important;
+  border-color:var(--brand-black)!important;
+}
+#what .activity-slide h3 b{color:var(--brand-pink)!important}
+#what .activity-prev{
+  background:var(--brand-pink)!important;
+  color:#fff!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:var(--brand-shadow-sm)!important;
+}
+#what .activity-dots{
+  background:var(--brand-black)!important;
+}
+#what .activity-dots button.active{background:var(--brand-pink)!important}
+
+/* MORE AT HOP FEST — alternating brand colour blocks */
+#experience{
+  background:var(--brand-paper)!important;
+}
+#experience .experience-head h2{
+  color:var(--brand-black)!important;
+  font-family:var(--brand-display)!important;
+}
+#experience .experience-head .copy{color:var(--brand-black)!important}
+#experience .more-swipe{
+  background:var(--brand-pink)!important;
+  color:#fff!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:var(--brand-shadow-sm)!important;
+}
+#experience .zone{
+  border:4px solid var(--brand-black)!important;
+  box-shadow:7px 7px 0 var(--brand-black)!important;
+  background-color:var(--brand-blue)!important;
+}
+#experience .zone:nth-child(2n){background-color:var(--brand-pink)!important}
+#experience .zone:nth-child(3n){background-color:var(--brand-lime)!important}
+#experience .zone-no{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+  border:3px solid var(--brand-black)!important;
+  padding:3px 7px!important;
+}
+#experience .zone-title{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:var(--brand-shadow-sm)!important;
+}
+#experience .zone-desc{
+  background:var(--brand-black)!important;
+  color:#fff!important;
+  padding:5px 8px!important;
+}
+
+/* CITIES — blue identity field, yellow headline, pink label */
+#cities{
+  background:var(--brand-blue)!important;
+  color:#fff!important;
+}
+#cities .cities-kicker{
+  background:var(--brand-pink)!important;
+  color:#fff!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:var(--brand-shadow-sm)!important;
+}
+#cities h2{
+  color:var(--brand-yellow)!important;
+  text-shadow:5px 5px 0 var(--brand-black)!important;
+  font-family:var(--brand-display)!important;
+}
+#cities .cities-intro{color:#fff!important}
+#cities .city-card{
+  background:var(--brand-paper)!important;
+  color:var(--brand-black)!important;
+  border:4px solid var(--brand-black)!important;
+  border-radius:0!important;
+  box-shadow:7px 7px 0 var(--brand-pink)!important;
+}
+#cities .city-photo{
+  border-bottom:4px solid var(--brand-black)!important;
+}
+#cities .city-rule{
+  background:var(--brand-yellow)!important;
+}
+#cities .city-ticket{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:var(--brand-shadow-sm)!important;
+}
+#cities .city-dots span{
+  border:2px solid var(--brand-black)!important;
+}
+#cities .city-dots .active{background:var(--brand-pink)!important}
+#cities .city-bottom-note{
+  background:var(--brand-pink)!important;
+  color:#fff!important;
+  border-top:4px solid var(--brand-black)!important;
+}
+#cities .city-bottom-note span:last-child{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+  border:3px solid var(--brand-black)!important;
+}
+
+/* PRIZES — yellow / blue / pink identity sequence */
+#prizes .prizes-hero{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+}
+#prizes .prizes-kicker{
+  background:var(--brand-blue)!important;
+  color:#fff!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:var(--brand-shadow-sm)!important;
+}
+#prizes .prizes-hero h2{
+  color:var(--brand-black)!important;
+  text-shadow:none!important;
+}
+#prizes .prizes-hero h2 span{
+  background:var(--brand-blue)!important;
+  color:var(--brand-yellow)!important;
+  box-shadow:var(--brand-shadow-sm)!important;
+}
+#prizes .prize-hero-photo{
+  border:4px solid var(--brand-black)!important;
+  box-shadow:7px 7px 0 var(--brand-black)!important;
+}
+#prizes .prizes-body{
+  background:var(--brand-blue)!important;
+  color:#fff!important;
+}
+#prizes .prizes-body h3,
+#prizes .top-prizes h3{
+  color:var(--brand-yellow)!important;
+}
+#prizes .prize-grid article{
+  background:var(--brand-paper)!important;
+  color:var(--brand-black)!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:6px 6px 0 var(--brand-pink)!important;
+}
+#prizes .prize-grid strong{
+  display:inline-block!important;
+  background:var(--brand-pink)!important;
+  color:#fff!important;
+  padding:4px 8px!important;
+  border:2px solid var(--brand-black)!important;
+}
+#prizes .top-prizes{
+  background:var(--brand-pink)!important;
+  color:#fff!important;
+}
+#prizes .top-prize-grid article{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:6px 6px 0 var(--brand-black)!important;
+}
+#prizes .top-prize-grid strong{
+  display:inline-block!important;
+  color:var(--brand-black)!important;
+}
+
+/* FINAL CTA — same system as the rest, not a separate visual world */
+#why{
+  background:var(--brand-blue)!important;
+  color:#fff!important;
+}
+#why .final-kicker,
+#why .final-stamp{
+  background:var(--brand-pink)!important;
+  color:#fff!important;
+  border:3px solid var(--brand-black)!important;
+  box-shadow:var(--brand-shadow)!important;
+}
+#why .final-copy h2{
+  color:#fff!important;
+  text-shadow:5px 5px 0 var(--brand-black)!important;
+}
+#why .final-copy h2 span{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+  box-shadow:var(--brand-shadow-sm)!important;
+}
+#why .final-cta{
+  background:var(--brand-yellow)!important;
+  color:var(--brand-black)!important;
+  border:4px solid var(--brand-black)!important;
+  box-shadow:7px 7px 0 var(--brand-black)!important;
+}
+
+/* SMALL BRAND GRAPHIC ACCENTS — decorative only */
+#hero:before,#what:before,#experience:before,#cities:before,#prizes:before,#why:before{
+  content:"✦";
+  position:absolute;
+  z-index:0;
+  pointer-events:none;
+  font-family:var(--brand-display);
+  font-size:72px;
+  line-height:1;
+  color:var(--brand-pink);
+  opacity:1;
+}
+#hero:before{right:2%;bottom:5%;color:var(--brand-orange);transform:rotate(13deg)}
+#what:before{right:3%;top:6%;color:var(--brand-blue);transform:rotate(-12deg)}
+#experience:before{left:2%;bottom:5%;color:var(--brand-green);transform:rotate(-9deg)}
+#cities:before{right:3%;top:5%;color:var(--brand-yellow);transform:rotate(12deg)}
+#prizes:before{right:3%;top:5%;color:var(--brand-purple);transform:rotate(-8deg)}
+#why:before{left:3%;top:5%;color:var(--brand-lime);transform:rotate(-12deg)}
+
+@media(max-width:700px){
+  #hero:before,#what:before,#experience:before,#cities:before,#prizes:before,#why:before{font-size:48px}
+  #experience .zone-title{box-shadow:3px 3px 0 var(--brand-black)!important}
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
