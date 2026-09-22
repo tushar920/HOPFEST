@@ -3630,6 +3630,206 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
     width:100%!important;
   }
 }
+</style><style id="hopfest-alignment-v10">
+/* FINAL ALIGNMENT + NAV + MOVING TICKER */
+
+header{overflow:visible!important}
+.nav{min-width:0}
+.nav-links{gap:20px!important;align-items:center!important}
+.nav-links a{white-space:nowrap!important}
+.mobile-menu{background:#fff!important;position:relative!important;z-index:30!important}
+.mobile-menu a{font-size:18px!important}
+
+/* Compact animated movement ticker */
+.hop-play-strip{
+  height:58px!important;
+  min-height:58px!important;
+  padding:0!important;
+  margin:0!important;
+  overflow:hidden!important;
+  display:block!important;
+  background:var(--yellow)!important;
+  border-top:3px solid #000!important;
+  border-bottom:3px solid #000!important;
+}
+.hop-play-track{
+  width:max-content!important;
+  height:100%!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:28px!important;
+  padding:0 28px!important;
+  animation:hopTicker 20s linear infinite!important;
+  will-change:transform!important;
+}
+.hop-play-track span{
+  flex:0 0 auto!important;
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-size:31px!important;
+  line-height:1!important;
+  color:#000!important;
+  white-space:nowrap!important;
+}
+.hop-play-track i{
+  flex:0 0 auto!important;
+  font-style:normal!important;
+  font-size:18px!important;
+  color:var(--pink)!important;
+}
+@keyframes hopTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Activity tiles: no dead grey area; image + caption become one tight card */
+#what .activity-slide{
+  height:auto!important;
+  min-height:0!important;
+  align-self:flex-start!important;
+}
+#what .activity-slide img{
+  height:245px!important;
+  flex:0 0 245px!important;
+}
+#what .activity-slide h3{
+  flex:0 0 auto!important;
+  min-height:54px!important;
+}
+#what .activity-slide .activity-desc{
+  flex:0 0 auto!important;
+  min-height:0!important;
+}
+@media(max-width:700px){
+  #what .activity-slide{
+    height:auto!important;
+    min-height:0!important;
+  }
+  #what .activity-slide img{
+    height:215px!important;
+    flex-basis:215px!important;
+  }
+  #what .activity-slide h3{
+    min-height:52px!important;
+  }
+}
+
+/* Activity section alignment */
+#what .activity-head{
+  box-sizing:border-box!important;
+}
+#what .activity-head h2{
+  margin:0!important;
+}
+#what .activity-head .activity-rule{
+  display:block!important;
+  margin:14px auto 0!important;
+}
+#what .activity-head p{
+  margin:14px auto 0!important;
+}
+
+/* Lucky draw: keep title from colliding with decorative elements */
+#lucky .lucky-inner{
+  align-items:center!important;
+}
+#lucky .lucky-copy{
+  position:relative!important;
+  z-index:5!important;
+  min-width:0!important;
+}
+#lucky .lucky-copy h2{
+  position:relative!important;
+  z-index:2!important;
+  margin:0 0 8px!important;
+}
+#lucky .lucky-copy h2 span{
+  display:inline-block!important;
+  position:relative!important;
+  z-index:1!important;
+  background:var(--yellow)!important;
+  color:#000!important;
+  padding:0 10px 2px!important;
+  line-height:.88!important;
+  text-shadow:4px 4px 0 #000!important;
+}
+#lucky .lucky-visual{
+  position:relative!important;
+  min-width:0!important;
+}
+@media(max-width:700px){
+  #lucky .lucky-inner{
+    gap:18px!important;
+  }
+  #lucky .lucky-copy h2{
+    font-size:clamp(62px,17vw,88px)!important;
+    line-height:.78!important;
+  }
+  #lucky .lucky-copy h2 span{
+    padding:0 7px 2px!important;
+  }
+}
+
+/* Final CTA: consistent vertical rhythm and no oversized gaps */
+#why{
+  align-items:center!important;
+}
+#why .final-copy{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+}
+#why .final-copy h2{margin-bottom:10px!important}
+#why .final-copy p{margin:12px 0 18px!important}
+#why .final-photo{align-self:center!important}
+@media(max-width:700px){
+  #why{
+    gap:18px!important;
+  }
+  #why .final-copy{
+    align-items:flex-start!important;
+  }
+  #why .final-photo{
+    height:250px!important;
+  }
+}
+
+/* Mobile header: keep every control aligned inside the bar */
+@media(max-width:700px){
+  header{
+    border-bottom:3px solid #000!important;
+  }
+  .nav{
+    width:100%!important;
+    height:76px!important;
+    padding:0 14px!important;
+    gap:8px!important;
+  }
+  .brand{
+    min-width:72px!important;
+    flex:0 0 72px!important;
+  }
+  .brand img{
+    width:58px!important;
+    height:48px!important;
+  }
+  .nav .btn{
+    display:inline-flex!important;
+    margin-left:auto!important;
+    min-width:124px!important;
+    height:48px!important;
+    padding:9px 14px!important;
+    justify-content:center!important;
+    font-size:15px!important;
+  }
+  .burger{
+    flex:0 0 38px!important;
+    width:38px!important;
+    height:38px!important;
+    display:block!important;
+    padding:4px!important;
+  }
+  .burger span{
+    height:3px!important;
+    margin:5px 0!important;
+  }
+}
 </style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -3647,11 +3847,11 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
   <header>
     <nav class="nav wrap">
       <a class="brand logo-missing" href="#hero" aria-label="HOP FEST home"><img src="assets/logo/hop-fest-logo-final.png" alt="HOP FEST" onload="this.parentElement.classList.remove('logo-missing')" onerror="this.parentElement.classList.add('logo-missing')"><span class="brand-fallback">HOP FEST</span></a>
-      <div class="nav-links"><a href="#why-hop">Why HOP?</a><a href="#experience">Experiences</a><a href="#cities">Cities</a><a href="#tickets">Tickets</a></div>
+      <div class="nav-links"><a href="#why-hop">Why HOP?</a><a href="#what">Activities</a><a href="#experience">More at HOP FEST</a><a href="#cities">Cities</a><a href="#prizes">Prizes</a><a href="#lucky">Lucky Draw</a></div>
       <a class="btn btn-pink" href="#tickets">Get Your Pass <svg><use href="#arrow"/></svg></a>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </nav>
-    <div class="mobile-menu" id="mobileMenu"><a href="#what">What Is Hop?</a><a href="#experience">Experiences</a><a href="#cities">Cities</a><a href="#tickets">Tickets</a></div>
+    <div class="mobile-menu" id="mobileMenu"><a href="#why-hop">Why HOP?</a><a href="#what">Activities</a><a href="#experience">More at HOP FEST</a><a href="#cities">Cities</a><a href="#prizes">Prizes</a><a href="#lucky">Lucky Draw</a><a href="#tickets">Get Your Pass</a></div>
   </header>
 
   <main>
@@ -3694,9 +3894,7 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
     <div class="why-hop-photo"><img src="assets/images/Family Race.png" alt="Family fitness at HOP FEST"></div>
   </div>
 </section>
-<div id="play" class="hop-play-strip" aria-label="HOP FEST movement ticker">
-  <span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span>
-</div>
+<div id="play" class="hop-play-strip" aria-label="HOP FEST movement ticker"><div class="hop-play-track"><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i></div></div>
 
 <section id="what" aria-label="What can you do at HOP FEST">
   <div class="activity-head">
