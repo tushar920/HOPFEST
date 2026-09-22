@@ -1904,7 +1904,12 @@ header{
  #hero .hero-highlights span{font-size:9px}
 }
 </style>
-</head>
+<style id="hopfest-footer-copy-v1">
+.foot-tagline{display:inline-block;margin-top:14px;background:var(--brand-yellow);color:#000;border:3px solid #000;box-shadow:4px 4px #000;padding:7px 10px;font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:15px;line-height:1}
+.foot-links{display:flex!important;flex-wrap:wrap!important;gap:12px 22px!important}
+.foot-links a{font-family:'Bowlby One SC','Anton',Impact,sans-serif!important}
+@media(max-width:700px){.foot-links{gap:10px 16px!important}.foot-tagline{font-size:13px}}
+</style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
@@ -2095,7 +2100,33 @@ header{
 </section>
   </main>
 
-  <footer><div class="wrap"><div class="foot-grid"><div class="foot-brand brand logo-missing"><img src="assets/logo/hop-fest-logo-final.png" alt="HOP FEST" onload="this.parentElement.classList.remove('logo-missing')" onerror="this.parentElement.classList.add('logo-missing')"><span class="brand-fallback">HOP FEST</span><p>India's biggest fitness carnival for kids and families.</p></div><div class="foot-links"><a href="#what">What Is Hop?</a><a href="#experience">Experiences</a><a href="#cities">Cities</a><a href="#tickets">Tickets</a></div></div><div class="foot-bottom"><span>© 2026 HOP FEST</span><span>HOP. PLAY. REPEAT.</span></div></div></footer>
+  <footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand brand logo-missing">
+        <img src="assets/logo/hop-fest-logo-final.png" alt="HOP FEST" onload="this.parentElement.classList.remove('logo-missing')" onerror="this.parentElement.classList.add('logo-missing')">
+        <span class="brand-fallback">HOP FEST</span>
+        <p>India's biggest fitness carnival for kids and families.</p>
+        <div class="foot-tagline">HOP OUT. PLAY MORE.</div>
+      </div>
+      <div class="foot-links">
+        <a href="#why-hop">Why HOP?</a>
+        <a href="#what">Experiences</a>
+        <a href="#cities">Cities</a>
+        <a href="#tickets">Tickets</a>
+        <a href="#">Instagram</a>
+        <a href="#">Contact</a>
+        <a href="#">FAQs</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 HOP FEST</span>
+      <span>HOP<br>PLAY<br>REPEAT.</span>
+    </div>
+  </div>
+</footer>
   <script>const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');b.addEventListener('click',()=>{const open=m.classList.toggle('open');b.setAttribute('aria-expanded',open)});m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded','false')}));</script>
 
 <script id="hop-activities-carousel">
