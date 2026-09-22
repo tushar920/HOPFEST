@@ -2172,6 +2172,350 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
   footer .foot-bottom{padding:18px 0 22px!important}
 }
 </style>
+
+<style id="hopfest-final-repair-v5">
+/* =========================================================
+   FINAL REPAIR V5 — fixes from the supplied screenshots
+   ========================================================= */
+
+/* 1) HERO — keep the primary CTA in the visible hero composition */
+#hero .hero-copy{
+  position:relative!important;
+  z-index:30!important;
+  transform:translateY(-1vh)!important;
+}
+#hero .hero-ctas{
+  position:relative!important;
+  z-index:40!important;
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  margin-top:4px!important;
+}
+#hero .hero-ctas .btn{
+  position:relative!important;
+  z-index:41!important;
+}
+@media(min-width:701px){
+  #hero .hero-copy{
+    max-width:560px!important;
+  }
+  #hero .hero-copy h1{
+    font-size:clamp(68px,7.1vw,112px)!important;
+  }
+  #hero .hero-sub{
+    font-size:clamp(22px,2.15vw,31px)!important;
+  }
+  #hero .hero-copy p{
+    margin-bottom:14px!important;
+  }
+  #hero .hero-highlights{
+    margin-bottom:12px!important;
+  }
+}
+@media(max-width:700px){
+  #hero .hero-copy{transform:none!important}
+}
+
+/* 2) MOVEMENT STRIP — remove the duplicate smaller bar.
+   Keep ONE large yellow HOP FEST strip. */
+.hop-ticker{display:none!important}
+#play.hop-play-strip{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:clamp(18px,3vw,42px)!important;
+  height:132px!important;
+  min-height:132px!important;
+  padding:18px 24px!important;
+  background:var(--brand-yellow)!important;
+  color:#000!important;
+  border-top:4px solid #000!important;
+  border-bottom:4px solid #000!important;
+  overflow:hidden!important;
+  white-space:nowrap!important;
+  font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;
+  font-size:clamp(42px,5.2vw,78px)!important;
+  line-height:.9!important;
+  letter-spacing:-.025em!important;
+}
+#play.hop-play-strip span{
+  display:inline-block!important;
+  flex:0 0 auto!important;
+}
+#play.hop-play-strip i{
+  flex:0 0 auto!important;
+  color:var(--brand-pink)!important;
+  font:800 .42em/1 Inter,Arial,sans-serif!important;
+}
+@media(max-width:700px){
+  #play.hop-play-strip{
+    height:94px!important;
+    min-height:94px!important;
+    gap:13px!important;
+    padding:12px 14px!important;
+    font-size:clamp(28px,8vw,42px)!important;
+  }
+}
+
+/* 3) ACTIVITIES — no duplicated/stacked header copy */
+#what .section-kicker{display:block!important}
+#what .activity-head .activity-count{display:block!important}
+#what .activity-head h2{
+  font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;
+  font-weight:400!important;
+}
+#what .activity-desc{
+  font-family:Inter,Arial,sans-serif!important;
+  font-weight:800!important;
+}
+
+/* 4) MORE AT HOP FEST — remove the dead space and keep one heading */
+#experience{
+  padding:58px 0 46px!important;
+  min-height:0!important;
+}
+#experience .experience-head{
+  margin-bottom:22px!important;
+}
+#experience .experience-head h2{
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-size:clamp(48px,6.5vw,86px)!important;
+  line-height:.8!important;
+  max-width:720px!important;
+}
+#experience .experience-head .copy{
+  margin-top:12px!important;
+  max-width:520px!important;
+}
+#experience .more-swipe{margin-top:10px!important}
+#experience .exp-zones{
+  padding-top:4px!important;
+  padding-bottom:8px!important;
+}
+@media(min-width:701px){
+  #experience .zone{
+    height:350px!important;
+    min-height:350px!important;
+  }
+}
+@media(max-width:700px){
+  #experience{
+    padding:42px 0 38px!important;
+  }
+  #experience .experience-head{
+    margin-bottom:16px!important;
+  }
+  #experience .experience-head h2{
+    font-size:47px!important;
+  }
+}
+
+/* 5) PRIZES HERO — reduce empty yellow area and bring
+   "EVERY HOPPER GETS" into the visual flow */
+#prizes .prizes-hero{
+  min-height:500px!important;
+  padding-top:42px!important;
+  padding-bottom:30px!important;
+}
+#prizes .prize-hero-photo{
+  min-height:360px!important;
+}
+#prizes .prizes-body{
+  padding-top:38px!important;
+}
+#prizes .prizes-body h3{
+  margin-bottom:18px!important;
+}
+
+/* "EVERY HOPPER GETS" cards — real content, no artificial empty height */
+#prizes .prize-grid article{
+  min-height:0!important;
+  height:auto!important;
+  padding:0 0 14px!important;
+  display:flex!important;
+  flex-direction:column!important;
+}
+#prizes .prize-grid article:before{
+  flex:0 0 170px!important;
+  height:170px!important;
+}
+#prizes .prize-grid strong{
+  margin-top:10px!important;
+}
+#prizes .prize-grid p{
+  margin:8px 10px 0!important;
+}
+@media(max-width:700px){
+  #prizes .prizes-hero{
+    min-height:0!important;
+    padding:30px 20px 24px!important;
+  }
+  #prizes .prizes-hero h2{
+    margin-top:22px!important;
+  }
+  #prizes .prize-hero-photo{
+    min-height:0!important;
+    height:220px!important;
+    margin-top:22px!important;
+  }
+  #prizes .prizes-body{
+    padding:28px 16px 34px!important;
+  }
+  #prizes .prize-grid article:before{
+    flex-basis:112px!important;
+    height:112px!important;
+  }
+}
+
+/* 6) TOP PERFORMERS — no black-on-black heading, no empty card bodies */
+#prizes .top-prizes h3{
+  color:var(--brand-yellow)!important;
+  text-shadow:none!important;
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+}
+#prizes .top-prizes h4{
+  color:#fff!important;
+  text-shadow:none!important;
+  font-family:Inter,Arial,sans-serif!important;
+  font-weight:800!important;
+}
+#prizes .top-prizes p{
+  color:#fff!important;
+}
+#prizes .top-prize-grid article{
+  min-height:0!important;
+  height:auto!important;
+}
+@media(min-width:701px){
+  #prizes .top-prize-grid article{
+    min-height:0!important;
+  }
+  #prizes .top-prize-grid article:before{
+    flex:0 0 190px!important;
+    height:190px!important;
+    min-height:190px!important;
+  }
+}
+#prizes .top-prize-grid strong{
+  text-shadow:none!important;
+}
+#prizes .top-prize-grid span{
+  min-height:0!important;
+  margin-bottom:16px!important;
+}
+
+/* 7) LUCKY DRAW — fix WAY contrast and make the wheel feel 3D */
+#lucky .lucky-copy h2{
+  color:#fff!important;
+  text-shadow:6px 6px 0 #000!important;
+}
+#lucky .lucky-copy h2 span{
+  display:inline-block!important;
+  background:var(--brand-yellow)!important;
+  color:#000!important;
+  text-shadow:none!important;
+  border:3px solid #000!important;
+  box-shadow:5px 5px 0 #000!important;
+  padding:3px 13px 6px!important;
+}
+.lucky-visual{
+  perspective:1000px!important;
+}
+.lucky-wheel{
+  transform:perspective(900px) rotateX(12deg) rotateY(-8deg) rotateZ(-8deg)!important;
+  transform-style:preserve-3d!important;
+  background:
+    radial-gradient(circle at 38% 30%,rgba(255,255,255,.45),transparent 23%),
+    conic-gradient(var(--yellow) 0 60deg,var(--pink) 60deg 120deg,var(--blue) 120deg 180deg,var(--lime) 180deg 240deg,var(--pink) 240deg 300deg,var(--yellow) 300deg 360deg)!important;
+  box-shadow:
+    0 10px 0 #050505,
+    8px 16px 0 rgba(0,0,0,.35),
+    inset 8px 8px 0 rgba(255,255,255,.2),
+    inset -10px -10px 0 rgba(0,0,0,.2)!important;
+}
+.lucky-wheel:before{
+  content:""!important;
+  position:absolute!important;
+  inset:8px!important;
+  border-radius:50%!important;
+  border:3px solid rgba(255,255,255,.4)!important;
+  box-shadow:inset 0 0 0 5px rgba(0,0,0,.15)!important;
+  pointer-events:none!important;
+}
+.lucky-wheel:after{
+  content:""!important;
+  position:absolute!important;
+  left:50%!important;
+  top:-26px!important;
+  transform:translateX(-50%)!important;
+  width:0!important;
+  height:0!important;
+  border-left:14px solid transparent!important;
+  border-right:14px solid transparent!important;
+  border-top:30px solid var(--brand-pink)!important;
+  filter:drop-shadow(3px 3px 0 #000)!important;
+}
+.lucky-wheel b{
+  transform:translate(-50%,-50%) rotate(8deg) translateZ(24px)!important;
+  box-shadow:0 5px 0 #000,inset 3px 3px 0 rgba(255,255,255,.15)!important;
+}
+.lucky-photo{
+  background:var(--brand-paper)!important;
+}
+.lucky-photo img{
+  object-position:center!important;
+}
+@media(max-width:700px){
+  .lucky-wheel{
+    transform:perspective(700px) rotateX(10deg) rotateY(-6deg) rotateZ(-8deg)!important;
+  }
+  .lucky-wheel:after{
+    top:-20px!important;
+    border-left-width:11px!important;
+    border-right-width:11px!important;
+    border-top-width:24px!important;
+  }
+}
+
+/* 8) FINAL CTA — fix the invisible READY block and keep the CTA readable */
+#why .final-copy h2 span{
+  background:var(--brand-yellow)!important;
+  color:#000!important;
+  text-shadow:none!important;
+  border:0!important;
+  box-shadow:5px 5px 0 #000!important;
+}
+#why .final-cta{
+  color:#000!important;
+  background:var(--brand-yellow)!important;
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-weight:400!important;
+  text-shadow:none!important;
+}
+#why .final-copy p{
+  color:#fff!important;
+}
+@media(min-width:701px){
+  #why .final-copy h2{font-size:clamp(70px,6.5vw,104px)!important}
+}
+@media(max-width:700px){
+  #why .final-copy h2{
+    font-size:58px!important;
+    line-height:.84!important;
+  }
+  #why .final-copy h2 span{
+    padding:3px 9px 5px!important;
+  }
+}
+
+/* Prevent old decorative pseudo-elements from reintroducing duplicates */
+#experience:before,#experience:after,
+#what:before,#what:after{
+  display:none!important;
+  content:none!important;
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -2344,7 +2688,7 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
         <span>WIN</span><span>HOP</span><span>PLAY</span><span>PRIZE</span><span>LUCKY</span><span>AGAIN</span>
         <b>SPIN!</b>
       </div>
-      <div class="lucky-photo"><img src="assets/images/prizes/prize-sheet.webp" alt="HOP FEST prize goodies"></div>
+      <div class="lucky-photo"><img src="assets/images/Hopfest3.png" alt="Kids enjoying HOP FEST together"></div>
     </div>
   </div>
 </section>
