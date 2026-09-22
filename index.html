@@ -1814,6 +1814,96 @@ header{
   }
 }
 </style>
+
+<style id="hopfest-new-copy-sections-v1">
+/* New copy sections — visual design only; existing content systems remain intact. */
+#play,#why-hop,#lucky,#family{position:relative;overflow:hidden}
+#play{
+  min-height:250px;padding:55px 6vw;background:var(--brand-yellow);color:var(--brand-black);
+  border-top:4px solid var(--brand-black);border-bottom:4px solid var(--brand-black);
+}
+#play .play-kicker{
+  display:inline-block;background:var(--brand-pink);color:#fff;border:3px solid #000;box-shadow:5px 5px #000;
+  padding:7px 14px;font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:25px;transform:rotate(-3deg)
+}
+#play h2{margin:20px 0 4px;font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:clamp(58px,9vw,120px);line-height:.8}
+#play p{font-family:'Anton','Arial Black',Impact,sans-serif;font-size:clamp(15px,2vw,25px);letter-spacing:.08em;margin:20px 0 0}
+#why-hop{
+  background:var(--brand-blue);color:#fff;padding:70px 6vw 75px;
+}
+#why-hop:after,#lucky:after,#family:after{
+  content:"✦";position:absolute;right:4%;top:6%;font-size:70px;color:var(--brand-pink);font-family:Impact;transform:rotate(12deg)
+}
+#why-hop .why-hop-kicker,#lucky .lucky-kicker,#family .family-kicker{
+  display:inline-block;background:var(--brand-pink);color:#fff;border:3px solid #000;box-shadow:5px 5px #000;
+  padding:9px 15px;font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:18px;transform:rotate(-2deg)
+}
+#why-hop h2,#lucky h2,#family h2{
+  margin:30px 0 14px;font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:clamp(48px,7vw,88px);line-height:.86;letter-spacing:-.02em
+}
+#why-hop h2{color:var(--brand-yellow);text-shadow:4px 4px #000}
+#why-hop .why-hop-lead{max-width:680px;font-family:'Anton','Arial Black',Impact,sans-serif;font-size:18px;line-height:1.45}
+.did-you-know{margin-top:38px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.did-you-know>div{grid-column:1/-1;font-family:'Bowlby One SC','Anton',Impact,sans-serif;color:var(--brand-yellow);font-size:28px}
+.did-you-know article{background:var(--brand-paper);color:#000;border:3px solid #000;box-shadow:5px 5px #000;padding:22px 18px}
+.did-you-know strong{display:block;font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:22px;line-height:1;color:var(--brand-pink)}
+.did-you-know p{font-family:'Anton','Arial Black',Impact,sans-serif;font-size:13px;line-height:1.45;margin:12px 0 0}
+.why-hop-close{margin-top:42px;max-width:760px}
+.why-hop-close h3{font-family:'Bowlby One SC','Anton',Impact,sans-serif;color:var(--brand-yellow);font-size:32px;line-height:.95}
+.why-hop-close p{font-family:'Anton','Arial Black',Impact,sans-serif;font-size:16px;line-height:1.45}
+.why-hop-close strong{display:inline-block;margin-top:8px;background:var(--brand-yellow);color:#000;border:3px solid #000;box-shadow:4px 4px #000;padding:8px 12px;font-family:'Bowlby One SC','Anton',Impact,sans-serif}
+
+#lucky{background:var(--brand-orange);color:#000;padding:70px 6vw 75px}
+#lucky h2{color:#fff;text-shadow:5px 5px #000}
+#lucky h2 span{background:var(--brand-yellow);color:#000;padding:2px 10px}
+#lucky h3{font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:28px;margin:25px 0 10px}
+#lucky>p{max-width:650px;font-family:'Anton','Arial Black',Impact,sans-serif;font-size:17px;line-height:1.45}
+.lucky-lines{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.lucky-lines strong{background:var(--brand-blue);color:#fff;border:3px solid #000;box-shadow:4px 4px #000;padding:10px 14px;font-family:'Bowlby One SC','Anton',Impact,sans-serif}
+
+#family{background:var(--brand-pink);color:#fff;padding:70px 6vw 80px}
+#family h2{color:var(--brand-yellow);text-shadow:4px 4px #000}
+#family>p{max-width:680px;font-family:'Anton','Arial Black',Impact,sans-serif;font-size:19px;line-height:1.55}
+.family-lines{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.family-lines strong{background:var(--brand-yellow);color:#000;border:3px solid #000;box-shadow:4px 4px #000;padding:10px 14px;font-family:'Bowlby One SC','Anton',Impact,sans-serif}
+
+#what .activity-count{
+  margin-top:13px;font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:17px;line-height:1
+}
+#what .activity-count span{color:var(--brand-pink)}
+#what .activity-desc{
+  position:absolute;z-index:11;left:20px;bottom:24px;max-width:310px;margin:0;
+  color:#fff;background:var(--brand-blue);border:2px solid #000;padding:5px 8px;
+  font-family:'Anton','Arial Black',Impact,sans-serif;font-size:11px;line-height:1.2
+}
+#prizes .top-prizes h4{
+  margin:8px 0 0;font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:24px;line-height:.95;color:var(--brand-yellow)
+}
+#why .final-highlights{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+#why .final-highlights span{background:var(--brand-pink);color:#fff;border:2px solid #000;box-shadow:3px 3px #000;padding:7px 9px;font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:12px}
+#hero .hero-kicker{display:inline-block;margin-bottom:10px;color:var(--brand-yellow);font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:14px}
+#hero .hero-highlights{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 16px;max-width:600px}
+#hero .hero-highlights span{background:var(--brand-yellow);color:#000;border:2px solid #000;box-shadow:3px 3px #000;padding:5px 8px;font-family:'Bowlby One SC','Anton',Impact,sans-serif;font-size:10px;line-height:1}
+@media(max-width:700px){
+ #play{min-height:190px;padding:40px 22px}
+ #play h2{font-size:62px}
+ #play p{font-size:12px;line-height:1.35}
+ #why-hop,#lucky,#family{padding:50px 22px 58px}
+ #why-hop h2,#lucky h2,#family h2{font-size:50px}
+ .did-you-know{grid-template-columns:1fr;gap:12px}
+ .did-you-know>div{font-size:24px}
+ .did-you-know article{padding:18px 15px}
+ #why-hop .why-hop-lead{font-size:15px}
+ .why-hop-close h3{font-size:27px}
+ .why-hop-close p,#lucky>p,#family>p{font-size:15px;line-height:1.5}
+ .lucky-lines,.family-lines{gap:9px}
+ .lucky-lines strong,.family-lines strong{font-size:12px}
+ #what .activity-count{font-size:14px}
+ #what .activity-desc{font-size:10px;max-width:240px}
+ #hero .hero-highlights{max-width:330px}
+ #hero .hero-highlights span{font-size:9px}
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -1831,7 +1921,7 @@ header{
   <header>
     <nav class="nav wrap">
       <a class="brand logo-missing" href="#hero" aria-label="HOP FEST home"><img src="assets/logo/hop-fest-logo-final.png" alt="HOP FEST" onload="this.parentElement.classList.remove('logo-missing')" onerror="this.parentElement.classList.add('logo-missing')"><span class="brand-fallback">HOP FEST</span></a>
-      <div class="nav-links"><a href="#what">What Is Hop?</a><a href="#experience">Experiences</a><a href="#cities">Cities</a><a href="#tickets">Tickets</a></div>
+      <div class="nav-links"><a href="#why-hop">Why HOP?</a><a href="#experience">Experiences</a><a href="#cities">Cities</a><a href="#tickets">Tickets</a></div>
       <a class="btn btn-pink" href="#tickets">Get Your Pass <svg><use href="#arrow"/></svg></a>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </nav>
@@ -1840,31 +1930,71 @@ header{
 
   <main>
     <section id="hero">
-      <div class="flag-line"></div>
-      <div class="wrap hero-grid">
-        <div class="hero-copy"><h1 class="display">HOP OUT<br>&amp; PLAY.</h1><div class="hero-sub">India's Biggest Fitness Carnival</div><p>A high-energy festival where kids move, play, compete and have fun — together.</p><div class="hero-ctas"><a class="btn btn-yellow" href="#tickets">Hop In <svg><use href="#arrow"/></svg></a><a class="btn btn-outline" href="#what">Explore the Fest <svg><use href="#arrow"/></svg></a></div></div>
-        <div class="hero-collage"><div class="festival-sticker sticker-yellow hero-sticker">PLAY<br>ALL DAY</div><svg class="object speed doodle"><use href="#speed"/></svg><svg class="object ball doodle"><use href="#ball-icon"/></svg><svg class="object confetti doodle"><use href="#confetti"/></svg><figure class="photo hero-main missing"><img src="assets/images/hero/hero-kids-race.jpg" alt="Children sprinting through a HOP FEST race" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">HERO: children racing, jumping and cheering<br>1600 × 1200</span></figure><figure class="photo hero-side missing"><img src="assets/images/hero/hero-finish-line.jpg" alt="Child celebrating at a finish line" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">finish-line celebration<br>720 × 840</span></figure><div class="hero-ticket"><small>HOP FEST · ADMIT ONE</small>PLAY<br>ALL DAY</div></div>
+  <div class="flag-line"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="hero-kicker">01 — HERO</div>
+      <h1 class="display">HOP OUT<br>&amp; PLAY.</h1>
+      <div class="hero-sub">INDIA'S BIGGEST FITNESS CARNIVAL FOR KIDS &amp; FAMILIES</div>
+      <p>A high-energy festival where kids move, play, compete and have fun — together.</p>
+      <div class="hero-highlights" aria-label="HOP FEST highlights">
+        <span>15+ ACTIVITIES</span><span>OBSTACLE RACE</span><span>MUSIC &amp; ENTERTAINMENT</span><span>GAMES &amp; CHALLENGES</span><span>EXCITING PRIZES</span><span>FAMILY FUN</span>
       </div>
-    </section>
+      <div class="hero-ctas">
+        <a class="btn btn-yellow" href="#tickets">HOP IN <svg><use href="#arrow"/></svg></a>
+        <a class="btn btn-outline" href="#what">EXPLORE THE FEST <svg><use href="#arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="hero-collage">
+      <div class="festival-sticker sticker-yellow hero-sticker">PLAY<br>ALL DAY</div>
+      <svg class="object speed doodle"><use href="#speed"/></svg><svg class="object ball doodle"><use href="#ball-icon"/></svg><svg class="object confetti doodle"><use href="#confetti"/></svg>
+      <figure class="photo hero-main missing"><img src="assets/images/hero/hero-kids-race.jpg" alt="Children sprinting through a HOP FEST race" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">HERO: children racing, jumping and cheering<br>1600 × 1200</span></figure>
+      <figure class="photo hero-side missing"><img src="assets/images/hero/hero-finish-line.jpg" alt="Child celebrating at a finish line" onload="this.closest('.photo').classList.remove('missing')" onerror="this.closest('.photo').classList.add('missing')"><span class="asset-label">finish-line celebration<br>720 × 840</span></figure>
+      <div class="hero-ticket"><small>HOP FEST · ADMIT ONE</small>PLAY<br>ALL DAY</div>
+    </div>
+  </div>
+</section>
 
     <div class="hop-ticker" aria-hidden="true"><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span></div>
-    <section id="what" aria-label="What can you do at HOP FEST">
+    <section id="play" aria-label="Play all day">
+  <div class="play-kicker">PLAY</div>
+  <h2>ALL DAY</h2>
+  <p>RUN ★ JUMP ★ PLAY ★ COMPETE ★ REPEAT</p>
+</section>
+
+<section id="why-hop" aria-label="Why HOP">
+  <div class="why-hop-kicker">02 — WHY HOP?</div>
+  <h2>KIDS NEED MORE<br>THAN SCREEN TIME.</h2>
+  <p class="why-hop-lead">Between school, homework, tuition and screens, finding time to simply move and play can be harder than ever.</p>
+  <div class="did-you-know">
+    <div><b>DID YOU KNOW?</b></div>
+    <article><strong>60 MINUTES A DAY</strong><p>Kids aged 5–17 should get an average of 60 minutes of physical activity every day.</p></article>
+    <article><strong>TOO MUCH SITTING MATTERS</strong><p>Higher sedentary time is associated with poorer physical fitness and cardiometabolic health in children.</p></article>
+    <article><strong>MOVEMENT MATTERS</strong><p>Regular physical activity supports children's physical, cognitive and mental wellbeing.</p></article>
+  </div>
+  <div class="why-hop-close"><h3>SO, LET'S MAKE TIME TO MOVE.</h3><p>HOP Fest is created to give kids a reason to put the screens down, get moving and just play.<br>And give families a reason to spend more time together.</p><strong>LESS SCREEN. MORE PLAY. MORE HOP.</strong></div>
+</section>
+
+<section id="what" aria-label="What can you do at HOP FEST">
   <div class="activity-head">
+    <div class="section-kicker">03 — WHAT CAN YOU DO AT HOP FEST?</div>
     <h2>WHAT CAN YOU DO<br>AT HOP FEST?</h2>
     <span class="activity-rule"></span>
-    <p>Try new activities, take on fun challenges and make unforgettable memories.</p>
+    <p>Try new activities, take on exciting challenges and make unforgettable memories.</p>
+    <div class="activity-count">15+ ACTIVITIES. <span>ONE BIG DAY OF FUN.</span></div>
   </div>
   <div class="activity-carousel" aria-label="HOP FEST activities">
-    <article class="activity-slide is-active"><img src="assets/images/Hopfest4.png" alt="Obstacle races at HOP FEST"><h3>OBSTACLE<br>RACES <b>→</b></h3></article>
-    <article class="activity-slide"><img src="assets/images/Hopfest1.png" alt="Family fitness challenges at HOP FEST"><h3>FAMILY FITNESS<br>CHALLENGES <b>→</b></h3></article>
-    <article class="activity-slide"><img src="assets/images/Hopfest5.png" alt="Wall climbing at HOP FEST"><h3>WALL<br>CLIMBING <b>→</b></h3></article>
-    <article class="activity-slide"><img src="assets/images/Hopfest4.png" alt="Balance test at HOP FEST"><h3>BALANCE<br>TEST <b>→</b></h3></article>
-    <article class="activity-slide"><img src="assets/images/Hopfest3.png" alt="Treasure hunt at HOP FEST"><h3>TREASURE<br>HUNT <b>→</b></h3></article>
-    <article class="activity-slide"><img src="assets/images/Hopfest_fisheye2.png" alt="Entertainment hub at HOP FEST"><h3>ENTERTAINMENT<br>HUB <b>→</b></h3></article>
+    <article class="activity-slide is-active"><img src="assets/images/Hopfest4.png" alt="Grit race at HOP FEST"><h3>GRIT<br>RACE <b>→</b></h3><p class="activity-desc">Race, climb, crawl and conquer.</p></article>
+    <article class="activity-slide"><img src="assets/images/Hopfest5.png" alt="Obstacle challenges at HOP FEST"><h3>OBSTACLE<br>CHALLENGES <b>→</b></h3><p class="activity-desc">Test your speed, strength, agility and determination.</p></article>
+    <article class="activity-slide"><img src="assets/images/Hopfest1.png" alt="Family fitness challenges at HOP FEST"><h3>FAMILY FITNESS<br>CHALLENGES <b>→</b></h3><p class="activity-desc">Challenge each other. Cheer each other on.</p></article>
+    <article class="activity-slide"><img src="assets/images/Hopfest4.png" alt="Wall climbing at HOP FEST"><h3>WALL<br>CLIMBING <b>→</b></h3><p class="activity-desc">Climb higher. Push further.</p></article>
+    <article class="activity-slide"><img src="assets/images/Hopfest5.png" alt="Balance and agility at HOP FEST"><h3>BALANCE &amp;<br>AGILITY <b>→</b></h3><p class="activity-desc">Think fast. Move smart.</p></article>
+    <article class="activity-slide"><img src="assets/images/Hopfest3.png" alt="Treasure hunt at HOP FEST"><h3>TREASURE<br>HUNT <b>→</b></h3><p class="activity-desc">Explore, discover and play your way through.</p></article>
+    <article class="activity-slide"><img src="assets/images/Hopfest_fisheye2.png" alt="More activities at HOP FEST"><h3>AND<br>MORE <b>→</b></h3><p class="activity-desc">There's always another HOP waiting.</p></article>
   </div>
   <button class="activity-prev" type="button" aria-label="Previous activity">←</button>
   <div class="activity-dots" aria-label="Activity slide navigation">
-    <button class="active" aria-label="Activity 1"></button><button aria-label="Activity 2"></button><button aria-label="Activity 3"></button><button aria-label="Activity 4"></button><button aria-label="Activity 5"></button><button aria-label="Activity 6"></button>
+    <button class="active" aria-label="Activity 1"></button><button aria-label="Activity 2"></button><button aria-label="Activity 3"></button><button aria-label="Activity 4"></button><button aria-label="Activity 5"></button><button aria-label="Activity 6"></button><button aria-label="Activity 7"></button>
   </div>
 </section>
 
@@ -1872,19 +2002,20 @@ header{
   <div class="wrap">
     <div class="experience-head">
       <div>
-        <h2 class="display title">There’s more to HOP into.</h2>
-        <p class="copy">Food, music, rides, stalls, photos and carnival fun.</p>
+        <div class="section-kicker">04 — THERE'S MORE TO HOP INTO.</div>
+        <h2 class="display title">THERE'S MORE TO HOP INTO.</h2>
+        <p class="copy">Food, music, rides, stalls, games, entertainment and carnival fun.</p>
       </div>
       <span class="more-swipe">SWIPE →</span>
     </div>
     <div class="exp-zones" aria-label="More at HOP FEST">
-      <article class="zone" style="--card-image:url('../images/Hopfest3.png')"><span class="zone-no">01</span><span class="zone-title">FOOD &amp; REFRESHMENTS →</span><span class="zone-desc">Food &amp; refreshments</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest1.png')"><span class="zone-no">02</span><span class="zone-title">KIDS STALLS &amp; SHOPPING →</span><span class="zone-desc">Kids’ stalls &amp; goodies</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest_fisheye2.png')"><span class="zone-no">03</span><span class="zone-title">LIVE ENTERTAINMENT →</span><span class="zone-desc">Live entertainment &amp; stage shows</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest5.png')"><span class="zone-no">04</span><span class="zone-title">PHOTO AREAS →</span><span class="zone-desc">Photo zones &amp; fun installations</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest4.png')"><span class="zone-no">05</span><span class="zone-title">RIDES &amp; CARNIVAL →</span><span class="zone-desc">Rides &amp; carnival games</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest_fisheye2.png')"><span class="zone-no">06</span><span class="zone-title">STAGE PERFORMANCES →</span><span class="zone-desc">Stage performances</span></article>
-      <article class="zone" style="--card-image:url('../images/Hopfest3.png')"><span class="zone-no">07</span><span class="zone-title">CARICATURES &amp; TATTOOS →</span><span class="zone-desc">Caricature artists &amp; temporary tattoos</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest3.png')"><span class="zone-no">01</span><span class="zone-title">FOOD &amp; REFRESHMENTS →</span><span class="zone-desc">Refuel and recharge between all the action.</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest1.png')"><span class="zone-no">02</span><span class="zone-title">KIDS' STALLS &amp; SHOPPING →</span><span class="zone-desc">Fun finds, goodies and surprises.</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest_fisheye2.png')"><span class="zone-no">03</span><span class="zone-title">LIVE ENTERTAINMENT →</span><span class="zone-desc">Music, performances and non-stop energy.</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest5.png')"><span class="zone-no">04</span><span class="zone-title">PHOTO AREAS →</span><span class="zone-desc">Capture the moments worth remembering.</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest4.png')"><span class="zone-no">05</span><span class="zone-title">RIDES &amp; CARNIVAL GAMES →</span><span class="zone-desc">Because the fun doesn't stop at the challenges.</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest_fisheye2.png')"><span class="zone-no">06</span><span class="zone-title">STAGE PERFORMANCES →</span><span class="zone-desc">More entertainment. More reasons to cheer.</span></article>
+      <article class="zone" style="--card-image:url('../images/Hopfest3.png')"><span class="zone-no">07</span><span class="zone-title">CREATIVITY &amp; FUN →</span><span class="zone-desc">Caricatures, temporary tattoos and more.</span></article>
     </div>
   </div>
 </section>
@@ -1895,63 +2026,68 @@ header{
 
     <section id="cities" aria-label="Where is HOP FEST">
   <div class="cities-wrap">
-    <div class="cities-kicker">04 — CITIES</div>
+    <div class="cities-kicker">05 — CITIES</div>
     <h2>WHERE IS<br>HOP FEST?</h2>
-    <p class="cities-intro">Same energy. More cities.<br>Find a HOP FEST near you!</p>
+    <p class="cities-intro">SAME ENERGY. MORE CITIES.<br>Find a HOP FEST near you!</p>
     <div class="city-cards" aria-label="HOP FEST cities">
-      <article class="city-card">
-        <div class="city-photo"><img src="assets/images/Hopfest_fisheye2.png" alt="HOP FEST in Delhi"></div>
-        <div class="city-card-body"><h3>DELHI</h3><div class="city-rule"></div><div class="city-detail">DATE: TBD<br>VENUE: TBD</div><a href="#tickets" class="city-ticket">GET TICKETS →</a></div>
-      </article>
-      <article class="city-card">
-        <div class="city-photo"><img src="assets/images/Hopfest1.png" alt="HOP FEST in Gurgaon"></div>
-        <div class="city-card-body"><h3>GURGAON</h3><div class="city-rule"></div><div class="city-detail">DATE: TBD<br>VENUE: TBD</div><a href="#tickets" class="city-ticket">GET TICKETS →</a></div>
-      </article>
-      <article class="city-card">
-        <div class="city-photo"><img src="assets/images/Hopfest3.png" alt="HOP FEST in Jaipur"></div>
-        <div class="city-card-body"><h3>JAIPUR</h3><div class="city-rule"></div><div class="city-detail">DATE: TBD<br>VENUE: TBD</div><a href="#tickets" class="city-ticket">GET TICKETS →</a></div>
-      </article>
-      <article class="city-card">
-        <div class="city-photo"><img src="assets/images/Hopfest5.png" alt="HOP FEST coming to your city"></div>
-        <div class="city-card-body"><h3>YOUR CITY</h3><div class="city-rule"></div><div class="city-detail">COMING SOON<br>STAY TUNED</div><a href="#tickets" class="city-ticket">STAY TUNED →</a></div>
-      </article>
+      <article class="city-card"><div class="city-photo"><img src="assets/images/Hopfest_fisheye2.png" alt="HOP FEST in Delhi"></div><div class="city-card-body"><h3>DELHI</h3><div class="city-rule"></div><div class="city-detail"><b>DATE:</b> TBD<br><b>VENUE:</b> TBD</div><a href="#tickets" class="city-ticket">GET TICKETS →</a></div></article>
+      <article class="city-card"><div class="city-photo"><img src="assets/images/Hopfest1.png" alt="HOP FEST in Gurgaon"></div><div class="city-card-body"><h3>GURGAON</h3><div class="city-rule"></div><div class="city-detail"><b>DATE:</b> TBD<br><b>VENUE:</b> TBD</div><a href="#tickets" class="city-ticket">GET TICKETS →</a></div></article>
+      <article class="city-card"><div class="city-photo"><img src="assets/images/Hopfest3.png" alt="HOP FEST in Jaipur"></div><div class="city-card-body"><h3>JAIPUR</h3><div class="city-rule"></div><div class="city-detail"><b>DATE:</b> TBD<br><b>VENUE:</b> TBD</div><a href="#tickets" class="city-ticket">GET TICKETS →</a></div></article>
+      <article class="city-card"><div class="city-photo"><img src="assets/images/Hopfest5.png" alt="HOP FEST coming to your city"></div><div class="city-card-body"><h3>YOUR CITY</h3><div class="city-rule"></div><div class="city-detail">COMING SOON<br>Stay tuned for the next HOP.</div><a href="#tickets" class="city-ticket">STAY TUNED →</a></div></article>
     </div>
     <div class="city-dots" aria-hidden="true"><span class="active"></span><span></span><span></span><span></span></div>
-    <div class="city-bottom-note"><span>DIFFERENT CITIES<br>SAME GOOD VIBES</span><span>KIDS<br>FAMILIES<br>COMMUNITY<br>FUN ♥</span></div>
+    <div class="city-bottom-note"><span>DIFFERENT CITIES.<br>SAME GOOD VIBES.</span><span>KIDS<br>FAMILIES<br>COMMUNITY<br>FUN ♥</span></div>
   </div>
 </section>
 
     <section id="prizes" aria-label="HOP FEST prizes">
   <div class="prizes-hero">
-    <div class="prizes-kicker">05 — PRIZES</div>
+    <div class="prizes-kicker">06 — PRIZES</div>
     <h2>EVERY<br>HOPPER <span>WINS.</span></h2>
-    <p>Because every child shows up, tries, plays and grows — and that’s a win!</p>
+    <p>Because every child who shows up, tries, plays and pushes themselves is already winning.</p>
     <div class="prize-hero-photo"><img src="assets/images/Hopfest1.png" alt="Happy HOP FEST child celebrating"></div>
   </div>
   <div class="prizes-body">
     <h3>EVERY HOPPER GETS</h3>
     <div class="prize-grid">
-      <article><div class="prize-icon">🏅</div><strong>MEDAL</strong><p>A symbol of your effort and spirit!</p></article>
+      <article><div class="prize-icon">🏅</div><strong>MEDAL</strong><p>A symbol of your effort and spirit.</p></article>
       <article><div class="prize-icon">🎒</div><strong>GOODIE KIT</strong><p>Fun goodies, merchandise and surprises.</p></article>
       <article><div class="prize-icon">📜</div><strong>CERTIFICATE</strong><p>A celebration of your participation.</p></article>
-      <article><div class="prize-icon">⭐</div><strong>EXCLUSIVE EXTRAS</strong><p>Stickers, wristbands and other fun surprises.</p></article>
+      <article><div class="prize-icon">🎁</div><strong>EXCITING GIFT HAMPERS</strong><p>More fun surprises to take home.</p></article>
     </div>
   </div>
   <div class="top-prizes">
-    <div><h3>TOP PERFORMERS<br>WIN MORE</h3><p>For those who go the extra mile — there are special prizes up for grabs!</p></div>
+    <div><h3>GO BIG.<br>WIN BIG.</h3><h4>TOP PERFORMERS WIN MORE.</h4><p>For those who go the extra mile — there are special prizes up for grabs.</p></div>
     <div class="top-prize-grid">
-      <article><b>🏆</b><strong>TROPHIES</strong><span>For top performers in each category.</span></article>
-      <article><b>🎁</b><strong>EXCITING PRIZES</strong><span>From our brand partners.</span></article>
-      <article><b>★</b><strong>SPECIAL RECOGNITION</strong><span>For outstanding effort and achievement.</span></article>
+      <article><b>🏆</b><strong>TROPHIES</strong><span>For top performers across categories.</span></article>
+      <article><b>🎁</b><strong>EXCITING PRIZES</strong><span>Special rewards from our brand partners.</span></article>
+      <article><b>★</b><strong>SPECIAL RECOGNITION</strong><span>Because every achievement deserves to be celebrated.</span></article>
     </div>
   </div>
 </section>
 
-    <section id="why" aria-label="Ready to HOP">
-  <div class="final-kicker">06 — READY TO HOP?</div><div class="final-top-note">HOP FEST · KIDS + FAMILIES · 2026</div>
+    <section id="lucky" aria-label="Lucky draw prizes">
+  <div class="lucky-kicker">08 — LUCK MIGHT JUST</div>
+  <h2>HOP YOUR<br><span>WAY.</span></h2>
+  <h3>LUCKY DRAW PRIZES</h3>
+  <p>You don't have to be the fastest or strongest to win something extra.<br>Every Hopper gets a chance to win exciting prizes through our Lucky Draw.</p>
+  <div class="lucky-lines"><strong>PLAY.</strong><strong>HAVE FUN.</strong><strong>KEEP YOUR FINGERS CROSSED.</strong></div>
+</section>
+
+<section id="family" aria-label="Hop with the family">
+  <div class="family-kicker">09 — HOP WITH THE FAMILY</div>
+  <h2>MORE THAN<br>A DAY OUT.</h2>
+  <p>It's a day to put the screens away.<br>To cheer each other on.<br>To try something new.<br>To celebrate little wins.<br>And to simply spend time together.</p>
+  <div class="family-lines"><strong>COME PLAY.</strong><strong>COME CHEER.</strong><strong>COME HOP.</strong></div>
+</section>
+
+<section id="why" aria-label="Ready to HOP">
+  <div class="final-kicker">10 — READY TO HOP?</div>
+  <div class="final-top-note">HOP FEST · KIDS + FAMILIES · 2026</div>
   <div class="final-copy">
     <h2>YOUR KIDS<br>ARE <span>READY.</span></h2>
     <p>A day of movement, challenges, games, music and carnival fun.</p>
+    <div class="final-highlights"><span>15+ ACTIVITIES.</span><span>1 BIG HOP.</span><span>COUNTLESS MEMORIES.</span></div>
     <a class="final-cta" href="#tickets">GET YOUR PASS <svg><use href="#arrow"/></svg></a>
   </div>
   <div class="final-photo"><img src="assets/images/Hopfest_fisheye2.png" alt="Kids and families enjoying HOP FEST"></div>
@@ -1959,7 +2095,7 @@ header{
 </section>
   </main>
 
-  <footer><div class="wrap"><div class="foot-grid"><div class="foot-brand brand logo-missing"><img src="assets/logo/hop-fest-logo-final.png" alt="HOP FEST" onload="this.parentElement.classList.remove('logo-missing')" onerror="this.parentElement.classList.add('logo-missing')"><span class="brand-fallback">HOP FEST</span><p>India's biggest fitness carnival for kids and families — built by Legaxy Sports Academy.</p></div><div class="foot-links"><a href="#what">What Is Hop?</a><a href="#experience">Experiences</a><a href="#cities">Cities</a><a href="#tickets">Tickets</a></div></div><div class="foot-bottom"><span>© 2026 HOP FEST — A LEGAXY SPORTS PRODUCTION</span><span>HOP. PLAY. REPEAT.</span></div></div></footer>
+  <footer><div class="wrap"><div class="foot-grid"><div class="foot-brand brand logo-missing"><img src="assets/logo/hop-fest-logo-final.png" alt="HOP FEST" onload="this.parentElement.classList.remove('logo-missing')" onerror="this.parentElement.classList.add('logo-missing')"><span class="brand-fallback">HOP FEST</span><p>India's biggest fitness carnival for kids and families.</p></div><div class="foot-links"><a href="#what">What Is Hop?</a><a href="#experience">Experiences</a><a href="#cities">Cities</a><a href="#tickets">Tickets</a></div></div><div class="foot-bottom"><span>© 2026 HOP FEST</span><span>HOP. PLAY. REPEAT.</span></div></div></footer>
   <script>const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');b.addEventListener('click',()=>{const open=m.classList.toggle('open');b.setAttribute('aria-expanded',open)});m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded','false')}));</script>
 
 <script id="hop-activities-carousel">
