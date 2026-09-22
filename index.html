@@ -3199,6 +3199,84 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
     visibility:visible!important;
   }
 }
+</style><style id="why-hop-facts-v8">
+/* WHY HOP — evidence-led facts */
+#why-hop{
+  padding:58px 0 62px!important;
+}
+.why-hop-inner{
+  width:min(1240px,calc(100% - 48px))!important;
+  grid-template-columns:.88fr 1.12fr!important;
+  gap:42px!important;
+  align-items:start!important;
+}
+.why-hop-copy{padding-top:2px!important}
+#why-hop .why-hop-lead{
+  margin:18px 0 24px!important;
+  max-width:560px!important;
+}
+.why-hop-facts{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:12px!important;
+  margin-top:28px!important;
+  grid-column:1 / -1!important;
+}
+.why-hop-facts article{
+  background:var(--yellow)!important;
+  color:var(--black)!important;
+  border:3px solid var(--black)!important;
+  box-shadow:5px 5px 0 var(--black)!important;
+  padding:18px 16px 17px!important;
+  min-height:148px!important;
+}
+.why-hop-facts article:nth-child(2){background:var(--pink)!important;color:#fff!important}
+.why-hop-facts article:nth-child(3){background:var(--lime)!important}
+.why-hop-facts strong{
+  display:block!important;
+  font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;
+  font-size:clamp(20px,2vw,30px)!important;
+  line-height:.9!important;
+  letter-spacing:-.02em!important;
+  margin-bottom:12px!important;
+}
+.why-hop-facts p{
+  margin:0!important;
+  font:800 12px/1.35 Inter,Arial,sans-serif!important;
+}
+.why-hop-points{display:none!important}
+.why-hop-photo{
+  height:410px!important;
+  margin-top:3px!important;
+}
+@media(min-width:901px){
+  .why-hop-inner{grid-template-columns:.88fr 1.12fr!important}
+  .why-hop-copy{min-width:0!important}
+  .why-hop-photo{grid-column:2!important;grid-row:1!important}
+  .why-hop-facts{grid-column:1 / -1!important;grid-row:2!important}
+}
+@media(max-width:900px) and (min-width:701px){
+  .why-hop-inner{grid-template-columns:1fr 1fr!important;gap:28px!important}
+  #why-hop h2{font-size:clamp(48px,5.4vw,72px)!important}
+  .why-hop-photo{height:330px!important}
+  .why-hop-facts{grid-column:1 / -1!important}
+}
+@media(max-width:700px){
+  #why-hop{padding:40px 0 46px!important}
+  .why-hop-inner{width:calc(100% - 32px)!important;display:flex!important;flex-direction:column!important;gap:0!important}
+  .why-hop-copy{order:1!important}
+  .why-hop-photo{order:2!important;width:100%!important;height:235px!important;margin:24px 0 0!important}
+  .why-hop-facts{
+    order:3!important;
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+    margin-top:18px!important;
+    width:100%!important;
+  }
+  .why-hop-facts article{min-height:0!important;padding:15px 14px!important}
+  .why-hop-facts strong{font-size:23px!important;margin-bottom:8px!important}
+  .why-hop-facts p{font-size:11px!important;line-height:1.35!important}
+}
 </style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -3256,7 +3334,11 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
       <div class="why-hop-kicker">02 — WHY HOP?</div>
       <h2>KIDS NEED MORE<br><span>THAN SCREEN TIME.</span></h2>
       <p class="why-hop-lead">Kids spend enough time sitting. HOP FEST gives them a reason to get outside, move, play and do it together.</p>
-      <div class="why-hop-points"><strong>MOVE MORE.</strong><strong>PLAY TOGETHER.</strong><strong>FEEL BETTER.</strong></div>
+      <div class="why-hop-facts" aria-label="Why movement matters">
+        <article><strong>60 MINUTES A DAY</strong><p>Kids aged 5–17 should get an average of 60 minutes of physical activity every day.</p></article>
+        <article><strong>TOO MUCH SITTING MATTERS</strong><p>Higher sedentary time is associated with poorer physical fitness and cardiometabolic health in children.</p></article>
+        <article><strong>MOVEMENT MATTERS</strong><p>Regular physical activity supports children's physical, cognitive and mental wellbeing.</p></article>
+      </div>
     </div>
     <div class="why-hop-photo"><img src="assets/images/Family Race.png" alt="Family fitness at HOP FEST"></div>
   </div>
