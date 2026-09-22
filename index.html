@@ -3277,6 +3277,359 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
   .why-hop-facts strong{font-size:23px!important;margin-bottom:8px!important}
   .why-hop-facts p{font-size:11px!important;line-height:1.35!important}
 }
+</style><style id="hopfest-directed-layout-v9">
+/* =========================================================
+   DIRECTED MOBILE + SECTION CLEANUP
+   ========================================================= */
+
+/* HERO — mobile copy centered over the full HOP FEST photo */
+@media(max-width:700px){
+  #hero{
+    min-height:calc(100svh - 76px)!important;
+    height:calc(100svh - 76px)!important;
+    padding:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    background-image:
+      linear-gradient(rgba(28,72,146,.72),rgba(28,72,146,.72)),
+      url('assets/images/Hopfest_fisheye2.png')!important;
+    background-size:cover!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+  }
+  #hero .hero-grid{
+    width:calc(100% - 30px)!important;
+    min-height:0!important;
+    height:auto!important;
+    display:block!important;
+  }
+  #hero .hero-copy{
+    width:100%!important;
+    max-width:440px!important;
+    margin:0 auto!important;
+    padding:24px 12px!important;
+    text-align:center!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    background:rgba(28,72,146,.40)!important;
+    border:3px solid rgba(255,255,255,.85)!important;
+    box-shadow:6px 6px 0 #090909!important;
+  }
+  #hero .hero-copy h1{
+    font-size:clamp(64px,17vw,92px)!important;
+    line-height:.78!important;
+    margin:0!important;
+  }
+  #hero .hero-sub{
+    font-size:clamp(20px,5.7vw,29px)!important;
+    line-height:.95!important;
+    margin:15px 0 10px!important;
+  }
+  #hero .hero-copy p{
+    max-width:340px!important;
+    margin:0 auto 13px!important;
+    color:#fff!important;
+    font-size:13px!important;
+    line-height:1.35!important;
+  }
+  #hero .hero-highlights{
+    justify-content:center!important;
+    margin:0 auto 15px!important;
+    gap:5px!important;
+  }
+  #hero .hero-highlights span{
+    font-size:9px!important;
+    padding:5px 7px!important;
+  }
+  #hero .hero-ctas{
+    width:100%!important;
+    justify-content:center!important;
+    align-items:center!important;
+    flex-direction:row!important;
+    gap:9px!important;
+  }
+  #hero .hero-ctas .btn{
+    width:auto!important;
+    min-width:135px!important;
+    height:50px!important;
+    padding:10px 13px!important;
+    justify-content:center!important;
+    font-size:15px!important;
+  }
+  #hero .hero-collage{display:none!important}
+  #hero .hero-copy:after{display:none!important}
+  #hero .flag-line{display:none!important}
+}
+
+/* WHY HOP — no numbered kicker */
+.why-hop-kicker,.section-kicker,.cities-kicker,.prizes-kicker,.final-kicker{display:none!important}
+
+/* ACTIVITIES — heading/copy first, photos as clean tiles underneath */
+#what{
+  padding:58px 0 62px!important;
+  background:var(--blue)!important;
+  color:#fff!important;
+}
+#what .activity-head{
+  position:relative!important;
+  top:auto!important;
+  left:auto!important;
+  right:auto!important;
+  width:min(720px,calc(100% - 40px))!important;
+  margin:0 auto 30px!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  text-align:center!important;
+}
+#what .activity-head h2{
+  color:var(--yellow)!important;
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-size:clamp(48px,7vw,88px)!important;
+  line-height:.78!important;
+  text-shadow:5px 5px 0 #000!important;
+}
+#what .activity-head p{
+  display:block!important;
+  max-width:560px!important;
+  margin:16px auto 0!important;
+  color:#fff!important;
+  font:800 14px/1.4 Inter,Arial,sans-serif!important;
+}
+#what .activity-count{
+  margin-top:13px!important;
+  color:#fff!important;
+}
+#what .activity-carousel{
+  position:relative!important;
+  display:flex!important;
+  gap:16px!important;
+  width:min(1240px,calc(100% - 40px))!important;
+  height:auto!important;
+  min-height:0!important;
+  margin:0 auto!important;
+  padding:5px 4px 14px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  scroll-snap-type:x mandatory!important;
+  scrollbar-width:none!important;
+}
+#what .activity-carousel::-webkit-scrollbar{display:none!important}
+#what .activity-slide{
+  position:relative!important;
+  flex:0 0 31.5%!important;
+  width:31.5%!important;
+  height:365px!important;
+  min-height:0!important;
+  margin:0!important;
+  scroll-snap-align:start!important;
+  display:flex!important;
+  flex-direction:column!important;
+  background:var(--cream)!important;
+  color:#000!important;
+  border:3px solid #000!important;
+  box-shadow:5px 5px 0 #000!important;
+  overflow:hidden!important;
+}
+#what .activity-slide img{
+  display:block!important;
+  width:100%!important;
+  height:245px!important;
+  flex:0 0 245px!important;
+  object-fit:cover!important;
+  margin:0!important;
+}
+#what .activity-slide h3{
+  position:relative!important;
+  inset:auto!important;
+  margin:0!important;
+  padding:12px 13px 3px!important;
+  min-height:0!important;
+  color:#000!important;
+  background:var(--yellow)!important;
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-size:25px!important;
+  line-height:.85!important;
+  text-shadow:none!important;
+  border-top:3px solid #000!important;
+}
+#what .activity-slide h3 b{
+  float:right!important;
+  font-family:Inter,Arial,sans-serif!important;
+}
+#what .activity-slide .activity-desc{
+  display:block!important;
+  position:relative!important;
+  inset:auto!important;
+  margin:0!important;
+  padding:7px 13px 12px!important;
+  background:var(--yellow)!important;
+  color:#000!important;
+  font:800 11px/1.25 Inter,Arial,sans-serif!important;
+}
+@media(max-width:700px){
+  #what{padding:42px 0 48px!important}
+  #what .activity-head{
+    width:calc(100% - 32px)!important;
+    margin-bottom:22px!important;
+  }
+  #what .activity-head h2{font-size:43px!important}
+  #what .activity-head p{font-size:12px!important}
+  #what .activity-carousel{
+    width:100%!important;
+    padding:4px 16px 12px!important;
+    gap:12px!important;
+  }
+  #what .activity-slide{
+    flex:0 0 82vw!important;
+    width:82vw!important;
+    height:330px!important;
+  }
+  #what .activity-slide img{
+    height:215px!important;
+    flex-basis:215px!important;
+  }
+  #what .activity-slide h3{font-size:24px!important}
+}
+
+/* MORE AT HOP FEST — no section number label, no rides tile */
+#experience{
+  padding:52px 0 48px!important;
+}
+#experience .experience-head{
+  margin-bottom:24px!important;
+}
+#experience .experience-head h2{
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-size:clamp(52px,6vw,86px)!important;
+  line-height:.8!important;
+}
+#experience .exp-zones{
+  grid-template-columns:1.15fr .85fr .95fr!important;
+}
+@media(max-width:700px){
+  #experience .experience-head{margin:0 20px 18px!important}
+  #experience .experience-head h2{font-size:48px!important}
+}
+
+/* CITIES — remove numbering only */
+#cities .cities-kicker{display:none!important}
+
+/* PRIZES — exciting cyan section for EVERY HOPPER GETS */
+#prizes .prizes-kicker{display:none!important}
+#prizes .prizes-body{
+  background:#16c8d8!important;
+  color:#000!important;
+  padding:46px 6vw 52px!important;
+  border-top:4px solid #000!important;
+  border-bottom:4px solid #000!important;
+}
+#prizes .prizes-body h3{
+  color:#fff!important;
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-size:clamp(42px,5vw,70px)!important;
+  line-height:.8!important;
+  text-shadow:5px 5px 0 #000!important;
+  margin:0 0 22px!important;
+}
+#prizes .prize-grid article{
+  background:var(--cream)!important;
+  border:3px solid #000!important;
+  box-shadow:5px 5px 0 #000!important;
+}
+#prizes .prize-grid strong{
+  background:var(--yellow)!important;
+  color:#000!important;
+  border:2px solid #000!important;
+}
+#prizes .prize-grid p{
+  color:#000!important;
+}
+@media(max-width:700px){
+  #prizes .prizes-body{padding:34px 16px 40px!important}
+  #prizes .prizes-body h3{font-size:35px!important}
+}
+
+/* LUCKY DRAW — keep the kicker as ordinary text, not a section tag */
+#lucky .lucky-kicker{
+  font:800 14px/1.1 Inter,Arial,sans-serif!important;
+  letter-spacing:.04em!important;
+  text-transform:uppercase!important;
+  color:#fff!important;
+  margin-bottom:14px!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+  transform:none!important;
+  padding:0!important;
+}
+
+/* FINAL CTA — compact, structured, image close to content */
+#why{
+  min-height:0!important;
+  padding:50px 6vw 56px!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)!important;
+  gap:34px!important;
+  align-items:center!important;
+  text-align:left!important;
+  background:var(--blue)!important;
+}
+#why .final-copy{
+  position:relative!important;
+  z-index:5!important;
+  width:auto!important;
+  margin:0!important;
+}
+#why .final-copy h2{
+  margin:0!important;
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-size:clamp(65px,6.5vw,104px)!important;
+  line-height:.77!important;
+}
+#why .final-copy p{
+  max-width:520px!important;
+  margin:18px 0 20px!important;
+}
+#why .final-cta{
+  margin:0!important;
+}
+#why .final-photo{
+  position:relative!important;
+  inset:auto!important;
+  width:100%!important;
+  height:390px!important;
+  margin:0!important;
+  border:4px solid #000!important;
+  box-shadow:8px 8px 0 #000!important;
+  transform:rotate(1deg)!important;
+}
+#why .final-photo img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+}
+@media(max-width:700px){
+  #why{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:20px!important;
+    padding:42px 16px 46px!important;
+    text-align:left!important;
+  }
+  #why .final-copy{width:100%!important}
+  #why .final-copy h2{font-size:57px!important}
+  #why .final-copy p{margin:15px 0 17px!important;font-size:13px!important}
+  #why .final-cta{margin:0!important}
+  #why .final-photo{
+    height:260px!important;
+    margin:0!important;
+    width:100%!important;
+  }
+}
 </style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -3306,7 +3659,6 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
   <div class="flag-line"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <div class="hero-kicker">01 — HERO</div>
       <h1 class="display">HOP OUT<br>&amp; PLAY.</h1>
       <div class="hero-sub">INDIA'S BIGGEST FITNESS CARNIVAL FOR KIDS &amp; FAMILIES</div>
       <p>A high-energy festival where kids move, play, compete and have fun — together.</p>
@@ -3331,7 +3683,6 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
 <section id="why-hop" aria-label="Why HOP">
   <div class="why-hop-inner">
     <div class="why-hop-copy">
-      <div class="why-hop-kicker">02 — WHY HOP?</div>
       <h2>KIDS NEED MORE<br><span>THAN SCREEN TIME.</span></h2>
       <p class="why-hop-lead">Kids spend enough time sitting. HOP FEST gives them a reason to get outside, move, play and do it together.</p>
       <div class="why-hop-facts" aria-label="Why movement matters">
@@ -3349,7 +3700,6 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
 
 <section id="what" aria-label="What can you do at HOP FEST">
   <div class="activity-head">
-    <div class="section-kicker">03 — ACTIVITIES</div>
     <h2>WHAT CAN YOU DO<br>AT HOP FEST?</h2>
     <span class="activity-rule"></span>
     <p>Try new activities, take on exciting challenges and make unforgettable memories.</p>
@@ -3374,7 +3724,6 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
   <div class="wrap">
     <div class="experience-head">
       <div>
-        <div class="section-kicker">04 — MORE AT HOP FEST</div>
         <h2 class="display title">THERE'S MORE TO HOP INTO.</h2>
         <p class="copy">Food, music, rides, stalls, games, entertainment and carnival fun.</p>
       </div>
@@ -3385,7 +3734,6 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
       <article class="zone" style="--card-image:url('assets/images/Family Race.png')"><span class="zone-no">02</span><span class="zone-title">KIDS' STALLS &amp; SHOPPING →</span><span class="zone-desc">Fun finds, goodies and surprises.</span></article>
       <article class="zone" style="--card-image:url('assets/images/entertainment HUB.png')"><span class="zone-no">03</span><span class="zone-title">LIVE ENTERTAINMENT →</span><span class="zone-desc">Music, performances and non-stop energy.</span></article>
       <article class="zone" style="--card-image:url('assets/images/Obstacle Race.png')"><span class="zone-no">04</span><span class="zone-title">PHOTO AREAS →</span><span class="zone-desc">Capture the moments worth remembering.</span></article>
-      <article class="zone" style="--card-image:url('assets/images/Wall Climb.png')"><span class="zone-no">05</span><span class="zone-title">RIDES &amp; CARNIVAL GAMES →</span><span class="zone-desc">Because the fun doesn't stop at the challenges.</span></article>
       <article class="zone" style="--card-image:url('assets/images/Hopfest_fisheye2.png')"><span class="zone-no">06</span><span class="zone-title">STAGE PERFORMANCES →</span><span class="zone-desc">More entertainment. More reasons to cheer.</span></article>
       <article class="zone" style="--card-image:url('assets/images/treasure HUnt.png')"><span class="zone-no">07</span><span class="zone-title">CREATIVITY &amp; FUN →</span><span class="zone-desc">Caricatures, temporary tattoos and more.</span></article>
     </div>
@@ -3398,7 +3746,6 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
 
     <section id="cities" aria-label="Where is HOP FEST">
   <div class="cities-wrap">
-    <div class="cities-kicker">05 — CITIES</div>
     <h2>WHERE IS<br>HOP FEST?</h2>
     <p class="cities-intro">SAME ENERGY. MORE CITIES.<br>Find a HOP FEST near you!</p>
     <div class="city-cards" aria-label="HOP FEST cities">
@@ -3414,7 +3761,6 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
 
     <section id="prizes" aria-label="HOP FEST prizes">
   <div class="prizes-hero">
-    <div class="prizes-kicker">06 — PRIZES</div>
     <h2>EVERY<br>HOPPER <span>WINS.</span></h2>
     <p>Show up. Give it a go. Leave with something to remember.</p>
     <div class="prize-hero-photo"><img src="assets/images/Hopfest1.png" alt="Happy HOP FEST child celebrating"></div>
@@ -3441,7 +3787,7 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
     <section id="lucky" aria-label="Lucky draw prizes">
   <div class="lucky-inner">
     <div class="lucky-copy">
-      <div class="lucky-kicker">07 — LUCK MIGHT JUST</div>
+      <div class="lucky-kicker">LUCK MIGHT JUST</div>
       <h2>HOP YOUR<br><span>WAY.</span></h2>
       <h3>LUCKY DRAW PRIZES</h3>
       <p>You don't have to be the fastest or strongest to win something extra. Every Hopper gets a chance to win through our Lucky Draw.</p>
@@ -3458,7 +3804,6 @@ footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!imp
 </section>
 
 <section id="why" aria-label="Ready to HOP">
-  <div class="final-kicker">08 — READY TO HOP?</div>
   <div class="final-copy">
     <h2>YOUR KIDS<br>ARE <span>READY.</span></h2>
     <p>A day of movement, challenges, games, music and carnival fun.</p>
