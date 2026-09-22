@@ -1909,7 +1909,270 @@ header{
 .foot-links{display:flex!important;flex-wrap:wrap!important;gap:12px 22px!important}
 .foot-links a{font-family:'Bowlby One SC','Anton',Impact,sans-serif!important}
 @media(max-width:700px){.foot-links{gap:10px 16px!important}.foot-tagline{font-size:13px}}
-</style></head>
+</style><style id="hopfest-final-corrections-v4">
+/* =========================================================
+   HOP FEST — CLEANUP PASS V4
+   ========================================================= */
+
+/* 01 HERO — remove the empty band + technical kicker */
+#hero{padding:0!important;min-height:calc(100svh - 88px)!important}
+#hero .hero-kicker{display:none!important}
+#hero .hero-grid{height:calc(100svh - 88px)!important}
+#hero .hero-collage{height:calc(100svh - 88px)!important;min-height:0!important}
+#hero .hero-copy{top:7vh!important}
+#hero .hero-copy p{margin-bottom:22px!important}
+#hero .hero-highlights{margin:0 0 18px!important}
+#hero .hero-ctas{margin:0!important}
+#hero .hero-ctas .btn{height:64px!important;min-width:300px!important;width:300px!important;font-size:18px!important}
+@media(max-width:700px){
+  #hero{min-height:calc(100svh - 88px)!important}
+  #hero .hero-grid,#hero .hero-collage{height:calc(100svh - 88px)!important;min-height:0!important}
+  #hero .hero-copy{top:42px!important}
+  #hero .hero-copy p{margin-bottom:18px!important}
+  #hero .hero-highlights{margin-bottom:14px!important}
+  #hero .hero-ctas .btn{width:232px!important;min-width:232px!important;height:59px!important}
+}
+
+/* COMPACT MOVEMENT STRIP — replaces the oversized ALL DAY section */
+#play.hop-play-strip{
+  display:flex!important;align-items:center!important;justify-content:center!important;gap:clamp(14px,2.5vw,34px)!important;
+  min-height:92px!important;height:92px!important;padding:12px 20px!important;
+  background:var(--yellow)!important;color:var(--black)!important;border-top:3px solid var(--black)!important;border-bottom:3px solid var(--black)!important;
+  overflow:hidden!important;white-space:nowrap!important;
+  font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;font-size:clamp(22px,3vw,42px)!important;line-height:1!important;
+}
+#play.hop-play-strip i{font-style:normal;color:var(--pink)!important;font-family:Inter,Arial,sans-serif!important;font-size:.55em!important}
+@media(max-width:560px){
+  #play.hop-play-strip{min-height:72px!important;height:72px!important;gap:12px!important;font-size:23px!important}
+}
+
+/* 02 WHY HOP — short, image-led problem statement */
+#why-hop{
+  padding:54px 0!important;background:var(--blue)!important;color:#fff!important;overflow:hidden!important;
+}
+.why-hop-inner{
+  width:min(1240px,calc(100% - 48px));margin:auto;display:grid!important;grid-template-columns:.88fr 1.12fr!important;
+  gap:54px!important;align-items:center!important;
+}
+.why-hop-copy{position:relative;z-index:2}
+.why-hop-kicker{
+  display:inline-block!important;margin-bottom:20px!important;padding:8px 13px!important;background:var(--pink)!important;color:#fff!important;
+  border:3px solid var(--black)!important;box-shadow:5px 5px 0 var(--black)!important;
+  font:800 13px/1 Inter,Arial,sans-serif!important;letter-spacing:.06em!important;transform:rotate(-2deg)!important;
+}
+#why-hop h2{
+  margin:0!important;font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;font-size:clamp(52px,6vw,92px)!important;
+  line-height:.82!important;letter-spacing:-.04em!important;color:var(--yellow)!important;text-shadow:5px 5px 0 var(--black)!important;
+}
+#why-hop h2 span{color:#fff!important}
+#why-hop .why-hop-lead{
+  max-width:520px!important;margin:20px 0 22px!important;color:#fff!important;
+  font:800 17px/1.45 Inter,Arial,sans-serif!important;
+}
+.why-hop-points{display:flex!important;flex-wrap:wrap!important;gap:10px!important}
+.why-hop-points strong{
+  display:inline-block!important;padding:9px 12px!important;background:var(--yellow)!important;color:var(--black)!important;
+  border:3px solid var(--black)!important;box-shadow:4px 4px 0 var(--black)!important;
+  font:800 13px/1 Inter,Arial,sans-serif!important;
+}
+.why-hop-photo{
+  height:390px!important;border:3px solid var(--black)!important;box-shadow:8px 8px 0 var(--black)!important;
+  transform:rotate(1.2deg)!important;overflow:hidden!important;
+}
+.why-hop-photo img{width:100%!important;height:100%!important;object-fit:cover!important}
+@media(max-width:700px){
+  #why-hop{padding:38px 0 44px!important}
+  .why-hop-inner{width:calc(100% - 32px)!important;display:block!important}
+  .why-hop-kicker{margin-bottom:16px!important;font-size:11px!important}
+  #why-hop h2{font-size:48px!important}
+  #why-hop .why-hop-lead{font-size:14px!important;margin:16px 0 18px!important}
+  .why-hop-points strong{font-size:11px!important;padding:8px 9px!important}
+  .why-hop-photo{height:235px!important;margin-top:25px!important;box-shadow:6px 6px 0 var(--black)!important}
+}
+
+/* ACTIVITIES — readable heading, no text sitting awkwardly on the photo */
+#what .section-head{
+  background:var(--blue)!important;color:#fff!important;padding:18px 22px 20px!important;
+  border-bottom:3px solid var(--black)!important;max-width:none!important;left:0!important;right:0!important;
+}
+#what .section-head h2.title:after{
+  color:var(--yellow)!important;text-shadow:4px 4px 0 var(--black)!important;
+  font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;
+}
+#what .section-head .copy:after{color:#fff!important;font-weight:800!important}
+@media(max-width:700px){
+  #what .section-head{top:0!important;padding:15px 20px 16px!important}
+  #what .section-head h2.title:after{font-size:31px!important}
+  #what .section-head .copy{margin-top:10px!important}
+  #what .section-head .copy:before{display:none!important}
+  #what .section-head .copy:after{font-size:12px!important}
+}
+
+/* PRIZES — same visual logic on desktop + mobile */
+#prizes{background:var(--yellow)!important}
+#prizes .prizes-hero{
+  min-height:560px!important;padding:54px max(5vw,28px) 46px!important;
+  background:var(--yellow)!important;display:grid!important;grid-template-columns:.82fr 1.18fr!important;
+  grid-template-rows:auto 1fr!important;column-gap:40px!important;align-items:start!important;
+}
+#prizes .prizes-kicker{grid-column:1!important;grid-row:1!important;background:var(--blue)!important;color:#fff!important;font:800 14px/1 Inter,Arial,sans-serif!important}
+#prizes h2{
+  grid-column:1!important;grid-row:2!important;width:auto!important;max-width:650px!important;margin:28px 0 0!important;
+  font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;font-size:clamp(66px,7vw,110px)!important;
+  line-height:.8!important;text-shadow:5px 5px 0 #fff!important;
+}
+#prizes h2 span{background:var(--blue)!important;color:var(--yellow)!important}
+#prizes .prizes-hero>p{
+  grid-column:1!important;grid-row:3!important;width:auto!important;max-width:480px!important;margin:-30px 0 0!important;font:800 14px/1.4 Inter,Arial,sans-serif!important;
+}
+#prizes .prize-hero-photo{
+  grid-column:2!important;grid-row:1 / span 3!important;position:relative!important;right:auto!important;bottom:auto!important;
+  width:100%!important;height:100%!important;min-height:430px!important;margin:0!important;transform:rotate(1.2deg)!important;
+}
+#prizes .prize-hero-photo img{content:url('assets/images/prizes/prize-hero.webp')!important}
+#prizes .prizes-body{background:#dff3ff!important}
+#prizes .prizes-body h3,#prizes .top-prizes h3{font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;color:var(--black)!important}
+@media(max-width:700px){
+  #prizes .prizes-hero{
+    min-height:0!important;display:flex!important;flex-direction:column!important;padding:32px 20px 30px!important;
+  }
+  #prizes .prizes-kicker{align-self:flex-start!important}
+  #prizes h2{font-size:55px!important;margin:25px 0 12px!important;max-width:330px!important}
+  #prizes .prizes-hero>p{margin:0!important;max-width:320px!important;font-size:12px!important}
+  #prizes .prize-hero-photo{width:100%!important;height:230px!important;min-height:0!important;margin-top:25px!important;order:5!important}
+  #prizes .prizes-body{padding:30px 16px 34px!important}
+  #prizes .prizes-body h3{font-size:34px!important}
+  #prizes .prize-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+  #prizes .prize-grid article:before{height:112px!important}
+  #prizes .top-prizes{padding:34px 16px 42px!important}
+  #prizes .top-prizes h3{font-size:40px!important}
+  #prizes .top-prize-grid{grid-template-columns:1fr!important;gap:14px!important}
+  #prizes .top-prize-grid article:before{height:170px!important}
+}
+
+/* 07 LUCKY DRAW — make it visual instead of a text wall */
+#lucky{
+  padding:64px 0!important;background:var(--orange)!important;color:var(--black)!important;overflow:hidden!important;
+}
+.lucky-inner{
+  width:min(1240px,calc(100% - 48px));margin:auto;display:grid!important;grid-template-columns:.9fr 1.1fr!important;
+  gap:48px!important;align-items:center!important;
+}
+.lucky-copy h2{
+  margin:20px 0 12px!important;font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;
+  font-size:clamp(72px,8vw,120px)!important;line-height:.75!important;color:#fff!important;text-shadow:6px 6px 0 var(--black)!important;
+}
+.lucky-copy h2 span{display:inline-block!important;background:var(--yellow)!important;color:var(--black)!important;padding:3px 12px 6px!important}
+.lucky-kicker{
+  display:inline-block!important;padding:9px 15px!important;background:var(--pink)!important;color:#fff!important;border:3px solid var(--black)!important;
+  box-shadow:5px 5px 0 var(--black)!important;font:800 14px/1 Inter,Arial,sans-serif!important;transform:rotate(-2deg)!important;
+}
+#lucky h3{font:800 22px/1 Inter,Arial,sans-serif!important;margin:15px 0 12px!important}
+#lucky p{max-width:500px!important;font:800 15px/1.5 Inter,Arial,sans-serif!important}
+.lucky-lines{display:flex!important;flex-wrap:wrap!important;gap:9px!important;margin-top:22px!important}
+.lucky-lines strong{padding:9px 12px!important;background:var(--blue)!important;color:#fff!important;border:3px solid var(--black)!important;box-shadow:4px 4px 0 var(--black)!important;font:800 12px/1 Inter,Arial,sans-serif!important}
+.lucky-visual{position:relative!important;height:470px!important;min-height:0!important}
+.lucky-wheel{
+  position:absolute!important;left:2%!important;top:3%!important;width:min(420px,72%)!important;aspect-ratio:1!important;border:7px solid var(--black)!important;border-radius:50%!important;
+  background:conic-gradient(var(--yellow) 0 60deg,var(--pink) 60deg 120deg,var(--blue) 120deg 180deg,var(--lime) 180deg 240deg,var(--pink) 240deg 300deg,var(--yellow) 300deg 360deg)!important;
+  box-shadow:10px 10px 0 var(--black)!important;transform:rotate(-8deg)!important;
+}
+.lucky-wheel span{position:absolute!important;left:50%!important;top:50%!important;transform-origin:0 0!important;font:800 16px/1 Inter,Arial,sans-serif!important}
+.lucky-wheel span:nth-child(1){transform:translate(-50%,-170px) rotate(8deg)!important}
+.lucky-wheel span:nth-child(2){transform:translate(90px,-120px) rotate(68deg)!important}
+.lucky-wheel span:nth-child(3){transform:translate(145px,-5px) rotate(128deg)!important}
+.lucky-wheel span:nth-child(4){transform:translate(75px,100px) rotate(188deg)!important}
+.lucky-wheel span:nth-child(5){transform:translate(-95px,110px) rotate(248deg)!important}
+.lucky-wheel span:nth-child(6){transform:translate(-150px,-15px) rotate(308deg)!important}
+.lucky-wheel b{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%) rotate(8deg)!important;width:105px!important;height:105px!important;display:grid!important;place-items:center!important;border-radius:50%!important;background:var(--black)!important;color:var(--yellow)!important;border:5px solid var(--yellow)!important;font:800 18px/1 Inter,Arial,sans-serif!important}
+.lucky-photo{
+  position:absolute!important;right:0!important;bottom:0!important;width:46%!important;height:240px!important;border:4px solid var(--black)!important;box-shadow:8px 8px 0 var(--black)!important;transform:rotate(3deg)!important;overflow:hidden!important;background:#fff!important;
+}
+.lucky-photo img{width:100%!important;height:100%!important;object-fit:cover!important}
+@media(max-width:700px){
+  #lucky{padding:42px 0 48px!important}
+  .lucky-inner{width:calc(100% - 32px)!important;display:block!important}
+  .lucky-copy h2{font-size:65px!important}
+  #lucky h3{font-size:18px!important}
+  #lucky p{font-size:13px!important}
+  .lucky-visual{height:335px!important;margin-top:26px!important}
+  .lucky-wheel{width:260px!important;left:0!important}
+  .lucky-wheel span{font-size:12px!important}
+  .lucky-wheel span:nth-child(1){transform:translate(-50%,-108px) rotate(8deg)!important}
+  .lucky-wheel span:nth-child(2){transform:translate(58px,-78px) rotate(68deg)!important}
+  .lucky-wheel span:nth-child(3){transform:translate(88px,-4px) rotate(128deg)!important}
+  .lucky-wheel span:nth-child(4){transform:translate(48px,65px) rotate(188deg)!important}
+  .lucky-wheel span:nth-child(5){transform:translate(-63px,70px) rotate(248deg)!important}
+  .lucky-wheel span:nth-child(6){transform:translate(-92px,-4px) rotate(308deg)!important}
+  .lucky-wheel b{width:72px!important;height:72px!important;font-size:14px!important}
+  .lucky-photo{width:46%!important;height:155px!important}
+}
+
+/* FINAL CTA — clean, strong, no overlapping sticker */
+#why{
+  min-height:620px!important;padding:70px 0!important;background:var(--blue)!important;color:#fff!important;
+  display:grid!important;grid-template-columns:.9fr 1.1fr!important;align-items:center!important;gap:50px!important;
+}
+#why .final-photo{position:relative!important;inset:auto!important;order:2!important;width:100%!important;height:500px!important;border:4px solid var(--black)!important;box-shadow:9px 9px 0 var(--black)!important;overflow:hidden!important;transform:rotate(1.2deg)!important}
+#why .final-photo:after{display:none!important}
+#why .final-photo img{width:100%!important;height:100%!important;object-fit:cover!important}
+#why .final-copy{position:relative!important;z-index:3!important;order:1!important;text-align:left!important}
+#why .final-kicker{
+  display:inline-block!important;margin-bottom:24px!important;padding:10px 16px!important;background:var(--pink)!important;color:#fff!important;
+  border:3px solid var(--black)!important;box-shadow:5px 5px 0 var(--black)!important;font:800 14px/1 Inter,Arial,sans-serif!important;transform:rotate(-2deg)!important;
+}
+#why .final-copy h2{
+  margin:0!important;font-family:'Bowlby One SC','Arial Black',Impact,sans-serif!important;font-size:clamp(64px,7vw,112px)!important;
+  line-height:.8!important;letter-spacing:-.04em!important;color:#fff!important;text-shadow:5px 5px 0 var(--black)!important;
+}
+#why .final-copy h2 span{color:var(--yellow)!important}
+#why .final-copy p{max-width:500px!important;margin:22px 0!important;font:800 17px/1.45 Inter,Arial,sans-serif!important}
+#why .final-highlights{display:none!important}
+#why .final-cta{
+  display:inline-flex!important;align-items:center!important;gap:20px!important;padding:16px 26px!important;background:var(--yellow)!important;color:var(--black)!important;
+  border:3px solid var(--black)!important;box-shadow:6px 6px 0 var(--black)!important;font:800 20px/1 Inter,Arial,sans-serif!important;
+}
+#why .final-cta svg{width:20px!important;height:20px!important}
+#why .final-stamp,#why .final-top-note{display:none!important}
+@media(max-width:700px){
+  #why{display:block!important;min-height:0!important;padding:42px 16px 52px!important}
+  #why .final-copy{margin-bottom:28px!important}
+  #why .final-kicker{font-size:11px!important;margin-bottom:20px!important}
+  #why .final-copy h2{font-size:58px!important}
+  #why .final-copy p{font-size:13px!important;margin:16px 0 20px!important}
+  #why .final-cta{font-size:16px!important;padding:14px 20px!important}
+  #why .final-photo{width:100%!important;height:285px!important;margin-top:30px!important;box-shadow:6px 6px 0 var(--black)!important}
+}
+
+/* FOOTER — stronger branded close */
+footer{background:var(--black)!important;color:#fff!important;padding:54px 0 0!important;border-top:5px solid var(--yellow)!important}
+footer .foot-grid{
+  display:grid!important;grid-template-columns:1.15fr 1.85fr!important;gap:60px!important;padding-bottom:42px!important;border-bottom:2px solid #2e2e2e!important;
+}
+footer .foot-brand img{width:150px!important;height:auto!important}
+footer .foot-brand p{max-width:360px!important;margin:16px 0 18px!important;color:#d2d2d2!important;font-size:15px!important;line-height:1.5!important}
+footer .foot-tagline{
+  display:inline-block!important;padding:11px 15px!important;background:var(--yellow)!important;color:var(--black)!important;
+  border:3px solid #000!important;box-shadow:5px 5px 0 var(--pink)!important;font:800 15px/1 Inter,Arial,sans-serif!important;transform:rotate(-2deg)!important;
+}
+footer .foot-links{
+  display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px 28px!important;align-content:start!important;
+  font:400 18px/1 Anton,Impact,sans-serif!important;text-transform:uppercase!important;
+}
+footer .foot-links a{display:inline-block!important}
+footer .foot-links a:hover{color:var(--yellow)!important}
+footer .foot-bottom{
+  padding:22px 0 26px!important;color:#777!important;font-size:11px!important;
+}
+footer .foot-bottom span:last-child{font:400 22px/.8 Anton,Impact,sans-serif!important;color:var(--yellow)!important;text-align:right!important}
+@media(max-width:700px){
+  footer{padding-top:38px!important}
+  footer .foot-grid{display:block!important;padding-bottom:30px!important}
+  footer .foot-links{grid-template-columns:repeat(2,minmax(0,1fr))!important;margin-top:34px!important;font-size:17px!important;gap:15px 18px!important}
+  footer .foot-bottom{padding:18px 0 22px!important}
+}
+</style>
+</head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
@@ -1960,25 +2223,21 @@ header{
   </div>
 </section>
 
-    <div class="hop-ticker" aria-hidden="true"><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span></div>
-    <section id="play" aria-label="Play all day">
-  <div class="play-kicker">PLAY</div>
-  <h2>ALL DAY</h2>
-  <p>RUN ★ JUMP ★ PLAY ★ COMPETE ★ REPEAT</p>
-</section>
-
 <section id="why-hop" aria-label="Why HOP">
-  <div class="why-hop-kicker">02 — WHY HOP?</div>
-  <h2>KIDS NEED MORE<br>THAN SCREEN TIME.</h2>
-  <p class="why-hop-lead">Between school, homework, tuition and screens, finding time to simply move and play can be harder than ever.</p>
-  <div class="did-you-know">
-    <div><b>DID YOU KNOW?</b></div>
-    <article><strong>60 MINUTES A DAY</strong><p>Kids aged 5–17 should get an average of 60 minutes of physical activity every day.</p></article>
-    <article><strong>TOO MUCH SITTING MATTERS</strong><p>Higher sedentary time is associated with poorer physical fitness and cardiometabolic health in children.</p></article>
-    <article><strong>MOVEMENT MATTERS</strong><p>Regular physical activity supports children's physical, cognitive and mental wellbeing.</p></article>
+  <div class="why-hop-inner">
+    <div class="why-hop-copy">
+      <div class="why-hop-kicker">02 — WHY HOP?</div>
+      <h2>KIDS NEED MORE<br><span>THAN SCREEN TIME.</span></h2>
+      <p class="why-hop-lead">Kids spend enough time sitting. HOP FEST gives them a reason to get outside, move, play and do it together.</p>
+      <div class="why-hop-points"><strong>MOVE MORE.</strong><strong>PLAY TOGETHER.</strong><strong>FEEL BETTER.</strong></div>
+    </div>
+    <div class="why-hop-photo"><img src="assets/images/Family Race.png" alt="Family fitness at HOP FEST"></div>
   </div>
-  <div class="why-hop-close"><h3>SO, LET'S MAKE TIME TO MOVE.</h3><p>HOP Fest is created to give kids a reason to put the screens down, get moving and just play.<br>And give families a reason to spend more time together.</p><strong>LESS SCREEN. MORE PLAY. MORE HOP.</strong></div>
 </section>
+<div class="hop-ticker" aria-hidden="true"><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span></div>
+    <div id="play" class="hop-play-strip" aria-label="HOP FEST movement ticker">
+  <span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span>
+</div>
 
 <section id="what" aria-label="What can you do at HOP FEST">
   <div class="activity-head">
@@ -2049,7 +2308,7 @@ header{
   <div class="prizes-hero">
     <div class="prizes-kicker">06 — PRIZES</div>
     <h2>EVERY<br>HOPPER <span>WINS.</span></h2>
-    <p>Because every child who shows up, tries, plays and pushes themselves is already winning.</p>
+    <p>Show up. Give it a go. Leave with something to remember.</p>
     <div class="prize-hero-photo"><img src="assets/images/Hopfest1.png" alt="Happy HOP FEST child celebrating"></div>
   </div>
   <div class="prizes-body">
@@ -2072,31 +2331,32 @@ header{
 </section>
 
     <section id="lucky" aria-label="Lucky draw prizes">
-  <div class="lucky-kicker">08 — LUCK MIGHT JUST</div>
-  <h2>HOP YOUR<br><span>WAY.</span></h2>
-  <h3>LUCKY DRAW PRIZES</h3>
-  <p>You don't have to be the fastest or strongest to win something extra.<br>Every Hopper gets a chance to win exciting prizes through our Lucky Draw.</p>
-  <div class="lucky-lines"><strong>PLAY.</strong><strong>HAVE FUN.</strong><strong>KEEP YOUR FINGERS CROSSED.</strong></div>
-</section>
-
-<section id="family" aria-label="Hop with the family">
-  <div class="family-kicker">09 — HOP WITH THE FAMILY</div>
-  <h2>MORE THAN<br>A DAY OUT.</h2>
-  <p>It's a day to put the screens away.<br>To cheer each other on.<br>To try something new.<br>To celebrate little wins.<br>And to simply spend time together.</p>
-  <div class="family-lines"><strong>COME PLAY.</strong><strong>COME CHEER.</strong><strong>COME HOP.</strong></div>
+  <div class="lucky-inner">
+    <div class="lucky-copy">
+      <div class="lucky-kicker">07 — LUCK MIGHT JUST</div>
+      <h2>HOP YOUR<br><span>WAY.</span></h2>
+      <h3>LUCKY DRAW PRIZES</h3>
+      <p>You don't have to be the fastest or strongest to win something extra. Every Hopper gets a chance to win through our Lucky Draw.</p>
+      <div class="lucky-lines"><strong>PLAY.</strong><strong>HAVE FUN.</strong><strong>KEEP YOUR FINGERS CROSSED.</strong></div>
+    </div>
+    <div class="lucky-visual">
+      <div class="lucky-wheel" aria-hidden="true">
+        <span>WIN</span><span>HOP</span><span>PLAY</span><span>PRIZE</span><span>LUCKY</span><span>AGAIN</span>
+        <b>SPIN!</b>
+      </div>
+      <div class="lucky-photo"><img src="assets/images/prizes/prize-sheet.webp" alt="HOP FEST prize goodies"></div>
+    </div>
+  </div>
 </section>
 
 <section id="why" aria-label="Ready to HOP">
-  <div class="final-kicker">10 — READY TO HOP?</div>
-  <div class="final-top-note">HOP FEST · KIDS + FAMILIES · 2026</div>
+  <div class="final-kicker">08 — READY TO HOP?</div>
   <div class="final-copy">
     <h2>YOUR KIDS<br>ARE <span>READY.</span></h2>
     <p>A day of movement, challenges, games, music and carnival fun.</p>
-    <div class="final-highlights"><span>15+ ACTIVITIES.</span><span>1 BIG HOP.</span><span>COUNTLESS MEMORIES.</span></div>
     <a class="final-cta" href="#tickets">GET YOUR PASS <svg><use href="#arrow"/></svg></a>
   </div>
   <div class="final-photo"><img src="assets/images/Hopfest_fisheye2.png" alt="Kids and families enjoying HOP FEST"></div>
-  <div class="final-stamp">HOP<br>PLAY<br>REPEAT.</div>
 </section>
   </main>
 
