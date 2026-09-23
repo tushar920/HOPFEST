@@ -4084,6 +4084,205 @@ header{overflow:visible!important}
   }
   #what .activity-dots button.active{background:var(--pink)!important}
 }
+</style><style id="activities-tile-final">
+/* FINAL ACTIVITIES TILE LAYOUT — image first, yellow tag below */
+#what{
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  padding:72px 0 76px!important;
+  margin:0!important;
+  background:var(--blue)!important;
+  overflow:hidden!important;
+}
+#what .activity-head{
+  position:relative!important;
+  inset:auto!important;
+  width:min(1120px,calc(100% - 48px))!important;
+  margin:0 auto 30px!important;
+  padding:0!important;
+  text-align:center!important;
+  z-index:5!important;
+}
+#what .activity-head h2{
+  margin:0!important;
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-size:clamp(48px,6vw,78px)!important;
+  line-height:.82!important;
+  letter-spacing:-.045em!important;
+  color:var(--yellow)!important;
+  text-shadow:5px 5px 0 #000!important;
+}
+#what .activity-rule{
+  display:block!important;
+  width:125px!important;
+  height:5px!important;
+  margin:17px auto 0!important;
+  background:var(--pink)!important;
+  transform:rotate(-2deg)!important;
+}
+#what .activity-carousel{
+  position:relative!important;
+  inset:auto!important;
+  display:flex!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:6px max(24px,calc((100vw - 1120px)/2)) 12px!important;
+  gap:18px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  scroll-snap-type:x mandatory!important;
+  -webkit-overflow-scrolling:touch!important;
+  scrollbar-width:none!important;
+  z-index:2!important;
+}
+#what .activity-carousel::-webkit-scrollbar{display:none!important}
+#what .activity-slide{
+  position:relative!important;
+  flex:0 0 340px!important;
+  width:340px!important;
+  height:auto!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-self:flex-start!important;
+  overflow:hidden!important;
+  scroll-snap-align:start!important;
+  background:#fff!important;
+  color:#000!important;
+  border:3px solid #000!important;
+  box-shadow:5px 5px 0 #000!important;
+}
+#what .activity-slide:after{display:none!important}
+#what .activity-slide img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:270px!important;
+  flex:0 0 270px!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  margin:0!important;
+}
+#what .activity-tag{
+  position:relative!important;
+  display:block!important;
+  background:var(--yellow)!important;
+  color:#000!important;
+  border-top:3px solid #000!important;
+}
+#what .activity-tag h3{
+  position:relative!important;
+  inset:auto!important;
+  margin:0!important;
+  padding:12px 12px 7px!important;
+  min-height:0!important;
+  background:var(--yellow)!important;
+  color:#000!important;
+  border:0!important;
+  font-family:'Bowlby One SC','Anton','Arial Black',Impact,sans-serif!important;
+  font-size:25px!important;
+  line-height:.9!important;
+  letter-spacing:-.025em!important;
+  text-shadow:none!important;
+}
+#what .activity-tag h3 b{
+  float:right!important;
+  margin:0!important;
+  color:var(--pink)!important;
+  font:800 21px/1 Inter,Arial,sans-serif!important;
+}
+#what .activity-tag p{
+  margin:0!important;
+  padding:5px 12px 11px!important;
+  background:var(--yellow)!important;
+  color:#000!important;
+  font:800 11px/1.25 Inter,Arial,sans-serif!important;
+}
+#what .activity-prev{
+  position:absolute!important;
+  left:24px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  z-index:20!important;
+  width:48px!important;
+  height:48px!important;
+  border:3px solid #000!important;
+  border-radius:50%!important;
+  background:var(--pink)!important;
+  color:#fff!important;
+  box-shadow:4px 4px 0 #000!important;
+  font:400 27px/40px Arial,sans-serif!important;
+  padding:0!important;
+}
+#what .activity-dots{
+  position:relative!important;
+  inset:auto!important;
+  transform:none!important;
+  display:flex!important;
+  justify-content:center!important;
+  width:max-content!important;
+  margin:16px auto 0!important;
+  padding:6px 10px!important;
+  gap:8px!important;
+  background:#000!important;
+  border-radius:20px!important;
+}
+#what .activity-dots button{
+  width:9px!important;height:9px!important;min-width:9px!important;
+  padding:0!important;margin:0!important;border:0!important;border-radius:50%!important;background:#fff!important;
+}
+#what .activity-dots button.active{background:var(--pink)!important}
+@media(max-width:700px){
+  #what{padding:42px 0 52px!important}
+  #what .activity-head{
+    width:calc(100% - 28px)!important;
+    margin:0 auto 22px!important;
+  }
+  #what .activity-head h2{
+    font-size:42px!important;
+    line-height:.8!important;
+  }
+  #what .activity-rule{
+    width:112px!important;
+    height:4px!important;
+    margin:14px auto 0!important;
+  }
+  #what .activity-carousel{
+    padding:5px 16px 10px!important;
+    gap:13px!important;
+  }
+  #what .activity-slide{
+    flex:0 0 calc(100vw - 32px)!important;
+    width:calc(100vw - 32px)!important;
+    box-shadow:5px 5px 0 #000!important;
+  }
+  #what .activity-slide img{
+    height:230px!important;
+    flex-basis:230px!important;
+  }
+  #what .activity-tag h3{
+    font-size:25px!important;
+    padding:11px 11px 6px!important;
+  }
+  #what .activity-tag p{
+    font-size:11px!important;
+    padding:5px 11px 10px!important;
+  }
+  #what .activity-prev{
+    left:24px!important;
+    top:auto!important;
+    bottom:94px!important;
+    transform:none!important;
+  }
+  #what .activity-dots{margin-top:15px!important}
+}
 </style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -4152,23 +4351,25 @@ header{overflow:visible!important}
 
 <section id="what" aria-label="What can you do at HOP FEST">
   <div class="activity-head">
-    <h2>WHAT CAN YOU DO<br>AT HOP FEST?</h2>
+    <h2>WHAT CAN YOU<br>DO AT HOP FEST?</h2>
     <span class="activity-rule"></span>
-    <p>Try new activities, take on exciting challenges and make unforgettable memories.</p>
-    <div class="activity-count">15+ ACTIVITIES. <span>ONE BIG DAY OF FUN.</span></div>
   </div>
   <div class="activity-carousel" aria-label="HOP FEST activities">
-    <article class="activity-slide is-active"><img src="assets/images/Obstacle Race.png" alt="Grit race at HOP FEST"><h3>GRIT<br>RACE <b>→</b></h3><p class="activity-desc">Race, climb, crawl and conquer.</p></article>
-    <article class="activity-slide"><img src="assets/images/Obstacle Race.png" alt="Obstacle challenges at HOP FEST"><h3>OBSTACLE<br>CHALLENGES <b>→</b></h3><p class="activity-desc">Test your speed, strength, agility and determination.</p></article>
-    <article class="activity-slide"><img src="assets/images/Family Race.png" alt="Family fitness challenges at HOP FEST"><h3>FAMILY FITNESS<br>CHALLENGES <b>→</b></h3><p class="activity-desc">Challenge each other. Cheer each other on.</p></article>
-    <article class="activity-slide"><img src="assets/images/Wall Climb.png" alt="Wall climbing at HOP FEST"><h3>WALL<br>CLIMBING <b>→</b></h3><p class="activity-desc">Climb higher. Push further.</p></article>
-    <article class="activity-slide"><img src="assets/images/Obstacle Race.png" alt="Balance and agility at HOP FEST"><h3>BALANCE &amp;<br>AGILITY <b>→</b></h3><p class="activity-desc">Think fast. Move smart.</p></article>
-    <article class="activity-slide"><img src="assets/images/treasure HUnt.png" alt="Treasure hunt at HOP FEST"><h3>TREASURE<br>HUNT <b>→</b></h3><p class="activity-desc">Explore, discover and play your way through.</p></article>
-    <article class="activity-slide"><img src="assets/images/entertainment HUB.png" alt="More activities at HOP FEST"><h3>AND<br>MORE <b>→</b></h3><p class="activity-desc">There's always another HOP waiting.</p></article>
+    <article class="activity-slide is-active"><img src="assets/images/Obstacle Race.png" alt="Grit Race at HOP FEST"><div class="activity-tag"><h3>GRIT RACE <b>→</b></h3><p>Race, climb, crawl and conquer.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/tug of war.png" alt="Tug of War at HOP FEST"><div class="activity-tag"><h3>TUG OF WAR <b>→</b></h3><p>Pull together. Play together.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/Wall Climb.png" alt="Wall Climbing at HOP FEST"><div class="activity-tag"><h3>WALL CLIMBING <b>→</b></h3><p>Climb, explore and challenge yourself.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/balance test.png" alt="Balance Test at HOP FEST"><div class="activity-tag"><h3>BALANCE TEST <b>→</b></h3><p>Stay steady. Stay focused.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/cycle.png" alt="Cycling Zone at HOP FEST"><div class="activity-tag"><h3>CYCLING ZONE <b>→</b></h3><p>Pedal, play and progress.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/dart game.png" alt="Dart Game at HOP FEST"><div class="activity-tag"><h3>DART GAME <b>→</b></h3><p>Aim, play and hit the target.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/Family Race.png" alt="Family Race at HOP FEST"><div class="activity-tag"><h3>FAMILY RACE <b>→</b></h3><p>Challenge each other. Cheer each other on.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/parents and child relay.png" alt="Parents and Child Relay at HOP FEST"><div class="activity-tag"><h3>PARENTS &amp; CHILD RELAY <b>→</b></h3><p>Move together. Grow together.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/sack race.png" alt="Sack Race at HOP FEST"><div class="activity-tag"><h3>SACK RACE <b>→</b></h3><p>Hop, race and have fun.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/treasure HUnt.png" alt="Treasure Hunt at HOP FEST"><div class="activity-tag"><h3>TREASURE HUNT <b>→</b></h3><p>Find clues. Solve. Explore.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/entertainment HUB.png" alt="Entertainment Hub at HOP FEST"><div class="activity-tag"><h3>ENTERTAINMENT HUB <b>→</b></h3><p>Music, performances and non-stop energy.</p></div></article>
   </div>
   <button class="activity-prev" type="button" aria-label="Previous activity">←</button>
   <div class="activity-dots" aria-label="Activity slide navigation">
-    <button class="active" aria-label="Activity 1"></button><button aria-label="Activity 2"></button><button aria-label="Activity 3"></button><button aria-label="Activity 4"></button><button aria-label="Activity 5"></button><button aria-label="Activity 6"></button><button aria-label="Activity 7"></button>
+    <button class="active" aria-label="Activity 1"></button><button aria-label="Activity 2"></button><button aria-label="Activity 3"></button><button aria-label="Activity 4"></button><button aria-label="Activity 5"></button><button aria-label="Activity 6"></button><button aria-label="Activity 7"></button><button aria-label="Activity 8"></button><button aria-label="Activity 9"></button><button aria-label="Activity 10"></button><button aria-label="Activity 11"></button>
   </div>
 </section>
 
