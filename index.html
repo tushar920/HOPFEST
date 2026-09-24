@@ -4283,6 +4283,37 @@ header{overflow:visible!important}
   }
   #what .activity-dots{margin-top:15px!important}
 }
+</style><style id="lucky-wheel-spin">
+/* Interactive lucky draw wheel */
+#lucky .lucky-wheel{
+  cursor:pointer!important;
+  -webkit-tap-highlight-color:transparent!important;
+  will-change:transform!important;
+}
+#lucky .lucky-wheel:focus-visible{
+  outline:4px solid #fff!important;
+  outline-offset:6px!important;
+}
+#lucky .lucky-wheel.is-spinning{
+  animation:luckyWheelSpin 2.8s cubic-bezier(.12,.78,.16,1) both!important;
+}
+@keyframes luckyWheelSpin{
+  0%{
+    transform:perspective(900px) rotateX(14deg) rotateY(-10deg) rotateZ(-7deg)!important;
+  }
+  72%{
+    transform:perspective(900px) rotateX(14deg) rotateY(-10deg) rotateZ(1390deg)!important;
+  }
+  88%{
+    transform:perspective(900px) rotateX(14deg) rotateY(-10deg) rotateZ(1328deg)!important;
+  }
+  100%{
+    transform:perspective(900px) rotateX(14deg) rotateY(-10deg) rotateZ(1353deg)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #lucky .lucky-wheel.is-spinning{animation:none!important}
+}
 </style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -4447,10 +4478,10 @@ header{overflow:visible!important}
       <div class="lucky-lines"><strong>PLAY.</strong><strong>HAVE FUN.</strong><strong>KEEP YOUR FINGERS CROSSED.</strong></div>
     </div>
     <div class="lucky-visual">
-      <div class="lucky-wheel" aria-hidden="true">
+      <button class="lucky-wheel" type="button" aria-label="Spin the lucky draw wheel">
         <span>WIN</span><span>HOP</span><span>PLAY</span><span>PRIZE</span><span>LUCKY</span><span>AGAIN</span>
         <b>SPIN!</b>
-      </div>
+      </button>
       <div class="lucky-photo"><img src="assets/images/Hopfest3.png" alt="Kids enjoying HOP FEST together"></div>
     </div>
   </div>
@@ -4502,6 +4533,21 @@ header{overflow:visible!important}
 (()=>{const c=document.querySelector('#what .activity-carousel');if(!c)return;
 const reset=()=>{if(window.matchMedia('(max-width:700px)').matches)c.scrollLeft=0};
 window.addEventListener('load',reset,{once:true});requestAnimationFrame(reset);setTimeout(reset,120);
+})();
+</script><script id="lucky-wheel-interaction">
+(()=>{const wheel=document.querySelector('#lucky .lucky-wheel');if(!wheel)return;
+let spinning=false;
+wheel.addEventListener('click',()=>{
+  if(spinning)return;
+  spinning=true;
+  wheel.classList.remove('is-spinning');
+  void wheel.offsetWidth;
+  wheel.classList.add('is-spinning');
+  wheel.addEventListener('animationend',()=>{
+    wheel.classList.remove('is-spinning');
+    spinning=false;
+  },{once:true});
+});
 })();
 </script></body>
 </html>
