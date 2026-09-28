@@ -8664,6 +8664,76 @@ header .brand img{
     height:72px!important;
   }
 }
+</style><style id="hopfest-achievements-final-v2">
+/* Header: double the visible logo, not just its transparent image box */
+header .brand img{
+  width:250px!important;
+  height:60px!important;
+  object-fit:contain!important;
+  transform:scale(2)!important;
+  transform-origin:left center!important;
+}
+@media(max-width:700px){
+  header .brand img{
+    width:116px!important;
+    height:72px!important;
+    transform:scale(2)!important;
+    transform-origin:left center!important;
+  }
+}
+
+/* Achievements: use the full screen instead of leaving a large dead area */
+#achievements{
+  box-sizing:border-box!important;
+  min-height:calc(100vh - 76px)!important;
+  height:calc(100vh - 76px)!important;
+  padding:30px 0 28px!important;
+  overflow:hidden!important;
+}
+#achievements .achievements-wrap{
+  height:100%!important;
+  box-sizing:border-box!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:space-between!important;
+}
+#achievements .achievements-top{
+  flex:0 0 auto!important;
+  align-items:center!important;
+  gap:34px!important;
+}
+#achievements .achievements-heading{
+  transform:translateY(2px)!important;
+}
+#achievements .achievements-intro{
+  max-width:540px!important;
+}
+#achievements .achievement-grid{
+  flex:0 0 auto!important;
+  width:100%!important;
+  margin:0!important;
+  gap:12px!important;
+}
+#achievements .achievement-card{
+  min-height:150px!important;
+  height:150px!important;
+  box-sizing:border-box!important;
+}
+#achievements .achievements-close{
+  flex:0 0 auto!important;
+  margin:0 auto!important;
+  transform:translateY(-2px)!important;
+}
+@media(max-width:900px){
+  #achievements{
+    height:auto!important;
+    min-height:calc(100vh - 76px)!important;
+  }
+  #achievements .achievements-wrap{
+    height:auto!important;
+    gap:22px!important;
+  }
+}
 </style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
