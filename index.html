@@ -5706,7 +5706,8 @@ header{overflow:visible!important}
   .cities-new-coming strong{text-align:center;font-size:23px}
   .cities-new-coming a{font-size:10px;padding:10px 13px}
 }
-</style>\n
+</style>
+
 <style id="cities-fit-fix">
 @media(min-width:901px){
   #cities{
@@ -5734,7 +5735,8 @@ header{overflow:visible!important}
 @media(max-width:900px){
   .city-landmark{height:90px}
 }
-</style>\n
+</style>
+
 <style id="cities-vivid-fit-fix">
 /* CITIES — vivid primary-color treatment, compact enough to fit in one desktop viewport */
 #cities{
@@ -6192,6 +6194,390 @@ header{overflow:visible!important}
   .cta9-ticket{width:100px!important;height:72px!important;right:2%!important;bottom:82px!important;font-size:20px!important}
 }
 </style>
+<style id="hopfest-visual-system-v2">
+/* HOP FEST VISUAL IDENTITY — exact palette from supplied brand guide:
+   Blue #1C4892, Pink #E84B81, Lime #A0CD3F, Orange #F68820,
+   Green #1A9D4D, Purple #683D98, Yellow #FAEE30, White #FFFFFF, Black #000000.
+*/
+
+/* Remove the old dead/hidden nav assumptions */
+.nav-links{gap:29px!important}
+@media(max-width:900px){.nav-links{display:none!important}}
+
+/* PAGE 2 — story-led, not text-led */
+#why-hop{
+  background:var(--yellow)!important;
+  color:var(--black)!important;
+  padding:54px 0 60px!important;
+  min-height:760px!important;
+  display:flex!important;
+  align-items:center!important;
+}
+.why-story-v2{
+  width:min(1260px,calc(100% - 52px));
+  min-height:650px;
+  margin:auto;
+  position:relative;
+}
+.why-v2-heading{
+  position:absolute;
+  left:0;top:20px;
+  width:54%;
+  z-index:6;
+}
+.why-v2-kicker{
+  display:inline-block;
+  padding:7px 12px;
+  background:var(--blue);
+  color:#fff;
+  border:3px solid #000;
+  box-shadow:5px 5px 0 #000;
+  font:800 11px/1 Inter,Arial,sans-serif;
+  letter-spacing:.15em;
+}
+.why-v2-heading h2{
+  margin-top:18px;
+  font:400 clamp(50px,6.1vw,86px)/.78 'Bowlby One SC','Anton',Impact,sans-serif;
+  letter-spacing:-.035em;
+  text-shadow:5px 5px 0 #000;
+}
+.why-v2-heading h2 em{
+  color:#fff;
+  font-style:normal;
+}
+.why-v2-heading h2 b{
+  display:inline-block;
+  padding:2px 12px 7px;
+  background:var(--pink);
+  color:#fff;
+  font-weight:400;
+  transform:rotate(-2deg);
+  text-shadow:4px 4px 0 #000;
+}
+.why-v2-photo-main{
+  position:absolute;
+  right:0;top:0;
+  width:51%;height:470px;
+  border:4px solid #000;
+  box-shadow:9px 9px 0 #000;
+  transform:rotate(1.5deg);
+  overflow:hidden;
+  z-index:3;
+}
+.why-v2-photo-main img{width:100%;height:100%;object-fit:cover}
+.why-v2-photo-main:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(28,72,146,.02),rgba(28,72,146,.2));
+}
+.why-v2-photo-main span{
+  position:absolute;right:15px;bottom:15px;z-index:4;
+  padding:10px 13px;
+  background:var(--yellow);
+  border:3px solid #000;
+  box-shadow:4px 4px 0 #000;
+  font:400 20px/.9 Anton,Impact,sans-serif;
+  transform:rotate(-3deg);
+}
+.why-v2-photo-main span b{color:var(--pink)}
+.why-v2-photo-small{
+  position:absolute;
+  left:42%;bottom:8px;
+  width:27%;height:205px;
+  border:4px solid #000;
+  box-shadow:7px 7px 0 #000;
+  transform:rotate(-4deg);
+  z-index:5;
+  overflow:hidden;
+}
+.why-v2-photo-small img{width:100%;height:100%;object-fit:cover}
+.why-v2-caption{
+  position:absolute;
+  left:0;bottom:90px;
+  width:43%;
+  padding:15px 18px;
+  background:#000;
+  color:#fff;
+  border:3px solid #000;
+  box-shadow:6px 6px 0 var(--blue);
+  font:800 12px/1.35 Inter,Arial,sans-serif;
+  z-index:6;
+}
+.why-v2-caption strong{
+  display:block;
+  margin-top:5px;
+  color:var(--yellow);
+  font:400 clamp(25px,2.8vw,40px)/.88 Anton,Impact,sans-serif;
+}
+.why-v2-stat{
+  position:absolute;
+  left:2%;bottom:0;
+  width:220px;height:92px;
+  display:flex;align-items:center;gap:10px;
+  padding:10px 14px;
+  background:var(--blue);
+  color:#fff;
+  border:3px solid #000;
+  box-shadow:6px 6px 0 #000;
+  transform:rotate(-2deg);
+  z-index:8;
+}
+.why-v2-stat strong{font:400 60px/.8 'Bowlby One SC','Anton',Impact,sans-serif;color:var(--yellow)}
+.why-v2-stat span{font:800 9px/1.15 Inter,Arial,sans-serif}
+.why-v2-reason{
+  position:absolute;
+  right:0;bottom:0;
+  width:34%;
+  padding:16px 19px;
+  background:var(--pink);
+  color:#fff;
+  border:3px solid #000;
+  box-shadow:6px 6px 0 #000;
+  z-index:7;
+  transform:rotate(-1deg);
+}
+.why-v2-reason span{font:800 13px/1 Inter,Arial,sans-serif}
+.why-v2-reason strong{display:block;margin-top:4px;color:var(--yellow);font:400 clamp(27px,3vw,43px)/.85 Anton,Impact,sans-serif;text-shadow:3px 3px 0 #000}
+.why-v2-reason p{margin-top:7px;font:700 11px/1.3 Inter,Arial,sans-serif}
+
+@media(max-width:800px){
+  #why-hop{min-height:0!important;padding:48px 0 58px!important}
+  .why-story-v2{width:calc(100% - 28px);min-height:0;display:flex;flex-direction:column;gap:16px}
+  .why-v2-heading,.why-v2-photo-main,.why-v2-photo-small,.why-v2-caption,.why-v2-stat,.why-v2-reason{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%;height:auto}
+  .why-v2-heading h2{font-size:clamp(46px,13vw,72px)}
+  .why-v2-photo-main{height:330px;order:2}
+  .why-v2-photo-small{height:190px;width:62%;align-self:flex-start;order:3;margin-top:-48px;margin-left:8px}
+  .why-v2-caption{order:4}
+  .why-v2-stat{order:5;width:220px}
+  .why-v2-reason{order:6}
+}
+
+/* PAGE 5 — activity carousel: photographic and clean, no heavy horizontal bars */
+#what{
+  background:var(--blue)!important;
+  color:#fff!important;
+  min-height:760px!important;
+  padding:58px 0 52px!important;
+}
+#what .activity-head{
+  position:relative!important;
+  top:auto!important;left:auto!important;right:auto!important;
+  width:min(1240px,calc(100% - 48px))!important;
+  margin:0 auto 24px!important;
+  padding:0!important;
+  color:#fff!important;
+  z-index:20!important;
+  pointer-events:auto!important;
+}
+#what .activity-head h2{
+  font:400 clamp(48px,5.7vw,78px)/.82 'Bowlby One SC','Anton',Impact,sans-serif!important;
+  color:var(--yellow)!important;
+  text-shadow:5px 5px 0 #000!important;
+  letter-spacing:-.025em!important;
+}
+#what .activity-intro-copy{
+  display:inline-block!important;
+  margin-top:13px!important;
+  padding:7px 12px!important;
+  background:var(--pink)!important;
+  color:#fff!important;
+  border:3px solid #000!important;
+  box-shadow:4px 4px 0 #000!important;
+  font:800 12px/1 Inter,Arial,sans-serif!important;
+}
+#what .activity-description{
+  display:block!important;
+  max-width:500px!important;
+  margin:11px 0 0!important;
+  font:700 13px/1.4 Inter,Arial,sans-serif!important;
+  color:#fff!important;
+}
+#what .activity-rule{display:none!important}
+#what .activity-carousel{
+  position:relative!important;
+  width:min(1240px,calc(100% - 48px))!important;
+  height:520px!important;
+  margin:0 auto!important;
+  display:flex!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  gap:18px!important;
+  scroll-snap-type:x mandatory!important;
+  scrollbar-width:none!important;
+  border:0!important;
+  z-index:2!important;
+}
+#what .activity-carousel::-webkit-scrollbar{display:none!important}
+#what .activity-slide{
+  flex:0 0 100%!important;
+  width:100%!important;
+  height:100%!important;
+  position:relative!important;
+  overflow:hidden!important;
+  scroll-snap-align:start!important;
+  border:4px solid #000!important;
+  box-shadow:9px 9px 0 #000!important;
+  background:var(--purple)!important;
+}
+#what .activity-slide img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important}
+#what .activity-slide:after{
+  content:""!important;position:absolute!important;inset:0!important;
+  background:linear-gradient(180deg,rgba(28,72,146,.02) 35%,rgba(0,0,0,.72) 100%)!important;
+}
+#what .activity-tag{
+  position:absolute!important;left:22px!important;right:22px!important;bottom:20px!important;z-index:4!important;
+  display:block!important;
+}
+#what .activity-slide h3{
+  display:flex!important;align-items:center!important;justify-content:space-between!important;
+  width:max-content!important;max-width:100%!important;
+  margin:0!important;padding:10px 16px!important;
+  background:var(--yellow)!important;color:#000!important;
+  border:3px solid #000!important;box-shadow:5px 5px 0 #000!important;
+  font:400 clamp(29px,3.5vw,49px)/.82 Anton,Impact,sans-serif!important;
+  text-shadow:none!important;
+}
+#what .activity-slide h3 b{font:800 25px/1 Inter,Arial,sans-serif!important;margin-left:25px!important}
+#what .activity-slide p{
+  width:max-content;max-width:90%;
+  margin:8px 0 0!important;padding:8px 12px!important;
+  background:#000;color:#fff;
+  font:700 11px/1.3 Inter,Arial,sans-serif!important;
+}
+#what .activity-prev{
+  position:absolute!important;z-index:8!important;left:calc(50% - min(620px,calc((100% - 48px)/2)))!important;top:auto!important;bottom:72px!important;
+  width:48px!important;height:48px!important;border:3px solid #000!important;border-radius:50%!important;background:var(--yellow)!important;color:#000!important;box-shadow:4px 4px 0 #000!important;font:900 25px/1 Arial!important
+}
+#what .activity-dots{position:absolute!important;z-index:8!important;bottom:30px!important;left:50%!important;transform:translateX(-50%)!important}
+#what .activity-dots button{background:#fff!important}
+#what .activity-dots button.active{background:var(--yellow)!important}
+#what .activities-cta{background:var(--pink)!important;color:#fff!important;border-color:#000!important;box-shadow:5px 5px 0 #000!important;margin-top:28px!important}
+@media(max-width:700px){
+  #what{min-height:680px!important;padding:45px 0!important}
+  #what .activity-head{width:calc(100% - 28px)!important}
+  #what .activity-carousel{width:calc(100% - 28px)!important;height:430px!important}
+  #what .activity-prev{left:14px!important;bottom:76px!important}
+}
+
+/* PAGE 6 — achievements: high-contrast brand combinations */
+#achievements{
+  background:var(--pink)!important;
+  color:#fff!important;
+  padding:70px 0 78px!important;
+}
+#achievements .achievements-heading span:first-child{color:#fff!important}
+#achievements .achievements-heading strong{color:var(--yellow)!important;text-shadow:5px 5px 0 #000!important}
+#achievements .achievements-heading span:last-child{background:#000!important;color:#fff!important}
+#achievements .achievements-intro{background:var(--blue)!important;color:#fff!important;border-color:#000!important;box-shadow:6px 6px 0 #000!important}
+#achievements .achievement-card:nth-child(1){background:var(--yellow)!important;color:#000!important}
+#achievements .achievement-card:nth-child(2){background:var(--blue)!important;color:#fff!important}
+#achievements .achievement-card:nth-child(3){background:var(--lime)!important;color:#000!important}
+#achievements .achievement-card:nth-child(4){background:var(--purple)!important;color:#fff!important}
+#achievements .achievement-card h3{font-size:clamp(26px,2.5vw,38px)!important}
+#achievements .achievement-card p{font-size:11px!important}
+#achievements .achievement-card:nth-child(2) .achievement-icon,
+#achievements .achievement-card:nth-child(4) .achievement-icon{background:var(--yellow)!important;color:#000!important}
+#achievements .achievements-close span{color:#fff!important}
+#achievements .achievements-close strong{background:#000!important;color:var(--yellow)!important;box-shadow:6px 6px 0 var(--blue)!important}
+
+/* PAGE 6 — more at HOP FEST: turn the empty colored boxes into a true image carousel */
+#experience{
+  background:var(--orange)!important;
+  color:#000!important;
+  padding:68px 0 78px!important;
+}
+#experience .experience-head{
+  width:min(1240px,calc(100% - 48px));
+  margin:0 auto 25px!important;
+}
+#experience .experience-head h2{color:#fff!important;text-shadow:5px 5px 0 #000!important;font-size:clamp(46px,5.8vw,78px)!important}
+#experience .experience-head .copy{color:#000!important;font-weight:800!important}
+#experience .more-swipe{background:var(--yellow)!important;color:#000!important;border:3px solid #000!important;box-shadow:4px 4px 0 #000!important}
+#experience .exp-zones{
+  width:min(1240px,calc(100% - 48px));
+  margin:0 auto!important;
+  display:flex!important;
+  gap:18px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  scroll-snap-type:x mandatory!important;
+  scrollbar-width:none!important;
+  padding:4px 4px 14px!important;
+}
+#experience .exp-zones::-webkit-scrollbar{display:none!important}
+#experience .zone{
+  flex:0 0 78%!important;
+  height:470px!important;
+  min-height:470px!important;
+  display:flex!important;
+  align-items:flex-end!important;
+  padding:24px!important;
+  position:relative!important;
+  background-image:linear-gradient(180deg,rgba(28,72,146,.04) 25%,rgba(0,0,0,.8) 100%),var(--card-image)!important;
+  background-size:cover!important;
+  background-position:center!important;
+  color:#fff!important;
+  border:4px solid #000!important;
+  box-shadow:8px 8px 0 #000!important;
+  transform:rotate(-.8deg)!important;
+  scroll-snap-align:start!important;
+}
+#experience .zone:nth-child(2){transform:rotate(.8deg)!important}
+#experience .zone:nth-child(3){transform:rotate(-.6deg)!important}
+#experience .zone:nth-child(4){transform:rotate(.8deg)!important}
+#experience .zone:nth-child(5){transform:rotate(-.7deg)!important}
+#experience .zone:after{
+  content:"";position:absolute;inset:auto 0 0;height:38%;
+  background:linear-gradient(transparent,rgba(0,0,0,.85));z-index:1
+}
+#experience .zone-no{position:absolute;top:18px;left:18px;z-index:3;padding:6px 9px;background:var(--yellow);color:#000;border:3px solid #000;box-shadow:3px 3px 0 #000;font:800 11px/1 Inter,Arial,sans-serif}
+#experience .zone-title{position:relative;z-index:3;display:block;width:max-content;max-width:95%;padding:9px 13px;background:var(--pink);color:#fff;border:3px solid #000;box-shadow:4px 4px 0 #000;font:400 clamp(30px,3.6vw,50px)/.84 Anton,Impact,sans-serif}
+#experience .zone-desc{position:relative;z-index:3;display:block;width:max-content;max-width:85%;margin-top:9px;padding:7px 10px;background:#000;color:#fff;font:700 11px/1.3 Inter,Arial,sans-serif}
+@media(max-width:700px){
+  #experience .experience-head,#experience .exp-zones{width:calc(100% - 28px)}
+  #experience .zone{flex-basis:88%;height:370px!important;min-height:370px!important}
+}
+
+/* PAGE 7 — improve the radial visual */
+#why-hop-in{
+  background:var(--purple)!important;
+  color:#fff!important;
+  padding:64px 0 74px!important;
+}
+.why-hop-in-heading h2{color:var(--yellow)!important;text-shadow:5px 5px 0 #000!important}
+.why-hop-in-heading .kicker{color:#fff!important}
+.why-hop-core{background:var(--yellow)!important;border-color:#000!important}
+.why-hop-point{
+  border:3px solid #000!important;
+  box-shadow:6px 6px 0 #000!important;
+  padding:14px 17px!important;
+}
+.why-hop-point strong{font-size:22px!important;line-height:.9!important}
+.why-hop-point.p1{background:var(--pink)!important;color:#fff!important}
+.why-hop-point.p2{background:var(--orange)!important;color:#000!important}
+.why-hop-point.p3{background:var(--lime)!important;color:#000!important}
+.why-hop-point.p4{background:var(--blue)!important;color:#fff!important}
+.why-hop-point.p5{background:var(--yellow)!important;color:#000!important}
+.why-hop-point.p6{background:var(--green,#1A9D4D)!important;color:#fff!important}
+.why-hop-in-lines .l1{stroke:var(--pink)!important}.why-hop-in-lines .l2{stroke:var(--orange)!important}.why-hop-in-lines .l3{stroke:var(--lime)!important}.why-hop-in-lines .l4{stroke:var(--blue)!important}.why-hop-in-lines .l5{stroke:var(--yellow)!important}.why-hop-in-lines .l6{stroke:#1A9D4D!important}
+.why-hop-in-lines circle{stroke:#000!important}
+
+/* CITIES — use brand purple as the section field, keep vivid cards */
+#cities{
+  background:var(--purple)!important;
+  color:#fff!important;
+}
+.cities-new-head h2{color:var(--yellow)!important;text-shadow:4px 4px 0 #000!important}
+.cities-new-head h2 span{color:var(--pink)!important;text-shadow:4px 4px 0 #000!important}
+.cities-new-head p{color:#fff!important}
+.city-pune{background:var(--pink)!important;color:#fff!important}
+.city-mumbai{background:var(--orange)!important;color:#000!important}
+.city-bangalore{background:var(--lime)!important;color:#000!important}
+.city-delhi{background:var(--blue)!important;color:#fff!important}
+.cities-new-coming{background:var(--yellow)!important;color:#000!important}
+
+/* FINAL CTA — retain strong blue field but make text combinations consistent */
+#why{background:var(--blue)!important}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -6209,11 +6595,10 @@ header{overflow:visible!important}
   <header>
     <nav class="nav wrap">
       <a class="brand logo-missing" href="#hero" aria-label="HOP FEST home"><img src="assets/logo/hop-fest-logo-final.png" alt="HOP FEST" onload="this.parentElement.classList.remove('logo-missing')" onerror="this.parentElement.classList.add('logo-missing')"><span class="brand-fallback">HOP FEST</span></a>
-      <div class="nav-links"><a href="#why-hop">Why HOP?</a><a href="#what">Activities</a><a href="#experience">More at HOP FEST</a><a href="#cities">Cities</a><a href="#prizes">Prizes</a><a href="#lucky">Lucky Draw</a></div>
-      <a class="btn btn-pink" href="#tickets">Get Your Pass <svg><use href="#arrow"/></svg></a>
+      <div class="nav-links"><a href="#why-hop">Why HOP?</a><a href="#what">Activities</a><a href="#experience">More at HOP FEST</a><a href="#cities">Cities</a></div>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </nav>
-    <div class="mobile-menu" id="mobileMenu"><a href="#why-hop">Why HOP?</a><a href="#what">Activities</a><a href="#experience">More at HOP FEST</a><a href="#cities">Cities</a><a href="#prizes">Prizes</a><a href="#lucky">Lucky Draw</a><a href="#tickets">Get Your Pass</a></div>
+    <div class="mobile-menu" id="mobileMenu"><a href="#why-hop">Why HOP?</a><a href="#what">Activities</a><a href="#experience">More at HOP FEST</a><a href="#cities">Cities</a></div>
   </header>
 
   <main>
@@ -6234,37 +6619,32 @@ header{overflow:visible!important}
 </section>
 
 <section id="why-hop" aria-label="Why HOP">
-  <div class="why-story">
-    <div class="why-story-copy">
-      <div class="why-question">
-        <span>WHEN WAS THE</span>
-        <strong>LAST TIME</strong>
-        <span>YOUR CHILD JUST</span>
-        <strong>PLAYED?</strong>
-      </div>
-      <p class="why-context">Between school, homework, tuition and screens, finding time to simply move, play and be active can be harder than it should be.</p>
+  <div class="why-story-v2">
+    <div class="why-v2-heading">
+      <span class="why-v2-kicker">THE REAL CHALLENGE</span>
+      <h2>WHEN WAS THE<br><em>LAST TIME</em><br>YOUR CHILD JUST <b>PLAYED?</b></h2>
     </div>
 
-    <div class="why-story-photo">
-      <img src="assets/images/Family Race.png" alt="Children and families being active together at HOP FEST">
-      <span class="why-photo-note">LESS SCROLL.<br>MORE PLAY.</span>
+    <div class="why-v2-photo-main">
+      <img src="assets/images/Family Race.png" alt="Children playing at HOP FEST">
+      <span>LESS SCROLL.<br><b>MORE PLAY.</b></span>
     </div>
 
-    <div class="why-story-kids">
-      <span class="why-kids-line">THEY NEED TIME</span>
-      <strong>TO JUST BE KIDS.</strong>
+    <div class="why-v2-photo-small">
+      <img src="assets/images/Obstacle Race.png" alt="Kids taking on a HOP FEST challenge">
     </div>
 
-    <div class="why-alarm">
-      <span>SCREEN TIME HAS INCREASED BY</span>
+    <div class="why-v2-caption">SCHOOL. HOMEWORK. SCREENS.<br><strong>THEY NEED TIME TO JUST BE KIDS.</strong></div>
+
+    <div class="why-v2-stat">
       <strong>52%</strong>
-      <span>AMONG CHILDREN AND ADOLESCENTS.</span>
+      <span>SCREEN TIME<br>HAS INCREASED</span>
     </div>
 
-    <div class="why-reason">
-      <strong>AND SOMETIMES, ALL THEY NEED IS A REASON TO GET STARTED.</strong>
-      <span>HOP FEST is that reason.</span>
-      <p>A place to put the screen away, step outside and spend a day moving, playing and having fun together.</p>
+    <div class="why-v2-reason">
+      <span>SO GIVE THEM A REASON.</span>
+      <strong>HOP FEST IS THAT REASON.</strong>
+      <p>A day to move, play, explore and be together.</p>
     </div>
   </div>
 </section>
@@ -6378,12 +6758,12 @@ header{overflow:visible!important}
         <line class="l6" x1="540" y1="550" x2="540" y2="450"/><circle cx="540" cy="550" r="7" fill="var(--yellow)"/>
       </svg>
       <div class="why-hop-core"><span>WHY<br>HOP<br>IN?</span></div>
-      <article class="why-hop-point p1"><strong>MORE OUTDOOR TIME</strong><span>Step away from screens. Get moving.</span></article>
-      <article class="why-hop-point p2"><strong>PLAY THAT BUILDS CONFIDENCE</strong><span>Try something new. Take on a challenge.</span></article>
-      <article class="why-hop-point p3"><strong>MOVE, RUN, CLIMB, EXPLORE</strong><span>Build coordination, balance, strength and agility.</span></article>
-      <article class="why-hop-point p4"><strong>FAMILY TIME THAT FEELS DIFFERENT</strong><span>Put the phones away. Get involved. Make memories.</span></article>
-      <article class="why-hop-point p5"><strong>DISCOVER WHAT THEY CAN DO</strong><span>Every challenge is a chance to push further.</span></article>
-      <article class="why-hop-point p6"><strong>ACTIVE, WITHOUT FEELING LIKE EXERCISE</strong><span>Movement is better when it feels like fun.</span></article>
+      <article class="why-hop-point p1"><strong>MORE OUTDOOR TIME</strong></article>
+      <article class="why-hop-point p2"><strong>PLAY THAT BUILDS CONFIDENCE</strong></article>
+      <article class="why-hop-point p3"><strong>MOVE, RUN, CLIMB, EXPLORE</strong></article>
+      <article class="why-hop-point p4"><strong>FAMILY TIME THAT FEELS DIFFERENT</strong></article>
+      <article class="why-hop-point p5"><strong>DISCOVER WHAT THEY CAN DO</strong></article>
+      <article class="why-hop-point p6"><strong>ACTIVE, WITHOUT FEELING LIKE EXERCISE</strong></article>
     </div>
   </div>
 </section>
