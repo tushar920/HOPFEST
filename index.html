@@ -4641,6 +4641,29 @@ header{overflow:visible!important}
   }
 }
 </style>
+<style id="hero-center-final">
+/* Keep the hero content geometrically centred in the viewport */
+@media(min-width:701px){
+  #hero .hero-grid{position:relative!important;display:block!important;}
+  #hero .hero-copy{
+    position:absolute!important;
+    left:50%!important;
+    top:50%!important;
+    margin:0!important;
+    transform:translate(-50%,-50%)!important;
+  }
+}
+@media(max-width:700px){
+  #hero .hero-grid{position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+  #hero .hero-copy{
+    position:relative!important;
+    left:auto!important;
+    top:auto!important;
+    transform:none!important;
+    margin:0 auto!important;
+  }
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
