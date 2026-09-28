@@ -9755,6 +9755,31 @@ footer .foot-bottom{color:#fff!important}
 footer .foot-grid{border-bottom-color:rgba(255,255,255,.4)!important}
 </style>
 
+<style id="hopfest-hero-image-restore">
+/* Restore the original HOP FEST hero photograph without changing the current hero copy/layout. */
+#hero{
+  position:relative!important;
+  overflow:hidden!important;
+  background:#1c4892 url('assets/images/Hop_out_n_play_hero.png') center center/cover no-repeat!important;
+}
+#hero .hero-background{
+  position:absolute!important;
+  inset:0!important;
+  z-index:0!important;
+  display:block!important;
+  background:linear-gradient(rgba(20,55,115,.28),rgba(20,55,115,.28)),url('assets/images/Hop_out_n_play_hero.png') center center/cover no-repeat!important;
+  pointer-events:none!important;
+}
+#hero .hero-grid{
+  position:relative!important;
+  z-index:2!important;
+}
+@media(max-width:700px){
+  #hero .hero-background{
+    background:linear-gradient(rgba(20,55,115,.30),rgba(20,55,115,.30)),url('assets/images/Hop_out_n_play_hero.png') center center/cover no-repeat!important;
+  }
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
