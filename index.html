@@ -12014,6 +12014,390 @@ wheel.addEventListener('click',()=>{
   }
   #experience .experience-cta span{margin-left:8px!important}
 }
-</style>\n</body>
+</style>\n<style id="HOPFEST-MOBILE-FINAL-CLEANUP">
+@media screen and (max-width:700px){
+
+  /* HEADER: full-width, genuinely centered, smaller logo */
+  header{
+    position:fixed!important;
+    top:0!important;left:0!important;right:0!important;
+    width:100vw!important;
+    height:calc(78px + env(safe-area-inset-top))!important;
+    padding-top:env(safe-area-inset-top)!important;
+    box-sizing:border-box!important;
+    z-index:100000!important;
+  }
+  header .nav,
+  header .nav.wrap{
+    width:100vw!important;
+    max-width:none!important;
+    min-width:0!important;
+    height:78px!important;
+    margin:0!important;
+    padding:0 18px!important;
+    box-sizing:border-box!important;
+    position:relative!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  header .brand{
+    position:absolute!important;
+    left:50%!important;
+    top:50%!important;
+    transform:translate(-50%,-50%)!important;
+    width:68px!important;
+    max-width:68px!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  header .brand img{
+    display:block!important;
+    width:68px!important;
+    max-width:68px!important;
+    height:auto!important;
+    margin:0!important;
+  }
+  header .brand-fallback{font-size:16px!important}
+  header .burger{
+    position:absolute!important;
+    right:18px!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+    margin:0!important;
+    width:38px!important;
+    height:38px!important;
+  }
+
+  /* Stop forcing content into fixed-height boxes. Every section gets its own
+     safe screen-sized canvas, but can grow if its content needs more room. */
+  main>section:not(#play){
+    width:100vw!important;
+    height:auto!important;
+    min-height:calc(100svh - 78px - env(safe-area-inset-top))!important;
+    max-height:none!important;
+    margin:0!important;
+    box-sizing:border-box!important;
+    overflow:visible!important;
+    scroll-snap-align:start!important;
+    scroll-snap-stop:always!important;
+  }
+
+  /* Ticker must be a real separator, never overlap the next section. */
+  main>#play{
+    height:46px!important;
+    min-height:46px!important;
+    max-height:46px!important;
+    padding:0!important;
+    margin:0!important;
+    overflow:hidden!important;
+    position:relative!important;
+    scroll-snap-align:none!important;
+  }
+  #play .hop-play-strip{
+    position:relative!important;
+    inset:auto!important;
+    width:100%!important;
+    height:46px!important;
+    min-height:46px!important;
+  }
+
+  /* Any text sitting directly on white must be dark. */
+  #experience,
+  #experience .experience-head,
+  #experience .experience-head h2,
+  #experience .experience-head .copy,
+  #cities,
+  #cities .cities-new-head,
+  #why,
+  #why .why-final-copy{
+    color:#090909!important;
+  }
+  #experience .experience-head h2,
+  #experience .experience-head .copy,
+  #cities .cities-new-head h2,
+  #cities .cities-new-head p,
+  #why .why-final-copy h2,
+  #why .why-final-lines span{
+    color:#090909!important;
+    text-shadow:none!important;
+  }
+
+  /* HERO */
+  #hero{
+    min-height:calc(100svh - 78px - env(safe-area-inset-top))!important;
+    height:auto!important;
+    padding:calc(78px + env(safe-area-inset-top) + 16px) 18px 24px!important;
+    overflow:hidden!important;
+  }
+  #hero .hero-copy{
+    min-height:calc(100svh - 78px - env(safe-area-inset-top) - 40px)!important;
+    height:auto!important;
+    max-width:390px!important;
+    padding:12px 10px 12px!important;
+    box-sizing:border-box!important;
+  }
+  #hero .hero-copy h1{
+    max-width:330px!important;
+    margin:18px auto 18px!important;
+    font-size:clamp(40px,11.5vw,54px)!important;
+    line-height:.88!important;
+    text-shadow:none!important;
+  }
+  #hero .hero-sub{
+    max-width:310px!important;
+    margin:0 auto 10px!important;
+    font-size:13px!important;
+    line-height:1!important;
+  }
+  #hero .hero-copy>p{
+    max-width:315px!important;
+    margin:7px auto!important;
+    font-size:10px!important;
+    line-height:1.28!important;
+    text-shadow:none!important;
+  }
+  #hero .hero-copy>p:first-of-type,
+  #hero .hero-age{color:#fff!important;text-shadow:none!important}
+  #hero .hero-cities{
+    margin:9px auto!important;
+    font-size:8px!important;
+  }
+  #hero .hero-ctas{
+    margin-top:auto!important;
+    padding:0 0 4px!important;
+  }
+  #hero .hero-ctas .btn{
+    width:235px!important;
+    min-height:48px!important;
+    padding:10px 12px!important;
+    box-shadow:none!important;
+  }
+
+  /* WHY HOP: remove the giant empty top gap */
+  #why-hop{
+    min-height:calc(100svh - 78px - env(safe-area-inset-top))!important;
+    padding:calc(78px + env(safe-area-inset-top) + 16px) 18px 24px!important;
+    display:block!important;
+    overflow:hidden!important;
+  }
+  #why-hop .why-clean-v4{
+    height:100%!important;
+    min-height:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:flex-start!important;
+    gap:10px!important;
+  }
+  #why-hop .why-clean-copy h2{
+    margin:0!important;
+    font-size:clamp(29px,8.2vw,40px)!important;
+    line-height:.84!important;
+  }
+  #why-hop .why-clean-rule{margin:9px 0 10px!important}
+  #why-hop .why-clean-photo{
+    flex:0 0 auto!important;
+    height:245px!important;
+    min-height:245px!important;
+    margin-top:8px!important;
+  }
+
+  /* ACTIVITIES: contained image, no dead white strip */
+  #what.activities-v4{
+    min-height:calc(100svh - 78px - env(safe-area-inset-top))!important;
+    padding:calc(78px + env(safe-area-inset-top) + 16px) 14px 18px!important;
+    overflow:hidden!important;
+  }
+  #what .activities-v4-copy h2{font-size:clamp(32px,9vw,45px)!important}
+  #what .activities-v4-visual{
+    flex:0 0 auto!important;
+    height:calc(100svh - 250px)!important;
+    min-height:350px!important;
+    max-height:510px!important;
+    margin-top:10px!important;
+  }
+
+  /* MORE TO PLAY: black text on white, predictable vertical spacing,
+     carousel is smaller and CTA is below it. */
+  #experience{
+    min-height:calc(100svh - 78px - env(safe-area-inset-top))!important;
+    height:auto!important;
+    padding:calc(78px + env(safe-area-inset-top) + 18px) 0 22px!important;
+    overflow:hidden!important;
+  }
+  #experience .wrap{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+  }
+  #experience .experience-head{
+    width:100%!important;
+    box-sizing:border-box!important;
+    padding:0 18px!important;
+    margin:0 0 10px!important;
+  }
+  #experience .experience-head h2{
+    font-size:clamp(31px,9vw,43px)!important;
+    line-height:.84!important;
+    margin:0 0 8px!important;
+  }
+  #experience .experience-head .copy{
+    font-size:9px!important;
+    line-height:1.2!important;
+    margin:5px 0!important;
+  }
+  #experience .more-swipe{
+    margin-top:2px!important;
+    flex-shrink:0!important;
+  }
+  #experience .exp-zones{
+    flex:0 0 auto!important;
+    width:100%!important;
+    height:430px!important;
+    min-height:430px!important;
+    padding:0 14px!important;
+    box-sizing:border-box!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+  }
+  #experience .zone{
+    flex:0 0 calc(100vw - 48px)!important;
+    width:calc(100vw - 48px)!important;
+    height:430px!important;
+    min-height:430px!important;
+    max-height:430px!important;
+    box-shadow:none!important;
+  }
+  #experience .experience-cta{
+    display:flex!important;
+    width:max-content!important;
+    margin:12px auto 0!important;
+    padding:10px 20px!important;
+    box-shadow:none!important;
+  }
+
+  /* WHY HOP IN: heading and entire grid belong to this section only */
+  #why-hop-in{
+    min-height:calc(100svh - 78px - env(safe-area-inset-top))!important;
+    height:auto!important;
+    padding:calc(78px + env(safe-area-inset-top) + 18px) 14px 22px!important;
+    display:block!important;
+    overflow:hidden!important;
+  }
+  #why-hop-in .why-hop-in-wrap{
+    height:auto!important;
+    min-height:0!important;
+    display:block!important;
+  }
+  #why-hop-in .why-hop-in-heading{
+    margin:0 0 12px!important;
+    text-align:center!important;
+  }
+  #why-hop-in .why-hop-in-heading h2{
+    font-size:clamp(29px,8.7vw,42px)!important;
+    line-height:.84!important;
+  }
+  #why-hop-in .why-hop-in-map{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    grid-template-rows:86px repeat(3,72px)!important;
+    gap:7px!important;
+    overflow:visible!important;
+  }
+  #why-hop-in .why-hop-core{
+    width:82px!important;
+    height:82px!important;
+    margin:0 auto!important;
+  }
+  #why-hop-in .why-hop-core span{
+    font-size:16px!important;
+    line-height:.78!important;
+  }
+  #why-hop-in .why-hop-point{
+    padding:8px 9px!important;
+    display:flex!important;
+    align-items:flex-start!important;
+  }
+  #why-hop-in .why-hop-point strong{
+    font-size:11px!important;
+    line-height:.9!important;
+  }
+
+  /* CITIES: no section bleed; card has room for date, venue and CTA */
+  #cities{
+    min-height:calc(100svh - 78px - env(safe-area-inset-top))!important;
+    padding:calc(78px + env(safe-area-inset-top) + 16px) 0 20px!important;
+    overflow:hidden!important;
+  }
+  #cities .cities-new-wrap{height:auto!important;min-height:0!important}
+  #cities .cities-new-head{
+    margin:0 18px 10px!important;
+  }
+  #cities .cities-new-head h2{
+    font-size:clamp(34px,9.5vw,46px)!important;
+    line-height:.84!important;
+  }
+  #cities .cities-new-head p{font-size:8px!important;color:#090909!important}
+  #cities .cities-new-grid{
+    height:520px!important;
+    min-height:520px!important;
+    flex:0 0 520px!important;
+    padding:0 18px 8px!important;
+  }
+  #cities .city-new-card{
+    flex:0 0 calc(100vw - 54px)!important;
+    width:calc(100vw - 54px)!important;
+    height:500px!important;
+    min-height:500px!important;
+    padding:13px!important;
+  }
+  #cities .city-new-name{font-size:clamp(34px,10vw,48px)!important}
+  #cities .city-landmark{height:245px!important;min-height:245px!important}
+  #cities .city-new-ticket{
+    display:block!important;
+    margin-top:10px!important;
+  }
+
+  /* MAKE A DAY OF IT: self-contained and no giant empty lower area */
+  #why{
+    min-height:calc(100svh - 78px - env(safe-area-inset-top))!important;
+    height:auto!important;
+    padding:calc(78px + env(safe-area-inset-top) + 16px) 16px 28px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    overflow:hidden!important;
+  }
+  #why .why-final-image{
+    flex:0 0 300px!important;
+    height:300px!important;
+    min-height:300px!important;
+  }
+  #why .why-final-image img{object-fit:contain!important}
+  #why .why-final-copy{
+    flex:0 0 auto!important;
+    min-height:0!important;
+    justify-content:flex-start!important;
+    padding-top:8px!important;
+  }
+  #why .why-final-copy h2{
+    font-size:clamp(43px,12vw,58px)!important;
+    line-height:.8!important;
+    margin:0 0 10px!important;
+  }
+  #why .why-final-lines{gap:6px!important;margin-bottom:12px!important}
+  #why .why-final-lines span{font-size:14px!important}
+  #why .why-final-cta{padding:10px 18px!important}
+
+  /* No unnecessary shadows anywhere in mobile white-space layouts */
+  #experience *,#cities *,#why *,
+  #why-hop *,#why-hop-in *{
+    text-shadow:none!important;
+  }
+}
+</style>
+</body>
 </html>
 
