@@ -4991,6 +4991,138 @@ header{overflow:visible!important}
   .activities-cta{margin-top:27px;width:100%;justify-content:center;font-size:17px}
 }
 </style>
+<style id="activities-carousel-final">
+/* Restore the established HOP FEST carousel layout — copy/content only is new */
+#what{
+  background:var(--blue)!important;
+  color:#fff!important;
+}
+#what .activities-editorial{display:none!important}
+#what .activity-head{
+  width:min(1240px,calc(100% - 48px))!important;
+  margin:0 auto 24px!important;
+  display:block!important;
+}
+#what .activity-head h2{
+  margin:0!important;
+  font-family:'Bowlby One SC','Anton',Impact,sans-serif!important;
+  font-size:clamp(45px,6vw,76px)!important;
+  line-height:.82!important;
+  color:#fff!important;
+  text-shadow:5px 5px 0 #000!important;
+}
+#what .activity-intro-copy{
+  margin:14px 0 5px!important;
+  color:var(--yellow)!important;
+  font:400 clamp(26px,3vw,42px)/.9 Anton,Impact,sans-serif!important;
+  text-transform:uppercase!important;
+}
+#what .activity-description{
+  max-width:620px!important;
+  margin:0!important;
+  color:#fff!important;
+  font:700 14px/1.4 Inter,Arial,sans-serif!important;
+}
+#what .activity-carousel{
+  display:flex!important;
+  gap:0!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  scroll-snap-type:x mandatory!important;
+  scroll-behavior:smooth!important;
+  -webkit-overflow-scrolling:touch!important;
+  scrollbar-width:none!important;
+  width:100%!important;
+  padding:8px 0 22px!important;
+}
+#what .activity-carousel::-webkit-scrollbar{display:none!important}
+#what .activity-slide{
+  position:relative!important;
+  flex:0 0 min(76vw,900px)!important;
+  width:min(76vw,900px)!important;
+  height:430px!important;
+  margin-right:18px!important;
+  scroll-snap-align:start!important;
+  overflow:hidden!important;
+  border:3px solid #000!important;
+  box-shadow:7px 7px 0 #000!important;
+}
+#what .activity-slide:first-child{margin-left:max(24px,calc((100vw - 1240px)/2))!important}
+#what .activity-slide img{
+  width:100%!important;height:100%!important;object-fit:cover!important;
+}
+#what .activity-tag{
+  position:absolute!important;
+  left:0!important;right:0!important;bottom:0!important;
+  z-index:2!important;
+  padding:24px 24px 22px!important;
+  background:linear-gradient(transparent,rgba(0,0,0,.88))!important;
+}
+#what .activity-tag h3{
+  margin:0!important;
+  color:var(--yellow)!important;
+  font:400 clamp(30px,4vw,54px)/.86 Anton,Impact,sans-serif!important;
+  text-shadow:3px 3px 0 #000!important;
+}
+#what .activity-tag p{
+  margin:8px 0 0!important;
+  max-width:620px!important;
+  color:#fff!important;
+  font:800 13px/1.35 Inter,Arial,sans-serif!important;
+}
+#what .activity-prev{
+  display:block!important;
+  margin:-4px 0 0 max(24px,calc((100vw - 1240px)/2))!important;
+  width:48px!important;height:48px!important;
+  background:var(--yellow)!important;color:#000!important;
+  border:3px solid #000!important;
+  box-shadow:5px 5px 0 #000!important;
+  font:900 24px/1 Arial,sans-serif!important;
+}
+#what .activity-dots{
+  display:flex!important;
+  justify-content:center!important;
+  gap:8px!important;
+  margin:16px auto 0!important;
+}
+#what .activity-dots button{
+  width:9px!important;height:9px!important;
+  padding:0!important;border:2px solid #000!important;
+  background:#fff!important;border-radius:50%!important;
+}
+#what .activity-dots button.active{background:var(--yellow)!important}
+#what .activities-cta{
+  display:flex!important;
+  width:max-content!important;
+  max-width:calc(100% - 32px)!important;
+  align-items:center!important;
+  gap:10px!important;
+  margin:24px auto 0!important;
+  padding:13px 20px!important;
+  background:var(--pink)!important;color:#fff!important;
+  border:3px solid #000!important;
+  box-shadow:5px 5px 0 #000!important;
+  font:400 18px/.9 Anton,Impact,sans-serif!important;
+}
+@media(max-width:700px){
+  #what{padding:48px 0 55px!important}
+  #what .activity-head{width:calc(100% - 32px)!important;margin-bottom:18px!important}
+  #what .activity-head h2{font-size:clamp(43px,13vw,64px)!important}
+  #what .activity-intro-copy{font-size:27px!important;margin-top:12px!important}
+  #what .activity-description{font-size:12px!important;line-height:1.4!important}
+  #what .activity-slide{
+    flex-basis:calc(100vw - 32px)!important;
+    width:calc(100vw - 32px)!important;
+    height:330px!important;
+    margin-right:12px!important;
+  }
+  #what .activity-slide:first-child{margin-left:16px!important}
+  #what .activity-tag{padding:20px 15px 16px!important}
+  #what .activity-tag h3{font-size:31px!important}
+  #what .activity-tag p{font-size:11px!important}
+  #what .activity-prev{margin-left:16px!important}
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -5070,52 +5202,30 @@ header{overflow:visible!important}
 <div id="play" class="hop-play-strip" aria-label="HOP FEST movement ticker"><div class="hop-play-track"><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i></div></div>
 
 <section id="what" aria-label="What can you do at HOP FEST">
-  <div class="activities-editorial">
-    <div class="activities-intro">
-      <div class="activities-title">
-        <span>WHAT CAN YOU</span>
-        <strong>DO AT HOP FEST?</strong>
-      </div>
-      <div class="activities-manifesto">
-        <span>ONE DAY.</span>
-        <strong>SO MANY WAYS TO PLAY.</strong>
-      </div>
-      <p>There’s something for every kind of kid — whether they love to race, climb, compete or simply try something new.</p>
+  <div class="activity-head">
+    <div>
+      <h2>WHAT CAN YOU<br>DO AT HOP FEST?</h2>
+      <p class="activity-intro-copy">ONE DAY. SO MANY WAYS TO PLAY.</p>
+      <p class="activity-description">There’s something for every kind of kid — whether they love to race, climb, compete or simply try something new.</p>
     </div>
-
-    <div class="activities-board">
-      <article class="activity-card activity-card-featured">
-        <img src="assets/images/Obstacle Race.png" alt="Grit Race at HOP FEST">
-        <div class="activity-card-copy"><h3>GRIT RACE</h3><p>Run. Jump. Climb. Crawl. Finish strong.</p></div>
-      </article>
-      <article class="activity-card">
-        <img src="assets/images/tug of war.png" alt="Obstacle challenges at HOP FEST">
-        <div class="activity-card-copy"><h3>OBSTACLE CHALLENGES</h3><p>Put speed, strength, balance and coordination to the test.</p></div>
-      </article>
-      <article class="activity-card">
-        <img src="assets/images/Wall Climb.png" alt="Wall climbing at HOP FEST">
-        <div class="activity-card-copy"><h3>WALL CLIMBING</h3><p>Find your grip. Find your balance. Make it to the top.</p></div>
-      </article>
-      <article class="activity-card">
-        <img src="assets/images/balance test.png" alt="Balance and agility at HOP FEST">
-        <div class="activity-card-copy"><h3>BALANCE &amp; AGILITY</h3><p>Quick feet. Sharp focus. Better control.</p></div>
-      </article>
-      <article class="activity-card">
-        <img src="assets/images/Family Race.png" alt="Family challenges at HOP FEST">
-        <div class="activity-card-copy"><h3>FAMILY CHALLENGES</h3><p>Team up, take on a challenge and play together.</p></div>
-      </article>
-      <article class="activity-card">
-        <img src="assets/images/dart game.png" alt="Games and play at HOP FEST">
-        <div class="activity-card-copy"><h3>GAMES &amp; PLAY</h3><p>Because not everything needs to be a competition.</p></div>
-      </article>
-      <article class="activity-card">
-        <img src="assets/images/entertainment HUB.png" alt="More activities at HOP FEST">
-        <div class="activity-card-copy"><h3>AND MORE</h3><p>Activities, challenges and experiences designed to keep kids moving all day.</p></div>
-      </article>
-    </div>
-
-    <a class="activities-cta" href="#what">EXPLORE THE ACTIVITIES <span>↗</span></a>
+    <span class="activity-rule"></span>
   </div>
+
+  <div class="activity-carousel" aria-label="HOP FEST activities">
+    <article class="activity-slide is-active"><img src="assets/images/Obstacle Race.png" alt="Grit Race at HOP FEST"><div class="activity-tag"><h3>GRIT RACE <b>→</b></h3><p>Run. Jump. Climb. Crawl. Finish strong.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/tug of war.png" alt="Obstacle Challenges at HOP FEST"><div class="activity-tag"><h3>OBSTACLE CHALLENGES <b>→</b></h3><p>Put speed, strength, balance and coordination to the test.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/Wall Climb.png" alt="Wall Climbing at HOP FEST"><div class="activity-tag"><h3>WALL CLIMBING <b>→</b></h3><p>Find your grip. Find your balance. Make it to the top.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/balance test.png" alt="Balance and Agility at HOP FEST"><div class="activity-tag"><h3>BALANCE &amp; AGILITY <b>→</b></h3><p>Quick feet. Sharp focus. Better control.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/Family Race.png" alt="Family Challenges at HOP FEST"><div class="activity-tag"><h3>FAMILY CHALLENGES <b>→</b></h3><p>Team up, take on a challenge and play together.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/dart game.png" alt="Games and Play at HOP FEST"><div class="activity-tag"><h3>GAMES &amp; PLAY <b>→</b></h3><p>Because not everything needs to be a competition.</p></div></article>
+    <article class="activity-slide"><img src="assets/images/entertainment HUB.png" alt="More activities at HOP FEST"><div class="activity-tag"><h3>AND MORE <b>→</b></h3><p>Activities, challenges and experiences designed to keep kids moving all day.</p></div></article>
+  </div>
+
+  <button class="activity-prev" type="button" aria-label="Previous activity">←</button>
+  <div class="activity-dots" aria-label="Activity slide navigation">
+    <button class="active" aria-label="Activity 1"></button><button aria-label="Activity 2"></button><button aria-label="Activity 3"></button><button aria-label="Activity 4"></button><button aria-label="Activity 5"></button><button aria-label="Activity 6"></button><button aria-label="Activity 7"></button>
+  </div>
+  <a class="activities-cta" href="#what">EXPLORE THE ACTIVITIES <span>↗</span></a>
 </section>
 
     <section id="experience">
