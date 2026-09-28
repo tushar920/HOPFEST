@@ -9783,6 +9783,23 @@ footer .foot-grid{border-bottom-color:rgba(255,255,255,.4)!important}
 
 
 
+<style id="hopfest-remove-section-borders-final">
+/* Remove all section divider lines */
+main > section,
+main > section[id],
+main > #play{
+  border-top:none!important;
+  border-bottom:none!important;
+  box-shadow:none!important;
+}
+main > section::after,
+main > section::before,
+main > #play::after,
+main > #play::before{
+  border-top:none!important;
+  border-bottom:none!important;
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
