@@ -5355,51 +5355,44 @@ header{overflow:visible!important}
 
 /* PAGE 7 — WHY HOP IN? */
 #why-hop-in{
-  background:var(--cream);
-  padding:105px 0 125px;
-  overflow:hidden;
+  position:relative!important;
+  background:var(--cream)!important;
+  padding:92px 0 108px!important;
+  overflow:hidden!important;
 }
 .why-hop-in-wrap{
   width:min(1220px,calc(100% - 40px));
   margin:auto;
   position:relative;
-  min-height:720px;
 }
-.why-hop-in-heading{
-  text-align:center;
-  margin-bottom:18px;
-}
+.why-hop-in-heading{text-align:center;margin-bottom:4px;position:relative;z-index:5}
 .why-hop-in-heading .kicker{
   display:block;
   font:800 12px/1 Inter,Arial,sans-serif;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  margin-bottom:13px;
+  letter-spacing:.18em;
+  margin-bottom:12px;
 }
 .why-hop-in-heading h2{
-  font:400 clamp(54px,7vw,88px)/.82 'Bowlby One SC','Anton',Impact,sans-serif;
+  font:400 clamp(48px,6.5vw,82px)/.84 'Bowlby One SC','Anton',Impact,sans-serif;
   color:var(--blue);
   text-shadow:4px 4px 0 var(--yellow);
 }
 .why-hop-in-map{
   position:relative;
-  width:min(100%,1080px);
-  height:620px;
-  margin:0 auto;
+  width:min(1080px,100%);
+  height:650px;
+  margin:4px auto 0;
 }
 .why-hop-in-lines{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
   overflow:visible;
   pointer-events:none;
   z-index:1;
 }
-.why-hop-in-lines line{
-  stroke-width:5;
-  stroke-linecap:round;
-}
+.why-hop-in-lines line{stroke-width:6;stroke-linecap:round}
 .why-hop-in-lines .l1{stroke:var(--pink)}
 .why-hop-in-lines .l2{stroke:var(--orange)}
 .why-hop-in-lines .l3{stroke:var(--lime)}
@@ -5408,12 +5401,13 @@ header{overflow:visible!important}
 .why-hop-in-lines .l6{stroke:var(--yellow)}
 .why-hop-in-lines circle{stroke:var(--black);stroke-width:3}
 .why-hop-core{
-  position:absolute;
-  left:50%;
-  top:50%;
-  width:245px;
-  height:245px;
-  transform:translate(-50%,-50%) rotate(-4deg);
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  width:250px!important;
+  height:250px!important;
+  margin:0!important;
+  transform:translate(-50%,-50%) rotate(-4deg)!important;
   border:5px solid var(--black);
   border-radius:50%;
   background:var(--yellow);
@@ -5433,35 +5427,33 @@ header{overflow:visible!important}
 .why-hop-core span{
   position:relative;
   z-index:2;
-  font:400 46px/.78 'Bowlby One SC','Anton',Impact,sans-serif;
+  font:400 47px/.78 'Bowlby One SC','Anton',Impact,sans-serif;
 }
 .why-hop-point{
-  position:absolute;
-  width:285px;
-  padding:16px 18px;
-  border:3px solid var(--black);
-  box-shadow:5px 5px 0 var(--black);
-  z-index:4;
+  position:absolute!important;
+  width:292px!important;
+  padding:17px 19px!important;
+  border:3px solid var(--black)!important;
+  box-shadow:5px 5px 0 var(--black)!important;
+  z-index:4!important;
 }
 .why-hop-point strong{
   display:block;
-  font:400 25px/.9 'Bowlby One SC','Anton',Impact,sans-serif;
+  font:400 24px/.92 'Bowlby One SC','Anton',Impact,sans-serif;
 }
 .why-hop-point span{
   display:block;
   margin-top:7px;
   font:700 12px/1.35 Inter,Arial,sans-serif;
-  max-width:245px;
 }
-.why-hop-point:nth-of-type(1){left:0;top:45px;background:var(--pink);color:#fff;transform:rotate(-2deg)}
-.why-hop-point:nth-of-type(2){right:0;top:25px;background:var(--orange);transform:rotate(2deg)}
-.why-hop-point:nth-of-type(3){left:0;bottom:65px;background:var(--lime);transform:rotate(1.5deg)}
-.why-hop-point:nth-of-type(4){right:0;bottom:45px;background:var(--blue);color:#fff;transform:rotate(-1.5deg)}
-.why-hop-point:nth-of-type(5){left:50%;top:0;transform:translateX(-50%) rotate(-1deg);background:var(--purple);color:#fff;width:270px}
-.why-hop-point:nth-of-type(6){left:50%;bottom:0;transform:translateX(-50%) rotate(1deg);background:var(--yellow)}
+.why-hop-point.p1{left:0;top:75px;background:var(--pink);color:#fff;transform:rotate(-2deg)}
+.why-hop-point.p2{right:0;top:55px;background:var(--orange);color:var(--black);transform:rotate(2deg)}
+.why-hop-point.p3{left:0;bottom:75px;background:var(--lime);color:var(--black);transform:rotate(1.5deg)}
+.why-hop-point.p4{right:0;bottom:55px;background:var(--blue);color:#fff;transform:rotate(-1.5deg)}
+.why-hop-point.p5{left:50%;top:0;background:var(--purple);color:#fff;width:280px!important;transform:translateX(-50%) rotate(-1deg)!important}
+.why-hop-point.p6{left:50%;bottom:0;background:var(--yellow);color:var(--black);width:280px!important;transform:translateX(-50%) rotate(1deg)!important}
 @media(max-width:760px){
-  #why-hop-in{padding:70px 0 80px}
-  .why-hop-in-wrap{min-height:0}
+  #why-hop-in{padding:70px 0 80px!important}
   .why-hop-in-map{
     height:auto;
     display:flex;
@@ -5470,32 +5462,27 @@ header{overflow:visible!important}
     gap:13px;
     padding-top:20px;
   }
-  .why-hop-in-lines{display:none}
+  .why-hop-in-lines{display:none!important}
   .why-hop-core{
-    position:relative;
-    left:auto;top:auto;
-    transform:rotate(-3deg);
-    width:190px;height:190px;
+    position:relative!important;
+    left:auto!important;top:auto!important;
+    transform:rotate(-3deg)!important;
+    width:190px!important;height:190px!important;
     order:0;
-    margin:5px 0 12px;
+    margin:5px 0 12px!important;
   }
   .why-hop-core span{font-size:36px}
   .why-hop-point,
-  .why-hop-point:nth-of-type(1),
-  .why-hop-point:nth-of-type(2),
-  .why-hop-point:nth-of-type(3),
-  .why-hop-point:nth-of-type(4),
-  .why-hop-point:nth-of-type(5),
-  .why-hop-point:nth-of-type(6){
-    position:relative;
-    left:auto;right:auto;top:auto;bottom:auto;
-    transform:none;
-    width:min(100%,430px);
+  .why-hop-point.p1,.why-hop-point.p2,.why-hop-point.p3,
+  .why-hop-point.p4,.why-hop-point.p5,.why-hop-point.p6{
+    position:relative!important;
+    left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
+    transform:none!important;
+    width:min(100%,430px)!important;
   }
   .why-hop-point strong{font-size:22px}
   .why-hop-point span{font-size:11px}
-}
-</style>
+}</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -5673,21 +5660,21 @@ header{overflow:visible!important}
       <h2>WHY SHOULD YOU HOP IN?</h2>
     </div>
     <div class="why-hop-in-map">
-      <svg class="why-hop-in-lines" viewBox="0 0 1080 620" preserveAspectRatio="none" aria-hidden="true">
-        <line class="l1" x1="285" y1="120" x2="430" y2="255"/><circle class="l1" cx="285" cy="120" r="7" fill="var(--pink)"/>
-        <line class="l2" x1="795" y1="100" x2="650" y2="250"/><circle class="l2" cx="795" cy="100" r="7" fill="var(--orange)"/>
-        <line class="l3" x1="285" y1="490" x2="435" y2="385"/><circle class="l3" cx="285" cy="490" r="7" fill="var(--lime)"/>
-        <line class="l4" x1="795" y1="480" x2="650" y2="385"/><circle class="l4" cx="795" cy="480" r="7" fill="var(--blue)"/>
-        <line class="l5" x1="540" y1="100" x2="540" y2="185"/><circle class="l5" cx="540" cy="100" r="7" fill="var(--purple)"/>
-        <line class="l6" x1="540" y1="520" x2="540" y2="435"/><circle class="l6" cx="540" cy="520" r="7" fill="var(--yellow)"/>
+      <svg class="why-hop-in-lines" viewBox="0 0 1080 650" preserveAspectRatio="none" aria-hidden="true">
+        <line class="l1" x1="292" y1="142" x2="440" y2="285"/><circle cx="292" cy="142" r="7" fill="var(--pink)"/>
+        <line class="l2" x1="788" y1="122" x2="640" y2="285"/><circle cx="788" cy="122" r="7" fill="var(--orange)"/>
+        <line class="l3" x1="292" y1="510" x2="440" y2="365"/><circle cx="292" cy="510" r="7" fill="var(--lime)"/>
+        <line class="l4" x1="788" y1="530" x2="640" y2="365"/><circle cx="788" cy="530" r="7" fill="var(--blue)"/>
+        <line class="l5" x1="540" y1="100" x2="540" y2="200"/><circle cx="540" cy="100" r="7" fill="var(--purple)"/>
+        <line class="l6" x1="540" y1="550" x2="540" y2="450"/><circle cx="540" cy="550" r="7" fill="var(--yellow)"/>
       </svg>
       <div class="why-hop-core"><span>WHY<br>HOP<br>IN?</span></div>
-      <article class="why-hop-point"><strong>MORE OUTDOOR TIME</strong><span>Step away from screens. Get moving.</span></article>
-      <article class="why-hop-point"><strong>PLAY THAT BUILDS CONFIDENCE</strong><span>Try something new. Take on a challenge.</span></article>
-      <article class="why-hop-point"><strong>MOVE, RUN, CLIMB, EXPLORE</strong><span>Build coordination, balance, strength and agility.</span></article>
-      <article class="why-hop-point"><strong>FAMILY TIME THAT FEELS DIFFERENT</strong><span>Put the phones away. Get involved.</span></article>
-      <article class="why-hop-point"><strong>DISCOVER WHAT THEY CAN DO</strong><span>Every challenge is a chance to push further.</span></article>
-      <article class="why-hop-point"><strong>ACTIVE, WITHOUT FEELING LIKE EXERCISE</strong><span>Because movement is better when it feels like fun.</span></article>
+      <article class="why-hop-point p1"><strong>MORE OUTDOOR TIME</strong><span>Step away from screens. Get moving.</span></article>
+      <article class="why-hop-point p2"><strong>PLAY THAT BUILDS CONFIDENCE</strong><span>Try something new. Take on a challenge.</span></article>
+      <article class="why-hop-point p3"><strong>MOVE, RUN, CLIMB, EXPLORE</strong><span>Build coordination, balance, strength and agility.</span></article>
+      <article class="why-hop-point p4"><strong>FAMILY TIME THAT FEELS DIFFERENT</strong><span>Put the phones away. Get involved. Make memories.</span></article>
+      <article class="why-hop-point p5"><strong>DISCOVER WHAT THEY CAN DO</strong><span>Every challenge is a chance to push further.</span></article>
+      <article class="why-hop-point p6"><strong>ACTIVE, WITHOUT FEELING LIKE EXERCISE</strong><span>Movement is better when it feels like fun.</span></article>
     </div>
   </div>
 </section>
