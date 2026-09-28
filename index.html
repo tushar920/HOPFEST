@@ -9846,6 +9846,7 @@ main > #play::before{
     overflow:hidden!important;
     scroll-snap-align:start!important;
     scroll-snap-stop:always!important;
+    scroll-margin-top:76px!important;
     box-sizing:border-box!important;
   }
 
@@ -10314,6 +10315,7 @@ main > #play::before{
 
   /* FOOTER becomes the final full-screen page. */
   footer{
+    scroll-margin-top:76px!important;
     min-height:calc(100svh - 76px)!important;
     height:calc(100svh - 76px)!important;
     max-height:calc(100svh - 76px)!important;
@@ -10395,6 +10397,14 @@ main > #play::before{
       touchStartY=e.touches[0].clientY;
       touchStartX=e.touches[0].clientX;
     },{passive:true});
+
+    scroller.addEventListener('touchmove',function(e){
+      if(window.innerWidth>700 || !e.touches.length) return;
+      if(e.target.closest('.activities-v4-carousel,.exp-zones,.cities-new-grid')) return;
+      const dy=touchStartY-e.touches[0].clientY;
+      const dx=touchStartX-e.touches[0].clientX;
+      if(Math.abs(dy)>Math.abs(dx)*1.15 && Math.abs(dy)>12) e.preventDefault();
+    },{passive:false});
 
     scroller.addEventListener('touchend',function(e){
       if(window.innerWidth>700 || !e.changedTouches.length) return;
