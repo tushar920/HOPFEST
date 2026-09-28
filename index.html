@@ -5965,6 +5965,72 @@ header{overflow:visible!important}
 .cta9-star{position:absolute;left:18px;top:10px;color:var(--pink);font-size:82px;text-shadow:4px 4px 0 var(--black);transform:rotate(13deg)}
 @media(max-width:760px){#why{min-height:0!important;padding:60px 0!important}.cta9-inner{display:block;min-height:0}.cta9-copy h2{font-size:65px}.cta9-lines{font-size:22px}.cta9-visual{height:245px;margin-top:25px}.cta9-circle{width:190px;height:190px;right:18%;top:15px;font-size:34px}.cta9-ticket{width:105px;height:76px;right:0;bottom:5px;font-size:21px}.cta9-star{font-size:55px;left:2%;top:0}}
 </style>
+<style id="page9-cta-layout-fix">
+#why{
+  min-height:560px!important;
+  height:560px!important;
+  padding:45px 0!important;
+  display:flex!important;
+  align-items:center!important;
+}
+.cta9-inner{
+  width:min(1280px,calc(100% - 70px))!important;
+  min-height:0!important;
+  height:470px!important;
+  grid-template-columns:1.05fr .95fr!important;
+  gap:25px!important;
+  align-items:center!important;
+}
+.cta9-copy{max-width:650px!important}
+.cta9-kicker{margin-bottom:14px!important}
+.cta9-copy h2{
+  font-size:clamp(58px,6.4vw,92px)!important;
+  line-height:.82!important;
+  margin:0 0 22px!important;
+  position:relative!important;
+  z-index:4!important;
+}
+.cta9-lines{
+  font-size:clamp(20px,2vw,28px)!important;
+  line-height:1.22!important;
+  margin-bottom:25px!important;
+  position:relative!important;
+  z-index:4!important;
+}
+.cta9-visual{
+  height:450px!important;
+  position:relative!important;
+  overflow:visible!important;
+}
+.cta9-circle{
+  width:300px!important;
+  height:300px!important;
+  right:105px!important;
+  top:45px!important;
+  font-size:48px!important;
+  z-index:2!important;
+}
+.cta9-ticket{
+  right:20px!important;
+  bottom:30px!important;
+  z-index:4!important;
+}
+.cta9-star{
+  left:auto!important;
+  right:15px!important;
+  top:5px!important;
+  z-index:5!important;
+}
+@media(max-width:760px){
+  #why{height:auto!important;min-height:0!important;padding:55px 0!important}
+  .cta9-inner{width:calc(100% - 32px)!important;height:auto!important;display:block!important}
+  .cta9-copy{max-width:none!important}
+  .cta9-copy h2{font-size:62px!important}
+  .cta9-visual{height:285px!important;margin-top:28px!important}
+  .cta9-circle{width:205px!important;height:205px!important;right:18%!important;top:8px!important;font-size:35px!important}
+  .cta9-ticket{width:110px!important;height:80px!important;right:2%!important;bottom:4px!important;font-size:22px!important}
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
