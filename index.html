@@ -5605,24 +5605,26 @@ header{overflow:visible!important}
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
   position:relative;
-  color:rgba(255,255,255,.9);
-  font:900 88px/1 Georgia,serif;
-  text-shadow:4px 4px 0 rgba(0,0,0,.2);
+  overflow:hidden;
+  border:3px solid rgba(9,9,9,.85);
+  background:rgba(255,255,255,.14);
 }
 .city-landmark:before{
-  content:"";
+  content:"HOP FEST";
   position:absolute;
-  width:190px;height:72px;
-  background:var(--yellow);
-  transform:rotate(-7deg);
-  opacity:.9;
+  inset:auto 0 8px;
+  text-align:center;
+  font:800 11px/1 Inter,Arial,sans-serif;
+  letter-spacing:.18em;
+  opacity:.65;
 }
-.city-mumbai .city-landmark:before{background:#8fd3ff}
-.city-bangalore .city-landmark:before{background:#fff04b}
-.city-delhi .city-landmark:before{background:var(--pink)}
-.city-landmark span{position:relative;z-index:1}
+.city-landmark span{
+  position:relative;
+  z-index:1;
+  font:400 78px/.8 'Bowlby One SC','Anton',Impact,sans-serif;
+  text-shadow:4px 4px 0 rgba(0,0,0,.22);
+}
 .city-new-detail{
   position:relative;
   z-index:2;
@@ -5694,7 +5696,7 @@ header{overflow:visible!important}
   }
   .city-new-name{font-size:29px}
   .city-bangalore .city-new-name{font-size:22px}
-  .city-landmark{height:75px;margin:4px 0;font-size:50px}
+  .city-landmark{height:75px;margin:4px 0}.city-landmark span{font-size:46px}
   .city-landmark:before{width:105px;height:44px}
   .city-new-detail{margin:5px 0;font-size:10px;display:block}
   .city-new-detail b{display:inline-block;font-size:8px;margin-right:4px}
@@ -5703,6 +5705,34 @@ header{overflow:visible!important}
   .cities-new-coming{width:100%;min-height:120px;margin-top:18px}
   .cities-new-coming strong{text-align:center;font-size:23px}
   .cities-new-coming a{font-size:10px;padding:10px 13px}
+}
+</style>\n
+<style id="cities-fit-fix">
+@media(min-width:901px){
+  #cities{
+    height:calc(100vh - 88px)!important;
+    min-height:0!important;
+    padding:34px 0 42px!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+  .cities-new-wrap{width:min(1500px,calc(100% - 42px))!important}
+  .cities-new-head{margin-bottom:20px!important}
+  .cities-new-head h2{font-size:clamp(42px,5vw,70px)!important}
+  .cities-new-head p{margin-top:9px!important;font-size:16px!important}
+  .cities-new-grid{gap:14px!important}
+  .city-new-card{min-height:0!important;height:350px!important;padding:18px 18px 15px!important}
+  .city-new-name{font-size:42px!important}
+  .city-bangalore .city-new-name{font-size:37px!important}
+  .city-landmark{height:105px!important;margin:7px 0!important}
+  .city-new-detail{margin:5px 0!important}
+  .city-new-ticket{margin-top:11px!important;padding:9px 10px!important}
+  .cities-new-coming{margin-top:17px!important;min-height:62px!important;padding:9px 20px!important}
+  .cities-new-coming strong{font-size:28px!important}
+  .cities-new-coming a{padding:9px 15px!important}
+}
+@media(max-width:900px){
+  .city-landmark{height:90px}
 }
 </style>\n</head>
 <body>
