@@ -4824,6 +4824,173 @@ header{overflow:visible!important}
   .why-reason p{font-size:11px}
 }
 </style>
+<style id="activities-editorial-v11">
+/* ACTIVITIES — editorial carnival board */
+#what{
+  background:#234f95!important;
+  color:#fff!important;
+  padding:74px 0 78px!important;
+  overflow:hidden!important;
+}
+.activities-editorial{
+  width:min(1240px,calc(100% - 48px));
+  margin:0 auto;
+}
+.activities-intro{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:42px;
+  align-items:end;
+  margin-bottom:34px;
+}
+.activities-title{
+  display:flex;
+  flex-direction:column;
+  line-height:.8;
+  text-transform:uppercase;
+  letter-spacing:-.035em;
+  font-family:'Bowlby One SC','Anton',Impact,sans-serif;
+}
+.activities-title span{
+  font-size:clamp(27px,3vw,44px);
+  color:#fff;
+}
+.activities-title strong{
+  font-size:clamp(58px,6.5vw,94px);
+  color:var(--yellow);
+  text-shadow:5px 5px 0 #000;
+}
+.activities-manifesto{
+  position:relative;
+  padding:14px 18px 15px;
+  background:var(--yellow);
+  color:#000;
+  border:3px solid #000;
+  box-shadow:7px 7px 0 #000;
+  transform:rotate(-1.2deg);
+}
+.activities-manifesto:before{
+  content:'';
+  position:absolute;
+  width:12px;height:12px;
+  left:-8px;top:-8px;
+  background:var(--pink);
+  border:2px solid #000;
+}
+.activities-manifesto span{
+  display:block;
+  font:400 clamp(22px,2.4vw,34px)/.9 Anton,Impact,sans-serif;
+}
+.activities-manifesto strong{
+  display:block;
+  margin-top:4px;
+  font:400 clamp(32px,3.5vw,52px)/.86 'Bowlby One SC','Anton',Impact,sans-serif;
+}
+.activities-intro>p{
+  grid-column:2;
+  max-width:530px;
+  margin:-18px 0 0;
+  font:800 14px/1.45 Inter,Arial,sans-serif;
+  color:#fff;
+}
+.activities-board{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-auto-rows:225px;
+  gap:15px;
+}
+.activity-card{
+  position:relative;
+  min-width:0;
+  overflow:hidden;
+  border:3px solid #000;
+  box-shadow:7px 7px 0 #000;
+  background:#111;
+}
+.activity-card-featured{grid-column:span 2}
+.activity-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .35s ease;
+}
+.activity-card:hover img{transform:scale(1.045)}
+.activity-card:after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.82) 100%);
+}
+.activity-card-copy{
+  position:absolute;
+  z-index:2;
+  left:16px;
+  right:14px;
+  bottom:14px;
+}
+.activity-card-copy h3{
+  margin:0;
+  color:var(--yellow);
+  font:400 clamp(25px,2.4vw,38px)/.86 'Bowlby One SC','Anton',Impact,sans-serif;
+  letter-spacing:-.02em;
+  text-shadow:3px 3px 0 #000;
+}
+.activity-card-copy p{
+  margin-top:7px;
+  max-width:330px;
+  color:#fff;
+  font:800 11px/1.3 Inter,Arial,sans-serif;
+}
+.activity-card:nth-child(2) .activity-card-copy h3,
+.activity-card:nth-child(5) .activity-card-copy h3{color:#fff}
+.activity-card:nth-child(3) .activity-card-copy h3{color:var(--pink)}
+.activity-card:nth-child(4) .activity-card-copy h3{color:var(--lime)}
+.activity-card:nth-child(7){
+  background:var(--pink);
+}
+.activity-card:nth-child(7) img{object-position:center}
+.activities-cta{
+  display:flex;
+  width:max-content;
+  max-width:100%;
+  align-items:center;
+  gap:12px;
+  margin:31px auto 0;
+  padding:14px 22px;
+  background:var(--pink);
+  color:#fff;
+  border:3px solid #000;
+  box-shadow:6px 6px 0 #000;
+  font:400 19px/.9 Anton,Impact,sans-serif;
+  transform:rotate(1deg);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.activities-cta span{font-family:Arial,sans-serif;font-weight:900}
+.activities-cta:hover{transform:translate(-3px,-3px) rotate(1deg);box-shadow:9px 9px 0 #000}
+@media(max-width:900px){
+  #what{padding:58px 0 64px!important}
+  .activities-editorial{width:calc(100% - 32px)}
+  .activities-intro{grid-template-columns:1fr;gap:22px;margin-bottom:27px}
+  .activities-intro>p{grid-column:auto;margin:-8px 0 0;max-width:620px}
+  .activities-board{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:230px;gap:12px}
+  .activity-card-featured{grid-column:span 2}
+}
+@media(max-width:560px){
+  #what{padding:47px 0 55px!important}
+  .activities-title span{font-size:22px}
+  .activities-title strong{font-size:clamp(48px,15vw,68px)}
+  .activities-manifesto{padding:12px 14px}
+  .activities-manifesto span{font-size:22px}
+  .activities-manifesto strong{font-size:31px}
+  .activities-intro>p{font-size:13px;line-height:1.45;margin:0}
+  .activities-board{grid-template-columns:1fr;grid-auto-rows:270px;gap:12px}
+  .activity-card-featured{grid-column:auto}
+  .activity-card-copy{left:13px;bottom:13px}
+  .activity-card-copy h3{font-size:29px}
+  .activity-card-copy p{font-size:11px;max-width:300px}
+  .activities-cta{margin-top:27px;width:100%;justify-content:center;font-size:17px}
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -4903,26 +5070,51 @@ header{overflow:visible!important}
 <div id="play" class="hop-play-strip" aria-label="HOP FEST movement ticker"><div class="hop-play-track"><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i></div></div>
 
 <section id="what" aria-label="What can you do at HOP FEST">
-  <div class="activity-head">
-    <h2>WHAT CAN YOU<br>DO AT HOP FEST?</h2>
-    <span class="activity-rule"></span>
-  </div>
-  <div class="activity-carousel" aria-label="HOP FEST activities">
-    <article class="activity-slide is-active"><img src="assets/images/Obstacle Race.png" alt="Grit Race at HOP FEST"><div class="activity-tag"><h3>GRIT RACE <b>→</b></h3><p>Race, climb, crawl and conquer.</p></div></article>
-    <article class="activity-slide"><img src="assets/images/tug of war.png" alt="Tug of War at HOP FEST"><div class="activity-tag"><h3>TUG OF WAR <b>→</b></h3><p>Pull together. Play together.</p></div></article>
-    <article class="activity-slide"><img src="assets/images/Wall Climb.png" alt="Wall Climbing at HOP FEST"><div class="activity-tag"><h3>WALL CLIMBING <b>→</b></h3><p>Climb, explore and challenge yourself.</p></div></article>
-    <article class="activity-slide"><img src="assets/images/balance test.png" alt="Balance Test at HOP FEST"><div class="activity-tag"><h3>BALANCE TEST <b>→</b></h3><p>Stay steady. Stay focused.</p></div></article>
-    <article class="activity-slide"><img src="assets/images/cycle.png" alt="Cycling Zone at HOP FEST"><div class="activity-tag"><h3>CYCLING ZONE <b>→</b></h3><p>Pedal, play and progress.</p></div></article>
-    <article class="activity-slide"><img src="assets/images/dart game.png" alt="Dart Game at HOP FEST"><div class="activity-tag"><h3>DART GAME <b>→</b></h3><p>Aim, play and hit the target.</p></div></article>
-    <article class="activity-slide"><img src="assets/images/Family Race.png" alt="Family Race at HOP FEST"><div class="activity-tag"><h3>FAMILY RACE <b>→</b></h3><p>Challenge each other. Cheer each other on.</p></div></article>
-    <article class="activity-slide"><img src="assets/images/parents and child relay.png" alt="Parents and Child Relay at HOP FEST"><div class="activity-tag"><h3>PARENTS &amp; CHILD RELAY <b>→</b></h3><p>Move together. Grow together.</p></div></article>
-    <article class="activity-slide"><img src="assets/images/sack race.png" alt="Sack Race at HOP FEST"><div class="activity-tag"><h3>SACK RACE <b>→</b></h3><p>Hop, race and have fun.</p></div></article>
-    <article class="activity-slide"><img src="assets/images/treasure HUnt.png" alt="Treasure Hunt at HOP FEST"><div class="activity-tag"><h3>TREASURE HUNT <b>→</b></h3><p>Find clues. Solve. Explore.</p></div></article>
-    <article class="activity-slide"><img src="assets/images/entertainment HUB.png" alt="Entertainment Hub at HOP FEST"><div class="activity-tag"><h3>ENTERTAINMENT HUB <b>→</b></h3><p>Music, performances and non-stop energy.</p></div></article>
-  </div>
-  <button class="activity-prev" type="button" aria-label="Previous activity">←</button>
-  <div class="activity-dots" aria-label="Activity slide navigation">
-    <button class="active" aria-label="Activity 1"></button><button aria-label="Activity 2"></button><button aria-label="Activity 3"></button><button aria-label="Activity 4"></button><button aria-label="Activity 5"></button><button aria-label="Activity 6"></button><button aria-label="Activity 7"></button><button aria-label="Activity 8"></button><button aria-label="Activity 9"></button><button aria-label="Activity 10"></button><button aria-label="Activity 11"></button>
+  <div class="activities-editorial">
+    <div class="activities-intro">
+      <div class="activities-title">
+        <span>WHAT CAN YOU</span>
+        <strong>DO AT HOP FEST?</strong>
+      </div>
+      <div class="activities-manifesto">
+        <span>ONE DAY.</span>
+        <strong>SO MANY WAYS TO PLAY.</strong>
+      </div>
+      <p>There’s something for every kind of kid — whether they love to race, climb, compete or simply try something new.</p>
+    </div>
+
+    <div class="activities-board">
+      <article class="activity-card activity-card-featured">
+        <img src="assets/images/Obstacle Race.png" alt="Grit Race at HOP FEST">
+        <div class="activity-card-copy"><h3>GRIT RACE</h3><p>Run. Jump. Climb. Crawl. Finish strong.</p></div>
+      </article>
+      <article class="activity-card">
+        <img src="assets/images/tug of war.png" alt="Obstacle challenges at HOP FEST">
+        <div class="activity-card-copy"><h3>OBSTACLE CHALLENGES</h3><p>Put speed, strength, balance and coordination to the test.</p></div>
+      </article>
+      <article class="activity-card">
+        <img src="assets/images/Wall Climb.png" alt="Wall climbing at HOP FEST">
+        <div class="activity-card-copy"><h3>WALL CLIMBING</h3><p>Find your grip. Find your balance. Make it to the top.</p></div>
+      </article>
+      <article class="activity-card">
+        <img src="assets/images/balance test.png" alt="Balance and agility at HOP FEST">
+        <div class="activity-card-copy"><h3>BALANCE &amp; AGILITY</h3><p>Quick feet. Sharp focus. Better control.</p></div>
+      </article>
+      <article class="activity-card">
+        <img src="assets/images/Family Race.png" alt="Family challenges at HOP FEST">
+        <div class="activity-card-copy"><h3>FAMILY CHALLENGES</h3><p>Team up, take on a challenge and play together.</p></div>
+      </article>
+      <article class="activity-card">
+        <img src="assets/images/dart game.png" alt="Games and play at HOP FEST">
+        <div class="activity-card-copy"><h3>GAMES &amp; PLAY</h3><p>Because not everything needs to be a competition.</p></div>
+      </article>
+      <article class="activity-card">
+        <img src="assets/images/entertainment HUB.png" alt="More activities at HOP FEST">
+        <div class="activity-card-copy"><h3>AND MORE</h3><p>Activities, challenges and experiences designed to keep kids moving all day.</p></div>
+      </article>
+    </div>
+
+    <a class="activities-cta" href="#what">EXPLORE THE ACTIVITIES <span>↗</span></a>
   </div>
 </section>
 
