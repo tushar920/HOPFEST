@@ -6964,6 +6964,31 @@ header{overflow:visible!important}
   .why-clean-photo{height:300px}
   .why-clean-body{font-size:22px!important}
 }
+</style><style id="hopfest-page2-video">
+#why-hop .why-clean-video{
+  position:relative;
+  background:#000;
+}
+#why-hop .why-clean-video video{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+}
+#why-hop .why-clean-video:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(0,0,0,.04),rgba(0,0,0,0));
+}
+@media(max-width:900px){
+  #why-hop .why-clean-video{height:380px!important}
+}
+@media(max-width:520px){
+  #why-hop .why-clean-video{height:300px!important}
+}
 </style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -7013,8 +7038,10 @@ header{overflow:visible!important}
       <p class="why-clean-body">They need time to just be kids.</p>
       <div class="why-clean-tag">LESS SCROLL. <b>MORE PLAY.</b></div>
     </div>
-    <div class="why-clean-photo">
-      <img src="assets/images/Family Race.png" alt="Children playing together at HOP FEST">
+    <div class="why-clean-photo why-clean-video">
+      <video autoplay muted loop playsinline preload="metadata" aria-label="Child watching short-form videos">
+        <source src="assets/videos/Boy watching Reels.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
