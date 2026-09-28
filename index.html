@@ -10569,6 +10569,7 @@ main > #play::before{
       <article class="zone" style="--card-image:url('assets/images/Hopfest_fisheye2.png')"><span class="zone-no">04</span><span class="zone-title">FOOD &amp; REFRESHMENTS →</span><span class="zone-desc">Because active kids need a recharge too.</span></article>
       <article class="zone" style="--card-image:url('assets/images/Family Race.png')"><span class="zone-no">05</span><span class="zone-title">KIDS’ STALLS &amp; EXPERIENCES →</span><span class="zone-desc">Explore, discover and take a little HOP FEST home.</span></article>
     </div>
+    <a class="experience-cta" href="#cities">EXPLORE MORE <span>→</span></a>
   </div>
 </section>
 
@@ -11985,6 +11986,34 @@ wheel.addEventListener('click',()=>{
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
-</body>
+<style id="HOPFEST-EXPERIENCE-CTA-FIX">
+@media screen and (max-width:700px){
+  #experience .exp-zones{
+    flex:1 1 auto!important;
+    min-height:0!important;
+    padding:4px 14px 8px!important;
+  }
+  #experience .zone{
+    height:100%!important;
+    max-height:100%!important;
+  }
+  #experience .experience-cta{
+    flex:0 0 auto!important;
+    align-self:center!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    margin:6px auto 0!important;
+    padding:9px 18px!important;
+    background:var(--pink)!important;
+    color:#fff!important;
+    border:3px solid #000!important;
+    font:900 10px/1 Inter,Arial,sans-serif!important;
+    text-decoration:none!important;
+    box-shadow:none!important;
+  }
+  #experience .experience-cta span{margin-left:8px!important}
+}
+</style>\n</body>
 </html>
 
