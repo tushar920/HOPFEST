@@ -9074,6 +9074,88 @@ header .brand img{
     font-size:10px!important;
   }
 }
+</style><style id="cities-card-polish">
+@media (min-width:901px){
+  /* Give Cities its own visual field so it does not bleed into the purple section above. */
+  #cities{
+    background:#faee30!important;
+    color:#090909!important;
+  }
+
+  /* One consistent card language across all four cities. */
+  .city-new-card{
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:flex-start!important;
+    border:4px solid #090909!important;
+    box-shadow:7px 7px 0 #090909!important;
+    transform:rotate(0deg)!important;
+    padding:11px 12px 10px!important;
+  }
+  .city-new-card:nth-child(even){
+    transform:rotate(0deg)!important;
+  }
+
+  .city-pune{background:#e84b81!important;color:#fff!important}
+  .city-mumbai{background:#f68820!important;color:#fff!important}
+  .city-bangalore{background:#a0cd3f!important;color:#fff!important}
+  .city-delhi{background:#1c4892!important;color:#fff!important}
+
+  /* Match Mumbai/Bangalore to the same title treatment as Pune/Delhi. */
+  .city-new-name,
+  .city-bangalore .city-new-name{
+    color:#fff!important;
+    text-shadow:4px 4px 0 #090909!important;
+    font-size:clamp(24px,2.4vw,36px)!important;
+    line-height:.9!important;
+    margin-bottom:3px!important;
+  }
+
+  .city-landmark{
+    height:82px!important;
+    margin:5px 0 7px!important;
+    flex:0 0 82px!important;
+    border:3px solid #090909!important;
+    background:rgba(255,255,255,.2)!important;
+    box-shadow:4px 4px 0 rgba(9,9,9,.9)!important;
+  }
+  .city-landmark:before{
+    color:#fff!important;
+    opacity:.85!important;
+  }
+
+  .city-new-detail{
+    color:#fff!important;
+    margin:3px 0!important;
+    font-size:10px!important;
+    line-height:1.05!important;
+    text-shadow:1px 1px 0 #090909!important;
+  }
+  .city-new-detail b{font-size:8px!important}
+  .city-new-detail strong{font-size:11px!important}
+
+  .city-new-ticket{
+    margin-top:auto!important;
+    padding:8px 8px!important;
+    min-height:32px!important;
+    box-sizing:border-box!important;
+    border:3px solid #090909!important;
+    box-shadow:4px 4px 0 #090909!important;
+    font-size:11px!important;
+  }
+
+  /* Keep the bottom callout visually attached to this section. */
+  .cities-new-coming{
+    background:#090909!important;
+    color:#faee30!important;
+    border:3px solid #090909!important;
+    box-shadow:6px 6px 0 #090909!important;
+  }
+  .cities-new-coming a{
+    background:#e84b81!important;
+    color:#fff!important;
+  }
+}
 </style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
