@@ -5352,6 +5352,149 @@ header{overflow:visible!important}
   .achievements-close span{font-size:23px}
   .achievements-close strong{font-size:31px}
 }
+
+/* PAGE 7 — WHY HOP IN? */
+#why-hop-in{
+  background:var(--cream);
+  padding:105px 0 125px;
+  overflow:hidden;
+}
+.why-hop-in-wrap{
+  width:min(1220px,calc(100% - 40px));
+  margin:auto;
+  position:relative;
+  min-height:720px;
+}
+.why-hop-in-heading{
+  text-align:center;
+  margin-bottom:18px;
+}
+.why-hop-in-heading .kicker{
+  display:block;
+  font:800 12px/1 Inter,Arial,sans-serif;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:13px;
+}
+.why-hop-in-heading h2{
+  font:400 clamp(54px,7vw,88px)/.82 'Bowlby One SC','Anton',Impact,sans-serif;
+  color:var(--blue);
+  text-shadow:4px 4px 0 var(--yellow);
+}
+.why-hop-in-map{
+  position:relative;
+  width:min(100%,1080px);
+  height:620px;
+  margin:0 auto;
+}
+.why-hop-in-lines{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:visible;
+  pointer-events:none;
+  z-index:1;
+}
+.why-hop-in-lines line{
+  stroke-width:5;
+  stroke-linecap:round;
+}
+.why-hop-in-lines .l1{stroke:var(--pink)}
+.why-hop-in-lines .l2{stroke:var(--orange)}
+.why-hop-in-lines .l3{stroke:var(--lime)}
+.why-hop-in-lines .l4{stroke:var(--blue)}
+.why-hop-in-lines .l5{stroke:var(--purple)}
+.why-hop-in-lines .l6{stroke:var(--yellow)}
+.why-hop-in-lines circle{stroke:var(--black);stroke-width:3}
+.why-hop-core{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:245px;
+  height:245px;
+  transform:translate(-50%,-50%) rotate(-4deg);
+  border:5px solid var(--black);
+  border-radius:50%;
+  background:var(--yellow);
+  box-shadow:9px 9px 0 var(--black);
+  display:grid;
+  place-items:center;
+  text-align:center;
+  z-index:3;
+}
+.why-hop-core:before{
+  content:"";
+  position:absolute;
+  inset:13px;
+  border:3px dashed var(--black);
+  border-radius:50%;
+}
+.why-hop-core span{
+  position:relative;
+  z-index:2;
+  font:400 46px/.78 'Bowlby One SC','Anton',Impact,sans-serif;
+}
+.why-hop-point{
+  position:absolute;
+  width:285px;
+  padding:16px 18px;
+  border:3px solid var(--black);
+  box-shadow:5px 5px 0 var(--black);
+  z-index:4;
+}
+.why-hop-point strong{
+  display:block;
+  font:400 25px/.9 'Bowlby One SC','Anton',Impact,sans-serif;
+}
+.why-hop-point span{
+  display:block;
+  margin-top:7px;
+  font:700 12px/1.35 Inter,Arial,sans-serif;
+  max-width:245px;
+}
+.why-hop-point:nth-of-type(1){left:0;top:45px;background:var(--pink);color:#fff;transform:rotate(-2deg)}
+.why-hop-point:nth-of-type(2){right:0;top:25px;background:var(--orange);transform:rotate(2deg)}
+.why-hop-point:nth-of-type(3){left:0;bottom:65px;background:var(--lime);transform:rotate(1.5deg)}
+.why-hop-point:nth-of-type(4){right:0;bottom:45px;background:var(--blue);color:#fff;transform:rotate(-1.5deg)}
+.why-hop-point:nth-of-type(5){left:50%;top:0;transform:translateX(-50%) rotate(-1deg);background:var(--purple);color:#fff;width:270px}
+.why-hop-point:nth-of-type(6){left:50%;bottom:0;transform:translateX(-50%) rotate(1deg);background:var(--yellow)}
+@media(max-width:760px){
+  #why-hop-in{padding:70px 0 80px}
+  .why-hop-in-wrap{min-height:0}
+  .why-hop-in-map{
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:13px;
+    padding-top:20px;
+  }
+  .why-hop-in-lines{display:none}
+  .why-hop-core{
+    position:relative;
+    left:auto;top:auto;
+    transform:rotate(-3deg);
+    width:190px;height:190px;
+    order:0;
+    margin:5px 0 12px;
+  }
+  .why-hop-core span{font-size:36px}
+  .why-hop-point,
+  .why-hop-point:nth-of-type(1),
+  .why-hop-point:nth-of-type(2),
+  .why-hop-point:nth-of-type(3),
+  .why-hop-point:nth-of-type(4),
+  .why-hop-point:nth-of-type(5),
+  .why-hop-point:nth-of-type(6){
+    position:relative;
+    left:auto;right:auto;top:auto;bottom:auto;
+    transform:none;
+    width:min(100%,430px);
+  }
+  .why-hop-point strong{font-size:22px}
+  .why-hop-point span{font-size:11px}
+}
 </style>
 </head>
 <body>
@@ -5522,7 +5665,34 @@ header{overflow:visible!important}
 
     
 
-    <section id="cities" aria-label="Where is HOP FEST">
+    
+<section id="why-hop-in" aria-label="Why should you HOP IN">
+  <div class="why-hop-in-wrap">
+    <div class="why-hop-in-heading">
+      <span class="kicker">WHY HOP?</span>
+      <h2>WHY SHOULD YOU HOP IN?</h2>
+    </div>
+    <div class="why-hop-in-map">
+      <svg class="why-hop-in-lines" viewBox="0 0 1080 620" preserveAspectRatio="none" aria-hidden="true">
+        <line class="l1" x1="285" y1="120" x2="430" y2="255"/><circle class="l1" cx="285" cy="120" r="7" fill="var(--pink)"/>
+        <line class="l2" x1="795" y1="100" x2="650" y2="250"/><circle class="l2" cx="795" cy="100" r="7" fill="var(--orange)"/>
+        <line class="l3" x1="285" y1="490" x2="435" y2="385"/><circle class="l3" cx="285" cy="490" r="7" fill="var(--lime)"/>
+        <line class="l4" x1="795" y1="480" x2="650" y2="385"/><circle class="l4" cx="795" cy="480" r="7" fill="var(--blue)"/>
+        <line class="l5" x1="540" y1="100" x2="540" y2="185"/><circle class="l5" cx="540" cy="100" r="7" fill="var(--purple)"/>
+        <line class="l6" x1="540" y1="520" x2="540" y2="435"/><circle class="l6" cx="540" cy="520" r="7" fill="var(--yellow)"/>
+      </svg>
+      <div class="why-hop-core"><span>WHY<br>HOP<br>IN?</span></div>
+      <article class="why-hop-point"><strong>MORE OUTDOOR TIME</strong><span>Step away from screens. Get moving.</span></article>
+      <article class="why-hop-point"><strong>PLAY THAT BUILDS CONFIDENCE</strong><span>Try something new. Take on a challenge.</span></article>
+      <article class="why-hop-point"><strong>MOVE, RUN, CLIMB, EXPLORE</strong><span>Build coordination, balance, strength and agility.</span></article>
+      <article class="why-hop-point"><strong>FAMILY TIME THAT FEELS DIFFERENT</strong><span>Put the phones away. Get involved.</span></article>
+      <article class="why-hop-point"><strong>DISCOVER WHAT THEY CAN DO</strong><span>Every challenge is a chance to push further.</span></article>
+      <article class="why-hop-point"><strong>ACTIVE, WITHOUT FEELING LIKE EXERCISE</strong><span>Because movement is better when it feels like fun.</span></article>
+    </div>
+  </div>
+</section>
+
+<section id="cities" aria-label="Where is HOP FEST">
   <div class="cities-wrap">
     <h2>WHERE IS<br>HOP FEST?</h2>
     <p class="cities-intro">SAME ENERGY. MORE CITIES.<br>Find a HOP FEST near you!</p>
