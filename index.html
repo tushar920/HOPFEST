@@ -4327,7 +4327,7 @@ header{overflow:visible!important}
   display:flex!important;
   align-items:center!important;
   justify-content:center!important;
-  background:#234f95 url('assets/images/Hop_out_n_play_hero.png') center center/cover no-repeat!important;
+  background:#234f95 url('assets/images/Hopfest_fisheye2.png') center center/cover no-repeat!important;
 }
 #hero .hero-background{display:none!important}
 #hero .hero-grid{
@@ -4459,7 +4459,7 @@ header{overflow:visible!important}
   align-items:center!important;
   justify-content:center!important;
   background-color:#234f95!important;
-  background-image:linear-gradient(rgba(20,55,115,.38),rgba(20,55,115,.38)),url('assets/images/Hop_out_n_play_hero.png')!important;
+  background-image:linear-gradient(rgba(20,55,115,.38),rgba(20,55,115,.38)),url('assets/images/Hopfest_fisheye2.png')!important;
   background-size:cover!important;
   background-position:center center!important;
   background-repeat:no-repeat!important;
@@ -4547,7 +4547,7 @@ header{overflow:visible!important}
     aspect-ratio:auto!important;
     height:calc(100svh - 76px)!important;
     min-height:600px!important;
-    background-image:linear-gradient(rgba(20,55,115,.34),rgba(20,55,115,.34)),url('assets/images/Hop_out_n_play_hero.png')!important;
+    background-image:linear-gradient(rgba(20,55,115,.34),rgba(20,55,115,.34)),url('assets/images/Hopfest_fisheye2.png')!important;
     background-size:cover!important;
     background-position:center center!important;
   }
@@ -4593,7 +4593,55 @@ header{overflow:visible!important}
     font-size:16px!important;
   }
 }
-</style></head>
+</style>
+<style id="hero-fisheye-proportions">
+/* HERO — use the wide fisheye event photograph without stretching it */
+#hero{
+  width:100%!important;
+  height:calc(100vh - 91px)!important;
+  min-height:680px!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  padding:0!important;
+  overflow:hidden!important;
+  background-image:linear-gradient(rgba(20,55,115,.28),rgba(20,55,115,.28)),url('assets/images/Hopfest_fisheye2.png')!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+}
+#hero .hero-grid{
+  width:100%!important;
+  height:100%!important;
+  padding:0 40px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+#hero .hero-copy{
+  width:min(720px,92%)!important;
+  max-width:720px!important;
+  margin:0!important;
+  text-align:center!important;
+}
+@media(max-width:700px){
+  #hero{
+    height:calc(100svh - 76px)!important;
+    min-height:600px!important;
+    background-image:linear-gradient(rgba(20,55,115,.30),rgba(20,55,115,.30)),url('assets/images/Hopfest_fisheye2.png')!important;
+    background-size:cover!important;
+    background-position:center center!important;
+  }
+  #hero .hero-grid{
+    height:100%!important;
+    padding:0 14px!important;
+  }
+  #hero .hero-copy{
+    width:min(430px,100%)!important;
+    max-width:430px!important;
+  }
+}
+</style>
+</head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
