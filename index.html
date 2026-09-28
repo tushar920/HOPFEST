@@ -4664,6 +4664,166 @@ header{overflow:visible!important}
   }
 }
 </style>
+<style id="why-hop-editorial-v10">
+/* WHY HOP — editorial story layout */
+#why-hop{
+  background:var(--blue)!important;
+  color:#fff!important;
+  padding:44px 0 50px!important;
+  min-height:calc(100vh - 106px)!important;
+  display:flex!important;
+  align-items:center!important;
+}
+.why-story{
+  width:min(1240px,calc(100% - 48px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(390px,.95fr);
+  grid-template-rows:auto auto auto;
+  column-gap:48px;
+  row-gap:20px;
+  align-items:start;
+}
+.why-story-copy{grid-column:1;grid-row:1}
+.why-question{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  font-family:'Bowlby One SC','Anton',Impact,sans-serif;
+  text-transform:uppercase;
+  line-height:.83;
+  letter-spacing:-.035em;
+}
+.why-question span{font-size:clamp(28px,3.1vw,48px);color:#fff}
+.why-question strong{font-size:clamp(64px,6.7vw,102px);color:var(--yellow);text-shadow:5px 5px 0 #000}
+.why-question strong:last-child{color:#fff}
+.why-context{
+  max-width:650px;
+  margin:24px 0 0;
+  font:800 clamp(14px,1.35vw,18px)/1.45 Inter,Arial,sans-serif;
+  color:#fff;
+}
+.why-story-photo{
+  grid-column:2;grid-row:1 / span 2;
+  position:relative;
+  height:420px;
+  border:3px solid #000;
+  box-shadow:8px 8px 0 #000;
+  transform:rotate(1.1deg);
+  overflow:hidden;
+}
+.why-story-photo img{width:100%;height:100%;object-fit:cover}
+.why-photo-note{
+  position:absolute;
+  right:14px;bottom:14px;
+  background:var(--yellow);color:#000;
+  border:3px solid #000;
+  box-shadow:4px 4px 0 #000;
+  padding:9px 12px;
+  font:400 20px/.9 Anton,Impact,sans-serif;
+  transform:rotate(-4deg);
+}
+.why-story-kids{
+  grid-column:1;grid-row:2;
+  display:flex;
+  flex-direction:column;
+  margin-top:4px;
+  line-height:.9;
+}
+.why-kids-line{
+  font:400 clamp(26px,3vw,44px)/.95 Anton,Impact,sans-serif;
+  color:#fff;
+}
+.why-story-kids strong{
+  display:inline-block;
+  width:max-content;
+  max-width:100%;
+  margin-top:6px;
+  padding:5px 11px 7px;
+  background:#fff;
+  color:#000;
+  font:400 clamp(32px,4vw,58px)/.88 Anton,Impact,sans-serif;
+  box-shadow:5px 5px 0 #000;
+}
+.why-alarm{
+  grid-column:1;grid-row:3;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:12px;
+  padding:13px 16px;
+  background:#ef2f45;
+  color:#fff;
+  border:3px solid #000;
+  box-shadow:6px 6px 0 #000;
+  transform:rotate(-.7deg);
+  text-transform:uppercase;
+}
+.why-alarm span{font:800 12px/1.15 Inter,Arial,sans-serif;max-width:180px}
+.why-alarm strong{
+  font:400 clamp(54px,5vw,78px)/.75 'Bowlby One SC','Anton',Impact,sans-serif;
+  text-shadow:4px 4px 0 #000;
+}
+.why-reason{
+  grid-column:2;grid-row:3;
+  padding:15px 18px 16px;
+  background:#090909;
+  border:3px solid #000;
+  box-shadow:6px 6px 0 var(--yellow);
+}
+.why-reason strong{
+  display:block;
+  color:#ef2f45;
+  font:400 clamp(18px,1.7vw,24px)/1.05 'Bowlby One SC','Anton',Impact,sans-serif;
+}
+.why-reason span{
+  display:block;
+  margin-top:8px;
+  color:var(--yellow);
+  font:400 clamp(27px,2.8vw,42px)/.9 Anton,Impact,sans-serif;
+  text-shadow:3px 3px 0 #000;
+}
+.why-reason p{
+  margin-top:8px;
+  font:700 12px/1.4 Inter,Arial,sans-serif;
+  color:#fff;
+}
+@media(max-width:900px){
+  #why-hop{min-height:0!important;padding:46px 0 54px!important}
+  .why-story{
+    width:calc(100% - 32px);
+    grid-template-columns:1fr;
+    row-gap:18px;
+  }
+  .why-story-copy,.why-story-photo,.why-story-kids,.why-alarm,.why-reason{
+    grid-column:1;grid-row:auto;
+  }
+  .why-question span{font-size:28px}
+  .why-question strong{font-size:clamp(54px,15vw,82px)}
+  .why-context{font-size:14px;margin-top:18px}
+  .why-story-photo{height:300px;transform:rotate(.6deg)}
+  .why-story-kids{margin-top:2px}
+  .why-alarm{grid-template-columns:1fr auto;gap:8px;padding:11px 13px}
+  .why-alarm span:last-child{grid-column:1;grid-row:2;max-width:none}
+  .why-alarm strong{grid-column:2;grid-row:1 / span 2;font-size:58px}
+  .why-reason{padding:14px}
+}
+@media(max-width:560px){
+  #why-hop{padding:38px 0 46px!important}
+  .why-question span{font-size:23px}
+  .why-question strong{font-size:clamp(48px,14.5vw,67px)}
+  .why-context{font-size:13px;line-height:1.42}
+  .why-story-photo{height:235px}
+  .why-photo-note{font-size:16px;right:9px;bottom:9px}
+  .why-kids-line{font-size:27px}
+  .why-story-kids strong{font-size:39px}
+  .why-alarm span{font-size:10px}
+  .why-alarm strong{font-size:49px}
+  .why-reason strong{font-size:16px}
+  .why-reason span{font-size:31px}
+  .why-reason p{font-size:11px}
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -4706,17 +4866,38 @@ header{overflow:visible!important}
 </section>
 
 <section id="why-hop" aria-label="Why HOP">
-  <div class="why-hop-inner">
-    <div class="why-hop-copy">
-      <h2>KIDS NEED MORE<br><span>THAN SCREEN TIME.</span></h2>
-      <p class="why-hop-lead">Kids spend enough time sitting. HOP FEST gives them a reason to get outside, move, play and do it together.</p>
-      <div class="why-hop-facts" aria-label="Why movement matters">
-        <article><strong>60 MINUTES A DAY</strong><p>Kids aged 5–17 should get an average of 60 minutes of physical activity every day.</p></article>
-        <article><strong>TOO MUCH SITTING MATTERS</strong><p>Higher sedentary time is associated with poorer physical fitness and cardiometabolic health in children.</p></article>
-        <article><strong>MOVEMENT MATTERS</strong><p>Regular physical activity supports children's physical, cognitive and mental wellbeing.</p></article>
+  <div class="why-story">
+    <div class="why-story-copy">
+      <div class="why-question">
+        <span>WHEN WAS THE</span>
+        <strong>LAST TIME</strong>
+        <span>YOUR CHILD JUST</span>
+        <strong>PLAYED?</strong>
       </div>
+      <p class="why-context">Between school, homework, tuition and screens, finding time to simply move, play and be active can be harder than it should be.</p>
     </div>
-    <div class="why-hop-photo"><img src="assets/images/Family Race.png" alt="Family fitness at HOP FEST"></div>
+
+    <div class="why-story-photo">
+      <img src="assets/images/Family Race.png" alt="Children and families being active together at HOP FEST">
+      <span class="why-photo-note">LESS SCROLL.<br>MORE PLAY.</span>
+    </div>
+
+    <div class="why-story-kids">
+      <span class="why-kids-line">THEY NEED TIME</span>
+      <strong>TO JUST BE KIDS.</strong>
+    </div>
+
+    <div class="why-alarm">
+      <span>SCREEN TIME HAS INCREASED BY</span>
+      <strong>52%</strong>
+      <span>AMONG CHILDREN AND ADOLESCENTS.</span>
+    </div>
+
+    <div class="why-reason">
+      <strong>AND SOMETIMES, ALL THEY NEED IS A REASON TO GET STARTED.</strong>
+      <span>HOP FEST is that reason.</span>
+      <p>A place to put the screen away, step outside and spend a day moving, playing and having fun together.</p>
+    </div>
   </div>
 </section>
 <div id="play" class="hop-play-strip" aria-label="HOP FEST movement ticker"><div class="hop-play-track"><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i><span>RUN</span><i>★</i><span>JUMP</span><i>★</i><span>PLAY</span><i>★</i><span>COMPETE</span><i>★</i><span>REPEAT</span><i>★</i></div></div>
