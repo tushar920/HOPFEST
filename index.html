@@ -9381,6 +9381,137 @@ header .brand img{
   #why .hop-layout-cta{order:3!important}
 }
 </style>
+<style id="hopfest-why-final-correction">
+/* FINAL DESKTOP CORRECTION — image left, clean typography right */
+#why{
+  min-height:calc(100svh - 88px)!important;
+  height:calc(100svh - 88px)!important;
+  padding:56px 5vw!important;
+  background:#fff7e8!important;
+  overflow:hidden!important;
+}
+#why .hop-layout-content{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.25fr) minmax(420px,.75fr)!important;
+  grid-template-rows:auto auto auto!important;
+  column-gap:clamp(40px,5vw,90px)!important;
+  row-gap:26px!important;
+  align-items:center!important;
+  width:100%!important;
+  height:100%!important;
+  margin:0!important;
+}
+#why .hop-layout-content::before{display:none!important}
+#why .hop-layout-image{
+  grid-column:1!important;
+  grid-row:1 / 4!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-height:calc(100svh - 200px)!important;
+  min-height:0!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+#why .hop-layout-title{
+  grid-column:2!important;
+  grid-row:1!important;
+  align-self:end!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  color:#faee30!important;
+  font-family:"Bowlby One SC","Arial Black",Impact,sans-serif!important;
+  font-size:clamp(58px,5.4vw,104px)!important;
+  font-weight:900!important;
+  line-height:.82!important;
+  letter-spacing:-.045em!important;
+  text-align:left!important;
+  -webkit-text-stroke:0!important;
+  text-shadow:5px 5px 0 #090909, 9px 9px 0 #090909, 12px 12px 0 rgba(0,0,0,.18)!important;
+  transform:none!important;
+}
+#why .hop-layout-lines{
+  grid-column:2!important;
+  grid-row:2!important;
+  align-self:center!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:9px!important;
+}
+#why .hop-layout-lines span,
+#why .hop-layout-lines span:nth-child(1),
+#why .hop-layout-lines span:nth-child(2),
+#why .hop-layout-lines span:nth-child(3){
+  display:block!important;
+  width:auto!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  font-family:Inter,Arial,sans-serif!important;
+  font-size:clamp(22px,1.65vw,31px)!important;
+  font-weight:800!important;
+  line-height:1.15!important;
+  letter-spacing:-.02em!important;
+  color:#090909!important;
+  -webkit-text-stroke:0!important;
+  text-shadow:none!important;
+}
+#why .hop-layout-lines span:nth-child(2){color:#e84b81!important}
+#why .hop-layout-lines span:nth-child(3){color:#f68820!important}
+#why .hop-layout-cta{
+  grid-column:2!important;
+  grid-row:3!important;
+  justify-self:start!important;
+  align-self:start!important;
+  margin:0!important;
+  display:inline-flex!important;
+  padding:15px 24px!important;
+  background:#e84b81!important;
+  color:#fff!important;
+  border:3px solid #090909!important;
+  box-shadow:6px 6px 0 #090909!important;
+  font-family:Inter,Arial,sans-serif!important;
+  font-size:16px!important;
+  font-weight:900!important;
+  line-height:1!important;
+  text-decoration:none!important;
+}
+@media(max-width:760px){
+  #why{
+    min-height:auto!important;
+    height:auto!important;
+    padding:36px 20px 48px!important;
+    overflow:visible!important;
+  }
+  #why .hop-layout-content{
+    height:auto!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:28px!important;
+  }
+  #why .hop-layout-image{
+    order:0!important;
+    width:100%!important;
+    height:auto!important;
+    max-height:none!important;
+    object-fit:contain!important;
+  }
+  #why .hop-layout-title{order:1!important;font-size:clamp(52px,15vw,78px)!important}
+  #why .hop-layout-lines{order:2!important}
+  #why .hop-layout-cta{order:3!important}
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -9618,6 +9749,7 @@ header .brand img{
   <div class="hop-layout-bg" aria-hidden="true"></div>
   <div class="hop-layout-overlay" aria-hidden="true"></div>
   <div class="hop-layout-content">
+    <img class="hop-layout-image" src="assets/images/Hop%20Fest%20Layout.png" alt="HOP FEST festival layout">
     <div class="hop-layout-title">MAKE A<br>DAY OF IT.</div>
     <div class="hop-layout-lines">
       <span>Bring the kids.</span>
