@@ -8550,6 +8550,54 @@ header{overflow:visible!important}
   #what.activities-v4 .activities-v4-tile{width:160px!important;height:160px!important;left:18px!important;bottom:18px!important}
   #what.activities-v4 .activities-v4-tile h3{font-size:25px!important}
 }
+</style><style id="activities-v5-controls">
+#what.activities-v4 .activities-v4-carousel{isolation:isolate!important}
+#what.activities-v4 .activities-v4-slide{z-index:1!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:opacity .25s ease!important}
+#what.activities-v4 .activities-v4-slide.is-active{z-index:2!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important}
+#what.activities-v4 .activities-v4-prev,
+#what.activities-v4 .activities-v4-next{
+  position:absolute!important;
+  top:50%!important;
+  bottom:auto!important;
+  transform:translateY(-50%)!important;
+  z-index:30!important;
+  width:48px!important;
+  height:48px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border:3px solid #000!important;
+  border-radius:50%!important;
+  background:var(--yellow)!important;
+  color:#000!important;
+  font-size:24px!important;
+  line-height:1!important;
+  cursor:pointer!important;
+  box-shadow:4px 4px 0 #000!important;
+}
+#what.activities-v4 .activities-v4-prev{left:-24px!important}
+#what.activities-v4 .activities-v4-next{right:-24px!important}
+#what.activities-v4 .activities-v4-prev:hover,
+#what.activities-v4 .activities-v4-next:hover{transform:translateY(-50%) scale(1.06)!important}
+#what.activities-v4 .activities-v4-dots{
+  z-index:31!important;
+  pointer-events:auto!important;
+}
+#what.activities-v4 .activities-v4-dots button{
+  cursor:pointer!important;
+  border:2px solid #000!important;
+  box-sizing:border-box!important;
+}
+#what.activities-v4 .activities-v4-cta{z-index:31!important}
+@media(max-width:900px){
+  #what.activities-v4{height:auto!important;min-height:100svh!important;padding:90px 20px 70px!important;display:block!important}
+  #what.activities-v4 .activities-v4-copy{margin-bottom:28px!important}
+  #what.activities-v4 .activities-v4-copy h2{font-size:44px!important;line-height:.88!important}
+  #what.activities-v4 .activities-v4-visual{position:relative!important;height:60vh!important;min-height:360px!important}
+  #what.activities-v4 .activities-v4-prev{left:8px!important}
+  #what.activities-v4 .activities-v4-next{right:8px!important}
+  #what.activities-v4 .activities-v4-dots{bottom:12px!important;right:50%!important;transform:translateX(50%)!important}
+}
 </style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -8632,6 +8680,7 @@ header{overflow:visible!important}
       <article class="activities-v4-slide"><img src="assets/images/Parents and child relay.png" alt="Parent and child relay at HOP FEST"><div class="activities-v4-tile"><h3>PARENT &amp; CHILD RELAY</h3><b>→</b><p>Team up, race together and make a memory.</p></div></article>
     </div>
     <button class="activities-v4-prev" type="button" aria-label="Previous activity">←</button>
+    <button class="activities-v4-next" type="button" aria-label="Next activity">→</button>
     <div class="activities-v4-dots" aria-label="Activity slide navigation">
       <button class="active" aria-label="Activity 1"></button><button aria-label="Activity 2"></button><button aria-label="Activity 3"></button><button aria-label="Activity 4"></button><button aria-label="Activity 5"></button><button aria-label="Activity 6"></button><button aria-label="Activity 7"></button><button aria-label="Activity 8"></button><button aria-label="Activity 9"></button>
     </div>
@@ -8834,12 +8883,38 @@ header{overflow:visible!important}
   <script>const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');b.addEventListener('click',()=>{const open=m.classList.toggle('open');b.setAttribute('aria-expanded',open)});m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded','false')}));</script>
 
 <script id="hop-activities-carousel">
-(()=>{const c=document.querySelector('.activities-v4-carousel');if(!c)return;
-const slides=[...c.querySelectorAll('.activities-v4-slide')],dots=[...document.querySelectorAll('.activities-v4-dots button')],prev=document.querySelector('.activities-v4-prev');let active=0;
-const set=i=>{active=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('is-active',n===active));dots.forEach((d,n)=>d.classList.toggle('active',n===active));};
-dots.forEach((d,i)=>d.addEventListener('click',()=>set(i)));
-if(prev)prev.addEventListener('click',()=>set(active-1));
-set(0);
+(function(){
+  function initActivities(){
+    const root=document.querySelector('#what.activities-v4');
+    if(!root || root.dataset.carouselReady==='1') return;
+    const slides=Array.from(root.querySelectorAll('.activities-v4-slide'));
+    const dots=Array.from(root.querySelectorAll('.activities-v4-dots button'));
+    const prev=root.querySelector('.activities-v4-prev');
+    const next=root.querySelector('.activities-v4-next');
+    if(!slides.length || !prev || !next) return;
+    root.dataset.carouselReady='1';
+    let index=0;
+    function show(i){
+      index=(i+slides.length)%slides.length;
+      slides.forEach((slide,n)=>slide.classList.toggle('is-active',n===index));
+      dots.forEach((dot,n)=>{
+        dot.classList.toggle('active',n===index);
+        dot.setAttribute('aria-current',n===index?'true':'false');
+      });
+    }
+    prev.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();show(index-1);});
+    next.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();show(index+1);});
+    dots.forEach((dot,n)=>dot.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();show(n);}));
+    root.addEventListener('keydown',function(e){
+      if(e.key==='ArrowLeft'){e.preventDefault();show(index-1)}
+      if(e.key==='ArrowRight'){e.preventDefault();show(index+1)}
+    });
+    root.tabIndex=0;
+    show(0);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initActivities);
+  else initActivities();
+  window.addEventListener('load',initActivities);
 })();
 </script>
 <script id="hopfest-activities-mobile-init">
