@@ -6590,6 +6590,110 @@ header{overflow:visible!important}
   #experience .exp-zones{height:500px!important}
 }
 </style>
+
+<style id="hopfest-page2-fix">
+/* PAGE 2 — composition correction */
+#why-hop{
+  min-height:840px!important;
+  padding:48px 0 56px!important;
+  display:flex!important;
+  align-items:center!important;
+}
+.why-story-v2{
+  width:min(1260px,calc(100% - 64px));
+  min-height:720px!important;
+}
+.why-v2-heading{
+  left:0!important;
+  top:22px!important;
+  width:48%!important;
+  max-width:610px!important;
+  z-index:8!important;
+}
+.why-v2-heading h2{
+  margin-top:18px!important;
+  font-size:clamp(46px,5vw,76px)!important;
+  line-height:.88!important;
+  letter-spacing:-.025em!important;
+  text-shadow:4px 4px 0 #000!important;
+}
+.why-v2-heading h2 br{display:block!important}
+.why-v2-heading h2 b{
+  padding:2px 10px 5px!important;
+}
+.why-v2-photo-main{
+  right:0!important;
+  top:0!important;
+  width:49%!important;
+  height:500px!important;
+  z-index:3!important;
+}
+.why-v2-photo-small{
+  left:39%!important;
+  bottom:18px!important;
+  width:27%!important;
+  height:205px!important;
+  z-index:7!important;
+}
+.why-v2-caption{
+  left:0!important;
+  bottom:112px!important;
+  width:41%!important;
+  padding:13px 17px!important;
+  z-index:9!important;
+}
+.why-v2-caption strong{
+  font-size:clamp(22px,2.35vw,34px)!important;
+  line-height:.92!important;
+}
+.why-v2-stat{
+  left:2%!important;
+  bottom:10px!important;
+  width:205px!important;
+  height:82px!important;
+  z-index:10!important;
+}
+.why-v2-stat strong{font-size:52px!important}
+.why-v2-reason{
+  right:0!important;
+  bottom:8px!important;
+  width:32%!important;
+  min-height:118px!important;
+  padding:14px 17px!important;
+  z-index:10!important;
+}
+.why-v2-reason strong{
+  font-size:clamp(24px,2.6vw,38px)!important;
+  line-height:.88!important;
+}
+.why-v2-reason p{margin-top:6px!important}
+
+/* Prevent the desktop composition from collapsing at intermediate widths */
+@media(min-width:801px) and (max-width:1100px){
+  #why-hop{min-height:800px!important}
+  .why-story-v2{width:calc(100% - 42px)!important}
+  .why-v2-heading{width:47%!important}
+  .why-v2-heading h2{font-size:clamp(43px,5vw,66px)!important}
+  .why-v2-photo-main{width:50%!important;height:455px!important}
+  .why-v2-caption{width:43%!important}
+}
+
+/* Mobile stays stacked and readable */
+@media(max-width:800px){
+  #why-hop{min-height:0!important;padding:48px 0 58px!important}
+  .why-story-v2{width:calc(100% - 28px)!important;min-height:0!important}
+  .why-v2-heading{width:100%!important;max-width:none!important}
+  .why-v2-heading h2{
+    font-size:clamp(43px,12vw,70px)!important;
+    line-height:.9!important;
+  }
+  .why-v2-photo-main{width:100%!important;height:330px!important}
+  .why-v2-photo-small{width:62%!important;height:190px!important}
+  .why-v2-caption{width:100%!important}
+  .why-v2-stat{width:220px!important;height:82px!important}
+  .why-v2-reason{width:100%!important}
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
