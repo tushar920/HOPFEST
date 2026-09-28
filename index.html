@@ -10658,7 +10658,7 @@ main > #play::before{
 
 <section id="why" class="why-final-layout" aria-label="Make a day of it">
   <div class="why-final-image">
-    <img src="/HOPFEST/assets/images/Hop%20Fest%20Layout.png" alt="HOP FEST festival layout">
+    <img src="assets/images/Hop%20Fest%20Layout.png" alt="HOP FEST festival layout">
   </div>
   <div class="why-final-copy">
     <h2>MAKE A<br>DAY OF IT.</h2>
@@ -13098,6 +13098,25 @@ wheel.addEventListener('click',()=>{
 }
 </style>
 
+<style id="hop-mobile-breakout-fixes">
+@media (max-width:700px){
+  /* Activities: undo collapsed height so copy + carousel both fit */
+  #what.activities-v4{display:block!important;height:auto!important;min-height:0!important;max-height:none!important;padding:96px 14px 28px!important}
+  #what.activities-v4 .activities-v4-visual{position:relative!important;width:100%!important;height:300px!important;min-height:300px!important;max-height:none!important;margin-top:16px!important}
+  #what.activities-v4 .activities-v4-carousel{position:absolute!important;inset:0!important;width:100%!important;height:100%!important}
+  #what.activities-v4 .activities-v4-slide,#what.activities-v4 .activities-v4-slide.is-active{height:100%!important;top:0!important;bottom:0!important}
+  /* Experience: swipe pill was absolutely positioned over the subtitle */
+  #experience .experience-head{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:8px!important;height:auto!important}
+  #experience .experience-head .more-swipe{position:static!important;display:inline-block!important;margin:0!important}
+  /* Final section: stack image + copy instead of a squashed 2-col grid that overflowed under the header */
+  #why.why-final-layout{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:20px!important;height:auto!important;min-height:0!important;max-height:none!important;padding:96px 20px 40px!important;text-align:center!important}
+  #why .why-final-image{width:min(70vw,260px)!important;height:auto!important;flex:none!important}
+  #why .why-final-image img{width:100%!important;height:auto!important}
+  #why .why-final-copy{width:100%!important;height:auto!important;align-items:center!important;text-align:center!important}
+  #why .why-final-copy h2{font-size:clamp(34px,11vw,46px)!important;line-height:.95!important;margin:0!important}
+  #why .why-final-cta{max-width:100%!important}
+}
+</style>
 </body>
 </html>
 
