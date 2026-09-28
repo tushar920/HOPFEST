@@ -7695,6 +7695,178 @@ header{overflow:visible!important}
   }
   #why-hop .why-clean-copy h2{font-size:40px!important}
 }
+</style><style id="hopfest-activities-desktop-viewport-final">
+@media(min-width:901px){
+  /* ACTIVITIES — one complete laptop screen, with a safe zone below sticky nav */
+  #what{
+    position:relative!important;
+    box-sizing:border-box!important;
+    width:100%!important;
+    height:calc(100svh - 88px)!important;
+    min-height:0!important;
+    max-height:calc(100svh - 88px)!important;
+    padding:24px 4.2vw 18px!important;
+    margin:0!important;
+    overflow:hidden!important;
+    display:grid!important;
+    grid-template-rows:132px minmax(0,1fr) 42px!important;
+    row-gap:10px!important;
+    scroll-margin-top:88px!important;
+  }
+
+  /* Keep the heading completely below the sticky header. */
+  #what .activity-head{
+    position:relative!important;
+    top:auto!important;
+    left:auto!important;
+    right:auto!important;
+    z-index:10!important;
+    width:min(760px,100%)!important;
+    height:132px!important;
+    margin:0 auto!important;
+    padding:0!important;
+    text-align:center!important;
+    pointer-events:none!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+  }
+
+  #what .activity-head h2{
+    margin:0!important;
+    padding:0!important;
+    font-size:clamp(40px,4vw,58px)!important;
+    line-height:.82!important;
+    letter-spacing:-.045em!important;
+  }
+
+  #what .activity-intro-copy{
+    margin:10px 0 5px!important;
+    padding:8px 20px!important;
+    font-size:clamp(14px,1.25vw,19px)!important;
+    line-height:1!important;
+  }
+
+  #what .activity-description{
+    margin:0!important;
+    max-width:690px!important;
+    font-size:12px!important;
+    line-height:1.25!important;
+  }
+
+  #what .activity-rule{
+    width:145px!important;
+    height:5px!important;
+    margin:8px 0 0!important;
+  }
+
+  /* Carousel stays entirely inside the section's safe rectangle. */
+  #what .activity-carousel{
+    position:relative!important;
+    inset:auto!important;
+    z-index:2!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    padding:0!important;
+    margin:0!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    border:4px solid #000!important;
+    box-sizing:border-box!important;
+  }
+
+  #what .activity-slide{
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+
+  #what .activity-slide img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center!important;
+  }
+
+  /* Keep the slide label inside the image rather than below it. */
+  #what .activity-tag{
+    left:48px!important;
+    right:auto!important;
+    bottom:18px!important;
+    max-width:430px!important;
+    z-index:6!important;
+  }
+
+  #what .activity-tag h3{
+    font-size:clamp(30px,2.7vw,45px)!important;
+    padding:12px 16px 8px!important;
+  }
+
+  #what .activity-tag p{
+    font-size:12px!important;
+    padding:6px 16px 9px!important;
+  }
+
+  #what .activity-prev{
+    left:calc(4.2vw + 20px)!important;
+    top:auto!important;
+    bottom:72px!important;
+    width:46px!important;
+    height:46px!important;
+    z-index:30!important;
+  }
+
+  #what .activity-dots{
+    position:relative!important;
+    left:auto!important;
+    bottom:auto!important;
+    transform:none!important;
+    justify-self:center!important;
+    align-self:center!important;
+    z-index:30!important;
+    padding:5px 10px!important;
+  }
+
+  #what .activities-cta{
+    position:relative!important;
+    align-self:center!important;
+    justify-self:center!important;
+    margin:0!important;
+    padding:8px 16px!important;
+    font-size:13px!important;
+    line-height:1!important;
+    z-index:30!important;
+  }
+}
+
+/* Short laptop screens: compress only the Activities section further. */
+@media(min-width:901px) and (max-height:760px){
+  #what{
+    grid-template-rows:116px minmax(0,1fr) 38px!important;
+    padding-top:18px!important;
+    padding-bottom:12px!important;
+    row-gap:7px!important;
+  }
+  #what .activity-head{height:116px!important}
+  #what .activity-head h2{font-size:42px!important}
+  #what .activity-intro-copy{margin:7px 0 4px!important;font-size:14px!important}
+  #what .activity-description{font-size:10px!important}
+  #what .activity-rule{margin-top:6px!important}
+  #what .activity-tag{bottom:12px!important;left:35px!important}
+}
+
+/* Never apply the desktop viewport lock to mobile/tablet. */
+@media(max-width:900px){
+  #what{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+}
 </style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
