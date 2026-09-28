@@ -9512,6 +9512,140 @@ header .brand img{
   #why .hop-layout-cta{order:3!important}
 }
 </style>
+<style id="hopfest-why-force-v2">
+#why.why-final-layout{
+  box-sizing:border-box!important;
+  width:100%!important;
+  height:calc(100svh - 88px)!important;
+  min-height:640px!important;
+  padding:48px 5vw!important;
+  margin:0!important;
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:clamp(45px,6vw,110px)!important;
+  overflow:hidden!important;
+  background:#fff7e8!important;
+}
+#why.why-final-layout .why-final-image{
+  flex:1 1 60%!important;
+  width:auto!important;
+  height:100%!important;
+  min-width:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+#why.why-final-layout .why-final-image img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:900px!important;
+  max-height:calc(100svh - 180px)!important;
+  min-width:0!important;
+  min-height:0!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+#why.why-final-layout .why-final-copy{
+  flex:0 1 40%!important;
+  width:auto!important;
+  min-width:390px!important;
+  max-width:620px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:center!important;
+  gap:0!important;
+}
+#why.why-final-layout .why-final-copy h2{
+  margin:0 0 42px!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  color:#faee30!important;
+  font-family:"Bowlby One SC","Arial Black",Impact,sans-serif!important;
+  font-size:clamp(62px,5.6vw,108px)!important;
+  line-height:.8!important;
+  letter-spacing:-.045em!important;
+  font-weight:900!important;
+  text-align:left!important;
+  text-shadow:5px 5px 0 #090909,9px 9px 0 #090909!important;
+}
+#why.why-final-layout .why-final-lines{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:12px!important;
+  margin:0 0 48px!important;
+}
+#why.why-final-layout .why-final-lines span{
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  color:#090909!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:clamp(23px,1.7vw,31px)!important;
+  line-height:1.12!important;
+  font-weight:800!important;
+  letter-spacing:-.025em!important;
+  text-shadow:none!important;
+}
+#why.why-final-layout .why-final-lines span:nth-child(2){color:#e84b81!important}
+#why.why-final-layout .why-final-lines span:nth-child(3){color:#f68820!important}
+#why.why-final-layout .why-final-cta{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:28px!important;
+  width:auto!important;
+  padding:17px 27px!important;
+  margin:0!important;
+  background:#e84b81!important;
+  color:#fff!important;
+  border:3px solid #090909!important;
+  box-shadow:7px 7px 0 #090909!important;
+  text-decoration:none!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:17px!important;
+  line-height:1!important;
+  font-weight:900!important;
+}
+@media(max-width:760px){
+  #why.why-final-layout{
+    height:auto!important;
+    min-height:0!important;
+    padding:38px 22px 50px!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:35px!important;
+    overflow:visible!important;
+  }
+  #why.why-final-layout .why-final-image{
+    flex:none!important;
+    width:100%!important;
+    height:auto!important;
+  }
+  #why.why-final-layout .why-final-image img{
+    width:100%!important;
+    height:auto!important;
+    max-width:none!important;
+    max-height:none!important;
+  }
+  #why.why-final-layout .why-final-copy{
+    flex:none!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:none!important;
+  }
+  #why.why-final-layout .why-final-copy h2{font-size:clamp(52px,15vw,82px)!important;margin-bottom:28px!important}
+  #why.why-final-layout .why-final-lines{margin-bottom:34px!important}
+}
+</style>
 </head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -9745,18 +9879,18 @@ header .brand img{
 
     
 
-<section id="why" aria-label="Make a day of it">
-  <div class="hop-layout-bg" aria-hidden="true"></div>
-  <div class="hop-layout-overlay" aria-hidden="true"></div>
-  <div class="hop-layout-content">
-    <img class="hop-layout-image" src="assets/images/Hop%20Fest%20Layout.png" alt="HOP FEST festival layout">
-    <div class="hop-layout-title">MAKE A<br>DAY OF IT.</div>
-    <div class="hop-layout-lines">
+<section id="why" class="why-final-layout" aria-label="Make a day of it">
+  <div class="why-final-image">
+    <img src="/HOPFEST/assets/images/Hop%20Fest%20Layout.png" alt="HOP FEST festival layout">
+  </div>
+  <div class="why-final-copy">
+    <h2>MAKE A<br>DAY OF IT.</h2>
+    <div class="why-final-lines">
       <span>Bring the kids.</span>
       <span>Leave the screens behind.</span>
       <span>Come play together.</span>
     </div>
-    <a class="hop-layout-cta" href="#tickets">GET YOUR TICKETS <span>→</span></a>
+    <a href="#tickets" class="why-final-cta">GET YOUR TICKETS <span>→</span></a>
   </div>
 </section>
   </main>
