@@ -6757,7 +6757,102 @@ header{overflow:visible!important}
   }
 }
 </style>
-</head>
+<style id="hopfest-page2-simple-v3">
+/* PAGE 2 — simple editorial split */
+#why-hop{
+  background:var(--yellow)!important;
+  min-height:720px!important;
+  padding:58px 0!important;
+  display:flex!important;
+  align-items:center!important;
+  color:#000!important;
+}
+.why-simple-v3{
+  width:min(1240px,calc(100% - 64px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:40% 60%;
+  align-items:center;
+  gap:34px;
+}
+.why-simple-copy{
+  padding:10px 0 10px 8px;
+  position:relative;
+  z-index:2;
+}
+.why-v3-kicker{
+  display:inline-block;
+  padding:7px 11px;
+  background:var(--blue);
+  color:#fff;
+  border:2px solid #000;
+  box-shadow:4px 4px 0 #000;
+  font:800 10px/1 Inter,Arial,sans-serif;
+  letter-spacing:.14em;
+}
+.why-simple-copy h2{
+  margin:20px 0 22px!important;
+  font:400 clamp(34px,3.45vw,52px)/.92 'Bowlby One SC','Anton',Impact,sans-serif!important;
+  letter-spacing:-.02em!important;
+  color:#000!important;
+  text-shadow:none!important;
+}
+.why-simple-copy h2 em{
+  color:var(--pink)!important;
+  font-style:normal!important;
+}
+.why-simple-copy h2 b{
+  color:var(--blue)!important;
+  font-weight:400!important;
+  background:none!important;
+  padding:0!important;
+  text-shadow:none!important;
+}
+.why-v3-lead{
+  font:800 13px/1.2 Inter,Arial,sans-serif;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+.why-v3-body{
+  max-width:360px;
+  font:400 clamp(24px,2.25vw,34px)/1.02 Anton,Impact,sans-serif;
+  text-transform:uppercase;
+}
+.why-v3-tag{
+  display:inline-block;
+  margin-top:24px;
+  padding:10px 14px;
+  background:#000;
+  color:#fff;
+  border:2px solid #000;
+  font:800 12px/1 Inter,Arial,sans-serif;
+}
+.why-v3-tag strong{color:var(--pink)}
+.why-simple-photo{
+  height:500px;
+  border:4px solid #000;
+  box-shadow:8px 8px 0 #000;
+  overflow:hidden;
+  transform:rotate(1deg);
+}
+.why-simple-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+@media(max-width:800px){
+  #why-hop{min-height:0!important;padding:48px 0 56px!important}
+  .why-simple-v3{
+    width:calc(100% - 28px);
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .why-simple-copy{padding-left:0}
+  .why-simple-copy h2{font-size:clamp(35px,10vw,55px)!important}
+  .why-simple-photo{height:340px;transform:none}
+}
+</style></head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
@@ -6798,32 +6893,16 @@ header{overflow:visible!important}
 </section>
 
 <section id="why-hop" aria-label="Why HOP">
-  <div class="why-story-v2">
-    <div class="why-v2-heading">
-      <span class="why-v2-kicker">THE REAL CHALLENGE</span>
+  <div class="why-simple-v3">
+    <div class="why-simple-copy">
+      <span class="why-v3-kicker">THE REAL CHALLENGE</span>
       <h2>WHEN WAS THE<br><em>LAST TIME</em><br>YOUR CHILD JUST <b>PLAYED?</b></h2>
+      <p class="why-v3-lead">School. Homework. Screens.</p>
+      <p class="why-v3-body">They need time to just be kids.</p>
+      <div class="why-v3-tag">LESS SCROLL. <strong>MORE PLAY.</strong></div>
     </div>
-
-    <div class="why-v2-photo-main">
-      <img src="assets/images/Family Race.png" alt="Children playing at HOP FEST">
-      <span>LESS SCROLL.<br><b>MORE PLAY.</b></span>
-    </div>
-
-    <div class="why-v2-photo-small">
-      <img src="assets/images/Obstacle Race.png" alt="Kids taking on a HOP FEST challenge">
-    </div>
-
-    <div class="why-v2-caption">SCHOOL. HOMEWORK. SCREENS.<br><strong>THEY NEED TIME TO JUST BE KIDS.</strong></div>
-
-    <div class="why-v2-stat">
-      <strong>52%</strong>
-      <span>SCREEN TIME<br>HAS INCREASED</span>
-    </div>
-
-    <div class="why-v2-reason">
-      <span>SO GIVE THEM A REASON.</span>
-      <strong>HOP FEST IS THAT REASON.</strong>
-      <p>A day to move, play, explore and be together.</p>
+    <div class="why-simple-photo">
+      <img src="assets/images/Family Race.png" alt="Child playing at HOP FEST">
     </div>
   </div>
 </section>
