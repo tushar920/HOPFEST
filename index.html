@@ -12964,6 +12964,100 @@ wheel.addEventListener('click',()=>{
 }
 </style>
 
+
+<style id="HOPFEST-MOBILE-FINAL-V3">
+@media screen and (max-width:700px){
+
+  /* Override the old full-screen mobile template with content-sized sections. */
+  main>section#why-hop,
+  main>section#what.activities-v4,
+  main>section#experience,
+  main>section#why-hop-in,
+  main>section#cities,
+  main>section#why{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+
+  /* Keep only the hero as the intentional opening screen. */
+  main>section#hero{
+    min-height:calc(100svh - 78px)!important;
+    max-height:none!important;
+    height:auto!important;
+  }
+
+  /* Section 2: make the mixed LAST/TIME treatment readable instead of overlapping. */
+  main>section#why-hop .why-clean-copy h2 .last-time-mix{
+    display:inline!important;
+    position:static!important;
+    white-space:nowrap!important;
+    color:var(--blue)!important;
+  }
+  main>section#why-hop .why-clean-copy h2 .last-time-mix i{
+    display:inline!important;
+    position:static!important;
+    transform:none!important;
+    margin:0!important;
+    color:#090909!important;
+  }
+
+  /* Section 3: the carousel and CTA define the section height. */
+  main>section#what.activities-v4 .activities-v4-visual{
+    flex:none!important;
+  }
+
+  /* Section 4: black typography on the white canvas. */
+  main>section#experience,
+  main>section#experience .experience-head,
+  main>section#experience .experience-head h2,
+  main>section#experience .experience-head .copy,
+  main>section#experience .more-swipe{
+    color:#090909!important;
+  }
+
+  /* Section 5: the six points stay inside their own section. */
+  main>section#why-hop-in .why-hop-in-map{
+    flex:none!important;
+  }
+
+  /* Section 6: compact city card with an actual visible CTA. */
+  main>section#cities .cities-new-grid{
+    flex:none!important;
+  }
+  main>section#cities .city-new-card{
+    flex:none!important;
+  }
+  main>section#cities .city-new-ticket{
+    background:#fff!important;
+    color:#090909!important;
+    border-color:#090909!important;
+  }
+
+  /* Section 7: no full-screen white void after the content. */
+  main>section#why .why-final-image{
+    flex:none!important;
+  }
+
+  /* User requested no drop shadows anywhere on mobile. */
+  main>section *,
+  main>section *::before,
+  main>section *::after,
+  header *,
+  footer *,
+  footer{
+    box-shadow:none!important;
+    text-shadow:none!important;
+  }
+
+  /* Footer statement stays white on the blue background. */
+  footer .foot-brand p,
+  footer .foot-brand .foot-tagline{
+    color:#fff!important;
+  }
+}
+</style>
+
 </body>
 </html>
 
