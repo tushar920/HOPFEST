@@ -5734,7 +5734,163 @@ header{overflow:visible!important}
 @media(max-width:900px){
   .city-landmark{height:90px}
 }
-</style>\n</head>
+</style>\n
+<style id="cities-vivid-fit-fix">
+/* CITIES — vivid primary-color treatment, compact enough to fit in one desktop viewport */
+#cities{
+  background:#fff!important;
+  color:#090909!important;
+  min-height:calc(100vh - 88px)!important;
+  height:calc(100vh - 88px)!important;
+  padding:28px 0 30px!important;
+  display:flex!important;
+  align-items:center!important;
+}
+.cities-new-wrap{
+  width:min(1500px,calc(100% - 44px))!important;
+  height:100%!important;
+  margin:auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+}
+.cities-new-head{
+  margin-bottom:18px!important;
+  flex:0 0 auto!important;
+}
+.cities-new-head h2{
+  font-size:clamp(42px,4.7vw,72px)!important;
+  line-height:.82!important;
+  color:#003fba!important;
+  text-shadow:4px 4px 0 #ffe900!important;
+}
+.cities-new-head h2 span{
+  color:#ff1744!important;
+  text-shadow:4px 4px 0 #ffe900!important;
+}
+.cities-new-head p{
+  margin-top:9px!important;
+  font-size:clamp(13px,1.2vw,18px)!important;
+  line-height:1.2!important;
+}
+.cities-new-grid{
+  flex:0 0 auto!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:14px!important;
+}
+.city-new-card{
+  min-height:0!important;
+  height:365px!important;
+  padding:17px 17px 14px!important;
+  border:3px solid #090909!important;
+  box-shadow:5px 6px 0 #090909!important;
+  transform:rotate(-.6deg)!important;
+}
+.city-new-card:nth-child(even){transform:rotate(.7deg)!important}
+
+/* Vivid primary palette */
+.city-pune{background:#ff1744!important;color:#fff!important}
+.city-mumbai{background:#ff8a00!important;color:#090909!important}
+.city-bangalore{background:#39c600!important;color:#090909!important}
+.city-delhi{background:#0057d9!important;color:#fff!important}
+
+.city-new-name{
+  font-size:clamp(31px,3vw,48px)!important;
+  line-height:.86!important;
+  text-shadow:3px 3px 0 #090909!important;
+}
+.city-bangalore .city-new-name{font-size:clamp(27px,2.6vw,43px)!important}
+
+/* Replace the placeholder blocks with actual HOP FEST photography */
+.city-landmark{
+  height:118px!important;
+  margin:7px 0 7px!important;
+  overflow:hidden!important;
+  border:3px solid #090909!important;
+  background:#fff!important;
+  box-shadow:4px 4px 0 #090909!important;
+}
+.city-landmark:before{
+  display:none!important;
+}
+.city-landmark span{
+  display:none!important;
+}
+.city-landmark:after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  background-position:center!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+}
+.city-pune .city-landmark:after{background-image:url('assets/images/Hopfest1.png')!important}
+.city-mumbai .city-landmark:after{background-image:url('assets/images/Hopfest3.png')!important}
+.city-bangalore .city-landmark:after{background-image:url('assets/images/Hopfest5.png')!important}
+.city-delhi .city-landmark:after{background-image:url('assets/images/Hopfest_fisheye2.png')!important}
+
+.city-new-detail{
+  margin:5px 0!important;
+  font-size:12px!important;
+}
+.city-new-detail b{font-size:9px!important}
+.city-new-detail strong{font-size:13px!important}
+
+.city-new-ticket{
+  margin-top:12px!important;
+  padding:9px 10px!important;
+  border:3px solid #090909!important;
+  box-shadow:3px 4px 0 #090909!important;
+  font-size:12px!important;
+}
+
+.cities-new-coming{
+  min-height:60px!important;
+  margin:17px auto 0!important;
+  padding:9px 20px!important;
+  background:#ffe900!important;
+  border:3px solid #090909!important;
+  box-shadow:5px 5px 0 #090909!important;
+}
+.cities-new-coming strong{
+  font-size:clamp(22px,2.5vw,35px)!important;
+}
+.cities-new-coming a{
+  padding:9px 14px!important;
+  background:#ff1744!important;
+  border:3px solid #090909!important;
+  box-shadow:3px 3px 0 #090909!important;
+  font-size:11px!important;
+}
+@media(max-width:900px){
+  #cities{
+    height:auto!important;
+    min-height:0!important;
+    padding:55px 0 65px!important;
+    display:block!important;
+  }
+  .cities-new-wrap{height:auto!important}
+  .cities-new-head{margin-bottom:24px!important}
+  .cities-new-grid{grid-template-columns:repeat(2,1fr)!important}
+  .city-new-card{height:330px!important}
+}
+@media(max-width:560px){
+  #cities{padding:45px 0 55px!important}
+  .cities-new-wrap{width:calc(100% - 24px)!important}
+  .cities-new-head h2{font-size:40px!important}
+  .cities-new-grid{gap:10px!important}
+  .city-new-card{height:285px!important;padding:12px 10px 10px!important}
+  .city-new-name{font-size:26px!important}
+  .city-bangalore .city-new-name{font-size:20px!important}
+  .city-landmark{height:75px!important}
+  .city-new-detail{margin:4px 0!important;font-size:9px!important}
+  .city-new-detail b{font-size:7px!important}
+  .city-new-detail strong{font-size:10px!important}
+  .city-new-ticket{margin-top:8px!important;padding:7px 5px!important;font-size:9px!important}
+  .cities-new-coming{min-height:105px!important;flex-direction:column!important;gap:9px!important}
+}
+</style>
+</head>
 <body>
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
