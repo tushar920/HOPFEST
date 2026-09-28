@@ -8834,7 +8834,13 @@ header{overflow:visible!important}
   <script>const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');b.addEventListener('click',()=>{const open=m.classList.toggle('open');b.setAttribute('aria-expanded',open)});m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded','false')}));</script>
 
 <script id="hop-activities-carousel">
-(()=>{const c=document.querySelector('.activity-carousel');if(!c)return;const slides=[...c.querySelectorAll('.activity-slide')],dots=[...document.querySelectorAll('.activity-dots button')],prev=document.querySelector('.activity-prev');let active=0;const set=i=>{active=Math.max(0,Math.min(slides.length-1,i));slides[active].scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});dots.forEach((d,n)=>d.classList.toggle('active',n===active));};c.addEventListener('scroll',()=>{const i=Math.round(c.scrollLeft/c.clientWidth);if(i!==active){active=i;dots.forEach((d,n)=>d.classList.toggle('active',n===active));}},{passive:true});dots.forEach((d,i)=>d.addEventListener('click',()=>set(i)));prev.addEventListener('click',()=>set(active-1));})();
+(()=>{const c=document.querySelector('.activities-v4-carousel');if(!c)return;
+const slides=[...c.querySelectorAll('.activities-v4-slide')],dots=[...document.querySelectorAll('.activities-v4-dots button')],prev=document.querySelector('.activities-v4-prev');let active=0;
+const set=i=>{active=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('is-active',n===active));dots.forEach((d,n)=>d.classList.toggle('active',n===active));};
+dots.forEach((d,i)=>d.addEventListener('click',()=>set(i)));
+if(prev)prev.addEventListener('click',()=>set(active-1));
+set(0);
+})();
 </script>
 <script id="hopfest-activities-mobile-init">
 (()=>{const c=document.querySelector('#what .activity-carousel');if(!c)return;
