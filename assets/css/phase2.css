@@ -1,5 +1,0 @@
-.p2-reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.75,.25,1)}
-.p2-reveal.p2-visible{opacity:1;transform:none}
-.p2-stagger>*{transition-delay:calc(var(--p2-i,0) * 80ms)}
-.p2-cursor{transition:transform .12s ease-out}
-@media(prefers-reduced-motion:reduce){.p2-reveal{opacity:1;transform:none;transition:none}.p2-cursor{transition:none}}
