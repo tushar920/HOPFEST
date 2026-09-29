@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<g transform="rotate(-7 100 100)">
+<rect x="18" y="30" width="164" height="118" rx="6" fill="#fffaf0" stroke="#090909" stroke-width="5"/>
+<rect x="29" y="41" width="142" height="96" rx="3" stroke="#1c4892" stroke-width="3"/>
+<rect x="60" y="54" width="80" height="12" rx="6" fill="#1c4892"/>
+<rect x="46" y="78" width="108" height="7" rx="3.5" fill="#d9d1bf"/>
+<rect x="46" y="93" width="108" height="7" rx="3.5" fill="#d9d1bf"/>
+<rect x="46" y="108" width="66" height="7" rx="3.5" fill="#d9d1bf"/>
+<path d="M136 150L126 192L138 184L147 195L152 156Z" fill="#e84b81" stroke="#090909" stroke-width="4"/>
+<path d="M158 150L170 190L158 184L150 195L145 156Z" fill="#1c4892" stroke="#090909" stroke-width="4"/>
+<g transform="translate(150 138)"><path d="M0.0,-30.0 L6.5,-24.1 L15.0,-26.0 L17.7,-17.7 L26.0,-15.0 L24.1,-6.5 L30.0,0.0 L24.1,6.5 L26.0,15.0 L17.7,17.7 L15.0,26.0 L6.5,24.1 L0.0,30.0 L-6.5,24.1 L-15.0,26.0 L-17.7,17.7 L-26.0,15.0 L-24.1,6.5 L-30.0,0.0 L-24.1,-6.5 L-26.0,-15.0 L-17.7,-17.7 L-15.0,-26.0 L-6.5,-24.1Z" fill="#e84b81" stroke="#090909" stroke-width="4"/>
+<circle r="16" fill="#faee30" stroke="#090909" stroke-width="3"/>
+<path d="M0.0,-8.0 L2.4,-2.2 L8.6,-1.8 L3.8,2.2 L5.3,8.3 L0.0,5.0 L-5.3,8.3 L-3.8,2.2 L-8.6,-1.8 L-2.4,-2.2Z" fill="#f68820" stroke="#090909" stroke-width="2"/></g>
+</g>
+<path d="M28 11 Q29.98 20.02 39 22 Q29.98 23.98 28 33 Q26.02 23.98 17 22 Q26.02 20.02 28 11Z" fill="#faee30" stroke="#090909" stroke-width="2.5" stroke-linejoin="round"/><path d="M186 55 Q187.62 62.38 195 64 Q187.62 65.62 186 73 Q184.38 65.62 177 64 Q184.38 62.38 186 55Z" fill="#fff" stroke="#090909" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>
