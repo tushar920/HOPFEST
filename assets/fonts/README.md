@@ -1,11 +1,5 @@
 # Heading font: Neutronic Heavy
 
-Upload your Neutronic Heavy file into **this folder** (`assets/fonts/`), named exactly one of:
-
-- `Neutronic-Heavy.woff2`  (best for websites)
-- `Neutronic-Heavy.otf`
-- `Neutronic-Heavy.ttf`
-
-The site already looks for these names, so headings switch over as soon as the file is here.
+`Neutronic-Heavy.otf` (uploaded) is used for all headings across the site.
+`Neutronic-Heavy.woff` is a smaller web copy made from it, which browsers load first.
 Subheadings use Inter Bold and body text Inter Regular (built into the page).
-Until the file is added, headings fall back to a heavy Archivo.
