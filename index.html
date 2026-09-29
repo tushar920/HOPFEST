@@ -137,7 +137,7 @@ h1,h2,h3,h1.font-display,h2.font-display,h3.font-display,[data-testid=achievemen
 
 /* ===== grit race ===== */
 
-.hf-grit{background:var(--hf-pink)!important}
+.hf-grit{background:#fff!important}
 .hf-grit-kicker{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2.4vw,22px);margin:0 0 clamp(18px,3.5vh,34px);text-align:center;font-size:clamp(32px,9vw,74px);line-height:1;text-transform:uppercase;color:var(--hf-yellow);text-shadow:.05em .06em 0 var(--hf-ink);-webkit-text-stroke:.03em var(--hf-ink);paint-order:stroke fill}
 .hf-grit-card{position:relative;display:inline-block;transform:rotate(-1.5deg);background:var(--hf-yellow);border:4px solid var(--hf-ink);box-shadow:10px 10px 0 var(--hf-ink);padding:clamp(16px,2.4vw,26px) clamp(18px,3vw,34px) clamp(14px,2vw,22px)}
 .hf-grit-title{margin:0;line-height:.86;text-transform:uppercase}
@@ -151,7 +151,7 @@ h1,h2,h3,h1.font-display,h2.font-display,h3.font-display,[data-testid=achievemen
 @media (min-width:768px){
   [data-testid=experience-swipe-hint]{display:none}
   [data-testid=experience-rail]{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible!important;margin-inline:0!important;padding-inline:0!important}
-  [data-testid=experience-rail]>article{width:auto!important;max-width:none!important;height:min(48svh,420px)!important}
+  [data-testid=experience-rail]>article{width:auto!important;max-width:none!important}
   [data-testid=experience-rail]>article span.block:first-child{font-size:clamp(18px,1.9vw,26px)!important}
   [data-testid=experience-rail]>article span.block + span.block{font-size:clamp(13px,1.15vw,16px)!important}
 }
@@ -198,14 +198,12 @@ h1,h2,h3,h1.font-display,h2.font-display,h3.font-display,[data-testid=achievemen
 }
 
 /* More to Play tiles: solid panel behind the text instead of a dark fade */
-[data-testid^=zone-card]>div[aria-hidden]{display:none}
-[data-testid^=zone-card]>div.relative>div{background:rgba(9,9,9,.86);border:3px solid var(--hf-ink);margin:0 -2px -2px;padding:12px 14px;min-height:98px}
 
 /* Grit Race course illustration */
 .hf-course{margin:0 0 clamp(18px,3vh,30px)}
 .hf-course img{display:block;width:100%;height:auto}
-.hf-course figcaption{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 10px;margin-top:10px;font-family:var(--font-sub);font-weight:700;font-size:clamp(11px,3vw,15px);letter-spacing:.08em;color:#fff}
-.hf-course figcaption i{font-style:normal;color:var(--hf-yellow);margin-right:10px}
+.hf-course figcaption{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 10px;margin-top:12px;font-family:var(--font-sub);font-weight:700;font-size:clamp(11px,3vw,15px);letter-spacing:.08em;color:var(--hf-ink)}
+.hf-course figcaption i{font-style:normal;color:var(--hf-pink);margin-right:10px}
 
 /* Neutronic is wide: never squeeze it */
 h1,h2,h3,h2 *,h3 *,[data-testid=achievements-heading],[data-testid=achievements-heading] *,.font-fest,.font-impact,.hf-st-stat,.hf-ticker-item,.hf-city-name{letter-spacing:.01em!important}
@@ -237,8 +235,8 @@ h1,h2,h3,h2 *,h3 *,[data-testid=achievements-heading],[data-testid=achievements-
 .hf-grit-head{display:flex;flex-direction:column;align-items:center;gap:clamp(14px,2.6vh,26px);text-align:center}
 .hf-grit-kicker{margin:0!important}
 .hf-grit-foot{margin-top:clamp(16px,3vh,30px);text-align:center}
-.hf-grit-sub{margin:0;font-family:var(--font-sub);font-weight:700;color:#fff;font-size:clamp(15px,4.2vw,22px);letter-spacing:.02em;text-transform:uppercase}
-.hf-grit-lead{margin:clamp(10px,1.8vh,18px) 0 0;font-family:var(--font-sub);font-weight:800;font-size:clamp(18px,5vw,30px);line-height:1.15;text-transform:uppercase;color:var(--hf-yellow);text-shadow:2px 2px 0 var(--hf-ink)}
+.hf-grit-sub{margin:0;font-family:var(--font-sub);font-weight:700;color:var(--hf-ink);font-size:clamp(15px,4.2vw,22px);letter-spacing:.02em;text-transform:uppercase}
+.hf-grit-lead{margin:clamp(10px,1.8vh,18px) 0 0;font-family:var(--font-sub);font-weight:800;font-size:clamp(18px,5vw,30px);line-height:1.15;text-transform:uppercase;color:var(--hf-blue)}
 .hf-grit-tests{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:clamp(12px,2.2vh,20px)}
 .hf-grit-tests span{border:3px solid var(--hf-ink);background:#fff;color:var(--hf-blue);padding:6px 14px;font-family:var(--font-sub);font-weight:700;font-size:clamp(11px,3vw,15px);box-shadow:4px 4px 0 var(--hf-ink);letter-spacing:.06em}
 @media (min-width:768px){
@@ -257,7 +255,7 @@ h1,h2,h3,[data-testid=achievements-heading],.font-fest,.font-impact,.hf-head,.hf
 /* ===== Key Activity: centred card with the badge on its corner ===== */
 .hf-grit-head{display:flex;justify-content:center}
 .hf-grit-stack{position:relative;display:inline-block;margin-top:clamp(20px,3.4vh,40px)}
-.hf-grit-kicker{position:absolute!important;top:0;left:clamp(4px,1.5%,20px);z-index:2;margin:0!important;transform:translateY(-58%) rotate(-2.5deg);font-size:clamp(17px,4.2vw,36px)!important;white-space:nowrap;background:var(--hf-blue);color:var(--hf-yellow);border:4px solid var(--hf-ink);box-shadow:7px 7px 0 var(--hf-ink);padding:.24em .5em .3em}
+.hf-grit-kicker{position:absolute!important;top:0;left:clamp(4px,1.5%,20px);z-index:2;margin:0!important;transform:translateY(-80%) rotate(-2.5deg);font-size:clamp(17px,4.2vw,36px)!important;white-space:nowrap;background:var(--hf-blue);color:var(--hf-yellow);border:4px solid var(--hf-ink);box-shadow:5px 5px 0 var(--hf-ink);padding:.24em .5em .3em}
 
 /* ===== closing section ===== */
 .hf-day-title{font-size:clamp(28px,7.6vw,60px);line-height:.98;text-transform:uppercase}
@@ -279,6 +277,25 @@ h1,h2,h3,[data-testid=achievements-heading],.font-fest,.font-impact,.hf-head,.hf
 
 /* Why hop in: badge on its own, centred */
 [data-testid=why-hop-in-core]{margin-inline:auto}
+
+/* ===== More to Play: whole photo on top, caption underneath ===== */
+[data-testid^=zone-card]{height:auto!important;min-height:0!important;max-height:none!important;display:flex!important;flex-direction:column;background:var(--hf-ink)}
+[data-testid^=zone-card]>img{position:static!important;width:100%;height:auto!important;aspect-ratio:4/3;object-fit:cover;object-position:50% 10%;border-bottom:3px solid var(--hf-ink)}
+[data-testid^=zone-card]>div[aria-hidden]{display:none}
+[data-testid^=zone-card]>div.relative{position:static!important;display:block!important;height:auto!important;flex:1 1 auto;padding:14px 16px 16px!important}
+[data-testid^=zone-card]>div.relative>span{position:absolute!important;top:10px;left:10px;z-index:2}
+
+/* ===== Grit Race skill tags ===== */
+.hf-grit-tests span{color:#fff;border-width:3px;padding:7px 16px 8px}
+.hf-grit-tests span:nth-child(odd){rotate:-1.5deg}
+.hf-grit-tests span:nth-child(even){rotate:1.5deg}
+.hf-grit-tests span:nth-child(1){background:var(--hf-pink)}
+.hf-grit-tests span:nth-child(2){background:var(--hf-blue)}
+.hf-grit-tests span:nth-child(3){background:var(--hf-lime);color:var(--hf-ink)}
+.hf-grit-tests span:nth-child(4){background:var(--hf-orange);color:var(--hf-ink)}
+.hf-grit-tests span:nth-child(5){background:var(--hf-purple)}
+.hf-grit-tests span{transition:rotate .2s ease,translate .2s ease}
+.hf-grit-tests span:hover{rotate:0deg;translate:0 -3px}
   </style>
 </head>
   <body>
@@ -305,7 +322,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   HFy(`div`,{className:`hf-city-media`,children:[HFx(`img`,{src:`./assets/images/cities/${e.slug}.webp`,alt:`HOP FEST in ${e.name.charAt(0)+e.name.slice(1).toLowerCase()}`,loading:`lazy`,decoding:`async`}),HFx(`span`,{"data-testid":`city-name-${e.slug}`,className:`hf-city-name`,children:e.name})]}),
   HFy(`div`,{className:`hf-city-body`,children:[HFy(`div`,{className:`hf-city-meta`,children:[HFy(`div`,{children:[HFx(`b`,{children:`DATE`}),HFx(`strong`,{"data-testid":`city-date-${e.slug}`,children:e.date})]}),HFy(`div`,{children:[HFx(`b`,{children:`VENUE`}),HFx(`strong`,{"data-testid":`city-venue-${e.slug}`,children:e.venue})]})]}),HFy(`a`,{href:`#tickets`,"data-testid":`city-tickets-cta-${e.slug}`,className:`hf-city-cta`,children:[io.ticket,HFx(bo,{className:`size-4`,strokeWidth:3})]})]})]},e.id))}),
  HFx(`div`,{className:`hf-dots mt-1`,"aria-label":`City slide navigation`,children:r.map((e,n)=>HFx(`button`,{type:`button`,onClick:()=>i(n),"aria-label":`${e.name}`,"aria-current":n===t,children:HFx(`span`,{"aria-hidden":`true`})},e.id))}),
- HFy(`div`,{className:`mt-3 flex flex-wrap items-center justify-between gap-3 border-[3px] border-hop-ink bg-hop-ink p-4`,children:[HFx(`strong`,{"data-testid":`cities-coming-soon`,className:`font-display text-[clamp(12.5px,3.8vw,20px)] tracking-tight text-hop-yellow uppercase`,children:io.comingSoon}),HFy(`a`,{href:`#tickets`,"data-testid":`cities-notify-cta`,className:`inline-flex min-h-11 items-center gap-2 border-b-[3px] border-hop-lime py-2.5 font-display text-xs tracking-wide text-hop-lime uppercase transition-transform duration-200 hover:translate-x-1 md:text-base`,children:[io.notify,HFx(bo,{className:`size-4`,strokeWidth:3})]})]})]})}function os(){return(0,R.jsxs)(`div`,{"aria-hidden":`true`,className:`pointer-events-none absolute inset-0 overflow-hidden`,children:[(0,R.jsx)(`div`,{className:`hop-dots absolute inset-0 opacity-25`}),[{c:`bg-hop-yellow`,t:`top-[-8%] left-[-6%]`,w:`w-[46px]`,h:`h-[52%]`},{c:`bg-hop-pink`,t:`top-[-10%] left-[6%]`,w:`w-[20px]`,h:`h-[42%]`},{c:`bg-hop-yellow`,t:`top-[-6%] left-[16%]`,w:`w-[10px]`,h:`h-[30%]`},{c:`bg-hop-pink`,t:`top-[-12%] right-[10%]`,w:`w-[34px]`,h:`h-[46%]`},{c:`bg-hop-yellow`,t:`top-[-8%] right-[2%]`,w:`w-[16px]`,h:`h-[34%]`},{c:`bg-hop-pink`,t:`bottom-[-10%] left-[4%]`,w:`w-[28px]`,h:`h-[40%]`},{c:`bg-hop-yellow`,t:`bottom-[-8%] left-[18%]`,w:`w-[12px]`,h:`h-[26%]`},{c:`bg-hop-yellow`,t:`bottom-[-12%] right-[6%]`,w:`w-[40px]`,h:`h-[48%]`},{c:`bg-hop-pink`,t:`bottom-[-8%] right-[20%]`,w:`w-[14px]`,h:`h-[30%]`}].map((e,t)=>(0,R.jsx)(`span`,{className:`absolute ${e.t} ${e.w} ${e.h} ${e.c} rotate-[24deg] opacity-50`},t))]})}function ss(){let{ref:e,shown:t}=Ka();return HFy(Ga,{id:`grit-race`,testId:`grit-race-section`,label:`The Grit Race`,className:`hf-bg hf-grit text-white`,innerClassName:`flex flex-col justify-center`,children:[
+ HFy(`div`,{className:`mt-3 flex flex-wrap items-center justify-between gap-3 border-[3px] border-hop-ink bg-hop-ink p-4`,children:[HFx(`strong`,{"data-testid":`cities-coming-soon`,className:`font-display text-[clamp(12.5px,3.8vw,20px)] tracking-tight text-hop-yellow uppercase`,children:io.comingSoon}),HFy(`a`,{href:`#tickets`,"data-testid":`cities-notify-cta`,className:`inline-flex min-h-11 items-center gap-2 border-b-[3px] border-hop-lime py-2.5 font-display text-xs tracking-wide text-hop-lime uppercase transition-transform duration-200 hover:translate-x-1 md:text-base`,children:[io.notify,HFx(bo,{className:`size-4`,strokeWidth:3})]})]})]})}function os(){return(0,R.jsxs)(`div`,{"aria-hidden":`true`,className:`pointer-events-none absolute inset-0 overflow-hidden`,children:[(0,R.jsx)(`div`,{className:`hop-dots absolute inset-0 opacity-25`}),[{c:`bg-hop-yellow`,t:`top-[-8%] left-[-6%]`,w:`w-[46px]`,h:`h-[52%]`},{c:`bg-hop-pink`,t:`top-[-10%] left-[6%]`,w:`w-[20px]`,h:`h-[42%]`},{c:`bg-hop-yellow`,t:`top-[-6%] left-[16%]`,w:`w-[10px]`,h:`h-[30%]`},{c:`bg-hop-pink`,t:`top-[-12%] right-[10%]`,w:`w-[34px]`,h:`h-[46%]`},{c:`bg-hop-yellow`,t:`top-[-8%] right-[2%]`,w:`w-[16px]`,h:`h-[34%]`},{c:`bg-hop-pink`,t:`bottom-[-10%] left-[4%]`,w:`w-[28px]`,h:`h-[40%]`},{c:`bg-hop-yellow`,t:`bottom-[-8%] left-[18%]`,w:`w-[12px]`,h:`h-[26%]`},{c:`bg-hop-yellow`,t:`bottom-[-12%] right-[6%]`,w:`w-[40px]`,h:`h-[48%]`},{c:`bg-hop-pink`,t:`bottom-[-8%] right-[20%]`,w:`w-[14px]`,h:`h-[30%]`}].map((e,t)=>(0,R.jsx)(`span`,{className:`absolute ${e.t} ${e.w} ${e.h} ${e.c} rotate-[24deg] opacity-50`},t))]})}function ss(){let{ref:e,shown:t}=Ka();return HFy(Ga,{id:`grit-race`,testId:`grit-race-section`,label:`The Grit Race`,className:`hf-bg hf-grit text-hop-ink`,innerClassName:`flex flex-col justify-center`,children:[
  HFx(`div`,{className:`hf-grit-head`,children:HFy(`div`,{className:`hf-grit-stack`,children:[
   HFx(`h2`,{"data-testid":`grit-race-kicker`,className:`hf-grit-kicker`,children:Xa.kicker}),
   HFx(`div`,{className:`hf-grit-card`,children:HFy(`h3`,{"data-testid":`grit-race-title`,className:`hf-grit-title`,children:[HFx(`span`,{className:`hf-grit-pre`,children:`READY TO TAKE ON THE`}),HFx(`span`,{className:`hf-grit-name`,children:`GRIT`}),HFx(`span`,{className:`hf-grit-name`,children:`RACE?`})]})})]})}),
