@@ -15,8 +15,8 @@ return [
     // Shown in the footer under "Contact us" and as the Instagram link.
     // Leave any of these empty ('') to hide them.
     'contact' => [
-        'email'     => '',
+        'email'     => 'hopfest.legaxy@gmail.com',
         'phone'     => '',
-        'instagram' => '',   // just the handle, e.g. 'hopfest.in'
+        'instagram' => 'hopfestofficial',   // just the handle
     ],
 ];

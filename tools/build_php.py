@@ -10,14 +10,14 @@ import os, re, shutil, sys, tempfile, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(ROOT, 'hopfest-website-php.zip')
-CONTACT_JS = 'window.HOPFEST_CONTACT={"email":"","phone":"","instagram":""};'
+CONTACT_RE = r'window\.HOPFEST_CONTACT=\{[^<]*?\};'
 CONTACT_PHP = ('window.HOPFEST_CONTACT=<?= json_encode((array)($hfcfg["contact"] ?? []), '
                'JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT|JSON_UNESCAPED_SLASHES) ?>;')
 
 html = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
 assert '<?' not in html, 'index.html must not contain "<?"'
-assert html.count(CONTACT_JS) == 1, 'contact placeholder missing from index.html'
-page = "<?php $hfcfg = require __DIR__ . '/config.php'; ?>" + html.replace(CONTACT_JS, CONTACT_PHP)
+assert len(re.findall(CONTACT_RE, html)) == 1, 'contact line missing from index.html'
+page = "<?php $hfcfg = require __DIR__ . '/config.php'; ?>" + re.sub(CONTACT_RE, lambda m: CONTACT_PHP, html)
 
 files = set()
 for ref in re.findall(r'\./((?:assets/|favicon|apple-touch)[^`"\'\s)]*)', html):
