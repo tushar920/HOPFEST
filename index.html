@@ -363,53 +363,89 @@ h1,h2,h3,[data-testid=achievements-heading],.font-fest,.font-impact,.hf-head,.hf
 .hf-fstack{font-family:var(--font-head);font-weight:800;font-stretch:112%;color:var(--hf-yellow);letter-spacing:.04em;text-shadow:.06em .07em 0 var(--hf-ink)}
 @media (min-width:768px){.hf-fgrid{grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}.hf-fbrand{grid-column:auto}}
 
-/* ===== pop-up: sign-up form and info panels ===== */
+/* ===== pop-up: sign-up form and info panels (kid palette) ===== */
+:root{--kp-dark:#2c2e35;--kp-red:#fb565a;--kp-purple:#7237c5;--kp-blue:#2d85df;--kp-teal:#1cc4ab;--kp-yellow:#f1dd1c}
 .hfm-lock{overflow:hidden}
-.hfm{width:min(540px,calc(100% - 24px));max-height:calc(100svh - 32px);margin:auto;padding:0;border:4px solid var(--hf-ink);background:#fff;color:var(--hf-ink);box-shadow:10px 10px 0 var(--hf-ink);overflow:auto;overscroll-behavior:contain}
-.hfm::backdrop{background:rgba(9,9,9,.62)}
+.hfm{width:min(560px,calc(100% - 24px));max-height:calc(100svh - 32px);margin:auto;padding:0;border:4px solid var(--kp-dark);background:#fff;color:var(--kp-dark);box-shadow:12px 12px 0 var(--kp-purple);overflow:auto;overscroll-behavior:contain}
+.hfm::backdrop{background:rgba(44,46,53,.8)}
 .hfm[open]{animation:hfm-in .22s ease-out}
 @keyframes hfm-in{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
-.hfm-box{position:relative;padding:26px 22px 24px}
-.hfm-x{position:absolute;top:10px;right:10px;width:40px;height:40px;border:3px solid var(--hf-ink);background:var(--hf-yellow);font-size:26px;line-height:1;font-weight:700;color:var(--hf-ink);cursor:pointer}
-.hfm-back{border:0;background:none;padding:0 0 10px;font-family:var(--font-sub);font-weight:700;font-size:13px;color:var(--hf-blue);cursor:pointer}
-.hfm-title{margin:0 48px 14px 0;font-family:var(--font-head)!important;font-weight:800;font-stretch:112%;font-size:clamp(26px,7vw,34px);line-height:1;text-transform:uppercase;color:var(--hf-blue);text-shadow:.045em .055em 0 var(--hf-yellow)!important}
+.hfm-rainbow{display:flex;height:10px}
+.hfm-rainbow i{flex:1}
+.hfm-rainbow i:nth-child(1){background:var(--kp-red)}
+.hfm-rainbow i:nth-child(2){background:var(--kp-purple)}
+.hfm-rainbow i:nth-child(3){background:var(--kp-blue)}
+.hfm-rainbow i:nth-child(4){background:var(--kp-teal)}
+.hfm-rainbow i:nth-child(5){background:var(--kp-yellow)}
+.hfm-pad{position:relative;padding:24px 22px 26px}
+.hfm-x{position:absolute;top:12px;right:12px;width:42px;height:42px;border:3px solid var(--kp-dark);background:var(--kp-yellow);font-size:26px;line-height:1;font-weight:700;color:var(--kp-dark);cursor:pointer;box-shadow:3px 3px 0 var(--kp-dark)}
+.hfm-x:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--kp-dark)}
+.hfm-back{border:0;background:none;padding:0 0 10px;font-family:var(--font-sub);font-weight:700;font-size:13px;color:var(--kp-blue);cursor:pointer}
+.hfm-title{margin:4px 52px 14px 0;font-family:var(--font-head)!important;font-weight:800;font-stretch:112%;font-size:clamp(26px,7vw,36px);line-height:1.02;text-transform:uppercase;color:var(--kp-purple);text-shadow:.05em .06em 0 var(--kp-yellow)!important}
 .hfm-body{font-size:15px;line-height:1.55}
-.hfm-body h3{margin:18px 0 4px;font-family:var(--font-sub)!important;font-weight:700!important;font-size:15px;text-transform:uppercase;letter-spacing:.03em;text-shadow:none!important;color:var(--hf-ink)}
+.hfm-body h3{margin:18px 0 4px;font-family:var(--font-sub)!important;font-weight:700!important;font-size:15px;text-transform:uppercase;letter-spacing:.03em;text-shadow:none!important;color:var(--kp-dark)}
 .hfm-body p{margin:8px 0 0}
-.hfm-body a{color:var(--hf-blue);font-weight:700;text-decoration:underline}
-.hfm-note{font-size:13px;color:rgba(9,9,9,.6)}
-.hfm-lead{margin:0 0 16px!important}
-.hfm-faq{border:3px solid var(--hf-ink);margin-top:10px;background:#fff}
+.hfm-body a{color:var(--kp-blue);font-weight:700;text-decoration:underline}
+.hfm-note{font-size:13px;color:rgba(44,46,53,.65)}
+.hfm-lead{margin:0 0 10px!important}
+.hfm-lead b{font-size:16px}
+.hfm-sec{display:inline-block;margin:18px 0 6px!important;padding:7px 12px 6px;font-family:var(--font-head);font-weight:800;font-stretch:112%;font-size:clamp(15px,4vw,19px);letter-spacing:.03em;text-transform:uppercase;border:3px solid var(--kp-dark);box-shadow:4px 4px 0 var(--kp-dark);transform:rotate(-1.2deg)}
+.hfm-sec-a{background:var(--kp-teal);color:var(--kp-dark)}
+.hfm-sec-b{background:var(--kp-red);color:#fff;text-shadow:.05em .06em 0 var(--kp-dark)}
+.hfm-q{display:flex;gap:12px;margin-top:16px}
+.hfm-qn{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:3px solid var(--kp-dark);font-family:var(--font-sub);font-weight:800;font-size:15px;color:#fff;box-shadow:2px 2px 0 var(--kp-dark)}
+.hfm-qn0{background:var(--kp-red)}.hfm-qn1{background:var(--kp-purple)}.hfm-qn2{background:var(--kp-blue)}
+.hfm-qn3{background:var(--kp-teal);color:var(--kp-dark)}.hfm-qn4{background:var(--kp-yellow);color:var(--kp-dark)}
+.hfm-qbody{flex:1;min-width:0}
+.hfm-qlabel{display:block;font-weight:800;font-size:16px;padding-top:5px}
+.hfm-req{color:var(--kp-red);margin-left:2px}
+.hfm-hint{margin:3px 0 0!important;font-size:13px;font-style:italic;color:rgba(44,46,53,.68)}
+.hfm-form input:not([type=checkbox]):not([type=radio]),.hfm-form select{display:block;width:100%;margin-top:8px;border:3px solid var(--kp-dark);background:#fff;padding:11px 12px;font:400 16px/1.2 var(--font-body);color:var(--kp-dark);border-radius:0;-webkit-appearance:none;appearance:none;box-shadow:3px 3px 0 rgba(44,46,53,.18)}
+.hfm-form select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%232c2e35' stroke-width='2.4'/%3E%3C/svg%3E") no-repeat right 12px center/12px 8px;padding-right:34px}
+.hfm-form input:focus,.hfm-form select:focus{outline:3px solid var(--kp-blue);outline-offset:1px}
+.hfm-q.is-bad input,.hfm-q.is-bad select{border-color:var(--kp-red)!important;background-color:#fff2f2}
+.hfm-q.is-bad .hfm-pill span{border-color:var(--kp-red)}
+.hfm-msg{display:block;font-weight:700;font-size:12.5px;color:#d92b30;margin-top:5px}
+.hfm-msg:empty{display:none}
+.hfm-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.hfm-pill{cursor:pointer}
+.hfm-pill input{position:absolute;opacity:0;width:1px;height:1px}
+.hfm-pill span{display:inline-block;min-width:54px;text-align:center;border:3px solid var(--kp-dark);background:#fff;color:var(--kp-dark);padding:10px 16px;font-family:var(--font-sub);font-weight:800;font-size:15px;box-shadow:3px 3px 0 var(--kp-dark);transition:transform .15s,background .15s}
+.hfm-pill:hover span{transform:translateY(-2px)}
+.hfm-pill input:focus-visible+span{outline:3px solid var(--kp-blue);outline-offset:2px}
+.hfm-pill0 input:checked+span{background:var(--kp-red);color:#fff}
+.hfm-pill1 input:checked+span{background:var(--kp-purple);color:#fff}
+.hfm-pill2 input:checked+span{background:var(--kp-blue);color:#fff}
+.hfm-pill3 input:checked+span{background:var(--kp-teal);color:var(--kp-dark)}
+.hfm-pill4 input:checked+span{background:var(--kp-yellow);color:var(--kp-dark)}
+.hfm-pill input:checked+span{transform:translate(2px,2px) rotate(-2deg);box-shadow:1px 1px 0 var(--kp-dark)}
+.hfm-check{display:flex;gap:10px;align-items:flex-start;margin-top:20px;font-size:14px;line-height:1.4;cursor:pointer}
+.hfm-check input{width:22px;height:22px;flex-shrink:0;margin:0;accent-color:var(--kp-purple)}
+.hfm-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}
+.hfm-err{margin:14px 0 0!important;border:3px solid #d92b30;background:#fff2f2;padding:10px 12px;font-weight:700;font-size:14px;color:#d92b30}
+.hfm-contact{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.hfm-contact li{border:3px solid var(--kp-dark);border-left-width:10px;padding:10px 14px}
+.hfm-contact li:nth-child(1){border-left-color:var(--kp-teal)}
+.hfm-contact li:nth-child(2){border-left-color:var(--kp-red)}
+.hfm-contact li:nth-child(3){border-left-color:var(--kp-purple)}
+.hfm-contact b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(44,46,53,.6)}
+.hfm-faq{border:3px solid var(--kp-dark);margin-top:10px;background:#fff;box-shadow:4px 4px 0 rgba(44,46,53,.15)}
 .hfm-faq summary{cursor:pointer;padding:12px 14px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:10px}
 .hfm-faq summary::-webkit-details-marker{display:none}
-.hfm-faq summary::after{content:"+";font-weight:800;color:var(--hf-pink)}
-.hfm-faq[open] summary{background:var(--hf-yellow)}
+.hfm-faq summary::after{content:"+";font-weight:800;color:var(--kp-red)}
+.hfm-faq[open] summary{background:var(--kp-yellow)}
 .hfm-faq[open] summary::after{content:"\2013"}
-.hfm-faq p{margin:0!important;padding:10px 14px 14px;border-top:3px solid var(--hf-ink)}
-.hfm-contact{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
-.hfm-contact li{border:3px solid var(--hf-ink);padding:10px 14px}
-.hfm-contact b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(9,9,9,.6)}
-.hfm-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;border:3px solid var(--hf-ink);background:var(--hf-pink);color:#fff!important;text-decoration:none!important;box-shadow:5px 5px 0 var(--hf-ink);padding:13px 24px;font-family:var(--font-head);font-weight:800;font-stretch:112%;font-size:18px;letter-spacing:.02em;cursor:pointer;text-shadow:.05em .06em 0 var(--hf-ink)}
-.hfm-btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--hf-ink)}
+.hfm-faq p{margin:0!important;padding:10px 14px 14px;border-top:3px solid var(--kp-dark)}
+.hfm-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;border:3px solid var(--kp-dark);background:var(--kp-red);color:#fff!important;text-decoration:none!important;box-shadow:5px 5px 0 var(--kp-dark);padding:14px 26px;font-family:var(--font-head);font-weight:800;font-stretch:112%;font-size:19px;letter-spacing:.02em;cursor:pointer;text-shadow:.05em .06em 0 var(--kp-dark)}
+.hfm-btn:hover{background:var(--kp-purple)}
+.hfm-btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--kp-dark)}
 .hfm-btn[disabled]{opacity:.6;cursor:wait}
-.hfm-form .hfm-f{display:block;margin-top:12px;font-weight:700;font-size:14px}
-.hfm-opt{font-weight:400;color:rgba(9,9,9,.55)}
-.hfm-form input:not([type=checkbox]),.hfm-form select{display:block;width:100%;margin-top:5px;border:3px solid var(--hf-ink);background:#fff;padding:11px 12px;font:400 16px/1.2 var(--font-body);color:var(--hf-ink);border-radius:0;-webkit-appearance:none;appearance:none}
-.hfm-form select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23090909' stroke-width='2.4'/%3E%3C/svg%3E") no-repeat right 12px center/12px 8px;padding-right:34px}
-.hfm-form input:focus,.hfm-form select:focus{outline:3px solid var(--hf-pink);outline-offset:1px}
-.hfm-form .is-bad{border-color:#d4202a!important;background:#fff4f4}
-.hfm-msg{display:block;font-weight:600;font-size:12.5px;color:#c4161c;margin-top:4px}
-.hfm-msg:empty{display:none}
-.hfm-row{display:grid;grid-template-columns:1.4fr 1fr;gap:12px}
-.hfm-check{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:14px;line-height:1.4;cursor:pointer}
-.hfm-check input{width:22px;height:22px;flex-shrink:0;margin:0;accent-color:var(--hf-pink)}
-.hfm-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}
-.hfm-err{margin:14px 0 0!important;border:3px solid #c4161c;background:#fff4f4;padding:10px 12px;font-weight:600;font-size:14px;color:#c4161c}
-.hfm-submit{width:100%;margin-top:18px}
+.hfm-submit{width:100%;margin-top:20px}
 .hfm-done{text-align:center}
 .hfm-done img{display:block;margin:4px auto 6px;width:120px;height:120px}
 .hfm-done p{font-size:17px}
-@media (max-width:420px){.hfm-box{padding:22px 16px 20px}.hfm-row{grid-template-columns:1fr}}
+.hfm-see{margin-top:16px!important;font-family:var(--font-head);font-weight:800;font-stretch:112%;font-size:clamp(17px,4.6vw,22px);text-transform:uppercase;color:var(--kp-blue);text-shadow:.05em .06em 0 var(--kp-yellow)}
+@media (max-width:420px){.hfm-pad{padding:20px 14px 22px}.hfm-q{gap:9px}.hfm-qn{width:30px;height:30px;font-size:14px}}
   </style>
 </head>
   <body>
@@ -520,7 +556,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     } },
     privacy: { title: 'Privacy Policy', html: function () {
       return '<p class="hfm-note">Last updated: October 2026</p>' +
-        '<h3>What we collect</h3><p>When you sign up, we collect the details you enter: your name, mobile number, email address (if you give one), city, number of kids and their ages (if you give them).</p>' +
+        '<h3>What we collect</h3><p>When you sign up, we collect the details you enter: your name, email address, mobile number, city, how many kids are coming and whether they’re boys, girls or both.</p>' +
         '<h3>Why we collect it</h3><p>Only to contact you about HOP FEST: dates, venues, tickets and event updates.</p>' +
         '<h3>How we look after it</h3><p>Your details are stored securely and can only be seen by the HOP FEST team. We do not sell or rent your details to anyone.</p>' +
         '<h3>Cookies and tracking</h3><p>This website does not use advertising or tracking cookies.</p>' +
@@ -528,11 +564,14 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     } }
   };
 
+  var RAINBOW = '<span class="hfm-rainbow" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>';
+
   function shell(title, body, back) {
-    return '<div class="hfm-box">' +
+    return '<div class="hfm-box">' + RAINBOW +
+      '<div class="hfm-pad">' +
       (back ? '<button class="hfm-back" type="button">← Back to sign up</button>' : '') +
       '<button class="hfm-x" type="button" aria-label="Close">×</button>' +
-      '<h2 id="hfm-title" class="hfm-title">' + title + '</h2><div class="hfm-body">' + body + '</div></div>';
+      '<h2 id="hfm-title" class="hfm-title">' + title + '</h2><div class="hfm-body">' + body + '</div></div></div>';
   }
 
   function show(html) {
@@ -566,24 +605,39 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     show(shell(PANELS[k].title, PANELS[k].html(), !!form));
   }
 
-  function field(label, input, opt) {
-    return '<label class="hfm-f">' + label + (opt ? ' <span class="hfm-opt">(optional)</span>' : '') + input + '<span class="hfm-msg"></span></label>';
+  function q(num, name, label, hint, control) {
+    return '<div class="hfm-q" data-q="' + name + '">' +
+      '<span class="hfm-qn hfm-qn' + ((num - 1) % 5) + '">' + num + '</span>' +
+      '<div class="hfm-qbody"><label class="hfm-qlabel"' + (name ? ' for="hfq-' + name + '"' : '') + '>' + label + '<b class="hfm-req">*</b></label>' +
+      (hint ? '<p class="hfm-hint">' + hint + '</p>' : '') +
+      control + '<span class="hfm-msg"></span></div></div>';
   }
+  function pills(name, opts) {
+    return '<div class="hfm-pills" role="radiogroup">' + opts.map(function (o, i) {
+      return '<label class="hfm-pill hfm-pill' + (i % 5) + '"><input type="radio" name="' + name + '" value="' + esc(o) + '"><span>' + esc(o) + '</span></label>';
+    }).join('') + '</div>';
+  }
+
   function openSignup(city) {
     var opts = CITIES.concat(['Other']).map(function (c) {
       return '<option' + (c === city ? ' selected' : '') + '>' + c + '</option>';
     }).join('');
-    var kids = [1, 2, 3, 4, 5].map(function (n) { return '<option value="' + n + '">' + (n === 5 ? '5+' : n) + '</option>'; }).join('');
-    show(shell('Sign up',
+    show(shell('GET READY TO HOP!',
       '<form class="hfm-form" novalidate>' +
-      '<p class="hfm-lead">Be the first to hear about dates, venues and tickets for HOP FEST.</p>' +
-      field('Parent / guardian name', '<input name="name" autocomplete="name" maxlength="80" required>') +
-      field('Mobile number', '<input name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="10-digit mobile number" required>') +
-      field('Email', '<input name="email" type="email" inputmode="email" autocomplete="email" maxlength="120">', true) +
-      '<div class="hfm-row">' +
-      field('City', '<select name="city" required><option value="">Choose…</option>' + opts + '</select>') +
-      field('Number of kids', '<select name="kids">' + kids + '</select>') + '</div>' +
-      field('Kids’ ages', '<input name="ages" maxlength="60" placeholder="e.g. 7, 11">', true) +
+      '<p class="hfm-lead"><b>Something exciting is coming for the little ones.</b></p>' +
+      '<p class="hfm-lead">Two days of running, jumping, climbing, competing, playing and trying something new — all in one place.</p>' +
+      '<p class="hfm-lead">Tickets are coming soon. Sign up below and we’ll make sure you’re among the first to know when HOP FEST goes live in your city.</p>' +
+      '<p class="hfm-sec hfm-sec-a">FIRST, A LITTLE ABOUT YOU</p>' +
+      q(1, 'name', 'What’s your name?', 'The parent behind the Hopper.', '<input id="hfq-name" name="name" autocomplete="name" maxlength="80" required>') +
+      q(2, 'email', 'Where can we reach you?', '', '<input id="hfq-email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="120" placeholder="Email address" required>') +
+      q(3, 'phone', 'And your number?', '', '<input id="hfq-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="10-digit mobile number" required>') +
+      q(4, 'city', 'Which city are you joining us from?', '', '<select id="hfq-city" name="city" required><option value="">Select your city…</option>' + opts + '</select>') +
+      '<p class="hfm-sec hfm-sec-b">NOW, THE IMPORTANT PART 👀</p>' +
+      '<p class="hfm-lead"><b>Who are you bringing along?</b></p>' +
+      q(5, 'kids', 'How many little Hoppers will be joining you?',
+        'By Hoppers, we mean your kids. The ones who will probably have more energy than all of us combined. 😉',
+        pills('kids', ['1', '2', '3', '4+'])) +
+      q(6, 'hoppers', 'Tell us about your Hoppers', 'Who’s joining the fun?', pills('hoppers', ['Boys', 'Girls', 'Both'])) +
       '<label class="hfm-check"><input type="checkbox" name="consent" value="1"> <span>I agree to be contacted about HOP FEST. <a href="#privacy">Privacy Policy</a></span></label>' +
       '<span class="hfm-msg hfm-consent-msg"></span>' +
       '<input class="hfm-hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">' +
@@ -592,37 +646,47 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       '</form>'));
     var form = dlg.querySelector('.hfm-form');
     form.addEventListener('submit', submit);
+    function onEdit(e) {
+      var b = e.target.closest ? e.target.closest('[data-q]') : null;
+      if (b) { b.classList.remove('is-bad'); var m = b.querySelector('.hfm-msg'); if (m) m.textContent = ''; }
+      if (e.target.name === 'consent') { var cm = form.querySelector('.hfm-consent-msg'); if (cm) cm.textContent = ''; }
+    }
+    form.addEventListener('input', onEdit);
+    form.addEventListener('change', onEdit);
     setTimeout(function () { var n = form.querySelector('input[name=name]'); if (n && window.matchMedia('(min-width:768px)').matches) n.focus(); }, 30);
   }
 
   function setErr(form, name, msg) {
-    var el = name === 'consent' ? form.querySelector('.hfm-consent-msg') : form.querySelector('[name=' + name + ']').closest('.hfm-f').querySelector('.hfm-msg');
-    el.textContent = msg || '';
-    var input = form.querySelector('[name=' + name + ']');
-    if (input) input.classList.toggle('is-bad', !!msg);
+    var box = form.querySelector('[data-q=' + name + ']');
+    var el = box ? box.querySelector('.hfm-msg') : form.querySelector('.hfm-consent-msg');
+    if (el) el.textContent = msg || '';
+    if (box) box.classList.toggle('is-bad', !!msg);
   }
   function validate(form) {
     var d = new FormData(form), e = {};
-    if (String(d.get('name') || '').trim().length < 2) e.name = 'Please enter your name.';
+    if (String(d.get('name') || '').trim().length < 2) e.name = 'Please tell us your name.';
+    var m = String(d.get('email') || '').trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m)) e.email = 'Please enter a valid email address.';
     var p = String(d.get('phone') || '').replace(/\D/g, '');
     if (p.length === 12 && p.indexOf('91') === 0) p = p.slice(2);
     if (p.length === 11 && p.charAt(0) === '0') p = p.slice(1);
     if (!/^[6-9]\d{9}$/.test(p)) e.phone = 'Please enter a valid 10-digit mobile number.';
-    var m = String(d.get('email') || '').trim();
-    if (m && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m)) e.email = 'Please check your email address.';
-    if (!d.get('city')) e.city = 'Please choose a city.';
+    if (!d.get('city')) e.city = 'Please select your city.';
+    if (!d.get('kids')) e.kids = 'Please pick how many Hoppers are coming.';
+    if (!d.get('hoppers')) e.hoppers = 'Please pick one.';
     if (!d.get('consent')) e.consent = 'Please tick this so we can contact you.';
     return e;
   }
   function submit(ev) {
     ev.preventDefault();
     var form = ev.target, err = form.querySelector('.hfm-err'), btn = form.querySelector('.hfm-submit');
-    ['name', 'phone', 'email', 'city', 'consent'].forEach(function (k) { setErr(form, k, ''); });
+    ['name', 'email', 'phone', 'city', 'kids', 'hoppers', 'consent'].forEach(function (k) { setErr(form, k, ''); });
     err.hidden = true;
     var e = validate(form), keys = Object.keys(e);
     if (keys.length) {
       keys.forEach(function (k) { setErr(form, k, e[k]); });
-      var first = form.querySelector('[name=' + keys[0] + ']'); if (first) first.focus();
+      var first = form.querySelector('[data-q=' + keys[0] + ']');
+      if (first) first.scrollIntoView({ block: 'center' });
       return;
     }
     btn.disabled = true; btn.textContent = 'SENDING…';
@@ -641,10 +705,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       });
   }
   function done(first, city) {
-    show(shell('You’re in!',
+    show(shell('YOU’RE ON THE LIST! 🎉',
       '<div class="hfm-done"><img src="./assets/images/rewards/medal.svg" alt="" width="120" height="120">' +
-      '<p>Thanks, ' + esc(first) + '! We’ll be in touch' + (city && city !== 'Other' ? ' about HOP FEST ' + esc(city) : '') +
-      ' with dates, venues and tickets.</p><p class="hfm-note">See you at HOP FEST.</p>' +
+      '<p>Thanks, ' + esc(first) + '! We’ll let you know when tickets go live, when HOP FEST comes to ' +
+      (city && city !== 'Other' ? esc(city) : 'your city') +
+      ' and everything your little Hoppers need to know.</p><p class="hfm-see">SEE YOU AT HOP FEST.</p>' +
       '<button type="button" class="hfm-btn hfm-ok">DONE</button></div>'));
     dlg.querySelector('.hfm-ok').onclick = close;
   }
