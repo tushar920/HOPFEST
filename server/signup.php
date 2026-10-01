@@ -73,7 +73,8 @@ if (!hf_save($row)) {
 
 $to = trim((string)($cfg['notify_email'] ?? ''));
 if ($to !== '' && filter_var($to, FILTER_VALIDATE_EMAIL)) {
-    $host = preg_replace('/[^a-z0-9.\-]/i', '', $_SERVER['HTTP_HOST'] ?? 'localhost');
+    $host = strtolower(explode(':', (string)($_SERVER['HTTP_HOST'] ?? 'localhost'))[0]);
+    $host = preg_replace('/^www\./', '', preg_replace('/[^a-z0-9.\-]/', '', $host));
     $body = "New HOP FEST sign-up\n\n";
     foreach (HF_COLUMNS as $i => $label) {
         $body .= $label . ': ' . $row[$i] . "\n";

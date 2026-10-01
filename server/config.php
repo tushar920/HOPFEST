@@ -10,7 +10,7 @@ return [
 
     // Optional: an email address that gets a message for every new sign-up.
     // Leave empty ('') to turn this off. Needs email to be enabled on the hosting.
-    'notify_email' => '',
+    'notify_email' => 'hopfest.legaxy@gmail.com',
 
     // Shown in the footer under "Contact us" and as the Instagram link.
     // Leave any of these empty ('') to hide them.
