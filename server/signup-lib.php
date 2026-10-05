@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-const HF_COLUMNS = ['Submitted (IST)', 'Name', 'Mobile (+91)', 'Email', 'City', 'Little Hoppers', 'Boys / Girls / Both'];
+const HF_COLUMNS = ['Submitted (IST)', 'Name', 'Mobile (+91)', 'Email', 'City', 'Number of kids', 'Kids’ ages'];
 
 /**
  * Where sign-ups are saved. Prefers a folder one level above the website
