@@ -34,7 +34,7 @@ $phone = hf_in('phone', 20);
 $email = hf_in('email', 120);
 $city  = hf_in('city', 20);
 $kids  = hf_in('kids', 3);
-$ages  = hf_in('ages', 40);
+$hoppers = hf_in('hoppers', 5);
 
 $errors = [];
 if (mb_strlen($name) < 2) {
@@ -46,14 +46,17 @@ if (strlen($digits) === 11 && $digits[0] === '0') { $digits = substr($digits, 1)
 if (!preg_match('/^[6-9]\d{9}$/', $digits)) {
     $errors['phone'] = 'Please enter a valid 10-digit mobile number.';
 }
-if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors['email'] = 'Please enter a valid email address.';
 }
 if (!in_array($city, ['Bangalore', 'Hyderabad', 'Pune', 'Mumbai', 'Delhi', 'Other'], true)) {
     $errors['city'] = 'Please choose your city.';
 }
 if (!in_array($kids, ['1', '2', '3', '4+'], true)) {
-    $errors['kids'] = 'Please choose how many kids are coming.';
+    $errors['kids'] = 'Please pick how many Hoppers are coming.';
+}
+if (!in_array($hoppers, ['Boys', 'Girls', 'Both'], true)) {
+    $errors['hoppers'] = 'Please pick one.';
 }
 if (empty($_POST['consent'])) {
     $errors['consent'] = 'Please tick this so we can contact you.';
@@ -63,7 +66,7 @@ if ($errors) {
 }
 
 $when = (new DateTime('now', new DateTimeZone('Asia/Kolkata')))->format('Y-m-d H:i');
-$row = [$when, $name, $digits, $email, $city, $kids, $ages];
+$row = [$when, $name, $digits, $email, $city, $kids, $hoppers];
 
 if (!hf_save($row)) {
     error_log('HOP FEST sign-up could not be saved: check folder permissions.');
