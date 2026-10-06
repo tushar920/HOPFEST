@@ -485,61 +485,8 @@ h1,h2,h3,[data-testid=achievements-heading],.font-fest,.font-impact,.hf-head,.hf
 .hf-st-more b{font-weight:inherit}
 .hf-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 
-/* ===== Grit Race course: animated strip ===== */
-.hf-track{position:relative;width:100%;margin-inline:auto;--ink:#0d2b6b}
-@media (min-width:768px){
-  .hf-track{aspect-ratio:2172/305}
-  .hf-track::after{content:"";position:absolute;left:0;right:0;bottom:0;height:clamp(4px,.42vw,9px);background:var(--ink);border-radius:2px;
-    transform:scaleX(0);transform-origin:left center;transition:transform 1.1s cubic-bezier(.4,0,.2,1)}
-  .hf-track.is-on::after{transform:scaleX(1)}
-  .hf-ob,.hf-ar{position:absolute;left:var(--x);width:var(--w);display:block}
-  .hf-ob{bottom:clamp(4px,.42vw,9px)}
-  .hf-ar{bottom:25.9%;width:2.44%}
-  .hf-ob img,.hf-ar img{display:block;width:100%;height:auto}
-}
-/* phones and small tablets: three rows of three, arrows dropped */
-@media (min-width:768px){.hf-row{display:contents}}
-@media (max-width:767px){
-  .hf-track{display:flex;flex-direction:column;gap:clamp(13px,3.6vw,22px)}
-  .hf-row{display:flex;align-items:flex-end;justify-content:center;gap:clamp(10px,3.2vw,20px);
-    border-bottom:4px solid var(--ink);padding-bottom:4px}
-  .hf-ob{flex:0 0 auto;width:calc(var(--u) * 100% / 758)}      /* one scale for every obstacle */
-  .hf-ob img{display:block;width:100%;height:auto}
-  .hf-ar{display:none}
-}
-/* build in, left to right */
-.hf-ob,.hf-ar{opacity:0}
-.hf-track.is-on .hf-ob{animation:hf-ob-in .5s cubic-bezier(.2,1.4,.4,1) calc(var(--i) * .11s) both,
-  var(--idle,hf-bob) var(--dur,3.2s) ease-in-out calc(.7s + var(--i) * .11s) infinite}
-.hf-track.is-on .hf-ar{animation:hf-ar-in .4s ease-out calc(.16s + var(--i) * .11s) both,
-  hf-ar-chase 2.6s ease-in-out calc(1s + var(--i) * .13s) infinite}
-@keyframes hf-ob-in{from{opacity:0;transform:translateY(14px) scale(.86)}to{opacity:1;transform:none}}
-@keyframes hf-ar-in{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
-@keyframes hf-ar-chase{0%,55%,100%{opacity:1;transform:translateX(0)}
-  22%{opacity:.45;transform:translateX(5px)}
-  38%{opacity:1;transform:translateX(0)}}
-/* each obstacle moves the way that obstacle moves */
-@keyframes hf-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
-@keyframes hf-hop{0%,62%,100%{transform:translateY(0)}
-  72%{transform:translateY(-11px) rotate(-3deg)}82%{transform:translateY(-4px) rotate(-1deg)}}
-@keyframes hf-wobble{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
-@keyframes hf-heave{0%,100%{transform:translateX(0)}45%{transform:translateX(6px) rotate(.8deg)}}
-@keyframes hf-shuffle{0%,100%{transform:translateX(0) scaleY(1)}50%{transform:translateX(5px) scaleY(.97)}}
-@keyframes hf-trudge{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-4px) rotate(1deg)}}
-@keyframes hf-hurl{0%,70%,100%{transform:rotate(0)}80%{transform:rotate(-4deg) translateX(-3px)}90%{transform:rotate(1.5deg)}}
-@keyframes hf-strain{0%,100%{transform:translateX(0) rotate(0)}50%{transform:translateX(-5px) rotate(-1.4deg)}}
-@keyframes hf-swing{0%,100%{transform:rotate(-2.4deg)}50%{transform:rotate(2.4deg)}}
-.hf-ob--jump{--idle:hf-hop;--dur:2.6s}
-.hf-ob--balance{--idle:hf-wobble;--dur:3s;transform-origin:50% 100%}
-.hf-ob--push{--idle:hf-heave;--dur:2.2s}
-.hf-ob--crawl{--idle:hf-shuffle;--dur:2.4s;transform-origin:50% 100%}
-.hf-ob--carry{--idle:hf-trudge;--dur:2s}
-.hf-ob--throw{--idle:hf-hurl;--dur:3.4s;transform-origin:30% 90%}
-.hf-ob--pole{--idle:hf-bob;--dur:6s}
-.hf-ob--pull{--idle:hf-strain;--dur:2.3s}
-.hf-ob--swing{--idle:hf-swing;--dur:2.8s;transform-origin:50% 8%}
-@media (prefers-reduced-motion:reduce){
-  .hf-ob,.hf-ar{opacity:1!important;animation:none!important;transform:none!important}
+/* ===== Grit Race course ===== */
+.hf-track{display:block;width:100%;height:auto}
   .hf-track::after{transform:scaleX(1)!important}
 }
   </style>
@@ -569,15 +516,15 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   HFy(`div`,{className:`hf-city-media`,children:[HFx(`img`,{src:`./assets/images/cities/${e.slug}.webp`,alt:`HOP FEST in ${e.name.charAt(0)+e.name.slice(1).toLowerCase()}`,loading:`lazy`,decoding:`async`}),HFx(`span`,{"data-testid":`city-name-${e.slug}`,className:`hf-city-name`,children:e.name})]}),
   HFy(`div`,{className:`hf-city-body`,children:[HFy(`div`,{className:`hf-city-meta`,children:[HFy(`div`,{children:[HFx(`b`,{children:`DATE`}),HFx(`strong`,{"data-testid":`city-date-${e.slug}`,children:e.date})]}),HFy(`div`,{children:[HFx(`b`,{children:`VENUE`}),HFx(`strong`,{"data-testid":`city-venue-${e.slug}`,children:e.venue})]})]}),HFy(`a`,{href:`#signup`,"data-city":e.name.charAt(0)+e.name.slice(1).toLowerCase(),"data-testid":`city-tickets-cta-${e.slug}`,className:`hf-city-cta`,children:[io.ticket,HFx(bo,{className:`size-4`,strokeWidth:3})]})]})]},e.id))}),
  HFx(`div`,{className:`hf-dots mt-1`,"aria-label":`City slide navigation`,children:r.map((e,n)=>HFx(`button`,{type:`button`,onClick:()=>i(n),"aria-label":`${e.name}`,"aria-current":n===t,children:HFx(`span`,{"aria-hidden":`true`})},e.id))}),
- HFy(`div`,{className:`mt-3 flex flex-wrap items-center justify-between gap-3 border-[3px] border-hop-ink bg-hop-ink p-4`,children:[HFx(`strong`,{"data-testid":`cities-coming-soon`,className:`font-display text-[clamp(12.5px,3.8vw,20px)] tracking-tight text-hop-yellow uppercase`,children:io.comingSoon}),HFy(`a`,{href:`#signup`,"data-testid":`cities-notify-cta`,className:`inline-flex min-h-11 items-center gap-2 border-b-[3px] border-hop-lime py-2.5 font-display text-xs tracking-wide text-hop-lime uppercase transition-transform duration-200 hover:translate-x-1 md:text-base`,children:[io.notify,HFx(bo,{className:`size-4`,strokeWidth:3})]})]})]})}function os(){return(0,R.jsxs)(`div`,{"aria-hidden":`true`,className:`pointer-events-none absolute inset-0 overflow-hidden`,children:[(0,R.jsx)(`div`,{className:`hop-dots absolute inset-0 opacity-25`}),[{c:`bg-hop-yellow`,t:`top-[-8%] left-[-6%]`,w:`w-[46px]`,h:`h-[52%]`},{c:`bg-hop-pink`,t:`top-[-10%] left-[6%]`,w:`w-[20px]`,h:`h-[42%]`},{c:`bg-hop-yellow`,t:`top-[-6%] left-[16%]`,w:`w-[10px]`,h:`h-[30%]`},{c:`bg-hop-pink`,t:`top-[-12%] right-[10%]`,w:`w-[34px]`,h:`h-[46%]`},{c:`bg-hop-yellow`,t:`top-[-8%] right-[2%]`,w:`w-[16px]`,h:`h-[34%]`},{c:`bg-hop-pink`,t:`bottom-[-10%] left-[4%]`,w:`w-[28px]`,h:`h-[40%]`},{c:`bg-hop-yellow`,t:`bottom-[-8%] left-[18%]`,w:`w-[12px]`,h:`h-[26%]`},{c:`bg-hop-yellow`,t:`bottom-[-12%] right-[6%]`,w:`w-[40px]`,h:`h-[48%]`},{c:`bg-hop-pink`,t:`bottom-[-8%] right-[20%]`,w:`w-[14px]`,h:`h-[30%]`}].map((e,t)=>(0,R.jsx)(`span`,{className:`absolute ${e.t} ${e.w} ${e.h} ${e.c} rotate-[24deg] opacity-50`},t))]})}var HFROWS=[3,4,2];var HFST=[{n:`jump`,x:1.335,w:7.320,pw:159,ph:222},{n:`balance`,x:11.234,w:9.669,pw:210,ph:206},{n:`push`,x:23.343,w:12.155,pw:264,ph:178},{n:`crawl`,x:37.891,w:13.490,pw:293,ph:118},{n:`carry`,x:53.775,w:6.031,pw:131,ph:182},{n:`throw`,x:62.293,w:9.530,pw:207,ph:206},{n:`pole`,x:71.961,w:1.703,pw:37,ph:237},{n:`pull`,x:76.289,w:9.807,pw:213,ph:133},{n:`swing`,x:88.490,w:10.866,pw:236,ph:305}];var HFAR=[8.840,20.902,35.497,51.381,59.899,69.337,73.849,86.096];function ss(){let{ref:e,shown:t}=Ka();return HFy(Ga,{id:`grit-race`,testId:`grit-race-section`,label:`The Grit Race`,className:`hf-bg hf-grit text-hop-ink`,innerClassName:`flex flex-col justify-center`,children:[
+ HFy(`div`,{className:`mt-3 flex flex-wrap items-center justify-between gap-3 border-[3px] border-hop-ink bg-hop-ink p-4`,children:[HFx(`strong`,{"data-testid":`cities-coming-soon`,className:`font-display text-[clamp(12.5px,3.8vw,20px)] tracking-tight text-hop-yellow uppercase`,children:io.comingSoon}),HFy(`a`,{href:`#signup`,"data-testid":`cities-notify-cta`,className:`inline-flex min-h-11 items-center gap-2 border-b-[3px] border-hop-lime py-2.5 font-display text-xs tracking-wide text-hop-lime uppercase transition-transform duration-200 hover:translate-x-1 md:text-base`,children:[io.notify,HFx(bo,{className:`size-4`,strokeWidth:3})]})]})]})}function os(){return(0,R.jsxs)(`div`,{"aria-hidden":`true`,className:`pointer-events-none absolute inset-0 overflow-hidden`,children:[(0,R.jsx)(`div`,{className:`hop-dots absolute inset-0 opacity-25`}),[{c:`bg-hop-yellow`,t:`top-[-8%] left-[-6%]`,w:`w-[46px]`,h:`h-[52%]`},{c:`bg-hop-pink`,t:`top-[-10%] left-[6%]`,w:`w-[20px]`,h:`h-[42%]`},{c:`bg-hop-yellow`,t:`top-[-6%] left-[16%]`,w:`w-[10px]`,h:`h-[30%]`},{c:`bg-hop-pink`,t:`top-[-12%] right-[10%]`,w:`w-[34px]`,h:`h-[46%]`},{c:`bg-hop-yellow`,t:`top-[-8%] right-[2%]`,w:`w-[16px]`,h:`h-[34%]`},{c:`bg-hop-pink`,t:`bottom-[-10%] left-[4%]`,w:`w-[28px]`,h:`h-[40%]`},{c:`bg-hop-yellow`,t:`bottom-[-8%] left-[18%]`,w:`w-[12px]`,h:`h-[26%]`},{c:`bg-hop-yellow`,t:`bottom-[-12%] right-[6%]`,w:`w-[40px]`,h:`h-[48%]`},{c:`bg-hop-pink`,t:`bottom-[-8%] right-[20%]`,w:`w-[14px]`,h:`h-[30%]`}].map((e,t)=>(0,R.jsx)(`span`,{className:`absolute ${e.t} ${e.w} ${e.h} ${e.c} rotate-[24deg] opacity-50`},t))]})}function ss(){let{ref:e,shown:t}=Ka();return HFy(Ga,{id:`grit-race`,testId:`grit-race-section`,label:`The Grit Race`,className:`hf-bg hf-grit text-hop-ink`,innerClassName:`flex flex-col justify-center`,children:[
  HFx(`div`,{className:`hf-grit-head`,children:HFy(`div`,{className:`hf-grit-stack`,children:[
   HFx(`h2`,{"data-testid":`grit-race-kicker`,className:`hf-grit-kicker`,children:Xa.kicker}),
   HFx(`div`,{className:`hf-grit-card`,children:HFy(`h3`,{"data-testid":`grit-race-title`,className:`hf-grit-title`,children:[HFx(`span`,{className:`hf-grit-pre`,children:`READY TO TAKE ON THE`}),HFx(`span`,{className:`hf-grit-name`,children:`GRIT`}),HFx(`span`,{className:`hf-grit-name`,children:`RACE?`})]})})]})}),
  HFy(`figure`,{className:`hf-course`,children:[
-  HFy(`div`,{className:`hf-track`,role:`img`,"aria-label":`The Grit Race course: box jump, balance beam, tyre push, net crawl, sandbag carry, ball throw, sled pull and monkey bars`,children:[
-    HFROWS.map((n,r)=>{let a=HFROWS.slice(0,r).reduce((p,c)=>p+c,0);return HFx(`span`,{className:`hf-row`,"aria-hidden":`true`,children:HFST.slice(a,a+n).map((o,k)=>{let i=a+k;return HFx(`span`,{className:`hf-ob hf-ob--${o.n}`,style:{"--x":`${o.x}%`,"--w":`${o.w}%`,"--u":o.pw,"--i":i},children:HFx(`img`,{src:`./assets/images/course/${o.n}.webp`,alt:``,width:o.pw,height:o.ph,loading:`lazy`,decoding:`async`})},o.n)})},`r${r}`)}),
-    HFAR.map((x,i)=>HFx(`span`,{className:`hf-ar`,"aria-hidden":`true`,style:{"--x":`${x}%`,"--i":i},children:HFx(`img`,{src:`./assets/images/course/arrow${i}.webp`,alt:``,width:53,height:52,loading:`lazy`,decoding:`async`})},`a${i}`))
-  ]}),HFx(`figcaption`,{children:[`JUMP`,`BALANCE`,`PUSH`,`CRAWL`,`CARRY`,`THROW`,`PULL`,`SWING`].map((e,t)=>HFy(`span`,{children:[t>0&&HFx(`i`,{"aria-hidden":`true`,children:`→`}),e]},e))})]}),
+  HFy(`picture`,{children:[
+    HFx(`source`,{srcSet:`./assets/images/grit-race-course.webp`,type:`image/webp`}),
+    HFx(`img`,{className:`hf-track`,src:`./assets/images/grit-race-course.png`,alt:`The Grit Race course: box jump, balance beam, tyre push, net crawl, sandbag carry, ball throw, sled pull and monkey bars`,width:2170,height:315,loading:`lazy`,decoding:`async`})]}),
+  HFx(`figcaption`,{children:[`JUMP`,`BALANCE`,`PUSH`,`CRAWL`,`CARRY`,`THROW`,`PULL`,`SWING`].map((e,t)=>HFy(`span`,{children:[t>0&&HFx(`i`,{"aria-hidden":`true`,children:`→`}),e]},e))})]}),
  HFy(`div`,{ref:e,className:`hf-grit-foot ${t?`animate-hop-rise`:`opacity-0`}`,children:[
   HFx(`p`,{"data-testid":`grit-race-intro`,className:`hf-grit-sub`,children:Xa.intro}),
   HFx(`p`,{"data-testid":`grit-race-lead`,className:`hf-grit-lead`,children:Xa.lead}),
