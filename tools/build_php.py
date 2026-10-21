@@ -20,7 +20,7 @@ assert len(re.findall(CONTACT_RE, html)) == 1, 'contact line missing from index.
 page = "<?php $hfcfg = require __DIR__ . '/config.php'; ?>" + re.sub(CONTACT_RE, lambda m: CONTACT_PHP, html)
 
 files = set()
-for ref in re.findall(r'\./((?:assets/|favicon|apple-touch)[^`"\'\s)]*)', html):
+for ref in re.findall(r'\./((?:assets/|favicon|apple-touch)[^`"\'\s)?]*)', html):
     if '${' in ref:
         files.update(os.path.join(os.path.dirname(ref), f) for f in os.listdir(os.path.join(ROOT, os.path.dirname(ref))))
     else:
