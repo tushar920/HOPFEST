@@ -1,6 +1,6 @@
-# HOP FEST logo
+# HOP FEST logo (mascot edition)
 
-- HOP-FEST-LEGAXY-LIVE.png — the master artwork (transparent, 1920x1080).
-- hop-fest-logo-tight.png  — the HOP FEST mark alone (header, pop-up, favicons).
-- hop-fest-lockup.png      — mark + "An initiative of Legaxy Live" (footer, dark backgrounds only: the small text is white).
-- hop-fest-logo.png        — same as the mark; kept for compatibility.
+- HOP-FEST-LEGAXY-LIVE.png — the master artwork as supplied (transparent, 1080x1080).
+- hop-fest-lockup.png      — mark + mascot + "An initiative of Legaxy Live" (932x436). Dark backgrounds only: the small text is white. Used in the header and footer.
+- hop-fest-logo-tight.png  — the HOP FEST mark + mascot alone (602x436). Used in the "is that reason" tag, the pop-up and the favicons.
+- hop-fest-logo.png        — same as the tight mark; kept for compatibility.
