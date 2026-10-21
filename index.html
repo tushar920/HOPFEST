@@ -200,8 +200,9 @@ h1,h2,h3,h1.font-display,h2.font-display,h3.font-display,[data-testid=achievemen
 /* More to Play tiles: solid panel behind the text instead of a dark fade */
 
 /* Grit Race course illustration */
-.hf-course{margin:0 0 clamp(18px,3vh,30px)}
+.hf-course{margin:clamp(16px,3vh,28px) 0 clamp(18px,3vh,30px)}
 .hf-course img{display:block;width:100%;height:auto}
+@media (max-width:767px){.hf-course img{max-width:560px;margin:0 auto}}
 .hf-course figcaption{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 10px;margin-top:12px;font-family:var(--font-sub);font-weight:700;font-size:clamp(11px,3vw,15px);letter-spacing:.08em;color:var(--hf-ink)}
 .hf-course figcaption i{font-style:normal;color:var(--hf-pink);margin-right:10px}
 
@@ -506,9 +507,7 @@ h1,h2,h3,[data-testid=achievements-heading],.font-fest,.font-impact,.hf-head,.hf
 .hf-mini{background:var(--hf-cream)!important}
 .hf-mini .hf-grit-card{background:var(--hf-lime)}
 .hf-mini .hf-grit-name{text-shadow:.04em .04em 0 var(--hf-yellow)}
-.hf-flow{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 10px;margin:clamp(14px,2.4vh,24px) 0 0;font-family:var(--font-sub);font-weight:700;font-size:clamp(11px,3vw,15px);letter-spacing:.08em;color:var(--hf-ink)}
-.hf-flow i{font-style:normal;color:var(--hf-pink);margin-right:10px}
-.hf-mini-body{display:grid;gap:clamp(18px,3vh,28px);margin-top:clamp(18px,3vh,30px)}
+.hf-mini-body{display:grid;gap:clamp(18px,3vh,28px)}
 .hf-mini-grid{list-style:none;margin:0;padding:0;display:grid;gap:12px}
 .hf-mstation{display:flex;gap:12px;align-items:flex-start;border:3px solid var(--hf-ink);background:#fff;box-shadow:5px 5px 0 var(--hf-ink);padding:12px 14px 13px;transition:translate .2s ease}
 .hf-mstation:hover{translate:0 -3px}
@@ -570,9 +569,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   HFx(`div`,{className:`hf-grit-card`,children:HFy(`h3`,{"data-testid":`grit-race-title`,className:`hf-grit-title`,children:[HFx(`span`,{className:`hf-grit-pre`,children:`READY TO TAKE ON THE`}),HFx(`span`,{className:`hf-grit-name`,children:`GRIT`}),HFx(`span`,{className:`hf-grit-name`,children:`RACE?`})]})})]})}),
  HFy(`figure`,{className:`hf-course`,children:[
   HFy(`picture`,{children:[
+    HFx(`source`,{media:`(max-width:767px)`,srcSet:`./assets/images/grit-race-course-mobile.webp`,type:`image/webp`}),
     HFx(`source`,{srcSet:`./assets/images/grit-race-course.webp`,type:`image/webp`}),
-    HFx(`img`,{className:`hf-track`,src:`./assets/images/grit-race-course.png`,alt:`The Grit Race course: box jump, balance beam, tyre push, net crawl, sandbag carry, ball throw, sled pull and monkey bars`,width:2170,height:315,loading:`lazy`,decoding:`async`})]}),
-  HFx(`figcaption`,{children:[`JUMP`,`BALANCE`,`PUSH`,`CRAWL`,`CARRY`,`THROW`,`PULL`,`SWING`].map((e,t)=>HFy(`span`,{children:[t>0&&HFx(`i`,{"aria-hidden":`true`,children:`→`}),e]},e))})]}),
+    HFx(`img`,{className:`hf-track`,src:`./assets/images/grit-race-course.png`,alt:`The Grit Race course: sprint, box jump, balance beam, tyre push, net crawl, sandbag carry, sled pull and the finish`,width:2172,height:330,loading:`lazy`,decoding:`async`})]}),
+  HFx(`figcaption`,{children:[`RUN`,`JUMP`,`BALANCE`,`PUSH`,`CRAWL`,`CARRY`,`PULL`,`FINISH`].map((e,t)=>HFy(`span`,{children:[t>0&&HFx(`i`,{"aria-hidden":`true`,children:`→`}),e]},e))})]}),
  HFy(`div`,{ref:e,className:`hf-grit-foot ${t?`animate-hop-rise`:`opacity-0`}`,children:[
   HFx(`p`,{"data-testid":`grit-race-intro`,className:`hf-grit-sub`,children:Xa.intro}),
   HFx(`p`,{"data-testid":`grit-race-lead`,className:`hf-grit-lead`,children:Xa.lead}),
@@ -587,7 +587,12 @@ function HFmini(){let{ref:e,shown:t}=Ka();return HFy(Ga,{id:`mini-grit-race`,tes
  HFx(`div`,{className:`hf-grit-head`,children:HFy(`div`,{className:`hf-grit-stack hf-mini-stack`,children:[
   HFy(`div`,{className:`hf-grit-badges`,children:[HFx(`h2`,{"data-testid":`mini-grit-kicker`,className:`hf-grit-kicker`,children:Xm.kicker}),HFx(`span`,{"data-testid":`mini-grit-age`,className:`hf-grit-age`,children:Xm.age})]}),
   HFx(`div`,{className:`hf-grit-card`,children:HFy(`h3`,{"data-testid":`mini-grit-title`,className:`hf-grit-title`,children:[HFx(`span`,{className:`hf-grit-pre`,children:Xm.pre}),...Xm.name.map(n=>HFx(`span`,{className:`hf-grit-name`,children:n},n))]})})]})}),
- HFx(`div`,{"data-testid":`mini-grit-flow`,className:`hf-flow`,children:Xm.flow.map((n,k)=>HFy(`span`,{children:[k>0&&HFx(`i`,{"aria-hidden":`true`,children:`→`}),n]},n))}),
+ HFy(`figure`,{className:`hf-course`,children:[
+  HFy(`picture`,{children:[
+    HFx(`source`,{media:`(max-width:767px)`,srcSet:`./assets/images/mini-grit-course-mobile.webp`,type:`image/webp`}),
+    HFx(`source`,{srcSet:`./assets/images/mini-grit-course.webp`,type:`image/webp`}),
+    HFx(`img`,{className:`hf-track`,src:`./assets/images/mini-grit-course.png`,alt:`The Mini Grit Race course: lava river crossing, jungle tunnel crawl, mini mountain hops, monster feed, dino zig-zag dash and the power push to the finish`,width:2172,height:372,loading:`lazy`,decoding:`async`})]}),
+  HFx(`figcaption`,{"data-testid":`mini-grit-flow`,children:Xm.flow.map((n,k)=>HFy(`span`,{children:[k>0&&HFx(`i`,{"aria-hidden":`true`,children:`→`}),n]},n))})]}),
  HFy(`div`,{ref:e,className:`hf-mini-body ${t?`animate-hop-rise`:`opacity-0`}`,children:[
   HFx(`ol`,{"data-testid":`mini-grit-stations`,className:`hf-mini-grid`,children:Xm.stations.map(n=>HFy(`li`,{className:`hf-mstation`,children:[HFx(`span`,{className:`hf-mstation-no`,"aria-hidden":`true`,children:n.no}),HFy(`div`,{className:`min-w-0`,children:[HFx(`h4`,{className:`hf-mstation-title`,children:n.title}),HFx(`p`,{className:`hf-mstation-how`,children:n.how}),HFx(`p`,{className:`hf-mstation-builds`,children:n.builds})]})]},n.no))})]}),
  HFy(`div`,{className:`hf-grit-foot`,children:[
