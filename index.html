@@ -202,16 +202,10 @@ h1,h2,h3,h1.font-display,h2.font-display,h3.font-display,[data-testid=achievemen
 /* Grit Race course illustration */
 .hf-course{margin:clamp(16px,3vh,28px) 0 clamp(18px,3vh,30px)}
 .hf-course img{display:block;width:100%;height:auto}
-.hf-scroll{overflow:visible}
-.hf-swipe{display:none}
 @media (max-width:767px){
   .hf-course{margin-left:-20px;margin-right:-20px}
-  .hf-scroll{overflow-x:auto;overflow-y:hidden;padding:0 20px;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
-  .hf-scroll::-webkit-scrollbar{display:none}
-  .hf-scroll picture{display:block;width:max-content}
-  .hf-course{--ch:clamp(230px,64vw,330px)}
-  .hf-scroll picture,.hf-scroll img{width:calc(var(--ch) * var(--ar,3.6))!important;height:var(--ch)!important;max-width:none!important;min-width:0}
-  .hf-swipe{display:block;margin:10px 20px 0;text-align:center;font-family:var(--font-sub);font-weight:700;font-size:11px;letter-spacing:.1em;color:var(--hf-pink)}
+  .hf-course picture{display:block;width:100%}
+  .hf-course img{width:100%;height:auto;max-width:none}
   .hf-course figcaption{padding:0 20px}
 }
 .hf-course figcaption{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 10px;margin-top:12px;font-family:var(--font-sub);font-weight:700;font-size:clamp(11px,3vw,15px);letter-spacing:.08em;color:var(--hf-ink)}
@@ -583,7 +577,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
  HFy(`div`,{ref:e,className:`hf-grit-foot ${t?`animate-hop-rise`:`opacity-0`}`,children:[
   HFx(`p`,{"data-testid":`grit-race-intro`,className:`hf-grit-sub`,children:Xa.intro}),
   HFx(`p`,{"data-testid":`grit-race-lead`,className:`hf-grit-lead`,children:Xa.lead}),
-  HFx(`div`,{"data-testid":`grit-race-tests`,className:`hf-grit-tests`,children:Xa.tests.map(e=>HFx(`span`,{children:e},e))})]})]})}function HFcourse(p){let r=(0,L.useRef)(null),c=()=>{let el=r.current;if(el&&el.scrollWidth>el.clientWidth+4)el.scrollLeft=(el.scrollWidth-el.clientWidth)/2};(0,L.useEffect)(c,[]);return HFy(`figure`,{className:`hf-course`,style:{"--ar":p.w/p.h},children:[HFx(`div`,{ref:r,className:`hf-scroll`,children:HFy(`picture`,{children:[HFx(`source`,{srcSet:p.webp,type:`image/webp`}),HFx(`img`,{className:`hf-track`,src:p.png,alt:p.alt,width:p.w,height:p.h,loading:`eager`,decoding:`async`,onLoad:c})]})}),HFx(`span`,{className:`hf-swipe`,"aria-hidden":`true`,children:`← SWIPE TO SEE THE WHOLE COURSE →`}),HFx(`figcaption`,{"data-testid":p.testId,children:p.flow.map((e,t)=>HFy(`span`,{children:[t>0&&HFx(`i`,{"aria-hidden":`true`,children:`→`}),e]},e))})]})}
+  HFx(`div`,{"data-testid":`grit-race-tests`,className:`hf-grit-tests`,children:Xa.tests.map(e=>HFx(`span`,{children:e},e))})]})]})}function HFcourse(p){return HFy(`figure`,{className:`hf-course`,children:[HFy(`picture`,{children:[HFx(`source`,{srcSet:p.webp,type:`image/webp`}),HFx(`img`,{className:`hf-track`,src:p.png,alt:p.alt,width:p.w,height:p.h,loading:`eager`,decoding:`async`})]}),HFx(`figcaption`,{"data-testid":p.testId,children:p.flow.map((e,t)=>HFy(`span`,{children:[t>0&&HFx(`i`,{"aria-hidden":`true`,children:`→`}),e]},e))})]})}
 var Xm={kicker:`LITTLE HOPPERS`,age:`3–6 YEARS`,pre:`READY FOR YOUR`,name:[`FIRST`,`RACE?`],intro:`A SOFT-PLAY OBSTACLE ADVENTURE`,lead:`Little legs. Big first wins.`,tests:[`BALANCE`,`COORDINATION`,`AGILITY`,`POWER`,`ACCURACY`],flow:[`CROSS`,`CRAWL`,`HOP`,`THROW`,`WEAVE`,`PUSH`],stations:[
 {no:`01`,title:`LAVA RIVER CROSSING`,how:`Cross a series of flat, non-slip stepping pads without stepping into the imaginary lava.`,builds:`Balance · Coordination · Agility`},
 {no:`02`,title:`JUNGLE TUNNEL CRAWL`,how:`Crawl through a colourful tunnel to retrieve a soft animal or treasure token at the other end.`,builds:`Coordination · Body control · Endurance`},
