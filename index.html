@@ -519,6 +519,41 @@ h1,h2,h3,[data-testid=achievements-heading],.font-fest,.font-impact,.hf-head,.hf
   .hf-rcard-earn{white-space:normal;max-width:100%}
 }
 @media (min-width:1080px){.hf-rgrid{gap:22px}.hf-rgrid>.hf-rcard{flex-basis:calc((100% - 88px) / 5)}}
+
+/* ===== race sections: louder title card + a proper closing panel ===== */
+.hf-grit-pre{display:table!important;margin:0 auto .5em;padding:.34em .75em .36em;background:var(--hf-pink);color:#fff;border:3px solid var(--hf-ink);box-shadow:4px 4px 0 var(--hf-ink);transform:rotate(-1.5deg);font-family:var(--font-head)!important;font-weight:800;font-stretch:112%;font-size:clamp(13px,3.4vw,22px);letter-spacing:.04em;line-height:1;white-space:nowrap;text-shadow:.045em .055em 0 var(--hf-ink)!important}
+.hf-grit-foot{position:relative;margin-top:clamp(34px,6vh,56px);padding:clamp(30px,4.5vh,44px) clamp(14px,3vw,40px) clamp(22px,3.4vh,34px);background:var(--hf-orange);border:3px solid var(--hf-ink);box-shadow:8px 8px 0 var(--hf-ink);color:#fff;text-align:center}
+.hf-grit-foot::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(9,9,9,.16) 1.5px,transparent 1.6px);background-size:22px 22px;pointer-events:none}
+.hf-grit-foot>*{position:relative}
+.hf-grit-sub{position:absolute!important;top:0;left:50%;z-index:2;transform:translate(-50%,-58%) rotate(-2deg);margin:0;width:max-content;max-width:calc(100% - 12px);padding:.42em .85em .44em;background:var(--hf-blue);color:var(--hf-yellow);border:3px solid var(--hf-ink);box-shadow:4px 4px 0 var(--hf-ink);font-family:var(--font-head)!important;font-weight:800;font-stretch:112%;font-size:clamp(11.5px,3.1vw,19px);letter-spacing:.03em;line-height:1.15;text-shadow:.045em .055em 0 var(--hf-ink)!important}
+.hf-grit-lead{margin:clamp(4px,1vh,10px) 0 0;font-family:var(--font-head)!important;font-weight:800;font-stretch:112%;font-size:clamp(23px,6.3vw,46px);line-height:1.02;color:#fff;-webkit-text-stroke:.028em var(--hf-ink);paint-order:stroke fill;text-shadow:.06em .07em 0 var(--hf-blue);text-wrap:balance}
+.hf-grit-tests{margin-top:clamp(16px,2.6vh,26px);gap:10px 12px}
+.hf-grit-tests span{border:3px solid var(--hf-ink);box-shadow:4px 4px 0 var(--hf-ink);padding:9px 16px 10px;font-family:var(--font-head);font-weight:800;font-stretch:112%;font-size:clamp(13px,3.4vw,19px);letter-spacing:.04em;text-shadow:.05em .06em 0 var(--hf-ink)}
+.hf-grit-tests span:nth-child(1){background:var(--hf-yellow);color:var(--hf-ink)}
+.hf-grit-tests span:nth-child(4){background:var(--hf-pink);color:#fff}
+.hf-grit-tests span:nth-child(1),.hf-grit-tests span:nth-child(3){text-shadow:none}
+.hf-grit-tests span:hover{rotate:0deg;translate:0 -4px;box-shadow:6px 6px 0 var(--hf-ink)}
+.hf-mini .hf-grit-foot{background:var(--hf-blue)}
+.hf-mini .hf-grit-foot::before{background-image:radial-gradient(rgba(255,255,255,.28) 1.5px,transparent 1.6px)}
+.hf-mini .hf-grit-sub{background:var(--hf-orange);color:var(--hf-ink);text-shadow:none!important}
+.hf-mini .hf-grit-lead{color:var(--hf-yellow);text-shadow:.06em .07em 0 var(--hf-ink)}
+.hf-mini .hf-grit-foot::before{background-image:radial-gradient(rgba(255,255,255,.28) 1.5px,transparent 1.6px)}
+.hf-mini .hf-grit-tests span:nth-child(4){background:var(--hf-orange);color:var(--hf-ink);text-shadow:none}
+.hf-mini .hf-grit-tests span:nth-child(1){background:var(--hf-pink);color:#fff;text-shadow:.05em .06em 0 var(--hf-ink)}
+.hf-mini .hf-grit-tests span:nth-child(2){background:var(--hf-yellow);color:var(--hf-ink);text-shadow:none}
+.hf-mini .hf-grit-tests span:nth-child(5){background:var(--hf-ink)}
+@media (max-width:767px){.hf-grit-foot{margin-left:-6px;margin-right:-6px;box-shadow:6px 6px 0 var(--hf-ink)}}
+
+/* ===== course chronology: numbered sticker chips ===== */
+.hf-course figcaption{gap:10px 6px;margin-top:clamp(14px,2.4vh,22px);align-items:center}
+.hf-course figcaption span{display:inline-flex;align-items:center;gap:.4em;background:var(--hf-yellow);color:var(--hf-ink);border:3px solid var(--hf-ink);box-shadow:3px 3px 0 var(--hf-ink);padding:.28em .7em .3em .3em;font-family:var(--font-head);font-weight:800;font-stretch:112%;font-size:clamp(11.5px,3vw,15px);letter-spacing:.04em;line-height:1;transform:rotate(-1.5deg);transition:transform .2s}
+.hf-course figcaption span:nth-of-type(even){transform:rotate(1.5deg)}
+.hf-course figcaption span:hover{transform:rotate(0) translateY(-3px)}
+.hf-course figcaption span b{display:inline-flex;align-items:center;justify-content:center;width:1.55em;height:1.55em;border-radius:50%;background:var(--hf-ink);color:var(--hf-yellow);font-size:.82em;font-weight:800}
+.hf-course figcaption i{font-style:normal;color:var(--hf-pink);font-size:1.35em;font-weight:800;margin:0;line-height:1}
+.hf-mini .hf-course figcaption span{background:var(--hf-lime)}
+.hf-mini .hf-course figcaption span b{color:var(--hf-lime)}
+.hf-mini .hf-course figcaption i{color:var(--hf-blue)}
   </style>
 </head>
   <body>
@@ -554,17 +589,17 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
  HFy(`div`,{ref:e,className:`hf-grit-foot ${t?`animate-hop-rise`:`opacity-0`}`,children:[
   HFx(`p`,{"data-testid":`grit-race-intro`,className:`hf-grit-sub`,children:Xa.intro}),
   HFx(`p`,{"data-testid":`grit-race-lead`,className:`hf-grit-lead`,children:Xa.lead}),
-  HFx(`div`,{"data-testid":`grit-race-tests`,className:`hf-grit-tests`,children:Xa.tests.map(e=>HFx(`span`,{children:e},e))})]})]})}function HFcourse(p){return HFy(`figure`,{className:`hf-course`,children:[HFy(`picture`,{children:[HFx(`source`,{media:`(max-width:767px)`,srcSet:p.mobile,type:`image/webp`}),HFx(`source`,{srcSet:p.webp,type:`image/webp`}),HFx(`img`,{className:`hf-track`,src:p.png,alt:p.alt,width:p.w,height:p.h,loading:`eager`,decoding:`async`})]}),HFx(`figcaption`,{"data-testid":p.testId,children:p.flow.map((e,t)=>HFy(`span`,{children:[t>0&&HFx(`i`,{"aria-hidden":`true`,children:`→`}),e]},e))})]})}
+  HFx(`div`,{"data-testid":`grit-race-tests`,className:`hf-grit-tests`,children:Xa.tests.map((e,i)=>HFx(`span`,{className:t?`animate-hop-pop`:`opacity-0`,style:{animationDelay:`${260+i*90}ms`},children:e},e))})]})]})}function HFcourse(p){return HFy(`figure`,{className:`hf-course`,children:[HFy(`picture`,{children:[HFx(`source`,{media:`(max-width:767px)`,srcSet:p.mobile,type:`image/webp`}),HFx(`source`,{srcSet:p.webp,type:`image/webp`}),HFx(`img`,{className:`hf-track`,src:p.png,alt:p.alt,width:p.w,height:p.h,loading:`eager`,decoding:`async`})]}),HFx(`figcaption`,{"data-testid":p.testId,children:p.flow.flatMap((e,t)=>[t>0?HFx(`i`,{"aria-hidden":`true`,children:`→`},`a${t}`):null,HFy(`span`,{children:[HFx(`b`,{"aria-hidden":`true`,children:t+1}),e]},e)])})]})}
 var Xm={kicker:`LITTLE HOPPERS`,age:`3–6 YEARS`,pre:`READY TO TAKE ON THE`,name:[`MINI`,`GRIT`,`RACE?`],intro:`A SOFT-PLAY OBSTACLE ADVENTURE`,lead:`Little legs. Big first wins.`,tests:[`BALANCE`,`COORDINATION`,`AGILITY`,`POWER`,`ACCURACY`],flow:[`CROSS`,`CRAWL`,`HOP`,`THROW`,`WEAVE`,`PUSH`]};
-function HFmini(){return HFy(Ga,{id:`mini-grit-race`,testId:`mini-grit-race-section`,label:`The Mini Grit Race`,className:`hf-bg hf-mini text-hop-ink`,innerClassName:`flex flex-col justify-center`,children:[
+function HFmini(){let{ref:e,shown:t}=Ka();return HFy(Ga,{id:`mini-grit-race`,testId:`mini-grit-race-section`,label:`The Mini Grit Race`,className:`hf-bg hf-mini text-hop-ink`,innerClassName:`flex flex-col justify-center`,children:[
  HFx(`div`,{className:`hf-grit-head`,children:HFy(`div`,{className:`hf-grit-stack hf-mini-stack`,children:[
   HFy(`div`,{className:`hf-grit-badges`,children:[HFx(`h2`,{"data-testid":`mini-grit-kicker`,className:`hf-grit-kicker`,children:Xm.kicker}),HFx(`span`,{"data-testid":`mini-grit-age`,className:`hf-grit-age`,children:Xm.age})]}),
   HFx(`div`,{className:`hf-grit-card`,children:HFy(`h3`,{"data-testid":`mini-grit-title`,className:`hf-grit-title`,children:[HFx(`span`,{className:`hf-grit-pre`,children:Xm.pre}),...Xm.name.map(n=>HFx(`span`,{className:`hf-grit-name`,children:n},n))]})})]})}),
- HFx(HFcourse,{webp:`./assets/images/mini-grit-strip.webp`,png:`./assets/images/mini-grit-strip.png`,mobile:`./assets/images/mini-grit-strip-mobile.webp`,w:2152,h:301,testId:`mini-grit-flow`,alt:`The Mini Grit Race course: lava river crossing, jungle tunnel crawl, mini mountain hops, monster feed, dino zig-zag dash and the power push to the finish`,flow:Xm.flow}),
- HFy(`div`,{className:`hf-grit-foot`,children:[
+ HFx(HFcourse,{webp:`./assets/images/mini-grit-strip.webp`,png:`./assets/images/mini-grit-strip.png`,mobile:`./assets/images/mini-grit-strip-mobile.webp`,w:2172,h:360,testId:`mini-grit-flow`,alt:`The Mini Grit Race course: lava river crossing, jungle tunnel crawl, mini mountain hops, monster feed, dino zig-zag dash and the power push to the finish`,flow:Xm.flow}),
+ HFy(`div`,{ref:e,className:`hf-grit-foot ${t?`animate-hop-rise`:`opacity-0`}`,children:[
   HFx(`p`,{"data-testid":`mini-grit-intro`,className:`hf-grit-sub`,children:Xm.intro}),
   HFx(`p`,{"data-testid":`mini-grit-lead`,className:`hf-grit-lead`,children:Xm.lead}),
-  HFx(`div`,{"data-testid":`mini-grit-tests`,className:`hf-grit-tests`,children:Xm.tests.map(e=>HFx(`span`,{children:e},e))})]})]})}
+  HFx(`div`,{"data-testid":`mini-grit-tests`,className:`hf-grit-tests`,children:Xm.tests.map((e,i)=>HFx(`span`,{className:t?`animate-hop-pop`:`opacity-0`,style:{animationDelay:`${260+i*90}ms`},children:e},e))})]})]})}
 var cs=[`#e84b81`,`#faee30`,`#a0cd3f`,`#f68820`,`#683d98`,`#e84b81`,`#faee30`,`#a0cd3f`,`#f68820`,`#683d98`,`#e84b81`,`#faee30`],ls=[{cls:`left-[6%] top-[14%] size-4 bg-hop-pink`,r:`12deg`,d:`0s`},{cls:`left-[86%] top-[10%] size-5 bg-hop-yellow`,r:`-18deg`,d:`0.6s`},{cls:`left-[78%] top-[30%] size-3 bg-hop-lime rounded-full`,r:`0deg`,d:`1.1s`},{cls:`left-[12%] top-[42%] size-3.5 bg-hop-orange`,r:`24deg`,d:`0.3s`},{cls:`left-[92%] top-[52%] size-4 bg-hop-pink rounded-full`,r:`0deg`,d:`1.6s`},{cls:`left-[3%] top-[62%] size-3 bg-hop-yellow`,r:`-10deg`,d:`0.9s`},{cls:`left-[68%] top-[18%] size-2.5 bg-white rounded-full`,r:`0deg`,d:`1.3s`},{cls:`left-[30%] top-[8%] size-3 bg-hop-purple`,r:`16deg`,d:`1.9s`}],us=[...Za,...Za];function ds(){return HFy(`section`,{id:`hero`,"data-testid":`hero-section`,className:`hf-hero hop-anchor`,children:[
  HFy(`div`,{className:`hf-hero-stage`,children:[
   HFx(`div`,{className:`hf-hero-photo`,children:HFx(`img`,{src:Ja.image,alt:`Kids playing at the HOP FEST carnival`,fetchPriority:`high`,decoding:`async`})}),
