@@ -561,7 +561,10 @@ h1,h2,h3,[data-testid=achievements-heading],.font-fest,.font-impact,.hf-head,.hf
 .hf-why-stat+.hf-why-stat b{color:var(--hf-blue)}
 .hf-why-stat span{display:block;margin-top:8px;font-family:var(--font-sub);font-weight:800;font-size:clamp(11.5px,1vw,13px);line-height:1.25;text-transform:uppercase;color:var(--hf-ink)}
 .hf-why-stat small{display:block;margin-top:6px;font-size:10.5px;line-height:1.3;color:rgba(9,9,9,.55)}
-.hf-why-close{margin:22px 0 0;font-family:var(--font-sub);font-weight:800;text-transform:uppercase;font-size:clamp(15px,1.3vw,20px);line-height:1.25;color:var(--hf-ink)}
+.hf-why-close{margin:22px 0 0;font-family:var(--font-sub);font-weight:800;text-transform:uppercase;font-size:clamp(15px,1.3vw,20px);line-height:1.35;color:var(--hf-ink);max-width:34ch}
+.hf-why-reason{display:inline-flex;align-items:center;gap:.4em;margin-top:8px;white-space:nowrap}
+.hf-why-reason img{height:clamp(40px,3.4vw,54px);width:auto;display:block;filter:drop-shadow(2px 2px 0 var(--hf-ink))}
+.hf-why-reason span{font-family:var(--font-head);font-weight:800;font-stretch:112%;font-size:clamp(20px,2vw,30px);line-height:1;letter-spacing:.01em;color:var(--hf-blue);-webkit-text-stroke:.02em var(--hf-ink);paint-order:stroke fill;text-shadow:.05em .06em 0 var(--hf-ink)}
 .hf-why-row{display:flex;flex-wrap:wrap;align-items:center;gap:0 22px}
 .hf-why-row .hf-st-tag{margin-top:16px}
 .hf-why-cta{margin-top:16px;display:inline-flex;align-items:center;gap:12px;border:3px solid var(--hf-ink);background:var(--hf-pink);color:#fff;padding:14px 24px;font-family:var(--font-head);font-weight:800;font-stretch:112%;font-size:clamp(15px,1.3vw,20px);letter-spacing:.02em;box-shadow:6px 7px 0 var(--hf-ink);text-shadow:.045em .055em 0 var(--hf-ink);transition:transform .2s}
@@ -667,9 +670,8 @@ var cs=[`#e84b81`,`#faee30`,`#a0cd3f`,`#f68820`,`#683d98`,`#e84b81`,`#faee30`,`#
   HFy(`div`,{className:`hf-why-stats`,children:[
    HFy(`div`,{className:`hf-why-stat`,children:[HFx(`b`,{"data-testid":`screen-time-stat`,children:`52%`}),HFx(`span`,{children:`more screen time · 2.7 → 4.1 hrs a day`}),HFx(`small`,{children:`Source: JAMA Pediatrics, 2022 (Madigan et al.)`})]}),
    HFy(`div`,{className:`hf-why-stat`,children:[HFx(`b`,{"data-testid":`parents-stat`,children:`3×`}),HFx(`span`,{children:`more time parents spend on their phone than with their children`}),HFx(`small`,{children:`Source: The Times of India`})]})]}),
-  HFx(`p`,{"data-testid":`screen-time-line-2`,className:`hf-why-close`,children:`Sometimes, all they need is a reason to play.`}),
+  HFy(`p`,{"data-testid":`screen-time-line-2`,className:`hf-why-close`,children:[HFx(`span`,{className:`block`,children:`Sometimes, all they need is a reason to play.`}),HFy(`span`,{"data-testid":`screen-time-tag`,className:`hf-why-reason`,children:[HFx(`img`,{src:`./assets/logo/hop-fest-mascot.png`,alt:`HOP FEST`,width:602,height:436}),HFx(`span`,{children:`IS THAT REASON.`})]})]}),
   HFy(`div`,{className:`hf-why-row`,children:[
-   HFy(`p`,{"data-testid":`screen-time-tag`,className:`hf-st-tag`,children:[HFx(`img`,{src:`./assets/logo/hop-fest-mascot.png`,alt:`HOP FEST`,width:602,height:436}),HFx(`span`,{children:`IS THAT REASON.`})]}),
    HFy(`a`,{href:`#signup`,"data-testid":`why-signup-cta`,className:`hf-why-cta`,children:[`BOOK TICKETS`,HFx(bo,{className:`size-5 shrink-0`,strokeWidth:3})]})]})]}),
  HFx(`div`,{className:`hf-pad-wrap`,children:HFy(`div`,{className:`hf-pad`,children:[
   HFx(`div`,{className:`hf-pad-screen`,children:HFx(`video`,{ref:v,"data-testid":`screen-time-video`,className:`hf-pad-video`,autoPlay:!0,muted:!0,loop:!0,playsInline:!0,controls:!1,disablePictureInPicture:!0,disableRemotePlayback:!0,tabIndex:-1,preload:`auto`,poster:Ya.poster,"aria-label":Ya.videoLabel,children:HFx(`source`,{src:Ya.video,type:`video/mp4`})})}),
