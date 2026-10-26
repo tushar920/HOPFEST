@@ -26,6 +26,7 @@ for ref in re.findall(r'\./((?:assets/|favicon|apple-touch)[^`"\'\s)?]*)', html)
     else:
         files.add(ref)
 files.update(['favicon.ico', 'assets/images/rewards/medal.svg'])
+files.update('assets/logo/hop/' + f for f in os.listdir(os.path.join(ROOT, 'assets/logo/hop')))
 missing = [f for f in files if not os.path.isfile(os.path.join(ROOT, f))]
 assert not missing, f'missing files: {missing}'
 
